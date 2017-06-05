@@ -1,0 +1,15 @@
+
+name = "Inclusive Docs"
+license = "MIT"
+# licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+description = ""
+homepage = "https://www.paciellogroup.com/"
+tags = ["inclusive design", "accessibility"]
+min_version = 0.1
+
+[taxonomies]
+  wcag = "wcag"
+
+[author]
+  name = "Heydon Pickering"
+  homepage = "https://inclusive-components.design"

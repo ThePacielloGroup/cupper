@@ -1,0 +1,116 @@
+/****************
+Notes:
+
+Brand color = #58068C
+
+*****************/
+
+*, *::before, *::after {
+  font-family: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: PT Sans, sans-serif;
+  line-height: 1.5;
+}
+
+* + * {
+  margin-top: 1.5rem;
+}
+
+br,
+dt,
+dd,
+th,
+td,
+option,
+[hidden] + *,
+li + li {
+  margin-top: 0;
+}
+
+p + p {
+  margin-top: 0.75rem;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus:not([tabindex="-1"]) {
+  outline: 2px solid;
+}
+
+/* fix for IE :( */
+div:not([tabindex]):focus {
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.125;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.33rem;
+}
+
+kbd {
+  line-height: 1;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.33rem;
+  border-radius: 0.25rem;
+  background: #ddd;
+  box-shadow: 0.125rem 0.125rem 0 #bbb;
+}
+
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+p code {
+  font-size: 0.85rem;
+}
+
+/* tables */
+
+table {
+  text-align: left;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 2px solid;
+  padding: 0.5rem;
+  line-height: 1;
+  margin: 0;
+}
+
+caption {
+  font-size: 1.125rem;
+  padding-bottom: 0.25rem;
+  font-style: italic;
+}
+
+th:empty {
+  border: 0;
+}

@@ -1,0 +1,14 @@
+{{ partial "header.html" . }}
+<main id="main">
+  {{ .Content }}
+
+
+  {{if .Params.wcag}}
+    <ul class="wcag">
+        {{range .Params.wcag}}
+            <li>{{partial (printf "wcag/%s.html" .)}}</li>
+        {{end}}
+    </ul>
+  {{end}}
+</main>
+{{ partial "footer.html" . }}

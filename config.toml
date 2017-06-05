@@ -1,0 +1,4 @@
+languageCode = "en-us"
+title = "Inclusive Docs Demo"
+baseURL = "/"
+theme = "inclusive-docs"
