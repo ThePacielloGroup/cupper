@@ -1,9 +1,14 @@
-/****************
-Notes:
 
-Brand color = #58068C
+/*
 
-*****************/
+Colors:
+Blue color = #38608F
+Dark blue color = #153B62
+Gold color = #FCB316
+Grey color = #707174
+Red color = #C83737
+
+*/
 
 *, *::before, *::after {
   font-family: inherit;
@@ -14,13 +19,19 @@ Brand color = #58068C
 }
 
 html {
-  font-size: 100%;
+  font-size: calc(1em + 0.33vw);
   font-family: PT Sans, sans-serif;
   line-height: 1.5;
+  color: #111;
+}
+
+body {
+  max-width: 30rem;
+  margin: 0 auto;
 }
 
 * + * {
-  margin-top: 1.5rem;
+  margin-top: 2.25rem;
 }
 
 br,
@@ -57,39 +68,50 @@ div:not([tabindex]):focus {
 }
 
 h1, h2, h3, h4 {
+  font-family: Miriam Libre, serif;
   line-height: 1.125;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.66rem;
 }
 
 h3 {
-  font-size: 1.33rem;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-family: PT Sans, sans-serif;
 }
 
 kbd {
   line-height: 1;
-  font-size: 0.8rem;
-  padding: 0.25rem 0.33rem;
+  font-size: 0.66rem;
+  padding: 0.1rem 0.25rem;
   border-radius: 0.25rem;
-  background: #ddd;
-  box-shadow: 0.125rem 0.125rem 0 #bbb;
+  border: 2px solid;
+  box-shadow: 0.125rem 0.125rem 0 #111;
 }
 
 code {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-}
-
-p code {
   font-size: 0.85rem;
 }
 
-/* tables */
+/* Buttons */
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+/* Tables */
 
 table {
   text-align: left;
@@ -113,4 +135,123 @@ caption {
 
 th:empty {
   border: 0;
+}
+
+/* Notes and warnings */
+
+.note {
+  border-left: 0.5rem solid #FCB316;
+  font-size: 0.85rem;
+}
+
+.note > div {
+  margin-left: 0.75rem;
+}
+
+.note > div > img:first-child {
+  height: 1.5rem;
+}
+
+.note.warning {
+  border-color: #C83737;
+}
+
+.note > div > :first-child + * {
+  margin-top: 0;
+}
+
+/* Code blocks */
+
+pre[class*=language-] {
+  padding: 1rem;
+  background: none;
+  border: 0.125rem solid #eee;
+  margin-top: 2.25rem;
+}
+
+pre[class*=language-][data-line] {
+  padding: 1em 0 1em 2.25rem;
+}
+
+pre[class*=language-] code * {
+  margin-top: 0 !important;
+}
+
+[data-codeblock-shortcode] {
+  display: block;
+  margin-top: -1rem;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #38608F;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #EBA205;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #375D84;
+}
+
+.line-numbers code {
+  padding-left: 2.25rem;
+  margin-top: -1rem;
+}
+
+.line-numbers {
+  padding-bottom: 2.25rem !important;
+}
+
+.line-numbers .line-numbers-rows {
+  margin-left: 2.25rem;
+  top: 1.25rem;
+}
+
+/* Expandable sections */
+
+[data-expands] {
+  text-align: left;
+  border: 0;
+  background: none;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+[data-expands] svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+[data-expands][aria-expanded="true"] svg .up-strut {
+  display: none;
 }

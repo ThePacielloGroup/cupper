@@ -1,14 +1,15 @@
 {{ partial "header.html" . }}
 <main id="main">
+  <h1>{{ .Title }}</h1>
   {{ .Content }}
 
-
-  {{if .Params.wcag}}
+  {{ if .Params.wcag }}
+    <h2>Relevant WCAG References</h2>
     <ul class="wcag">
-        {{range .Params.wcag}}
-            <li>{{partial (printf "wcag/%s.html" .)}}</li>
-        {{end}}
+        {{ range .Params.wcag }}
+            <li>{{ partial (printf "wcag/%s.html" .) }}</li>
+        {{ end }}
     </ul>
-  {{end}}
+  {{ end }}
 </main>
 {{ partial "footer.html" . }}
