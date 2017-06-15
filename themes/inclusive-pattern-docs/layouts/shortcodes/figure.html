@@ -1,0 +1,7 @@
+{{ $caption := .Get "caption" }}
+<figure role="group" aria-describedby="{{ $caption | base64Encode | truncate 20 "" }}">
+  {{ .Inner }}
+  <figcaption id="{{ $caption | base64Encode | truncate 20 "" }}">
+    {{ .Get "caption" | safeHTML }}
+  </figcaption>
+</figure>

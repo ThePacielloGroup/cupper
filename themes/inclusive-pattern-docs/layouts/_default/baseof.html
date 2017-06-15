@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ if .RSSLink }}
+      <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
+    {{ end }}
+    <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>
+      {{ block "title" . }}
+        {{ .Title }} | {{ .Site.Title }}
+      {{ end }}
+    </title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="intro-and-nav" role="banner">
+        <div>
+          <div class="intro">
+            <a class="logo" href="/" aria-label="{{ .Site.Title }} pattern library home page">
+              <img src="{{ .Site.BaseURL }}images/logo.png" alt="">
+            </a>
+            <p class="library-desc">{{ .Site.Params.Description | safeHTML }}</p>
+          </div>
+          <nav class="patterns" role="navigation">
+            {{ $current := . }}
+            {{ range $.Site.Home.Sections }}
+              <h2>Section: {{ .Title }}</h2>
+              <ul>
+                {{ range .Sections }}
+                  <h3>{{ .Title }}</h3>
+                  <ul>
+                    {{ range .Pages }}
+                      <li>
+                        <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}class="active"{{ end }}>{{ .Title }}</a></li>
+                    {{ end }}
+                  </ul>
+                {{ end }}
+              </ul>
+            {{ end }}
+          </nav>
+        </div>
+      </header>
+      <div class="main-and-footer">
+        <div>
+          {{ block "main" . }}
+          {{ end }}
+          <footer role="contentinfo">
+            By Heydon Pickering
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="/js/prism.js"></script>
+    <script src="/js/dom-scripts.js"></script>
+  </body>
+</html>

@@ -1,5 +1,8 @@
 languageCode = "en-us"
-title = "Inclusive Docs Demo"
+title = "Inclusive Pattern Docs"
 baseURL = "/"
-theme = "inclusive-docs"
-SectionPagesMenu = "main"
+theme = "inclusive-pattern-docs"
+
+[params]
+  description = "The pattern library for <strong>The Demo Project</strong>"
+  codePenUser = "Heydon"
