@@ -1,6 +1,6 @@
 +++
-title = "Example Pattern 1"
-wcag = ["1-1-1"]
+title = "Collapsible region"
+tags = ["animated", "forms"]
 +++
 
 <p>Nulla auctor eleifend turpis consequat pharetra: Cras molestie risus a enim convallis vitae luctus libero lacinia. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Nulla auctor eleifend turpis consequat pharetra. Sed mauris arcu, aliquet ultrices malesuada sed, pretium id <kbd>CTRL</kbd> + <kbd>V</kbd> massa. Fusce ac sodales magna. </p>

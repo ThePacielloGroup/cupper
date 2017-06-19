@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="{{ .Permalink }}">
-    {{ if .RSSLink }}
-      <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
-    {{ end }}
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/prism.css" />
@@ -19,6 +16,7 @@
     </title>
   </head>
   <body>
+    {{ partial "svg.html" . }}
     <div class="wrapper">
       <header class="intro-and-nav" role="banner">
         <div>
@@ -31,16 +29,30 @@
           <nav class="patterns" role="navigation">
             {{ $current := . }}
             {{ range $.Site.Home.Sections }}
-              <h2>Section: {{ .Title }}</h2>
               <ul>
+                {{ range .Pages }}
+                  <li class="pattern">
+                    <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
+                      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                      <span>{{ .Title }}</span>
+                    </a>
+                  </li>
+                  </li>
+                {{ end }}
                 {{ range .Sections }}
-                  <h3>{{ .Title }}</h3>
-                  <ul>
-                    {{ range .Pages }}
-                      <li>
-                        <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}class="active"{{ end }}>{{ .Title }}</a></li>
-                    {{ end }}
-                  </ul>
+                  <li>
+                    <h3>{{ .Title }}</h3>
+                    <ul>
+                      {{ range .Pages }}
+                        <li class="pattern">
+                          <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
+                            <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <span>{{ .Title }}</span>
+                          </a>
+                        </li>
+                      {{ end }}
+                    </ul>
+                  </li>
                 {{ end }}
               </ul>
             {{ end }}
@@ -57,7 +69,10 @@
         </div>
       </div>
     </div>
-    <script src="/js/prism.js"></script>
+    {{ if eq .Type "patterns" }}
+      <script src="/js/prism.js"></script>
+      <script src="/js/shadyDOM.min.js"></script>
+    {{ end }}
     <script src="/js/dom-scripts.js"></script>
   </body>
 </html>

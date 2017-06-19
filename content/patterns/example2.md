@@ -1,6 +1,6 @@
 +++
-title = "Example Pattern 2"
-wcag = ["1-1-1"]
+title = "Tab interface"
+tags = ["animated", "typography"]
 +++
 
 <p>Vestibulum sit amet ipsum lacus&hellip; Nulla lobortis tempus commodo. Maecenas sit <q cite='http://www.heydonworks.com'>amet tellus nec mi gravida posuere</q> non pretium magna. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh, <a href='#'>iaculis pretium</a> sem orci aliquet mauris. </p>

@@ -4,5 +4,5 @@ baseURL = "/"
 theme = "inclusive-pattern-docs"
 
 [params]
-  description = "The pattern library for <strong>The Demo Project</strong>"
+  description = "Documentation for the <strong>Inclusive Pattern Docs</strong> pattern library builder. This documentation is constructed using the builder itself."
   codePenUser = "Heydon"

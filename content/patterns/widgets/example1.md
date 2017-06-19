@@ -1,6 +1,5 @@
 +++
-title = "Widget 1"
-wcag = ["1-1-1"]
+title = "Card"
 +++
 
 <p>Duis sagittis, est sit amet gravida tristique, purus lectus venenatis urna, id molestie magna risus ut nunc. Maecenas sit amet tellus &ndash; nec mi gravida posuere non pretium magna. Potenti et eros sed justo commodo bibendum non at nunc. Aliquam nisl enim&hellip; tristique tempus placerat at, posuere in lectus. Nulla lobortis tempus commodo. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. </p>

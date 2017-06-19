@@ -1,6 +1,5 @@
 +++
-title = "Landmark Example 2"
-wcag = ["1-1-1"]
+title = "Footer"
 +++
 
 <p>Nulla vel magna sit amet dui lobortis commodo vitae vel nulla sit amet ante hendrerit tempus. Maecenas sit amet tellus nec mi gravida posuere non pretium magna. <strong>Donec a congue leo. </strong></p>
