@@ -314,6 +314,17 @@ th:empty {
   margin-top: 0;
 }
 
+.note.warning {
+  border-left: 0;
+  background-image: url(images/stripe.svg);
+  background-size: 0.5rem auto;
+  background-repeat: repeat-y;
+}
+
+.note.warning > div {
+  margin-left: 1.25rem;
+}
+
 /* Tick lists */
 
 .ticks li {

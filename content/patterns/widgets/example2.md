@@ -22,7 +22,18 @@ tags = ["animated", "interactive"]
 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac sodales <code>.generate()</code> magna. Aliquam tincidunt velit sit amet <a href='#'>ante hendrerit</a> tempus. Donec et nisi dictum felis sollicitudin congue.</p>
 
 {{<demo>}}
-
+<p>You must be having a laugh.</p>
+<style>
+p {
+  color: red !important;
+  font-family: cursive;
+}
+</style>
+<script>
+  demo.querySelector('p').addEventListener('click', function() {
+    alert('hello');
+  })
+</script>
 {{</demo>}}
 
 <p>Nulla vel magna sit &mdash; amet dui lobortis commodo &mdash; vitae vel nulla. Nulla lobortis tempus commodo. </p>

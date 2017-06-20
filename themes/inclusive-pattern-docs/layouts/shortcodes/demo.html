@@ -3,18 +3,7 @@
   <div id="demo-{{ $uniq }}">
   </div>
   <template id="template-{{ $uniq }}">
-    <p>You must be joking.</p>
-    <style>
-    p {
-      color: red !important;
-      font-family: cursive;
-    }
-    </style>
-    <script>
-      demo.querySelector('p').addEventListener('click', function() {
-        alert('hello');
-      })
-    </script>
+    {{ .Inner }}
   </template>
   <script>
     (function() {
