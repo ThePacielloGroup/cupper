@@ -541,3 +541,13 @@ a .bookmark {
 .pattern-link {
   font-weight: bold;
 }
+
+/* inline demos */
+
+[id^="demo-"] {
+  all: initial;
+}
+
+[id^="demo-"] * {
+  all: initial;
+}

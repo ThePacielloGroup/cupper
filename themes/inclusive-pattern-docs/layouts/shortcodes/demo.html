@@ -1,0 +1,30 @@
+{{ $uniq := .Inner | htmlEscape | base64Encode | truncate 15 "" }}
+<div class="demo-container">
+  <div id="demo-{{ $uniq }}">
+  </div>
+  <template id="template-{{ $uniq }}">
+    <p>You must be joking.</p>
+    <style>
+    p {
+      color: red !important;
+      font-family: cursive;
+    }
+    </style>
+    <script>
+      demo.querySelector('p').addEventListener('click', function() {
+        alert('hello');
+      })
+    </script>
+  </template>
+  <script>
+    (function() {
+      var root = document.getElementById('demo-{{ $uniq }}');
+      root.attachShadow({mode: 'open'});
+      var template = document.getElementById('template-{{ $uniq }}');
+      var script = template.content.querySelector('script');
+      script.textContent = 'var demo = document.getElementById(\'demo-{{ $uniq }}\').shadowRoot;' + script.textContent;
+      root.shadowRoot.appendChild(document.importNode(template.content, true));
+      console.log(root);
+    })();
+  </script>
+</div>

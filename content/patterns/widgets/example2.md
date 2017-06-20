@@ -19,7 +19,13 @@ tags = ["animated", "interactive"]
   }
 {{</codeBlock>}}
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac sodales <code>.generate()</code> magna. Aliquam tincidunt velit sit amet <a href='#'>ante hendrerit</a> tempus. Donec et nisi dictum felis sollicitudin congue. Nulla vel magna sit &mdash; amet dui lobortis commodo &mdash; vitae vel nulla. Nulla lobortis tempus commodo. </p>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac sodales <code>.generate()</code> magna. Aliquam tincidunt velit sit amet <a href='#'>ante hendrerit</a> tempus. Donec et nisi dictum felis sollicitudin congue.</p>
+
+{{<demo>}}
+
+{{</demo>}}
+
+<p>Nulla vel magna sit &mdash; amet dui lobortis commodo &mdash; vitae vel nulla. Nulla lobortis tempus commodo. </p>
 
 {{% ticks %}}
   * Something good
