@@ -11,9 +11,10 @@
       root.attachShadow({mode: 'open'});
       var template = document.getElementById('template-{{ $uniq }}');
       var script = template.content.querySelector('script');
-      script.textContent = 'var demo = document.getElementById(\'demo-{{ $uniq }}\').shadowRoot;' + script.textContent;
+      if (script) {
+        script.textContent = `(function() { var demo = document.getElementById(\'demo-{{ $uniq }}\').shadowRoot; ${script.textContent} })()`
+      }
       root.shadowRoot.appendChild(document.importNode(template.content, true));
-      console.log(root);
     })();
   </script>
 </div>

@@ -38,6 +38,21 @@ p {
 
 <p>Nulla vel magna sit &mdash; amet dui lobortis commodo &mdash; vitae vel nulla. Nulla lobortis tempus commodo. </p>
 
+{{<demo>}}
+<p>Everyone must not be having a laugh.</p>
+<style>
+p {
+  color: blue !important;
+  font-family: cursive;
+}
+</style>
+<script>
+  demo.querySelector('p').addEventListener('click', function() {
+    alert('fuck');
+  })
+</script>
+{{</demo>}}
+
 {{% ticks %}}
   * Something good
   * Something else good
