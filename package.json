@@ -1,0 +1,23 @@
+{
+  "name": "inclusive-pattern-library",
+  "version": "0.0.1",
+  "description": "An inclusive pattern library builder for documenting inclusive interface design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "hugo server",
+    "build": "hugo",
+    "setup": "hugo && git add public && git commit -m 'Make git acknowledge public folder' && rm -rf content && mkdir content",
+    "publish": "hugo && git push origin `git subtree split --prefix public master`:gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heydon/inclusive-pattern-library.git"
+  },
+  "author": "Heydon Pickering <heydon@heydonworks.com> (http://www.heydonworks.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heydon/inclusive-pattern-library/issues"
+  },
+  "homepage": "https://github.com/Heydon/inclusive-pattern-library#readme"
+}

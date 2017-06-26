@@ -30,18 +30,6 @@ title = "Footer"
     padding-top: 1.5rem;
     border-top: 2px solid;
   }
-
-  .expandable + .expandable {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 2px solid;
-  }
-
-  .expandable + .expandable {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 2px solid;
-  }
 {{</codeBlock>}}
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit <em>amet tellus</em> nec mi gravida posuere non <a href='#'>pretium magna</a>. Nulla vel magna sit amet dui lobortis commodo vitae vel nulla sit amet ante hendrerit tempus. Donec tempus tempus tellus, ac <abbr title='Hypertext Markup Language'>HTML</abbr> lacinia turpis mattis ac. Suspendisse potenti. Nunc iaculis risus vel orci ornare dignissim sed vitae nulla. Donec a congue leo? Fusce ac sodales <abbr title='Cascading Style Sheets'>CSS</abbr> magna. </p>

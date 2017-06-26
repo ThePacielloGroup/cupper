@@ -5,6 +5,32 @@ tags = ["animated", "interactive"]
 
 <p>Duis sagittis, est sit amet gravida tristique, purus lectus venenatis urna {{% patternLink "Menu button and menu" %}}, id molestie magna risus ut nunc. Fusce ac sodales <abbr title='Cascading Style Sheets'>CSS</abbr> magna. Nulla auctor eleifend turpis consequat pharetra. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh, iaculis pretium sem orci aliquet mauris.</p>
 
+{{<demo>}}
+<button aria-pressed="false">Press</button>
+<style>
+button {
+    background: blue;
+    color: white;
+    border: 0;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+}
+
+[aria-pressed="true"] {
+    box-shadow: inset 0 0 0.5rem #000;
+}
+</style>
+<script>
+var toggle = demo.querySelector('[aria-pressed]');
+console.log(toggle);
+
+toggle.addEventListener('click', (e) => {  
+  let pressed = e.target.getAttribute('aria-pressed') === 'true';
+  e.target.setAttribute('aria-pressed', !pressed);
+});
+</script>
+{{</demo>}}
+
 {{<codeBlock lang="css" numbered="true">}}
   .expandable + .expandable {
     margin-top: 1.5rem;
@@ -19,9 +45,15 @@ tags = ["animated", "interactive"]
   }
 {{</codeBlock>}}
 
+```html
+{{ .Inner }}
+```
+
+
+
 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac sodales <code>.generate()</code> magna. Aliquam tincidunt velit sit amet <a href='#'>ante hendrerit</a> tempus. Donec et nisi dictum felis sollicitudin congue.</p>
 
-{{<demo>}}
+{{<demo caption="Example caption">}}
 <p>You must be having a laugh.</p>
 <style>
 p {
