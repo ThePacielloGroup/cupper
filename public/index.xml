@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inclusive Pattern Docs</title>
+    <link>/</link>
+    <description>Recent content on Inclusive Pattern Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Card</title>
+      <link>/patterns/widgets/example1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/widgets/example1/</guid>
+      <description>Duis sagittis, est sit amet gravida tristique, purus lectus venenatis urna, id molestie magna risus ut nunc. Maecenas sit amet tellus &amp;ndash; nec mi gravida posuere non pretium magna. Potenti et eros sed justo commodo bibendum non at nunc. Aliquam nisl enim&amp;hellip; tristique tempus placerat at, posuere in lectus. Nulla lobortis tempus commodo. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Fusce ac sodales CSS magna. Maecenas sit amet tellus nec mi gravida posuere non pretium magna.</description>
+    </item>
+    
+    <item>
+      <title>Collapsible region</title>
+      <link>/patterns/example1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/example1/</guid>
+      <description>Nulla auctor eleifend turpis consequat pharetra: Cras molestie risus a enim convallis vitae luctus libero lacinia. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Nulla auctor eleifend turpis consequat pharetra. Sed mauris arcu, aliquet ultrices malesuada sed, pretium id CTRL + V massa. Fusce ac sodales magna. Nulla auctor eleifend turpis consequat pharetra: Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh (iaculis pretium sem orci aliquet mauris).</description>
+    </item>
+    
+    <item>
+      <title>Footer</title>
+      <link>/patterns/landmarks/example2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/landmarks/example2/</guid>
+      <description>Nulla vel magna sit amet dui lobortis commodo vitae vel nulla sit amet ante hendrerit tempus. Maecenas sit amet tellus nec mi gravida posuere non pretium magna. Donec a congue leo. 
+ See the demo on codePen   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet tellus nec mi gravida posuere non pretium magna. Nulla vel magna sit amet dui lobortis commodo vitae vel nulla sit amet ante hendrerit tempus.</description>
+    </item>
+    
+    <item>
+      <title>Menu button and menu</title>
+      <link>/patterns/widgets/example2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/widgets/example2/</guid>
+      <description>Duis sagittis, est sit amet gravida tristique, purus lectus venenatis urna   Menu button and menu  , id molestie magna risus ut nunc. Fusce ac sodales CSS magna. Nulla auctor eleifend turpis consequat pharetra. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh, iaculis pretium sem orci aliquet mauris.
+ Press  button { background: blue; color: white; border: 0; padding: 0.5rem 1rem; text-transform: uppercase; } [aria-pressed=&#34;</description>
+    </item>
+    
+    <item>
+      <title>Page region navigation landmark</title>
+      <link>/patterns/landmarks/example-one/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/landmarks/example-one/</guid>
+      <description>Nulla vel magna sit amet dui lobortis commodo vitae vel nulla sit amet ante hendrerit tempus. Maecenas sit amet tellus nec mi gravida posuere non pretium magna. Donec a congue leo. 
+ Add value: Consider the value of features and how they improve the experience for different users.   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet tellus nec mi gravida posuere non pretium magna. Nulla vel magna sit amet dui lobortis commodo vitae vel nulla sit amet ante hendrerit tempus.</description>
+    </item>
+    
+    <item>
+      <title>Tab interface</title>
+      <link>/patterns/example2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/example2/</guid>
+      <description>Vestibulum sit amet ipsum lacus&amp;hellip; Nulla lobortis tempus commodo. Maecenas sit amet tellus nec mi gravida posuere non pretium magna. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh, iaculis pretium sem orci aliquet mauris. Sed mauris arcu, aliquet ultrices malesuada sed, pretium id CTRL + V massa. Nulla lobortis tempus commodo. Nulla vel magna sit &amp;mdash; amet dui lobortis commodo &amp;mdash; vitae vel nulla. Lorem ipsum dolor sit amet, &amp;mdash; consectetur adipiscing &amp;mdash; elit.</description>
+    </item>
+    
+    <item>
+      <title>The Inclusive Pattern Library Builder</title>
+      <link>/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/</guid>
+      <description>Some introductory text.</description>
+    </item>
+    
+  </channel>
+</rss>

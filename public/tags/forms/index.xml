@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Forms on Inclusive Pattern Docs</title>
+    <link>/tags/forms/</link>
+    <description>Recent content in Forms on Inclusive Pattern Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/tags/forms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Collapsible region</title>
+      <link>/patterns/example1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/example1/</guid>
+      <description>Nulla auctor eleifend turpis consequat pharetra: Cras molestie risus a enim convallis vitae luctus libero lacinia. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Nulla auctor eleifend turpis consequat pharetra. Sed mauris arcu, aliquet ultrices malesuada sed, pretium id CTRL + V massa. Fusce ac sodales magna. Nulla auctor eleifend turpis consequat pharetra: Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh (iaculis pretium sem orci aliquet mauris).</description>
+    </item>
+    
+  </channel>
+</rss>
