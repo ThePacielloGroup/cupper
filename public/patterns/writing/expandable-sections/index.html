@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/inclusive-pattern-library/patterns/">
+    <link rel="canonical" href="https://heydon.github.io/inclusive-pattern-library/patterns/writing/expandable-sections/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>
       
-        Patterns | Infusion
+        Expandable sections | Infusion
       
     </title>
   </head>
@@ -110,7 +110,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="/inclusive-pattern-library/patterns/writing/expandable-sections/" >
+                          <a href="/inclusive-pattern-library/patterns/writing/expandable-sections/" aria-current="page">
                             <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span>Expandable sections</span>
                           </a>
@@ -177,44 +177,102 @@
         <div>
           
   <main id="main">
-    <h1>
-      
-      
-      Patterns
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/inclusive-pattern-library/patterns/installation/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Installation
-    </a>
-  </h2>
-</li>
+    <h1>Expandable sections</h1>
+    
+    <p>In some cases, where there is a lot of content, it&rsquo;s helpful to collapse certain sections. That way, readers get an overview of what&rsquo;s in the content and can choose where to focus in. <strong>Infusion</strong> provides a shortcode method for creating expandable sections which generates accessible markup using <code>aria-expanded</code>.</p>
 
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/inclusive-pattern-library/patterns/library-setup/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Library setup
-    </a>
-  </h2>
-</li>
+<p>The <code>expandable</code> shortcode takes three parameters:</p>
 
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/inclusive-pattern-library/patterns/serving/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Serving
-    </a>
-  </h2>
-</li>
+<ul>
+<li><strong>label</strong> — This is the label for the the section heading.</li>
+<li><strong>level</strong> — This is the heading level (e.g. <code>2</code> or <code>&lt;h2&gt;</code>) that will contain the label. If you omit a level parameter, no heading is used; it&rsquo;s just a button</li>
+<li><strong>open</strong> — Include this and give it a value of &ldquo;true&rdquo; or &ldquo;yes&rdquo; to make the section expanded on page load</li>
+</ul>
 
-      
-    </ul>
+<p>Here&rsquo;s what the code might look like for a simple expandable section containing markdown:</p>
+
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% expandable label="A section of dummy text" level="2" %}}
+Here is some markdown including [a link](https://twitter.com/heydonworks). Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.
+&#x7b;{% /expandable %}}
+</code></pre>
+
+
+<p>Let&rsquo;s look at what that outputs as:</p>
+
+<div class="expandable-section">
+  
+    <h2>
+  
+    <button aria-expanded="false" data-expands="expandable-PHA&#43;SGVyZSBpcyBzb21l">
+      <span class="expandable-label">A section of dummy text</span>
+      <svg aria-hidden="true" focusable="false" height="20mm" width="20mm" viewBox="0 0 70.866142 70.866141">
+        <g transform="translate(0 -981.5)">
+          <rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
+          <rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
+        </g>
+      </svg>
+    </button>
+  
+    </h2>
+  
+  <div id="expandable-PHA&#43;SGVyZSBpcyBzb21l" hidden>
+    <p>Here is some markdown including <a href="https://twitter.com/heydonworks">a link</a>. Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.</p>
+
+  </div>
+</div>
+
+
+<p>Successive collapsible sections fit snugly together. The second of the following two has <code>open=&quot;true&quot;</code>.</p>
+
+<div class="expandable-section">
+  
+    <h2>
+  
+    <button aria-expanded="false" data-expands="expandable-PHA&#43;TWF1cmlzIGVnZXQg">
+      <span class="expandable-label">A section of dummy text</span>
+      <svg aria-hidden="true" focusable="false" height="20mm" width="20mm" viewBox="0 0 70.866142 70.866141">
+        <g transform="translate(0 -981.5)">
+          <rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
+          <rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
+        </g>
+      </svg>
+    </button>
+  
+    </h2>
+  
+  <div id="expandable-PHA&#43;TWF1cmlzIGVnZXQg" hidden>
+    <p>Mauris eget elit ut neque venenatis placerat id nec libero. Nunc accumsan cursus elit nec iaculis. Proin id rutrum magna, a aliquet sem. Sed et tortor id sem eleifend porta vitae eget elit. Cras sodales porta malesuada. Suspendisse at odio ac tortor.</p>
+
+  </div>
+</div>
+
+
+<div class="expandable-section">
+  
+    <h2>
+  
+    <button aria-expanded="true" data-expands="expandable-PHA&#43;VXQgdnVscHV0YXRl">
+      <span class="expandable-label">Another dummy section</span>
+      <svg aria-hidden="true" focusable="false" height="20mm" width="20mm" viewBox="0 0 70.866142 70.866141">
+        <g transform="translate(0 -981.5)">
+          <rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
+          <rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
+        </g>
+      </svg>
+    </button>
+  
+    </h2>
+  
+  <div id="expandable-PHA&#43;VXQgdnVscHV0YXRl" >
+    <p>Ut vulputate enim ut lorem iaculis, vel faucibus metus iaculis. Aliquam erat volutpat. Aliquam luctus orci vel consectetur dignissim. Nullam et efficitur lorem, et ornare est. Sed tristique porttitor justo, quis malesuada velit. Nullam et elit finibus, sollicitudin velit placerat, ultricies dui.</p>
+
+  </div>
+</div>
+
+
+<p>Unfortunately, it is not currently possible to include shortcodes inside other shortcodes, using the &ldquo;<code>%</code>&rdquo; notation (which is designated for markdown content). If you use the angle brackets notation (illustrated below) it is possible, but markdown will no longer be permitted. You will have to code HTML inside such a section manually.</p>
+
   </main>
 
           <footer role="contentinfo">

@@ -35,7 +35,7 @@ toggle.addEventListener('click', (e) => {
 &#x7b;{&lt;/codeBlock>}}
 {{</codeBlock>}}
 
-The output will look like the following. Now you are able to refer to particular bits of the code, like the arrow function on line `3`.
+The output will look like the following. Now you can refer to particular bits of the code by line number, like the arrow function on line `3`.
 
 {{<codeBlock lang="js" numbered="true">}}
 var toggle = demo.querySelector('[aria-pressed]');

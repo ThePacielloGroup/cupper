@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/inclusive-pattern-library/patterns/">
+    <link rel="canonical" href="https://heydon.github.io/inclusive-pattern-library/patterns/code/writing-inline-demos/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>
       
-        Patterns | Infusion
+        Writing inline demos | Infusion
       
     </title>
   </head>
@@ -159,7 +159,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="/inclusive-pattern-library/patterns/code/writing-inline-demos/" >
+                          <a href="/inclusive-pattern-library/patterns/code/writing-inline-demos/" aria-current="page">
                             <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span>Writing inline demos</span>
                           </a>
@@ -177,44 +177,159 @@
         <div>
           
   <main id="main">
-    <h1>
-      
-      
-      Patterns
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/inclusive-pattern-library/patterns/installation/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Installation
-    </a>
-  </h2>
-</li>
+    <h1>Writing inline demos</h1>
+    
+    <p>There are some issues with 
 
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/inclusive-pattern-library/patterns/library-setup/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Library setup
-    </a>
-  </h2>
-</li>
+  
 
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/inclusive-pattern-library/patterns/serving/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Serving
-    </a>
-  </h2>
-</li>
+  
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <a class="pattern-link" href="https://heydon.github.io/inclusive-pattern-library/patterns/code/codepen-embedding/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      CodePen embedding
+    </a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+, like them not working offline. They also come with CodePen branding, which will clash with the pattern you&rsquo;re trying to illustrate.</p>
+
+<p><strong>Infusion</strong> offers another option: a special <code>demo</code> shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don&rsquo;t have to worry about broken styles and global JS.</p>
+
+<p>Here&rsquo;s the example code for an inline demo of a toggle button:</p>
+
+<pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
+&#x7b;{&lt;demo>}}
+&lt;button aria-pressed="false">Toggle Me&lt;/button>
+&lt;style>
+button {
+    background: DarkCyan;
+    color: white;
+    border: 0;
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+    border-right: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+
+[aria-pressed="true"] {
+  border: 0;
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+}
+&lt;/style>
+&lt;script>
+var toggle = demo.querySelector('[aria-pressed]');
+
+toggle.addEventListener('click', (e) => {  
+  let pressed = e.target.getAttribute('aria-pressed') === 'true';
+  e.target.setAttribute('aria-pressed', !pressed);
+});
+&lt;/script>
+&#x7b;{&lt;/demo>}}
+</code></pre>
+
+
+<p>Note the <code>demo.querySelector</code> on line <code>21</code>. <strong>Infusion</strong> automatically provides <code>demo</code>, representing the root node of the demo. It&rsquo;s like the <code>document</code> keyword but for a demo&rsquo;s subtree.</p>
+
+<p>Here&rsquo;s a live demo of&hellip; the demo:</p>
+
+<p>
+<div class="demo-container">
+  
+      <div class="demo" id="demo-CiZsdDtidXR0b24"></div>
       
-    </ul>
+  
+  <template id="template-CiZsdDtidXR0b24">
+      
+<button aria-pressed="false">Toggle Me</button>
+<style>
+button {
+    background: DarkCyan;
+    color: white;
+    border: 0;
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+    border-right: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+
+[aria-pressed="true"] {
+  border: 0;
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+}
+</style>
+<script>
+var toggle = demo.querySelector('[aria-pressed]');
+
+toggle.addEventListener('click', (e) => {  
+  let pressed = e.target.getAttribute('aria-pressed') === 'true';
+  e.target.setAttribute('aria-pressed', !pressed);
+});
+</script>
+
+  </template>
+  <script>
+    (function() {
+      var root = document.getElementById('demo-CiZsdDtidXR0b24');
+      if (document.head.attachShadow) {
+        root.attachShadow({mode: 'open'});
+        var template = document.getElementById('template-CiZsdDtidXR0b24');
+        var script = template.content.querySelector('script');
+        if (script) {
+          script.textContent = `(function() { var demo = document.getElementById(\'demo-CiZsdDtidXR0b24\').shadowRoot; ${script.textContent} })()`
+        }
+        root.shadowRoot.appendChild(document.importNode(template.content, true));
+      } else {
+        root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> Shadow DOM is needed to display encapsulated demos. The browser does not have an issue with the demo code itself.</p>';
+      }
+    })();
+  </script>
+</div>
+</p>
+
+<p><aside aria-label="note" class="note">
+  <div>
+    <img src="/inclusive-pattern-library/images/icon-info.svg" alt="">
+    <p>Firefox does not currently support Shadow DOM and <strong>Infusion</strong> does not include a polyfill. Firefox will output an error message. These demos function correctly in Chrome, Safari, and Opera.</p>
+
+  </div>
+</aside>
+</p>
+
   </main>
 
           <footer role="contentinfo">

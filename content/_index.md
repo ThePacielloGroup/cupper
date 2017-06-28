@@ -13,5 +13,3 @@ Welcome to **Infusion**: a pattern library builder with a focus on inclusive int
 * Choose between plain or line-numbered code blocks
 * A responsive, screen reader and keyboard accessible output site
 {{% /ticks %}}
-
-To get started using **Infusion**, you'll first need to look at the {{% pattern "Installation" %}} pattern.
