@@ -28,4 +28,20 @@ tags = ["interactive", "popup", "javascript"]
 +++
 ```
 
-This will create links to tag pages listing content tagged with the same terms.
+This will create links to pages listing content tagged with the same terms using the URL schema `/tag/[tag name]`.
+
+### Weight
+
+By default, patterns are listed in alphabetical order. However, sometimes you might like to change the order around. This is possible by adding a `weight` parameter. To make my menu button pattern appear at the top of its subsection, I would give it a `weight` of `1`:
+
+```
++++
+title = "Menu button"
+tags = ["interactive", "popup", "javascript"]
+weight = 1
++++
+```
+
+{{% warning %}}
+The `weight` parameter should be an integer, not a string, so don't use scare quotes around the value!
+{{% /warning %}}

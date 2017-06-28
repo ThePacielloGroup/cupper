@@ -30,7 +30,7 @@
             {{ $current := . }}
             {{ range $.Site.Home.Sections }}
               <ul>
-                {{ range .Pages }}
+                {{ range .Pages.ByWeight }}
                   <li class="pattern">
                     <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
                       <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
@@ -43,7 +43,7 @@
                   <li>
                     <h3>{{ .Title }}</h3>
                     <ul>
-                      {{ range .Pages }}
+                      {{ range .Pages.ByWeight }}
                         <li class="pattern">
                           <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
                             <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>

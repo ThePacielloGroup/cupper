@@ -2,7 +2,7 @@
 title = "Library setup"
 +++
 
-By now, you should have followed the {{% patternLink "Installation" %}} instructions. You should have Hugo and Node installed, and a local copy of a forked version of **Infusion**. You should also have run `npm install` in the root of that codebase.
+By now, you should have followed the {{% pattern "Installation" %}} instructions. You should have Hugo and Node installed, and a local copy of a forked version of **Infusion**. You should also have run `npm install` in the root of that codebase.
 
 ## "Cleaning" the content folder
 
@@ -14,7 +14,7 @@ If you are contributing to an existing **Infusion** library, do not run the foll
 
 {{<cmd>}}npm run clean{{</cmd>}}
 
-This will leave your `content` folder with just an `_index.md` file and a `patterns` folder containing a single demonstration pattern file. Find out more about these in {{% patternLink "Library structure" %}}.
+This will leave your `content` folder with just an `_index.md` file and a `patterns` folder containing a single demonstration pattern file. Find out more about these in {{% pattern "Library structure" %}}.
 
 ## The `setup` command
 
@@ -46,4 +46,4 @@ theme = "infusion"
 
 In the `static` folder, you'll find a `logo.png` file. Replace this file with your own company or project logo. Currently, only the PNG format is supported.
 
-Now that your logo's in place, everything should be ready. Where next? You can learn about {{% patternLink "Library structure" %}} to help you get writing, or find out how to serve the library locally and on Github Pages in {{% patternLink "Serving" %}}.
+Now that your logo's in place, everything should be ready. Where next? You can learn about {{% pattern "Library structure" %}} to help you get writing, or find out how to serve the library locally and on Github Pages in {{% pattern "Serving" %}}.

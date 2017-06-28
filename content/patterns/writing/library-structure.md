@@ -1,5 +1,6 @@
 +++
 title = "Library structure"
+weight = 1
 +++
 
 Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:
@@ -12,8 +13,9 @@ Before you can set about documenting patterns, you need to know where everything
         └── name-of-my-other-pattern.md
 ```
 
-* **_index.md** — This is the content for your home page
-* **/patterns** — This is the folder where individual pattern files are kept
+* **/content** - This is where all of your content lives. You won't need to visit any other folders very frequently.
+* **_index.md** — This is the content for your home page.
+* **/patterns** — This is the folder where individual pattern files are kept.
 
 ## Subsections
 
@@ -45,4 +47,4 @@ The `/patterns` folder itself does not need indexing explicitly in this way.
 **Infusion** does not currently support _sub_-subsections.
 {{% /note %}}
 
-Now that you know where to put everything, it's time to talk about how to actually write individual patterns. Don't worry, it's pretty straightforward. Turn to {{% patternLink "Markdown & metadata" %}}.
+Now that you know where to put everything, it's time to talk about how to actually write individual patterns. Don't worry, it's pretty straightforward. Turn to {{% pattern "Markdown & metadata" %}}.

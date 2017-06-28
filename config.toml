@@ -1,7 +1,7 @@
 languageCode = "en-us"
-title = "Inclusive Pattern Docs"
+title = "Infusion"
 baseURL = "/"
-theme = "inclusive-pattern-docs"
+theme = "infusion"
 
 [params]
   description = "Documentation for the <strong>Infusion</strong> pattern library builder. This documentation is constructed using the builder itself."

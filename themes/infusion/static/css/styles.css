@@ -43,10 +43,18 @@ img {
   max-width: 100%;
 }
 
+p img {
+  margin-top: 0.75rem;
+}
+
+figure p img {
+  margin-top: 0;
+}
+
 :focus:not([tabindex="-1"]),
 [data-expands]:focus svg,
 .patterns a:focus span {
-  outline: 3px solid #999;
+  outline: 3px solid #ccc;
   outline-offset: 2px;
 }
 
@@ -415,7 +423,6 @@ pre[class*=language-] code * {
 }
 
 *:not(pre) > code {
-  background: #f7f7f7;
   padding: 0.125rem 0.25rem;
   white-space: nowrap;
 }
@@ -452,7 +459,6 @@ pre[class*=language-] code * {
 .token.attr-value,
 .token.keyword {
 	color: #666;
-  font-weight: bold;
 }
 
 .token.function {
@@ -529,6 +535,10 @@ p:empty {
   display: none;
 }
 
+*:not(p) + p:empty + p {
+  margin-top: 2.25rem;
+}
+
 /* WCAG and principles */
 
 .wcag ul li {
@@ -570,6 +580,10 @@ a .bookmark {
   width: 0.75em;
 }
 
+a .balloon {
+  height: 1.125em;
+}
+
 /* cross references */
 
 .pattern-link {
@@ -600,6 +614,7 @@ a .bookmark {
 
   .intro-and-nav > div {
     padding: 1.5rem;
+    padding-bottom: 0;
   }
 
   .logo img {
@@ -610,10 +625,27 @@ a .bookmark {
     margin: 0;
   }
 
+  .patterns h3 {
+    margin-top: 0.75rem;
+  }
+
   .patterns li {
     margin: 0;
+  }
+
+  .patterns a {
     padding: 0.75rem 0;
     font-size: 1rem;
+  }
+
+  .patterns a[aria-current] {
+    background: #111;
+    color: #fff;
+    padding: 0.75rem;
+  }
+
+  .patterns a[aria-current] span {
+    text-decoration: none;
   }
 
   .patterns li + li {
