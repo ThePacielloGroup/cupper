@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Infusion"
-baseURL = "https://heydon.github.io/inclusive-pattern-library/"
+baseURL = "https://heydon.github.io/infusion/"
 canonifyURLs = true
 theme = "infusion"
 
