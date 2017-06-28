@@ -4,13 +4,17 @@ title = "References"
 
 ## Cross-references
 
-**Infusion** provides an easy mechanism to cross-reference patterns, by name, using the `pattern` shortcode. For example, I can reference the {{% pattern "Notes and warnings" %}} pattern here. Here's what the markdown looks like, including the shortcode:
+**Infusion** provides an easy mechanism to cross-reference patterns, by title, using the `pattern` shortcode. For example, I can reference the {{% pattern "Notes & warnings" %}} pattern. Here's what the markdown looks like, including the shortcode:
 
 {{<codeBlock>}}
-I can reference the &#x7b;{% pattern "Notes and warnings" %}} pattern here.
+I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 {{</codeBlock>}}
 
 This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.
+
+{{% note %}}
+The title argument you supply to the shortcode must be exactly the same as the referenced pattern's `title` metadata value and is case sensitive.
+{{% /note %}}
 
 ## WCAG References
 

@@ -310,7 +310,7 @@ th:empty {
   margin: 0;
 }
 
-.tag {
+.tag-icon {
   height: 1em;
   width: auto;
   vertical-align: middle;
@@ -423,7 +423,6 @@ pre[class*=language-] code * {
 }
 
 *:not(pre) > code {
-  padding: 0.125rem 0.25rem;
   white-space: nowrap;
 }
 
@@ -462,11 +461,11 @@ pre[class*=language-] code * {
 }
 
 .token.function {
-	color: #ccc;
+	color: #888;
 }
 
 .line-numbers code {
-  padding-left: 2.25rem;
+  padding-left: 3rem;
   margin-top: -1rem;
   overflow-x: auto;
   overflow-y: hidden;
@@ -478,8 +477,10 @@ pre[class*=language-] code * {
 
 .line-numbers .line-numbers-rows {
   margin-left: 2.25rem;
+  left: -3.5em;
   top: 1.25rem;
   color: #111;
+  border-color: #111;
 }
 
 .line-numbers-rows > span:before {
@@ -614,7 +615,6 @@ a .balloon {
 
   .intro-and-nav > div {
     padding: 1.5rem;
-    padding-bottom: 0;
   }
 
   .logo img {
@@ -626,29 +626,11 @@ a .balloon {
   }
 
   .patterns h3 {
-    margin-top: 0.75rem;
+    font-size: 1.125rem;
   }
 
-  .patterns li {
-    margin: 0;
-  }
-
-  .patterns a {
-    padding: 0.75rem 0;
+  .pattern {
     font-size: 1rem;
   }
 
-  .patterns a[aria-current] {
-    background: #111;
-    color: #fff;
-    padding: 0.75rem;
-  }
-
-  .patterns a[aria-current] span {
-    text-decoration: none;
-  }
-
-  .patterns li + li {
-    border-top: 1px solid;
-  }
 }

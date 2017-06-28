@@ -3,18 +3,59 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/patterns/writing/library-structure/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/writing/markdown-and-metadata/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2017-06-26T18:27:58+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/patterns/writing/including-images/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/project-setup/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/writing/notes-and-warnings/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/patterns/writing/references/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/serving/</loc>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/patterns/writing/</loc>
   </url>
   
 </urlset>

@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="/patterns/">
+    <link rel="canonical" href="/patterns/serving/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>
       
-        Patterns | Infusion
+        Serving | Infusion
       
     </title>
   </head>
@@ -83,7 +83,7 @@
                   </li>
                 
                   <li class="pattern">
-                    <a href="/patterns/serving/" >
+                    <a href="/patterns/serving/" aria-current="page">
                       <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span>Serving</span>
                     </a>
@@ -142,44 +142,37 @@
         <div>
           
   <main id="main">
-    <h1>
-      
-      
-      Patterns
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="/patterns/installation/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Installation
-    </a>
-  </h2>
-</li>
+    <h1>Serving</h1>
+    
+    
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/project-setup/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Library setup
-    </a>
-  </h2>
-</li>
+<h2 id="serving-locally">Serving locally</h2>
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/serving/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Serving
-    </a>
-  </h2>
-</li>
+<p>While you&rsquo;re creating content for your library, you&rsquo;ll probably want to see what the finished product looks like. Fortunately, <strong>Infusion</strong> is easy to serve locally using the <code>serve</code> command:</p>
 
-      
-    </ul>
+<pre class="cmd"><code>npm run serve</code></pre>
+
+
+<p>This will serve your working library on <code>localhost:1313</code>. Whenever you make changes to your library&rsquo;s files, the site will automatically rebuild. No need to refresh the web page!</p>
+
+<h2 id="publishing-on-github-pages">Publishing on Github Pages</h2>
+
+<p>The easiest way to host your pattern library so you have a link to share is to run the <code>host</code> command. This will build the library and push it to the local Github repository&rsquo;s <code>gh-pages</code> branch.</p>
+
+<pre class="cmd"><code>npm run host</code></pre>
+
+
+<p>You should now be able to find a &ldquo;live&rdquo; version of your library at <code>github.io/[your username]/[your library repo' name]</code>.</p>
+
+<aside aria-label="warning" class="note warning">
+  <div>
+    <img src="/images/icon-warning.svg" alt="">
+    <p>The <code>host</code> command <em>force</em> pushes the contents of the <code>public</code> folder to <code>gh-pages</code>. This is not in itself problematic since nothing is overwritten on the <code>master</code> branch. However, be aware that the command does not push your <code>master</code> branch changes to origin. You still have to commit and push any changes you&rsquo;ve made locally.</p>
+
+  </div>
+</aside>
+
+
   </main>
 
           <footer role="contentinfo">

@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="/patterns/">
+    <link rel="canonical" href="/patterns/writing/library-structure/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>
       
-        Patterns | Infusion
+        Library structure | Infusion
       
     </title>
   </head>
@@ -96,7 +96,7 @@
                     <ul>
                       
                         <li class="pattern">
-                          <a href="/patterns/writing/library-structure/" >
+                          <a href="/patterns/writing/library-structure/" aria-current="page">
                             <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span>Library structure</span>
                           </a>
@@ -142,44 +142,95 @@
         <div>
           
   <main id="main">
-    <h1>
-      
-      
-      Patterns
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="/patterns/installation/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Installation
-    </a>
-  </h2>
-</li>
+    <h1>Library structure</h1>
+    
+    
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/project-setup/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Library setup
-    </a>
-  </h2>
-</li>
+<p>Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:</p>
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/serving/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Serving
-    </a>
-  </h2>
-</li>
+<pre><code>└── content
+    ├── _index.md
+    └── patterns
+        ├── name-of-my-pattern.md
+        └── name-of-my-other-pattern.md
+</code></pre>
 
-      
-    </ul>
+<ul>
+<li><strong>/content</strong> - This is where all of your content lives. You won&rsquo;t need to visit any other folders very frequently.</li>
+<li><strong>_index.md</strong> — This is the content for your home page.</li>
+<li><strong>/patterns</strong> — This is the folder where individual pattern files are kept.</li>
+</ul>
+
+<h2 id="subsections">Subsections</h2>
+
+<p>You may have noticed that this site&rsquo;s navigation is divided partly into subsections, with labels like &ldquo;Writing&rdquo;. <strong>Infusion</strong> (or, rather, Hugo) allows you to create such subsections by simply nesting folders under the <code>/patterns</code> folder. In the following example, I have a subsection about different types of &ldquo;popup&rdquo; pattern.</p>
+
+<pre><code>└── content
+    ├── _index.md
+    └── patterns
+        ├── name-of-my-pattern.md
+        ├── name-of-my-other-pattern.md
+        └── popups
+            ├── _index.md
+            ├── popup-menu.md
+            └── tooltip.md
+</code></pre>
+
+<aside aria-label="note" class="note">
+  <div>
+    <img src="/images/icon-info.svg" alt="">
+    <p>Note that subfolders like <code>/popups</code> must each have an <code>_index.md</code> file. This file doesn&rsquo;t need any content except the TOML metadata defining the title (name) of that subsection:</p>
+
+<pre><code>+++
+title = &quot;Popups&quot;
++++
+</code></pre>
+
+<p>The <code>/patterns</code> folder itself does not need indexing explicitly in this way.</p>
+
+<p><strong>Infusion</strong> does not currently support <em>sub</em>-subsections.</p>
+
+  </div>
+</aside>
+
+
+<p>Now that you know where to put everything, it&rsquo;s time to talk about how to actually write individual patterns. Don&rsquo;t worry, it&rsquo;s pretty straightforward. Turn to 
+
+  
+
+  
+    <a class="pattern-link" href="/patterns/writing/markdown-and-metadata/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Markdown &amp; metadata
+    </a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+.</p>
+
   </main>
 
           <footer role="contentinfo">

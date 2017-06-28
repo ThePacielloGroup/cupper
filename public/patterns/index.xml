@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Patterns on Inclusive Pattern Docs</title>
+    <title>Patterns on Infusion</title>
     <link>/patterns/</link>
-    <description>Recent content in Patterns on Inclusive Pattern Docs</description>
+    <description>Recent content in Patterns on Infusion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -11,21 +11,36 @@
     
     
     <item>
-      <title>Collapsible region</title>
-      <link>/patterns/example1/</link>
+      <title>Installation</title>
+      <link>/patterns/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/patterns/example1/</guid>
-      <description>Nulla auctor eleifend turpis consequat pharetra: Cras molestie risus a enim convallis vitae luctus libero lacinia. Aliquam nisl enim, tristique tempus placerat at, posuere in lectus. Nulla auctor eleifend turpis consequat pharetra. Sed mauris arcu, aliquet ultrices malesuada sed, pretium id CTRL + V massa. Fusce ac sodales magna. Nulla auctor eleifend turpis consequat pharetra: Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh (iaculis pretium sem orci aliquet mauris).</description>
+      <guid>/patterns/installation/</guid>
+      <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get set up step-by-step.
+1. Install Hugo First we need to install Hugo globally.
+OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
+brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
     </item>
     
     <item>
-      <title>Tab interface</title>
-      <link>/patterns/example2/</link>
+      <title>Library setup</title>
+      <link>/patterns/project-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/patterns/example2/</guid>
-      <description>Vestibulum sit amet ipsum lacus&amp;hellip; Nulla lobortis tempus commodo. Maecenas sit amet tellus nec mi gravida posuere non pretium magna. Sed dapibus, lectus sit amet adipiscing egestas, mauris est viverra nibh, iaculis pretium sem orci aliquet mauris. Sed mauris arcu, aliquet ultrices malesuada sed, pretium id CTRL + V massa. Nulla lobortis tempus commodo. Nulla vel magna sit &amp;mdash; amet dui lobortis commodo &amp;mdash; vitae vel nulla. Lorem ipsum dolor sit amet, &amp;mdash; consectetur adipiscing &amp;mdash; elit.</description>
+      <guid>/patterns/project-setup/</guid>
+      <description>By now, you should have followed the   Installation  instructions. You should have Hugo and Node installed, and a local copy of a forked version of Infusion. You should also have run npm install in the root of that codebase.
+&amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start documenting patterns, there are a few things still to do in order to get set up. At the moment, your version of Infusion is a facsimile of the original, containing all this documentation content.</description>
+    </item>
+    
+    <item>
+      <title>Serving</title>
+      <link>/patterns/serving/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/serving/</guid>
+      <description>Serving locally While you&amp;rsquo;re creating content for your library, you&amp;rsquo;ll probably want to see what the finished product looks like. Fortunately, Infusion is easy to serve locally using the serve command:
+npm run serve This will serve your working library on localhost:1313. Whenever you make changes to your library&amp;rsquo;s files, the site will automatically rebuild. No need to refresh the web page!
+Publishing on Github Pages The easiest way to host your pattern library so you have a link to share is to run the host command.</description>
     </item>
     
   </channel>

@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="/patterns/">
+    <link rel="canonical" href="/patterns/writing/markdown-and-metadata/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>
       
-        Patterns | Infusion
+        Markdown &amp; metadata | Infusion
       
     </title>
   </head>
@@ -103,7 +103,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="/patterns/writing/markdown-and-metadata/" >
+                          <a href="/patterns/writing/markdown-and-metadata/" aria-current="page">
                             <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span>Markdown &amp; metadata</span>
                           </a>
@@ -142,44 +142,55 @@
         <div>
           
   <main id="main">
-    <h1>
-      
-      
-      Patterns
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="/patterns/installation/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Installation
-    </a>
-  </h2>
-</li>
+    <h1>Markdown &amp; metadata</h1>
+    
+    
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/project-setup/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Library setup
-    </a>
-  </h2>
-</li>
+<p>In <strong>Infusion</strong>, design patterns are documented using markdown. To create a new pattern file, just add a file with the <code>.md</code> extension to the <code>/patterns</code> folder. It&rsquo;s recommended you use &ldquo;kebab case&rdquo; to name the file ( words separated by hyphens). For example, a pattern with the title &ldquo;Menu button&rdquo; should probably have the filename <code>menu-button</code>. Then you get a nice clean URL: <code>your-company.com/patterns/menu-button</code>.</p>
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/serving/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Serving
-    </a>
-  </h2>
-</li>
+<p>If you&rsquo;re not familiar with writing markdown, there are a number of tutorials available. One of the best is <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a> offered by Github. There&rsquo;s also a <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">nice cheatsheet here</a>.</p>
 
-      
-    </ul>
+<h2 id="the-metadata">The metadata</h2>
+
+<p>Like many static site generators, Hugo lets you add metadata to its markdown files. Hugo&rsquo;s brand of metadata is called TOML (although YAML is also accepted). The only thing you <em>have</em> to put in the TOML is a <code>title</code> — like this:</p>
+
+<pre><code>+++
+title = &quot;Menu button&quot;
++++
+</code></pre>
+
+<h3 id="tags">Tags</h3>
+
+<p>If you like, you can also tag the pattern so that it turns up in lists of similar content. You add tags in an array format. Note that all the TOML data is found at the top of the markdown file, between the <code>+++</code> lines.</p>
+
+<pre><code>+++
+title = &quot;Menu button&quot;
+tags = [&quot;interactive&quot;, &quot;popup&quot;, &quot;javascript&quot;]
++++
+</code></pre>
+
+<p>This will create links to pages listing content tagged with the same terms using the URL schema <code>/tag/[tag name]</code>.</p>
+
+<h3 id="weight">Weight</h3>
+
+<p>By default, patterns are listed in alphabetical order. However, sometimes you might like to change the order around. This is possible by adding a <code>weight</code> parameter. To make my menu button pattern appear at the top of its subsection, I would give it a <code>weight</code> of <code>1</code>:</p>
+
+<pre><code>+++
+title = &quot;Menu button&quot;
+tags = [&quot;interactive&quot;, &quot;popup&quot;, &quot;javascript&quot;]
+weight = 1
++++
+</code></pre>
+
+<aside aria-label="warning" class="note warning">
+  <div>
+    <img src="/images/icon-warning.svg" alt="">
+    <p>The <code>weight</code> parameter should be an integer, not a string, so don&rsquo;t use scare quotes around the value!</p>
+
+  </div>
+</aside>
+
+
   </main>
 
           <footer role="contentinfo">

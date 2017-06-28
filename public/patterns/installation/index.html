@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="/patterns/">
+    <link rel="canonical" href="/patterns/installation/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>
       
-        Patterns | Infusion
+        Installation | Infusion
       
     </title>
   </head>
@@ -67,7 +67,7 @@
               <ul>
                 
                   <li class="pattern">
-                    <a href="/patterns/installation/" >
+                    <a href="/patterns/installation/" aria-current="page">
                       <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span>Installation</span>
                     </a>
@@ -142,44 +142,106 @@
         <div>
           
   <main id="main">
-    <h1>
-      
-      
-      Patterns
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="/patterns/installation/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Installation
-    </a>
-  </h2>
-</li>
+    <h1>Installation</h1>
+    
+    
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/project-setup/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+<p><strong>Infusion</strong> is built using the static site engine, <a href="https://gohugo.io/">Hugo</a>, and NPM. The codebase is available to download on Github. Let&rsquo;s get set up step-by-step.</p>
+
+<h2 id="1-install-hugo">1. Install Hugo</h2>
+
+<p>First we need to install Hugo globally.</p>
+
+<h3 id="osx-users">OSX users</h3>
+
+<p>If you are a Mac user and have <a href="https://brew.sh/">Homebrew</a> on your system, installing Hugo is simple:</p>
+
+<pre class="cmd"><code>brew install hugo</code></pre>
+
+
+<p>Alternatively, you can manually <a href="https://github.com/gohugoio/hugo/releases">install Hugo from a package</a>. You can verify the installation was successful by typing:</p>
+
+<pre class="cmd"><code>hugo version</code></pre>
+
+
+<h3 id="windows-users">Windows users</h3>
+
+<p>Installing on Windows is a bit more involved than on OSX. The authors of Hugo provide <a href="https://gohugo.io/tutorials/installing-on-windows/">a guide</a> with instructions for technical and less technical users.</p>
+
+<h2 id="2-install-node-npm">2. Install Node &amp; NPM</h2>
+
+<p>It is entirely likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, <a href="https://docs.npmjs.com/getting-started/installing-node">refer to NPM&rsquo;s own guide</a>, which includes a video tutorial.</p>
+
+<h2 id="3-getting-the-files">3. Getting the files</h2>
+
+<p><strong>Infusion</strong> is hosted on Github. To start using it, you&rsquo;ll need to get the files from there. If you are comfortable with the command line, just fork the <a href="https://github.com/heydon/inclusive-pattern-library">github.com/heydon/inclusive-pattern-library</a> repository, then do a <code>git clone</code> to your local system. Replace <code>[your username]</code> in the following:</p>
+
+<pre class="cmd"><code>git clone https://github.com/[your username]/infusion-builder.git</code></pre>
+
+
+<p>If the command line is not your thing, fork  <a href="https://github.com/heydon/inclusive-pattern-library">github.com/heydon/inclusive-pattern-library</a> and choose <strong>Open in Desktop</strong> from <strong>Clone or download</strong> (see figure 1, below).</p>
+
+
+<figure role="group" aria-describedby="VGhlIEdpdGh1YiB3ZWIg">
+  <p><img src="/images/open_in_desktop.png" alt="The open in desktop option, revealed when clicking clone or download" /></p>
+
+  <figcaption id="VGhlIEdpdGh1YiB3ZWIg">
+    The Github web interface
+  </figcaption>
+</figure>
+
+
+<aside aria-label="note" class="note">
+  <div>
+    <img src="/images/icon-info.svg" alt="">
+    <p>If you do not have a version of the Github desktop client installed, follow the prompts after clicking <strong>Open in Desktop</strong>.</p>
+
+  </div>
+</aside>
+
+
+<p>Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:</p>
+
+<pre class="cmd"><code>npm install</code></pre>
+
+
+<p>Now it&rsquo;s time to consult the 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <a class="pattern-link" href="/patterns/project-setup/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50">
+        <use xlink:href="#bookmark"></use>
+      </svg>
       Library setup
     </a>
-  </h2>
-</li>
+  
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/serving/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Serving
-    </a>
-  </h2>
-</li>
+  
 
-      
-    </ul>
+  
+
+  
+
+  
+
+  
+
+  
+
+ pattern.</p>
+
   </main>
 
           <footer role="contentinfo">

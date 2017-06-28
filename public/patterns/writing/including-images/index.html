@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="/patterns/">
+    <link rel="canonical" href="/patterns/writing/including-images/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>
       
-        Patterns | Infusion
+        Including images | Infusion
       
     </title>
   </head>
@@ -110,7 +110,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="/patterns/writing/including-images/" >
+                          <a href="/patterns/writing/including-images/" aria-current="page">
                             <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span>Including images</span>
                           </a>
@@ -142,44 +142,68 @@
         <div>
           
   <main id="main">
-    <h1>
-      
-      
-      Patterns
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="/patterns/installation/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Installation
-    </a>
-  </h2>
-</li>
+    <h1>Including images</h1>
+    
+    
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/project-setup/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Library setup
-    </a>
-  </h2>
-</li>
+<p>From time to time, you&rsquo;ll be wanting to include images illustrating the documented pattern in hand. Images live in the static folder, which is a sibling of the <code>/content</code> folder you&rsquo;ll be mostly working in.</p>
 
-      
-          <li>
-  <h2>
-    <a href="/patterns/serving/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Serving
-    </a>
-  </h2>
-</li>
+<pre><code>├── content
+└── static
+    └── images
+        ├── logo.png
+        └── menu-button.gif
+</code></pre>
 
-      
-    </ul>
+<aside aria-label="note" class="note">
+  <div>
+    <img src="/images/icon-info.svg" alt="">
+    <p>When you first make a copy of <strong>Infusion</strong>, <strong>Infusion&rsquo;s</strong> own logo will be included. You should replace this with your own company or project logo.</p>
+
+  </div>
+</aside>
+
+
+<p>The path to the <code>/images</code> folder should begin with a forward slash, so include that when referencing images in your markdown.</p>
+
+<pre><code>![Global Megacorp Ltd](/images/logo.png)
+</code></pre>
+
+<h2 id="figures">Figures</h2>
+
+<p>Sometimes you will want to include a caption with your illustration. This is what the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements are for. However, <strong>Infusion</strong> doesn&rsquo;t ask you to code all that manually. A special shortcode is provided, which takes a <code>caption</code> parameter. Note that the image markdown is provided between the opening and closing shortcode tags:</p>
+
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% figure caption="Steve Faulkner works for The Paciello Group" %}}
+![Steve Faulkner's face](/images/steve_faulkner.jpg)
+&#x7b;{% /figure %}}
+</code></pre>
+
+
+<p>This will output the following. Note the automatically incremented <strong>Figure</strong> number.</p>
+
+
+<figure role="group" aria-describedby="U3RldmUgRmF1bGtuZXIg">
+  <p><img src="/images/steve_faulkner.jpg" alt="Steve Faulkner's face" /></p>
+
+  <figcaption id="U3RldmUgRmF1bGtuZXIg">
+    Steve Faulkner works for The Paciello Group
+  </figcaption>
+</figure>
+
+
+<p>The generated markup includes special provisions for assistive technology support:</p>
+
+<pre><code class="language-html">&lt;figure role=&quot;group&quot; aria-describedby=&quot;U3RldmUgRmF1bGtuZXIg&quot;&gt;
+  &lt;p&gt;
+    &lt;img src=&quot;/images/steve_faulkner.jpg&quot; alt=&quot;Steve Faulkner's face&quot;&gt;
+  &lt;/p&gt;
+  &lt;figcaption id=&quot;U3RldmUgRmF1bGtuZXIg&quot;&gt;
+    Steve Faulkner works for The Paciello Group
+  &lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+
   </main>
 
           <footer role="contentinfo">

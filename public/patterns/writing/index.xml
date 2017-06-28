@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Infusion Pattern Library Builder on Infusion</title>
-    <link>/</link>
-    <description>Recent content in The Infusion Pattern Library Builder on Infusion</description>
+    <title>Writing on Infusion</title>
+    <link>/patterns/writing/</link>
+    <description>Recent content in Writing on Infusion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/patterns/writing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -42,28 +41,6 @@ If you&amp;rsquo;re not familiar with writing markdown, there are a number of tu
     </item>
     
     <item>
-      <title>Installation</title>
-      <link>/patterns/installation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/patterns/installation/</guid>
-      <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get set up step-by-step.
-1. Install Hugo First we need to install Hugo globally.
-OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
-brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
-    </item>
-    
-    <item>
-      <title>Library setup</title>
-      <link>/patterns/project-setup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/patterns/project-setup/</guid>
-      <description>By now, you should have followed the   Installation  instructions. You should have Hugo and Node installed, and a local copy of a forked version of Infusion. You should also have run npm install in the root of that codebase.
-&amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start documenting patterns, there are a few things still to do in order to get set up. At the moment, your version of Infusion is a facsimile of the original, containing all this documentation content.</description>
-    </item>
-    
-    <item>
       <title>Notes &amp; warnings</title>
       <link>/patterns/writing/notes-and-warnings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -81,17 +58,6 @@ Notes You may wish to pick out some content in your pattern&amp;rsquo;s document
       <guid>/patterns/writing/references/</guid>
       <description>Cross-references Infusion provides an easy mechanism to cross-reference patterns, by name, using the pattern shortcode. For example, I can reference the pattern here. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
 I can reference the &amp;#x7b;{% pattern &#34;Notes and warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
-    </item>
-    
-    <item>
-      <title>Serving</title>
-      <link>/patterns/serving/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/patterns/serving/</guid>
-      <description>Serving locally While you&amp;rsquo;re creating content for your library, you&amp;rsquo;ll probably want to see what the finished product looks like. Fortunately, Infusion is easy to serve locally using the serve command:
-npm run serve This will serve your working library on localhost:1313. Whenever you make changes to your library&amp;rsquo;s files, the site will automatically rebuild. No need to refresh the web page!
-Publishing on Github Pages The easiest way to host your pattern library so you have a link to share is to run the host command.</description>
     </item>
     
   </channel>
