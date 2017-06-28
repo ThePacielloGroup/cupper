@@ -7,7 +7,15 @@
   </url>
   
   <url>
+    <loc>/patterns/writing/</loc>
+  </url>
+  
+  <url>
     <loc>/patterns/writing/markdown-and-metadata/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/writing/expandable-sections/</loc>
   </url>
   
   <url>
@@ -21,6 +29,18 @@
   </url>
   
   <url>
+    <loc>/patterns/code/code-blocks/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/code/codepen-embedding/</loc>
+  </url>
+  
+  <url>
+    <loc>/patterns/code/</loc>
+  </url>
+  
+  <url>
     <loc>/patterns/writing/including-images/</loc>
   </url>
   
@@ -29,7 +49,7 @@
   </url>
   
   <url>
-    <loc>/patterns/project-setup/</loc>
+    <loc>/patterns/library-setup/</loc>
   </url>
   
   <url>
@@ -55,7 +75,7 @@
   </url>
   
   <url>
-    <loc>/patterns/writing/</loc>
+    <loc>/patterns/code/writing-inline-demos/</loc>
   </url>
   
 </urlset>

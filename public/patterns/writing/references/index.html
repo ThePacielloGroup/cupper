@@ -75,7 +75,7 @@
                   </li>
                 
                   <li class="pattern">
-                    <a href="/patterns/project-setup/" >
+                    <a href="/patterns/library-setup/" >
                       <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span>Library setup</span>
                     </a>
@@ -110,6 +110,13 @@
                         </li>
                       
                         <li class="pattern">
+                          <a href="/patterns/writing/expandable-sections/" >
+                            <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <span>Expandable sections</span>
+                          </a>
+                        </li>
+                      
+                        <li class="pattern">
                           <a href="/patterns/writing/including-images/" >
                             <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span>Including images</span>
@@ -133,6 +140,34 @@
                     </ul>
                   </li>
                 
+                  <li>
+                    <h3>Exhibiting code</h3>
+                    <ul>
+                      
+                        <li class="pattern">
+                          <a href="/patterns/code/code-blocks/" >
+                            <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <span>Code blocks</span>
+                          </a>
+                        </li>
+                      
+                        <li class="pattern">
+                          <a href="/patterns/code/codepen-embedding/" >
+                            <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <span>CodePen embedding</span>
+                          </a>
+                        </li>
+                      
+                        <li class="pattern">
+                          <a href="/patterns/code/writing-inline-demos/" >
+                            <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <span>Writing inline demos</span>
+                          </a>
+                        </li>
+                      
+                    </ul>
+                  </li>
+                
               </ul>
             
           </nav>
@@ -148,7 +183,7 @@
 
 <h2 id="cross-references">Cross-references</h2>
 
-<p><strong>Infusion</strong> provides an easy mechanism to cross-reference patterns, by name, using the <code>pattern</code> shortcode. For example, I can reference the 
+<p><strong>Infusion</strong> provides an easy mechanism to cross-reference patterns, by title, using the <code>pattern</code> shortcode. For example, I can reference the 
 
   
 
@@ -175,15 +210,41 @@
   
 
   
+    <a class="pattern-link" href="/patterns/writing/notes-and-warnings/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      Notes &amp; warnings
+    </a>
+  
 
- pattern here. Here&rsquo;s what the markdown looks like, including the shortcode:</p>
+  
+
+  
+
+  
+
+  
+
+  
+
+ pattern. Here&rsquo;s what the markdown looks like, including the shortcode:</p>
 
 <pre class=" "><code  data-codeblock-shortcode>
-I can reference the &#x7b;{% pattern "Notes and warnings" %}} pattern here.
+I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 </code></pre>
 
 
 <p>This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</p>
+
+<aside aria-label="note" class="note">
+  <div>
+    <img src="/images/icon-info.svg" alt="">
+    <p>The title argument you supply to the shortcode must be exactly the same as the referenced pattern&rsquo;s <code>title</code> metadata value and is case sensitive.</p>
+
+  </div>
+</aside>
+
 
 <h2 id="wcag-references">WCAG References</h2>
 

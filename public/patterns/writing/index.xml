@@ -31,6 +31,17 @@ If you&amp;rsquo;re not familiar with writing markdown, there are a number of tu
     </item>
     
     <item>
+      <title>Expandable sections</title>
+      <link>/patterns/writing/expandable-sections/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/patterns/writing/expandable-sections/</guid>
+      <description>In some cases, where there is a lot of content, it&amp;rsquo;s helpful to collapse certain sections. That way, readers get an overview of what&amp;rsquo;s in the content and can choose where to focus in. Infusion provides a shortcode method for creating expandable sections which generates accessible markup using aria-expanded.
+The expandable shortcode takes three parameters:
+ label — This is the label for the the section heading. level — This is the heading level (e.</description>
+    </item>
+    
+    <item>
       <title>Including images</title>
       <link>/patterns/writing/including-images/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -56,8 +67,8 @@ Notes You may wish to pick out some content in your pattern&amp;rsquo;s document
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/patterns/writing/references/</guid>
-      <description>Cross-references Infusion provides an easy mechanism to cross-reference patterns, by name, using the pattern shortcode. For example, I can reference the pattern here. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
-I can reference the &amp;#x7b;{% pattern &#34;Notes and warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
+      <description>Cross-references Infusion provides an easy mechanism to cross-reference patterns, by title, using the pattern shortcode. For example, I can reference the   Notes &amp;amp; warnings  pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
+I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
     </item>
     
   </channel>

@@ -35,10 +35,4 @@ Mauris eget elit ut neque venenatis placerat id nec libero. Nunc accumsan cursus
 Ut vulputate enim ut lorem iaculis, vel faucibus metus iaculis. Aliquam erat volutpat. Aliquam luctus orci vel consectetur dignissim. Nullam et efficitur lorem, et ornare est. Sed tristique porttitor justo, quis malesuada velit. Nullam et elit finibus, sollicitudin velit placerat, ultricies dui.
 {{% /expandable %}}
 
-Unfortunately, it is not currently possible to include shortcodes inside other shortcodes, using the `{{% %}}` notation (which is designated for markdown content). If you use the angle brackets notation (illustrated below) it is possible, but markdown will no longer be permitted. You will have to code HTML inside such a section manually.
-
-{{<codeBlock>}}
-&#x7b;{&lt;expandable label="Another dummy section" level="2">}}
-&lt;p>Here is a nested pattern reference shortcode: &#x7b;{% pattern "Writing inline demos" %}}.&lt;/p>
-&#x7b;{&lt;/expandable>}}
-{{</codeBlock>}}
+Unfortunately, it is not currently possible to include shortcodes inside other shortcodes, using the "`%`" notation (which is designated for markdown content). If you use the angle brackets notation (illustrated below) it is possible, but markdown will no longer be permitted. You will have to code HTML inside such a section manually.
