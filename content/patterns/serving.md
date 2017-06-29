@@ -12,12 +12,12 @@ This will serve your working library on `localhost:1313`. Whenever you make chan
 
 ## Publishing on Github Pages
 
-The easiest way to host your pattern library so you have a link to share is to run the `host` command. This will build the library and push it to the local Github repository's `gh-pages` branch.
+The easiest way to host your pattern library so you have a link to share is to run the `host` command. This will build the library and push it to the local Github repository's `gh-pages` branch. Before you can use `host` you will need to commit any changes you made on the master branch. Otherwise there's nothing new to push over to the `gh-pages` branch.
+
+{{<cmd>}}git commit -am "my commit message"{{</cmd>}}
+
+This will ensure changes go through to `gh-pages`. Now you can run:
 
 {{<cmd>}}npm run host{{</cmd>}}
 
-You should now be able to find a "live" version of your library at `github.io/[your username]/[your library repo' name]`.
-
-{{% warning %}}
-The `host` command *force* pushes the contents of the `public` folder to `gh-pages`. This is not in itself problematic since nothing is overwritten on the `master` branch. However, be aware that the command does not push your `master` branch changes to origin. You still have to commit and push any changes you've made locally.
-{{% /warning %}}
+You should now be able to find a "live" version of your library at `github.io/[your username]/[your library repo  name]`.

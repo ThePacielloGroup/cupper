@@ -192,21 +192,17 @@
 
 <h2 id="publishing-on-github-pages">Publishing on Github Pages</h2>
 
-<p>The easiest way to host your pattern library so you have a link to share is to run the <code>host</code> command. This will build the library and push it to the local Github repository&rsquo;s <code>gh-pages</code> branch.</p>
+<p>The easiest way to host your pattern library so you have a link to share is to run the <code>host</code> command. This will build the library and push it to the local Github repository&rsquo;s <code>gh-pages</code> branch. Before you can use <code>host</code> you will need to commit any changes you made on the master branch:</p>
+
+<pre class="cmd"><code>git commit -am "my commit message"</code></pre>
+
+
+<p>This will ensure changes go through to <code>gh-pages</code>. Now you can run:</p>
 
 <pre class="cmd"><code>npm run host</code></pre>
 
 
-<p>You should now be able to find a &ldquo;live&rdquo; version of your library at <code>github.io/[your username]/[your library repo' name]</code>.</p>
-
-<aside aria-label="warning" class="note warning">
-  <div>
-    <img src="https://heydon.github.io/infusion/images/icon-warning.svg" alt="">
-    <p>The <code>host</code> command <em>force</em> pushes the contents of the <code>public</code> folder to <code>gh-pages</code>. This is not in itself problematic since nothing is overwritten on the <code>master</code> branch. However, be aware that the command does not push your <code>master</code> branch changes to origin. You still have to commit and push any changes you&rsquo;ve made locally.</p>
-
-  </div>
-</aside>
-
+<p>You should now be able to find a &ldquo;live&rdquo; version of your library at <code>github.io/[your username]/[your library repo  name]</code>.</p>
 
   </main>
 
