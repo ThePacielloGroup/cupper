@@ -192,22 +192,36 @@
 
 <h2 id="publishing-on-github-pages">Publishing on Github Pages</h2>
 
-<p>The easiest way to host your pattern library so you have a link to share is to run the <code>host</code> command. This will build the library and push it to the local Github repository&rsquo;s <code>gh-pages</code> branch. Before you can use <code>host</code> you will need to commit any changes you made on the master branch. Otherwise there&rsquo;s nothing new to push over to the <code>gh-pages</code> branch.</p>
+<p>There are three steps to hosting your library on Github Pages.</p>
+
+<h3 id="1-edit-the-baseurl">1. Edit the baseURL</h3>
+
+<p>Open up <code>config.toml</code> (at the root of your library project folder) and make sure <code>baseURL</code> matches your Github Pages URL.</p>
+
+<pre><code class="language-html">baseURL = &quot;[your user name].github.io/[your library repo name]&quot;
+</code></pre>
+
+<p>If you are having trouble working out your Github Pages URL, <a href="https://drastudio.github.io/url-generator/">this tool may help</a>.</p>
+
+<h3 id="2-commit-your-latest-changes">2. Commit your latest changes</h3>
+
+<p>On the (default) master branch run:</p>
 
 <pre class="cmd"><code>git commit -am "my commit message"</code></pre>
 
 
-<p>This will ensure changes go through to <code>gh-pages</code>. Now you can run:</p>
+<h3 id="3-run-the-host-command">3. Run the <code>host</code> command</h3>
 
 <pre class="cmd"><code>npm run host</code></pre>
 
 
-<p>You should now be able to find a &ldquo;live&rdquo; version of your library at <code>github.io/[your username]/[your library repo  name]</code>.</p>
+<p>You should now be able to find a &ldquo;live&rdquo; version of your library at <code>[your user name].github.io/[your library repo name]</code>.</p>
 
   </main>
 
           <footer role="contentinfo">
-            By Heydon Pickering
+            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project<br>
+            For general enquiries, contact us on info@paciellogroup.com
           </footer>
         </div>
       </div>
