@@ -12,12 +12,26 @@ This will serve your working library on `localhost:1313`. Whenever you make chan
 
 ## Publishing on Github Pages
 
-The easiest way to host your pattern library so you have a link to share is to run the `host` command. This will build the library and push it to the local Github repository's `gh-pages` branch. Before you can use `host` you will need to commit any changes you made on the master branch. Otherwise there's nothing new to push over to the `gh-pages` branch.
+There are three steps to hosting your library on Github Pages.
+
+### 1. Edit the baseURL
+
+Open up `config.toml` (at the root of your library project folder) and make sure `baseURL` matches your Github Pages URL.
+
+```html
+baseURL = "[your user name].github.io/[your library repo name]"
+```
+
+If you are having trouble working out your Github Pages URL, [this tool may help](https://drastudio.github.io/url-generator/).
+
+### 2. Commit your latest changes
+
+On the (default) master branch run:
 
 {{<cmd>}}git commit -am "my commit message"{{</cmd>}}
 
-This will ensure changes go through to `gh-pages`. Now you can run:
+### 3. Run the `host` command
 
 {{<cmd>}}npm run host{{</cmd>}}
 
-You should now be able to find a "live" version of your library at `github.io/[your username]/[your library repo  name]`.
+You should now be able to find a "live" version of your library at `[your user name].github.io/[your library repo name]`.
