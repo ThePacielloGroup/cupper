@@ -39,7 +39,7 @@ Infusion offers a couple of ways to do this. The first is by embedding CodePen d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://heydon.github.io/infusion/patterns/code/writing-inline-demos/</guid>
-      <description>There are some issues with   CodePen embedding  , like them not working offline. They also come with CodePen branding, which will clash with the pattern you&amp;rsquo;re trying to illustrate.
+      <description>There are some issues with CodePen embedding , like them not working offline. They also come with CodePen branding, which will clash with the pattern you&amp;rsquo;re trying to illustrate.
 Infusion offers another option: a special demo shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don&amp;rsquo;t have to worry about broken styles and global JS.</description>
     </item>
     
