@@ -30,7 +30,7 @@ This is a warning! It's about something the reader should be careful to do or to
 &#x7b;{% /warning %}}
 {{</codeBlock>}}
 
-Warning render like this:
+Warnings render like this:
 
 {{% warning %}}
 This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
