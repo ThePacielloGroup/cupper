@@ -147,3 +147,5 @@ k.prototype.setElementClass=k.prototype.Ja;k.prototype._styleInfoForNode=k.proto
 {ScopingShim:G,prepareTemplate:function(a,b,c){G.f();G.prepareTemplate(a,b,c)},styleSubtree:function(a,b){G.f();G.styleSubtree(a,b)},styleElement:function(a){G.f();G.styleElement(a)},styleDocument:function(a){G.f();G.styleDocument(a)},getComputedStyleValue:function(a,b){return G.getComputedStyleValue(a,b)},nativeCss:v,nativeShadow:u};fb&&(window.ShadyCSS.ApplyShim=fb);gb&&(window.ShadyCSS.CustomStyleInterface=gb);(function(){function a(){requestAnimationFrame(function(){window.WebComponents.ready=
 !0;window.document.dispatchEvent(new CustomEvent("WebComponentsReady",{bubbles:!0}))})}function b(){a();c.removeEventListener("readystatechange",b)}var c=window.document;window.WebComponents=window.WebComponents||{};"loading"!==c.readyState?a():c.addEventListener("readystatechange",b)})()})();
 }).call(self)
+
+//# sourceMappingURL=webcomponents-sd-ce.js.map

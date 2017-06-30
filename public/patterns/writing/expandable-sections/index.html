@@ -273,6 +273,13 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
 
 <p>Unfortunately, it is not currently possible to include shortcodes inside other shortcodes, using the &ldquo;<code>%</code>&rdquo; notation (which is designated for markdown content). If you use the angle brackets notation (illustrated below) it is possible, but markdown will no longer be permitted. You will have to code HTML inside such a section manually.</p>
 
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{&lt;expandable label="A section of dummy text" level="2">}}
+&lt;p>Here is a pattern reference shortcode: &#x7b;{% pattern "Writing inline demos" %}}.&lt;/p>
+&#x7b;{&lt;/expandable>}}
+</code></pre>
+
+
   </main>
 
           <footer role="contentinfo">

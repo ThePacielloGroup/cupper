@@ -26,7 +26,7 @@
             </a>
             <p class="library-desc">{{ .Site.Params.Description | safeHTML }}</p>
           </div>
-          <nav class="patterns" role="navigation">
+          <nav id="patterns-nav" class="patterns" role="navigation">
             {{ $current := . }}
             {{ range $.Site.Home.Sections }}
               <ul>
