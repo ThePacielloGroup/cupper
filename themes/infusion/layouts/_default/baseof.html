@@ -27,16 +27,16 @@
             <p class="library-desc">{{ .Site.Params.Description | safeHTML }}</p>
           </div>
           <nav id="patterns-nav" class="patterns" role="navigation">
+            <button id="menu-button" aria-expanded="false">Menu</button>
             {{ $current := . }}
             {{ range $.Site.Home.Sections }}
-              <ul>
+              <ul id="patterns-list">
                 {{ range .Pages.ByWeight }}
                   <li class="pattern">
                     <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
                       <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                      <span>{{ .Title }}</span>
+                      <span class="text">{{ .Title }}</span>
                     </a>
-                  </li>
                   </li>
                 {{ end }}
                 {{ range .Sections.ByWeight }}
@@ -47,7 +47,7 @@
                         <li class="pattern">
                           <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
                             <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                            <span>{{ .Title }}</span>
+                            <span class="text">{{ .Title }}</span>
                           </a>
                         </li>
                       {{ end }}
