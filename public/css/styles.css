@@ -53,7 +53,7 @@ figure p img {
 
 :focus:not([tabindex="-1"]),
 [data-expands]:focus svg,
-.patterns a:focus span {
+.patterns a:focus .text {
   outline: 3px solid #ccc;
   outline-offset: 2px;
 }
@@ -148,9 +148,13 @@ main ul ul {
 /* Buttons */
 
 button {
-  font-size: inherit;
+  font-size: 1.25rem;
   font-family: inherit;
   font-weight: inherit;
+  background: #111;
+  color: #fff;
+  padding: 0.75rem;
+  border: 0;
 }
 
 /* Tables */
@@ -210,6 +214,9 @@ th:empty {
 .library-desc {
   font-style: italic;
   margin-top: 0.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 30rem;
 }
 
 .main-and-footer {
@@ -277,6 +284,19 @@ th:empty {
 .pattern [aria-current] span {
   text-decoration: underline;
   text-decoration-skip: ink;
+}
+
+/* menu button */
+
+#menu-button {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+#menu-button:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 0.25rem #ccc;
 }
 
 /* Pattern lists */
@@ -629,10 +649,41 @@ a .balloon {
 
   .patterns h3 {
     font-size: 1.125rem;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    padding: 0.75rem 0;
+  }
+
+  .patterns ul ul {
+    margin: 0;
+  }
+
+  .patterns li {
+    margin-top: 0;
   }
 
   .pattern {
     font-size: 1rem;
+  }
+
+  .pattern a {
+    padding: 0.75rem 0;
+  }
+
+  .pattern + .pattern {
+    border-top: 1px solid;
+  }
+
+  #menu-button {
+    display: block;
+  }
+
+  #patterns-list {
+    display: none;
+  }
+
+  [aria-expanded="true"] + #patterns-list {
+    display: block;
   }
 
 }
