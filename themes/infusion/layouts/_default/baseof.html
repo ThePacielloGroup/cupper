@@ -35,7 +35,7 @@
                 {{ range .Pages.ByWeight }}
                   <li class="pattern">
                     <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
-                      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                      <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span class="text">{{ .Title }}</span>
                     </a>
                   </li>
@@ -47,7 +47,7 @@
                       {{ range .Pages.ByWeight }}
                         <li class="pattern">
                           <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
-                            <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">{{ .Title }}</span>
                           </a>
                         </li>
