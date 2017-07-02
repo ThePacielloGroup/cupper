@@ -620,12 +620,17 @@ a svg {
   margin-right: 0.125rem;
 }
 
-a .bookmark {
+a .bookmark-icon {
   width: 0.75em;
 }
 
-a .balloon {
+a .balloon-icon {
   height: 1.125em;
+  width: 0.85em;
+}
+
+a .wcag-icon {
+  width: 1.5em;
 }
 
 /* cross references */
