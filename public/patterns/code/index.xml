@@ -34,6 +34,16 @@ Infusion offers a couple of ways to do this. The first is by embedding CodePen d
     </item>
     
     <item>
+      <title>Color palettes</title>
+      <link>https://heydon.github.io/infusion/patterns/code/color-palettes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/code/color-palettes/</guid>
+      <description>There&amp;rsquo;s no reason why your Infusion-powered pattern library has to be all about functionality. You can include style guide-like information such as color palettes too. The colors shortcode makes it easy to exhibit colors and their values together. Just supply a comma-separated list of CSS color values.
+&amp;#x7b;{% colors &#34;#111111, #cccccc, #ffffff&#34; %}}  The result is a one row strip showing each color supplied in order. The colors for Infusion are greyscale:</description>
+    </item>
+    
+    <item>
       <title>Writing inline demos</title>
       <link>https://heydon.github.io/infusion/patterns/code/writing-inline-demos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
