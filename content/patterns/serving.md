@@ -8,7 +8,7 @@ While you're creating content for your library, you'll probably want to see what
 
 {{<cmd>}}npm run serve{{</cmd>}}
 
-This will serve your working library on `localhost:1313`. Whenever you make changes to your library's files, the site will automatically rebuild. No need to refresh the web page!
+This will serve your working library from `localhost:1313` (the exact URL will be determined by what's in your `baseURL` and will be revealed to you by your terminal). Whenever you make changes to your library's files, the site will automatically rebuild. No need to refresh the web page!
 
 ## Publishing on Github Pages
 
