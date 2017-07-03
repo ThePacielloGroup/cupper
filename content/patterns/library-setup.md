@@ -38,7 +38,7 @@ theme = "infusion"
 {{</codeBlock>}}
 
 * **title** — This is the library's name, like "Megacorp 5000 Pattern Library". You don't have to include the term "pattern library" if you don't want to. For **Infusion's** version of **Infusion**, the `title` is, naturally, _Infusion_ :-)
-* **baseURL** — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site. More information is available in {{% pattern "Serving" %}}.
+* **baseURL** — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site. 
 * **theme** — This is the theme the library is using. Don't change this from "infusion".
 * **description** — This is a short description of the library and comes under the logo. You can include HTML like `<em>` and `<strong>`.
 * **codePenUser** — If you want to embed codePens in your pattern files, you need to supply a codePen username here.
