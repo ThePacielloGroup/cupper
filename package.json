@@ -10,7 +10,7 @@
     "clean": "rm -rf content && mkdir content && mkdir content/patterns && hugo new patterns/pattern.md && hugo new _index.md",
     "build": "rm -rfv public/* && hugo",
     "setup": "hugo && git add public",
-    "host": "rm -rfv public/* && hugo && git add public && git push -f origin `git subtree split --prefix public master`:gh-pages"
+    "host": "rm -rfv public/* && hugo && git add public/* && git push -f origin `git subtree split --prefix public master`:gh-pages"
   },
   "repository": {
     "type": "git",

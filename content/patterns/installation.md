@@ -24,7 +24,7 @@ Installing on Windows is a bit more involved than on OSX. The authors of Hugo pr
 
 ## 2. Install Node & NPM
 
-It is entirely likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, [refer to NPM's own guide](https://docs.npmjs.com/getting-started/installing-node), which includes a video tutorial.
+It is likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, [refer to NPM's own guide](https://docs.npmjs.com/getting-started/installing-node), which includes a video tutorial.
 
 ## 3. Getting the files
 
