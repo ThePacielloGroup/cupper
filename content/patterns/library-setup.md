@@ -18,7 +18,7 @@ This will leave your `content` folder with just an `_index.md` file and a `patte
 
 ## The `setup` command
 
-There's another command, `setup`, which you need to run to create an initial build and make sure git is aware of the `public` folder it generates.
+There's another command, `setup`, which you need to run to create an initial build and make sure git is aware of the `/docs` folder it generates.
 
 {{<cmd>}}npm run setup{{</cmd>}}
 
@@ -37,8 +37,8 @@ theme = "infusion"
   codePenUser = "Heydon"
 {{</codeBlock>}}
 
-* **title** — This is the library's name, like "Megacorp 5000 Pattern Library". You don't have to include the term "pattern library" if you don't want to. For **Infusion's** version of **Infusion**, the `title` is, naturally, _Infusion_ :-)
-* **baseURL** — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site. 
+* **title** — This is the library's name, like "Megacorp 5000 Pattern Library". You don't have to include the term "pattern library" if you don't want to. For **Infusion's** own version of **Infusion**, the `title` is, naturally, _Infusion_ :-)
+* **baseURL** — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site.
 * **theme** — This is the theme the library is using. Don't change this from "infusion".
 * **description** — This is a short description of the library and comes under the logo. You can include HTML like `<em>` and `<strong>`.
 * **codePenUser** — If you want to embed codePens in your pattern files, you need to supply a codePen username here.

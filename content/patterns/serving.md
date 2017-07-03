@@ -12,8 +12,16 @@ This will serve your working library from `localhost:1313` (the exact URL will b
 
 ## Publishing on Github Pages
 
-**Infusion** creates a `/docs` folder containing the latest version of your library whenever you run `npm run build` or do a `git commit`. This folder can be made the source for your Github Pages site by selecting it under  **Settings → Github Pages → Source** in the web interface.
+**Infusion** creates a `/docs` folder containing the latest version of your library whenever you do an `npm run build` or a `git commit`. This folder can be made the source for your Github Pages site by selecting it under  **Settings → Github Pages → Source** in the web interface.
 
 ![The publishing source dropdown menu on Github](/images/serve_from_docs.png)
 
-Then, whenever you push to master, you will also be updating the site found at your Github Pages URL, in the format `[your user name].github.io/[your library repo name]`. You'll also need to add this URL to your `config.toml` file. See {{ pattern "Library setup" }} for more information.
+Then, whenever you push to master, you will also be updating the site found at your Github Pages URL.
+
+This URL will be in the following format:
+
+```
+[your user name].github.io/[your library repo name]`
+```
+
+You'll also need to add it to your `config.toml` file. See {{% pattern "Library setup" %}} for more information.
