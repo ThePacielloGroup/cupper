@@ -7,9 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "hugo server",
     "clean": "rm -rf content && mkdir content && mkdir content/patterns && hugo new patterns/pattern.md && hugo new _index.md",
-    "build": "hugo",
-    "precommit": "npm run build"
+    "build": "hugo"
   },
+  "pre-commit": [
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Heydon/inclusive-pattern-library.git"
@@ -19,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Heydon/inclusive-pattern-library/issues"
   },
-  "homepage": "https://github.com/Heydon/inclusive-pattern-library#readme"
+  "homepage": "https://github.com/Heydon/inclusive-pattern-library#readme",
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  }
 }
