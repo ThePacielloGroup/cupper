@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "hugo server",
     "clean": "rm -rf content && mkdir content && mkdir content/patterns && hugo new patterns/pattern.md && hugo new _index.md",
-    "build": "hugo && git add -A"
+    "build": "rm -rfv docs/* && hugo && git add -A"
   },
   "pre-commit": [
     "build"
