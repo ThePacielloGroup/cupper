@@ -1,9 +1,0 @@
-languageCode = "en-us"
-title = "Infusion"
-baseURL = "https://heydon.github.io/infusion/"
-canonifyURLs = true
-theme = "infusion"
-
-[params]
-  description = "Documentation for the <strong>Infusion</strong> pattern library builder. This documentation is constructed using the builder itself."
-  codePenUser = "Heydon"

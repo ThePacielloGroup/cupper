@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing on Infusion</title>
+    <link>https://heydon.github.io/infusion/patterns/writing/</link>
+    <description>Recent content in Writing on Infusion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://heydon.github.io/infusion/patterns/writing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Library structure</title>
+      <link>https://heydon.github.io/infusion/patterns/writing/library-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/writing/library-structure/</guid>
+      <description>Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:
+└── content ├── _index.md └── patterns ├── name-of-my-pattern.md └── name-of-my-other-pattern.md   /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content for your home page. /patterns — This is the folder where individual pattern files are kept.</description>
+    </item>
+    
+    <item>
+      <title>Markdown &amp; metadata</title>
+      <link>https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/</guid>
+      <description>In Infusion, design patterns are documented using markdown. To create a new pattern file, just add a file with the .md extension to the /patterns folder. It&amp;rsquo;s recommended you use &amp;ldquo;kebab case&amp;rdquo; to name the file ( words separated by hyphens). For example, a pattern with the title &amp;ldquo;Menu button&amp;rdquo; should probably have the filename menu-button. Then you get a nice clean URL: your-company.com/patterns/menu-button.
+If you&amp;rsquo;re not familiar with writing markdown, there are a number of tutorials available.</description>
+    </item>
+    
+    <item>
+      <title>Expandable sections</title>
+      <link>https://heydon.github.io/infusion/patterns/writing/expandable-sections/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/writing/expandable-sections/</guid>
+      <description>In some cases, where there is a lot of content, it&amp;rsquo;s helpful to collapse certain sections. That way, readers get an overview of what&amp;rsquo;s in the content and can choose where to focus in. Infusion provides a shortcode method for creating expandable sections which generates accessible markup using aria-expanded.
+The expandable shortcode takes three parameters:
+ label — This is the label for the the section heading. level — This is the heading level (e.</description>
+    </item>
+    
+    <item>
+      <title>Including images</title>
+      <link>https://heydon.github.io/infusion/patterns/writing/including-images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/writing/including-images/</guid>
+      <description>From time to time, you&amp;rsquo;ll be wanting to include images illustrating the documented pattern in hand. Images live in the static folder, which is a sibling of the /content folder you&amp;rsquo;ll be mostly working in.
+├── content └── static └── images ├── logo.png └── menu-button.gif   When you first make a copy of Infusion, Infusion&amp;rsquo;s own logo will be included. You should replace this with your own company or project logo.</description>
+    </item>
+    
+    <item>
+      <title>Notes &amp; warnings</title>
+      <link>https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/</guid>
+      <description>Infusion acknowledges that simple markdown is limiting when it comes to writing compelling documentation, so it provides a number of &amp;ldquo;shortcodes&amp;rdquo;. Shortcodes offer a simple syntax for including rich content. For example, Infusion provides shortcodes for including notes and warnings.
+Notes You may wish to pick out some content in your pattern&amp;rsquo;s documentation as a note — an aside to the main thrust of the pattern&amp;rsquo;s description. This is possible using the following syntax:</description>
+    </item>
+    
+    <item>
+      <title>References</title>
+      <link>https://heydon.github.io/infusion/patterns/writing/references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/writing/references/</guid>
+      <description>Cross-references Infusion provides an easy mechanism to cross-reference patterns, by title, using the pattern shortcode. For example, I can reference the Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
+I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
+    </item>
+    
+  </channel>
+</rss>
