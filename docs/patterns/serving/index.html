@@ -198,30 +198,11 @@
 
 <h2 id="publishing-on-github-pages">Publishing on Github Pages</h2>
 
-<p>There are three steps to hosting your library on Github Pages.</p>
+<p><strong>Infusion</strong> creates a <code>/docs</code> folder containing the latest version of your library whenever you run <code>npm run build</code> or do a <code>git commit</code>. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
 
-<h3 id="1-edit-the-baseurl">1. Edit the baseURL</h3>
+<p><img src="https://heydon.github.io/infusion/images/serve_from_docs.png" alt="The publishing source dropdown menu on Github" /></p>
 
-<p>Open up <code>config.toml</code> (at the root of your library project folder) and make sure <code>baseURL</code> matches your Github Pages URL.</p>
-
-<pre><code class="language-html">baseURL = &quot;[your user name].github.io/[your library repo name]&quot;
-</code></pre>
-
-<p>If you are having trouble working out your Github Pages URL, <a href="https://drastudio.github.io/url-generator/">this tool may help</a>.</p>
-
-<h3 id="2-commit-your-latest-changes">2. Commit your latest changes</h3>
-
-<p>On the (default) master branch run:</p>
-
-<pre class="cmd"><code>git commit -am "my commit message"</code></pre>
-
-
-<h3 id="3-run-the-host-command">3. Run the <code>host</code> command</h3>
-
-<pre class="cmd"><code>npm run host</code></pre>
-
-
-<p>You should now be able to find a &ldquo;live&rdquo; version of your library at <code>[your user name].github.io/[your library repo name]</code>.</p>
+<p>Then, whenever you push to master, you will also be updating the site found at your Github Pages URL, in the format <code>[your user name].github.io/[your library repo name]</code>. You&rsquo;ll also need to add this URL to your <code>config.toml</code> file. See {{ pattern &ldquo;Library setup&rdquo; }} for more information.</p>
 
   </main>
 
