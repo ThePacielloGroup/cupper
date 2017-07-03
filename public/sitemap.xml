@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/writing/library-structure/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/writing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/writing/expandable-sections/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/</loc>
+    <lastmod>2017-06-26T18:27:58+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/code/code-blocks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/code/codepen-embedding/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/code/color-palettes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/code/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/writing/including-images/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/installation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/library-setup/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/writing/references/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/serving/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/code/writing-inline-demos/</loc>
+  </url>
+  
+</urlset>
