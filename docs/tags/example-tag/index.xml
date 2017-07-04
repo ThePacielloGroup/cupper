@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Example Tag on Infusion</title>
+    <link>https://heydon.github.io/infusion/tags/example-tag/</link>
+    <description>Recent content in Example Tag on Infusion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://heydon.github.io/infusion/tags/example-tag/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Library setup</title>
+      <link>https://heydon.github.io/infusion/patterns/library-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/library-setup/</guid>
+      <description>By now, you should have followed the Installation instructions. You should have Hugo and Node installed, and a local copy of a forked version of Infusion. You should also have run npm install in the root of that codebase.
+&amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start documenting patterns, there are a few things still to do in order to get set up. At the moment, your version of Infusion is a facsimile of the original, containing all this documentation content.</description>
+    </item>
+    
+  </channel>
+</rss>

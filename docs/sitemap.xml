@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://heydon.github.io/infusion/patterns/coding/code-blocks/</loc>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/writing/library-structure/</loc>
   </url>
   
@@ -11,7 +15,15 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/patterns/coding/codepen-embedding/</loc>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/</loc>
   </url>
   
   <url>
@@ -29,19 +41,16 @@
   </url>
   
   <url>
-    <loc>https://heydon.github.io/infusion/patterns/code/code-blocks/</loc>
+    <loc>https://heydon.github.io/infusion/patterns/coding/</loc>
   </url>
   
   <url>
-    <loc>https://heydon.github.io/infusion/patterns/code/codepen-embedding/</loc>
+    <loc>https://heydon.github.io/infusion/patterns/coding/color-palettes/</loc>
   </url>
   
   <url>
-    <loc>https://heydon.github.io/infusion/patterns/code/color-palettes/</loc>
-  </url>
-  
-  <url>
-    <loc>https://heydon.github.io/infusion/patterns/code/</loc>
+    <loc>https://heydon.github.io/infusion/tags/example-tag/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -66,6 +75,11 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/tags/quickstart/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/writing/references/</loc>
   </url>
   
@@ -76,10 +90,6 @@
   <url>
     <loc>https://heydon.github.io/infusion/tags/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://heydon.github.io/infusion/patterns/code/writing-inline-demos/</loc>
   </url>
   
 </urlset>

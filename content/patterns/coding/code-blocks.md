@@ -1,5 +1,6 @@
 +++
 title = "Code blocks"
+weight = 1
 +++
 
 Markdown already supports code samples both inline (using single backticks like \`some code here\`) and in blocks. **Infusion** will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.

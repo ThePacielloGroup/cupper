@@ -1,5 +1,6 @@
 +++
 title = "Writing inline demos"
+weight = 3
 +++
 
 There are some issues with {{% pattern "CodePen embedding" %}}, like them not working offline. They also come with CodePen branding, which will clash with the pattern you're trying to illustrate.

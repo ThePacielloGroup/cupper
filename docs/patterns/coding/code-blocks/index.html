@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/serving/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/coding/code-blocks/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://heydon.github.io/infusion/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="https://heydon.github.io/infusion/css/styles.css">
     <title>
       
-        Serving | Infusion
+        Code blocks | Infusion
       
     </title>
   </head>
@@ -83,7 +83,7 @@
                   </li>
                 
                   <li class="pattern">
-                    <a href="https://heydon.github.io/infusion/patterns/serving/" aria-current="page">
+                    <a href="https://heydon.github.io/infusion/patterns/serving/" >
                       <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span class="text">Serving</span>
                     </a>
@@ -144,7 +144,7 @@
                     <ul>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/coding/code-blocks/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/code-blocks/" aria-current="page">
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Code blocks</span>
                           </a>
@@ -183,80 +183,55 @@
         <div>
           
   <main id="main">
-    <h1>Serving</h1>
+    <h1>Code blocks</h1>
     
     
 
-<h2 id="serving-locally">Serving locally</h2>
+<p>Markdown already supports code samples both inline (using single backticks like `some code here`) and in blocks. <strong>Infusion</strong> will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.</p>
 
-<p>While you&rsquo;re creating content for your library, you&rsquo;ll probably want to see what the finished product looks like. Fortunately, <strong>Infusion</strong> is easy to serve locally using the <code>serve</code> command:</p>
+<p>So, this&hellip;</p>
 
-<pre class="cmd"><code>npm run serve</code></pre>
-
-
-<p>This will serve your working library from <code>localhost:1313</code> (the exact URL will be determined by what&rsquo;s in your <code>baseURL</code> and will be revealed to you by your terminal). Whenever you make changes to your library&rsquo;s files, the site will automatically rebuild. No need to refresh the web page!</p>
-
-<h2 id="publishing-on-github-pages">Publishing on Github Pages</h2>
-
-<p><strong>Infusion</strong> creates a <code>/docs</code> folder containing the latest version of your library whenever you do an <code>npm run build</code> or a <code>git commit</code>. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
-
-<p><img src="https://heydon.github.io/infusion/images/serve_from_docs.png" alt="The publishing source dropdown menu on Github" /></p>
-
-<p>Then, whenever you push to master, you will also be updating the site found at your Github Pages URL.</p>
-
-<p>This URL will be in the following format:</p>
-
-<pre><code>[your user name].github.io/[your library repo name]`
+<pre class=" "><code  data-codeblock-shortcode>
+```html
+&lt;button aria-pressed="false">toggle me&lt;/button>
+```
 </code></pre>
 
-<p>You&rsquo;ll also need to add it to your <code>config.toml</code> file. See 
 
-  
+<p>&hellip; will result in this:</p>
 
-  
+<pre><code class="language-html">&lt;button aria-pressed=&quot;false&quot;&gt;toggle me&lt;/button&gt;
+</code></pre>
 
-  
+<p>Note that the syntax highlighting uses a greyscale theme. <strong>Infusion</strong> is careful not to use color as part of its own design, because these colors may clash with those of the design being illustrated and discussed.</p>
 
-  
+<h2 id="line-numbered-code-blocks">Line-numbered code blocks</h2>
 
-  
+<p>In addition to the basic markdown support, <strong>Infusion</strong> provides a mechanism to display code blocks with line numbers. This is via the <code>codeBlock</code> shortcode. Here is the code for a block of JavaScript with line numbers:</p>
 
-  
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{&lt;codeBlock lang="js" numbered="true">}}
+var toggle = demo.querySelector('[aria-pressed]');
 
-  
+toggle.addEventListener('click', (e) => {  
+  let pressed = e.target.getAttribute('aria-pressed') === 'true';
+  e.target.setAttribute('aria-pressed', !pressed);
+});
+&#x7b;{&lt;/codeBlock>}}
+</code></pre>
 
-  
 
-  
+<p>The output will look like the following. Now you can refer to particular bits of the code by line number, like the arrow function on line <code>3</code>.</p>
 
-  
+<pre class="language-js line-numbers"><code class="language-js" data-codeblock-shortcode>
+var toggle = demo.querySelector('[aria-pressed]');
 
-  
+toggle.addEventListener('click', (e) => {  
+  let pressed = e.target.getAttribute('aria-pressed') === 'true';
+  e.target.setAttribute('aria-pressed', !pressed);
+});
+</code></pre>
 
-  
-
-  
-
-  
-
-  
-    <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/library-setup/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library setup</a>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
- for more information.</p>
 
   </main>
 

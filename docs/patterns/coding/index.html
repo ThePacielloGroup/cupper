@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/code/code-blocks/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/coding/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://heydon.github.io/infusion/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="https://heydon.github.io/infusion/css/styles.css">
     <title>
       
-        Code blocks | Infusion
+        Coding | Infusion
       
     </title>
   </head>
@@ -140,34 +140,34 @@
                   </li>
                 
                   <li>
-                    <h3>Exhibiting code</h3>
+                    <h3>Coding</h3>
                     <ul>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/code/code-blocks/" aria-current="page">
+                          <a href="https://heydon.github.io/infusion/patterns/coding/code-blocks/" >
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Code blocks</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/code/codepen-embedding/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/" >
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">CodePen embedding</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/code/color-palettes/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/" >
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                            <span class="text">Color palettes</span>
+                            <span class="text">Writing inline demos</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/code/writing-inline-demos/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/color-palettes/" >
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                            <span class="text">Writing inline demos</span>
+                            <span class="text">Color palettes</span>
                           </a>
                         </li>
                       
@@ -183,56 +183,54 @@
         <div>
           
   <main id="main">
-    <h1>Code blocks</h1>
-    
-    
+    <h1>
+      
+      
+      Coding
+    </h1>
+    <ul class="patterns-list">
+      
+          <li>
+  <h2>
+    <a href="https://heydon.github.io/infusion/patterns/coding/code-blocks/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+      Code blocks
+    </a>
+  </h2>
+</li>
 
-<p>Markdown already supports code samples both inline (using single backticks like `some code here`) and in blocks. <strong>Infusion</strong> will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.</p>
+      
+          <li>
+  <h2>
+    <a href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+      CodePen embedding
+    </a>
+  </h2>
+</li>
 
-<p>So, this&hellip;</p>
+      
+          <li>
+  <h2>
+    <a href="https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+      Writing inline demos
+    </a>
+  </h2>
+</li>
 
-<pre class=" "><code  data-codeblock-shortcode>
-```html
-&lt;button aria-pressed="false">toggle me&lt;/button>
-```
-</code></pre>
+      
+          <li>
+  <h2>
+    <a href="https://heydon.github.io/infusion/patterns/coding/color-palettes/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+      Color palettes
+    </a>
+  </h2>
+</li>
 
-
-<p>&hellip; will result in this:</p>
-
-<pre><code class="language-html">&lt;button aria-pressed=&quot;false&quot;&gt;toggle me&lt;/button&gt;
-</code></pre>
-
-<p>Note that the syntax highlighting uses a greyscale theme. <strong>Infusion</strong> is careful not to use color as part of its own design, because these colors may clash with those of the design being illustrated and discussed.</p>
-
-<h2 id="line-numbered-code-blocks">Line-numbered code blocks</h2>
-
-<p>In addition to the basic markdown support, <strong>Infusion</strong> provides a mechanism to display code blocks with line numbers. This is via the <code>codeBlock</code> shortcode. Here is the code for a block of JavaScript with line numbers:</p>
-
-<pre class=" "><code  data-codeblock-shortcode>
-&#x7b;{&lt;codeBlock lang="js" numbered="true">}}
-var toggle = demo.querySelector('[aria-pressed]');
-
-toggle.addEventListener('click', (e) => {  
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
-});
-&#x7b;{&lt;/codeBlock>}}
-</code></pre>
-
-
-<p>The output will look like the following. Now you can refer to particular bits of the code by line number, like the arrow function on line <code>3</code>.</p>
-
-<pre class="language-js line-numbers"><code class="language-js" data-codeblock-shortcode>
-var toggle = demo.querySelector('[aria-pressed]');
-
-toggle.addEventListener('click', (e) => {  
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
-});
-</code></pre>
-
-
+      
+    </ul>
   </main>
 
           <footer role="contentinfo">

@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/code/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz%26" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="https://heydon.github.io/infusion/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="https://heydon.github.io/infusion/css/styles.css">
     <title>
       
-        Exhibiting code | Infusion
+        CodePen embedding | Infusion
       
     </title>
   </head>
@@ -140,34 +140,34 @@
                   </li>
                 
                   <li>
-                    <h3>Exhibiting code</h3>
+                    <h3>Coding</h3>
                     <ul>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/code/code-blocks/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/code-blocks/" >
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Code blocks</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/code/codepen-embedding/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/" aria-current="page">
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">CodePen embedding</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/code/color-palettes/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/" >
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                            <span class="text">Color palettes</span>
+                            <span class="text">Writing inline demos</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/code/writing-inline-demos/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/color-palettes/" >
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                            <span class="text">Writing inline demos</span>
+                            <span class="text">Color palettes</span>
                           </a>
                         </li>
                       
@@ -183,54 +183,86 @@
         <div>
           
   <main id="main">
-    <h1>
-      
-      
-      Exhibiting code
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/infusion/patterns/code/code-blocks/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Code blocks
-    </a>
-  </h2>
-</li>
+    <h1>CodePen embedding</h1>
+    
+    <p>Sometimes just pictures of the pattern you&rsquo;re documenting aren&rsquo;t enough. Interactive patterns benefit from live demos, so that readers can test their functionality.</p>
 
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/infusion/patterns/code/codepen-embedding/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      CodePen embedding
-    </a>
-  </h2>
-</li>
+<p><strong>Infusion</strong> offers a couple of ways to do this. The first is by embedding CodePen demos into the content. The <code>codePen</code> shortcode takes just one argument: the codePen&rsquo;s <code>ID</code>.</p>
 
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/infusion/patterns/code/color-palettes/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Color palettes
-    </a>
-  </h2>
-</li>
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% codePen VpVNKW %}}
+</code></pre>
 
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/infusion/patterns/code/writing-inline-demos/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Writing inline demos
-    </a>
-  </h2>
-</li>
 
-      
-    </ul>
+<p>This will embed the identified codePen into the content wherever you placed the shortcode, with the result view showing by default:</p>
+
+
+  <iframe height='300' scrolling='no' title="code demonstration with codePen" src='//codepen.io/heydon/embed/VpVNKW/?height=265&theme-id=dark&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
+    <div>
+      <a href="//codepen.io/heydon/pen/VpVNKW">See the demo on codePen</a>
+    </div>
+  </iframe>
+
+
+
+<aside aria-label="warning" class="note warning">
+  <div>
+    <img src="https://heydon.github.io/infusion/images/icon-warning.svg" alt="">
+    <p>The compiled site will output an error if your <code>config.toml</code> does not include your CodePen username (in the  <code>codePenUser</code> parameter). This is needed to construct the embed URL.</p>
+
+  </div>
+</aside>
+
+
+<p><strong>Infusion</strong> also supports the ability to write inline demos directly in markdown files. See 
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/">
+      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Writing inline demos</a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+.</p>
+
   </main>
 
           <footer role="contentinfo">
