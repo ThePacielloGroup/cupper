@@ -634,6 +634,10 @@ a .wcag-icon {
   width: 1.5em;
 }
 
+h1 svg {
+  vertical-align: -0.5rem;
+}
+
 /* color palettes */
 
 .colors {

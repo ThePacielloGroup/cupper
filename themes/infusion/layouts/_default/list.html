@@ -1,12 +1,6 @@
 {{ define "main" }}
   <main id="main">
     <h1>
-      {{ $URLparts := split .URL "/" }}
-      {{ if in $URLparts "tags" }}
-        <svg class="tag" aria-hidden="true" height="50" width="50" viewBox="0 0 177.16535 177.16535">
-          <use xlink:href="#tag"></use>
-        </svg>
-      {{ end }}
       {{ .Title }}
     </h1>
     <ul class="patterns-list">
