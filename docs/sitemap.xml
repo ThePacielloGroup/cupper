@@ -49,11 +49,6 @@
   </url>
   
   <url>
-    <loc>https://heydon.github.io/infusion/tags/example-tag/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://heydon.github.io/infusion/patterns/writing/including-images/</loc>
   </url>
   
@@ -71,11 +66,6 @@
   
   <url>
     <loc>https://heydon.github.io/infusion/patterns/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://heydon.github.io/infusion/tags/quickstart/</loc>
     <priority>0</priority>
   </url>
   
