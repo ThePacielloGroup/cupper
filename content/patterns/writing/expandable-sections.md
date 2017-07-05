@@ -8,8 +8,8 @@ In some cases, where there is a lot of content, it's helpful to collapse certain
 The `expandable` shortcode takes three parameters:
 
 * **label** — This is the label for the the section heading.
-* **level** — This is the heading level (e.g. `2` or `<h2>`) that will contain the label. If you omit a level parameter, no heading is used; it's just a button
-* **open** — Include this and give it a value of "true" or "yes" to make the section expanded on page load
+* **level** — This is the heading level (e.g. `level="2"` for a `<h2>`) that will contain the label. If you omit a level parameter, no heading is used; it's just a button.
+* **open** — Include this and give it a value of "true" or "yes" to make the section expanded on page load.
 
 Here's what the code might look like for a simple expandable section containing markdown:
 
@@ -19,7 +19,7 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
 &#x7b;{% /expandable %}}
 {{</codeBlock>}}
 
-Let's look at what that outputs as:
+Let's look at what that outputs:
 
 {{% expandable label="A section of dummy text" level="2" %}}
 Here is some markdown including [a link](https://twitter.com/heydonworks). Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.

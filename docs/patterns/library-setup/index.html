@@ -68,6 +68,24 @@
     </g>
    </g>
   </symbol>
+
+  <symbol id="info">
+   <g transform="translate(-37.035 -1004.6)">
+    <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m76.25 1030.2a18.968 18.968 0 0 1 -23.037 13.709 18.968 18.968 0 0 1 -13.738 -23.019 18.968 18.968 0 0 1 23.001 -13.768 18.968 18.968 0 0 1 13.798 22.984"/>
+    <g transform="matrix(1.1146 0 0 1.1146 -26.276 -124.92)">
+     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m75.491 1039.5v-8.7472"/>
+     <path style="stroke-width:0;fill:currentColor" transform="scale(-1)" d="m-73.193-1024.5a2.3719 2.3719 0 0 1 -2.8807 1.7142 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+    </g>
+   </g>
+ </symbol>
+
+ <symbol id="warning">
+  <g transform="translate(-1.1273 -1010.2)">
+   <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
+   <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
+   <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+  </g>
+</symbol>
 </svg>
 
     <div class="wrapper">
@@ -204,50 +222,7 @@
     
     
 
-<p>By now, you should have followed the 
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/installation/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Installation</a>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
- instructions. You should have Hugo and Node installed, and a local copy of a forked version of <strong>Infusion</strong>. You should also have run <code>npm install</code> in the root of that codebase.</p>
+<p>By now, you should have followed the <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/installation/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Installation</a> instructions. You should have Hugo and Node installed, and a local copy of a forked version of <strong>Infusion</strong>. You should also have run <code>npm install</code> in the root of that codebase.</p>
 
 <h2 id="cleaning-the-content-folder">&ldquo;Cleaning&rdquo; the content folder</h2>
 
@@ -255,7 +230,9 @@
 
 <aside aria-label="warning" class="note warning">
   <div>
-    <img src="https://heydon.github.io/infusion/images/icon-warning.svg" alt="">
+    <svg aria-hidden="true" height="41.646" width="48.43" viewBox="0 0 48.430474 41.646302">
+      <use xlink:href="#warning"></use>
+    </svg>
     <p>If you are contributing to an existing <strong>Infusion</strong> library, do not run the following command. It will delete all of the patterns in that library. The <code>clean</code> command is just for libraries that you are starting from scratch.</p>
 
   </div>
@@ -265,50 +242,7 @@
 <pre class="cmd"><code>npm run clean</code></pre>
 
 
-<p>This will leave your <code>content</code> folder with just an <code>_index.md</code> file and a <code>patterns</code> folder containing a single demonstration pattern file. Find out more about these in 
-
-  
-
-  
-    <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/library-structure/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library structure</a>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-.</p>
+<p>This will leave your <code>content</code> folder with just an <code>_index.md</code> file and a <code>patterns</code> folder containing a single demonstration pattern file. Find out more about these in <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/library-structure/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library structure</a>.</p>
 
 <h2 id="the-setup-command">The <code>setup</code> command</h2>
 
@@ -345,93 +279,7 @@ theme = "infusion"
 
 <p>In the <code>static</code> folder, you&rsquo;ll find a <code>logo.png</code> file. Replace this file with your own company or project logo. Currently, only the PNG format is supported.</p>
 
-<p>Now that your logo&rsquo;s in place, everything should be ready. Where next? You can learn about 
-
-  
-
-  
-    <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/library-structure/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library structure</a>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
- to help you get writing, or find out how to serve the library locally and on Github Pages in 
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/serving/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Serving</a>
-  
-
-  
-
-.</p>
+<p>Now that your logo&rsquo;s in place, everything should be ready. Where next? You can learn about <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/library-structure/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library structure</a> to help you get writing, or find out how to serve the library locally and on Github Pages in <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/serving/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Serving</a>.</p>
 
   </main>
 

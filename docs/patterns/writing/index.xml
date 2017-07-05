@@ -48,7 +48,7 @@ The expandable shortcode takes three parameters:
       
       <guid>https://heydon.github.io/infusion/patterns/writing/including-images/</guid>
       <description>From time to time, you&amp;rsquo;ll be wanting to include images illustrating the documented pattern in hand. Images live in the static folder, which is a sibling of the /content folder you&amp;rsquo;ll be mostly working in.
-├── content └── static └── images ├── logo.png └── menu-button.gif   When you first make a copy of Infusion, Infusion&amp;rsquo;s own logo will be included. You should replace this with your own company or project logo.</description>
+├── content └── static └── images ├── logo.png └── menu-button.gif     When you first make a copy of Infusion, Infusion&amp;rsquo;s own logo will be included. You should replace this with your own company or project logo.</description>
     </item>
     
     <item>

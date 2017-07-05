@@ -21,7 +21,7 @@ Then, whenever you push to master, you will also be updating the site found at y
 This URL will be in the following format:
 
 ```
-[your user name].github.io/[your library repo name]`
+[your user name].github.io/[your library repo name]
 ```
 
 You'll also need to add it to your `config.toml` file. See {{% pattern "Library setup" %}} for more information.

@@ -24,8 +24,8 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet">
-    <link rel="stylesheet" href="/css/prism.css" />
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/prism.css" />
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/styles.css">
     <title>
       {{ block "title" . }}
         {{ .Title }} | {{ .Site.Title }}
@@ -89,8 +89,8 @@
       </div>
     </div>
     {{ if eq .Type "patterns" }}
-      <script src="/js/prism.js"></script>
+      <script src="{{ .Site.BaseURL }}js/prism.js"></script>
     {{ end }}
-    <script src="/js/dom-scripts.js"></script>
+    <script src="{{ .Site.BaseURL }}js/dom-scripts.js"></script>
   </body>
 </html>

@@ -68,6 +68,24 @@
     </g>
    </g>
   </symbol>
+
+  <symbol id="info">
+   <g transform="translate(-37.035 -1004.6)">
+    <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m76.25 1030.2a18.968 18.968 0 0 1 -23.037 13.709 18.968 18.968 0 0 1 -13.738 -23.019 18.968 18.968 0 0 1 23.001 -13.768 18.968 18.968 0 0 1 13.798 22.984"/>
+    <g transform="matrix(1.1146 0 0 1.1146 -26.276 -124.92)">
+     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m75.491 1039.5v-8.7472"/>
+     <path style="stroke-width:0;fill:currentColor" transform="scale(-1)" d="m-73.193-1024.5a2.3719 2.3719 0 0 1 -2.8807 1.7142 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+    </g>
+   </g>
+ </symbol>
+
+ <symbol id="warning">
+  <g transform="translate(-1.1273 -1010.2)">
+   <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
+   <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
+   <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+  </g>
+</symbol>
 </svg>
 
     <div class="wrapper">
@@ -208,8 +226,8 @@
 
 <ul>
 <li><strong>label</strong> — This is the label for the the section heading.</li>
-<li><strong>level</strong> — This is the heading level (e.g. <code>2</code> or <code>&lt;h2&gt;</code>) that will contain the label. If you omit a level parameter, no heading is used; it&rsquo;s just a button</li>
-<li><strong>open</strong> — Include this and give it a value of &ldquo;true&rdquo; or &ldquo;yes&rdquo; to make the section expanded on page load</li>
+<li><strong>level</strong> — This is the heading level (e.g. <code>level=&quot;2&quot;</code> for a <code>&lt;h2&gt;</code>) that will contain the label. If you omit a level parameter, no heading is used; it&rsquo;s just a button.</li>
+<li><strong>open</strong> — Include this and give it a value of &ldquo;true&rdquo; or &ldquo;yes&rdquo; to make the section expanded on page load.</li>
 </ul>
 
 <p>Here&rsquo;s what the code might look like for a simple expandable section containing markdown:</p>
@@ -221,7 +239,7 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
 </code></pre>
 
 
-<p>Let&rsquo;s look at what that outputs as:</p>
+<p>Let&rsquo;s look at what that outputs:</p>
 
 <div class="expandable-section">
   

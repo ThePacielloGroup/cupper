@@ -1,7 +1,7 @@
 {
   "name": "infusion",
   "version": "0.0.1",
-  "description": "An inclusive pattern library builder for documenting inclusive interface design",
+  "description": "A pattern library builder for inclusive designers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,14 +14,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Heydon/inclusive-pattern-library.git"
+    "url": "git+https://github.com/Heydon/infusion.git"
   },
   "author": "Heydon Pickering <heydon@heydonworks.com> (http://www.heydonworks.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Heydon/inclusive-pattern-library/issues"
+    "url": "https://github.com/Heydon/infusion/issues"
   },
-  "homepage": "https://github.com/Heydon/inclusive-pattern-library#readme",
+  "homepage": "https://github.com/Heydon/infusion#readme",
   "devDependencies": {
     "pre-commit": "^1.2.2"
   }

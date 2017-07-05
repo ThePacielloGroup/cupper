@@ -68,6 +68,24 @@
     </g>
    </g>
   </symbol>
+
+  <symbol id="info">
+   <g transform="translate(-37.035 -1004.6)">
+    <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m76.25 1030.2a18.968 18.968 0 0 1 -23.037 13.709 18.968 18.968 0 0 1 -13.738 -23.019 18.968 18.968 0 0 1 23.001 -13.768 18.968 18.968 0 0 1 13.798 22.984"/>
+    <g transform="matrix(1.1146 0 0 1.1146 -26.276 -124.92)">
+     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m75.491 1039.5v-8.7472"/>
+     <path style="stroke-width:0;fill:currentColor" transform="scale(-1)" d="m-73.193-1024.5a2.3719 2.3719 0 0 1 -2.8807 1.7142 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+    </g>
+   </g>
+ </symbol>
+
+ <symbol id="warning">
+  <g transform="translate(-1.1273 -1010.2)">
+   <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
+   <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
+   <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+  </g>
+</symbol>
 </svg>
 
     <div class="wrapper">
@@ -202,50 +220,7 @@
   <main id="main">
     <h1>Writing inline demos</h1>
     
-    <p>There are some issues with 
-
-  
-
-  
-
-  
-
-  
-    <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>CodePen embedding</a>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-, like them not working offline. They also come with CodePen branding, which will clash with the pattern you&rsquo;re trying to illustrate.</p>
+    <p>There are some issues with <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>CodePen embedding</a>, like them not working offline. They also come with CodePen branding, which will clash with the pattern you&rsquo;re trying to illustrate.</p>
 
 <p><strong>Infusion</strong> offers another option: a special <code>demo</code> shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don&rsquo;t have to worry about broken styles and global JS.</p>
 
@@ -344,7 +319,9 @@ toggle.addEventListener('click', (e) => {
 
 <p><aside aria-label="note" class="note">
   <div>
-    <img src="https://heydon.github.io/infusion/images/icon-info.svg" alt="">
+    <svg aria-hidden="true" height="41.667" width="41.667" viewBox="0 0 41.667306 41.66729">
+      <use xlink:href="#info"></use>
+    </svg>
     <p>Firefox does not currently support Shadow DOM and <strong>Infusion</strong> does not include a polyfill. Firefox will output an error message. These demos function correctly in Chrome, Safari, and Opera.</p>
 
   </div>

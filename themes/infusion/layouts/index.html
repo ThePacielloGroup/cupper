@@ -6,5 +6,7 @@
   <main id="main">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+    {{ $packageInfo := getJSON "./package.json" }}
+    {{ print $packageInfo.repository.url }}
   </main>
 {{ end }}
