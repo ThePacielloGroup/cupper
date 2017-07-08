@@ -26,4 +26,4 @@ The value for the `using` attribute follows a specific format: each testing setu
 * Firefox Android
 * Safari iOS
 
-Obviously, this is not a comprehensive list and more may be added over time. But it covers most of the main browsers for pairing with other software — at least in testing.
+Obviously, this is not a comprehensive list and more may be added over time. But it covers most of the main browsers for pairing with other software — at least for testing purposes.
