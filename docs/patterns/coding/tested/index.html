@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/library-setup/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/coding/tested/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://heydon.github.io/infusion/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://heydon.github.io/infusion/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://heydon.github.io/infusion/images/apple-icon-72x72.png">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="https://heydon.github.io/infusion/css/styles.css">
     <title>
       
-        Library setup | Infusion
+        Tested using... | Infusion
       
     </title>
   </head>
@@ -111,7 +111,7 @@
                   </li>
                 
                   <li class="pattern">
-                    <a href="https://heydon.github.io/infusion/patterns/library-setup/" aria-current="page">
+                    <a href="https://heydon.github.io/infusion/patterns/library-setup/" >
                       <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span class="text">Library setup</span>
                     </a>
@@ -207,7 +207,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/coding/tested/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/tested/" aria-current="page">
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Tested using...</span>
                           </a>
@@ -225,68 +225,81 @@
         <div>
           
   <main id="main">
-    <h1>Library setup</h1>
+    <h1>Tested using...</h1>
     
-    
+    <p>When you&rsquo;re an inclusive designer, it&rsquo;s pertinent to do some testing. Following specs is one thing, but you need to verify that your component works okay for users.</p>
 
-<p>By now, you should have followed the <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/installation/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Installation</a> instructions. You should have Hugo and Node installed, and a local copy of a forked version of <strong>Infusion</strong>. You should also have run <code>npm install</code> in the root of that codebase.</p>
+<p><strong>Infusion</strong> provided a <code>tested</code> shortcode that let&rsquo;s you show which browsers and assistive technologies you&rsquo;ve tried your design out in. Here&rsquo;s an example. Note the commas and &ldquo;+&rdquo; signs.</p>
 
-<h2 id="cleaning-the-content-folder">&ldquo;Cleaning&rdquo; the content folder</h2>
-
-<p>Before you can start documenting patterns, there are a few things still to do in order to get set up. At the moment, your version of <strong>Infusion</strong> is a facsimile of the original, containing all this documentation content. We want to delete that content and replace it with some starter content. There&rsquo;s a simple <code>clean</code> command for this.</p>
-
-<aside aria-label="warning" class="note warning">
-  <div>
-    <svg aria-hidden="true" height="41.646" width="48.43" viewBox="0 0 48.430474 41.646302">
-      <use xlink:href="#warning"></use>
-    </svg>
-    <p>If you are contributing to an existing <strong>Infusion</strong> library, do not run the following command. It will delete all of the patterns in that library. The <code>clean</code> command is just for libraries that you are starting from scratch.</p>
-
-  </div>
-</aside>
-
-
-<pre class="cmd"><code>npm run clean</code></pre>
-
-
-<p>This will leave your <code>content</code> folder with just an <code>_index.md</code> file and a <code>patterns</code> folder containing a single demonstration pattern file. Find out more about these in <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/library-structure/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library structure</a>.</p>
-
-<h2 id="the-setup-command">The <code>setup</code> command</h2>
-
-<p>There&rsquo;s another command, <code>setup</code>, which you need to run to create an initial build and make sure git is aware of the <code>/docs</code> folder it generates.</p>
-
-<pre class="cmd"><code>npm run setup</code></pre>
-
-
-<h2 id="the-config-file">The config file</h2>
-
-<p>You&rsquo;ll also want to name your library and configure one or two other things in the <code>config.toml</code> file that&rsquo;s found at the root of your project. Here&rsquo;s how that file looks:</p>
-
-<pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
-languageCode = "en-us"
-title = "Infusion"
-baseURL = "https://heydon.github.io/infusion/"
-theme = "infusion"
-
-[params]
-  description = "Documentation for the <strong>Inclusive Pattern Docs</strong> pattern library builder. This documentation is constructed using the builder itself."
-  codePenUser = "Heydon"
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% tested using="Firefox Android + NVDA, Chrome, Safari iOS + Voiceover, Edge" %}}
 </code></pre>
 
 
+<p>This outputs:</p>
+
+
+
+
+<table class="tested">
+  <tr>
+    <th scope="row">Tested using</th>
+    
+      <td>
+        
+          
+          
+          
+          <img src="https://heydon.github.io/infusion/images/browser-Firefox-Android.svg" alt="">
+          <span><strong>Firefox Android</strong></span>
+          <span class="additional">with <strong>Talkback</strong></span>
+        
+      </td>
+    
+      <td>
+        
+          
+          <img src="https://heydon.github.io/infusion/images/browser-Chrome.svg" alt="">
+          <span><strong>Chrome</strong></span>
+        
+      </td>
+    
+      <td>
+        
+          
+          
+          
+          <img src="https://heydon.github.io/infusion/images/browser-Safari-iOS.svg" alt="">
+          <span><strong>Safari iOS</strong></span>
+          <span class="additional">with <strong>Voiceover</strong></span>
+        
+      </td>
+    
+      <td>
+        
+          
+          <img src="https://heydon.github.io/infusion/images/browser-Edge.svg" alt="">
+          <span><strong>Edge</strong></span>
+        
+      </td>
+    
+  </tr>
+</table>
+
+
+<p>The value for the <code>using</code> attribute follows a specific format: each testing setup is separated by a comma (with a space if you like, but it&rsquo;s not mandatory). If you want to add an assistive technology (or any other &ldquo;add on&rdquo;) this needs to follow a &ldquo;+&rdquo;. This additional part can be anything, like &ldquo;A VR headset I borrowed&rdquo;, but there are only a few browser terms available. These are case sensitive, so you need to write them as below:</p>
+
 <ul>
-<li><strong>title</strong> — This is the library&rsquo;s name, like &ldquo;Megacorp 5000 Pattern Library&rdquo;. You don&rsquo;t have to include the term &ldquo;pattern library&rdquo; if you don&rsquo;t want to. For <strong>Infusion&rsquo;s</strong> own version of <strong>Infusion</strong>, the <code>title</code> is, naturally, <em>Infusion</em> :-)</li>
-<li><strong>baseURL</strong> — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site.</li>
-<li><strong>theme</strong> — This is the theme the library is using. Don&rsquo;t change this from &ldquo;infusion&rdquo;.</li>
-<li><strong>description</strong> — This is a short description of the library and comes under the logo. You can include HTML like <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code>.</li>
-<li><strong>codePenUser</strong> — If you want to embed codePens in your pattern files, you need to supply a codePen username here.</li>
+<li>Firefox</li>
+<li>Chrome</li>
+<li>Safari</li>
+<li>IE</li>
+<li>Edge</li>
+<li>Opera</li>
+<li>Chrome Android</li>
+<li>Firefox Android</li>
+<li>Safari iOS</li>
 </ul>
-
-<h2 id="including-a-logo">Including a logo</h2>
-
-<p>In the <code>static</code> folder, you&rsquo;ll find a <code>logo.png</code> file. Replace this file with your own company or project logo. Currently, only the PNG format is supported.</p>
-
-<p>Now that your logo&rsquo;s in place, everything should be ready. Where next? You can learn about <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/library-structure/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library structure</a> to help you get writing, or find out how to serve the library locally and on Github Pages in <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/serving/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Serving</a>.</p>
 
   </main>
 

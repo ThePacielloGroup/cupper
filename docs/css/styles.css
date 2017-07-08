@@ -190,18 +190,51 @@ table {
 th, td {
   border: 2px solid;
   padding: 0.5rem;
-  line-height: 1;
+  line-height: 1.25;
   margin: 0;
+}
+
+th {
+  font-weight: bold;
+}
+
+th:empty {
+  border: 0;
+}
+
+/* Tested using... table */
+
+.tested {
+  text-align: center;
+}
+
+.tested td {
+  vertical-align: top;
+}
+
+.tested th {
+  background-color: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.tested img {
+  max-width: 3rem;
+}
+
+.tested span {
+  display: block;
+  margin: 0;
+}
+
+.tested .additional {
+  font-size: 0.85rem;
 }
 
 caption {
   font-size: 1.125rem;
   padding-bottom: 0.25rem;
   font-style: italic;
-}
-
-th:empty {
-  border: 0;
 }
 
 /* Page structure */

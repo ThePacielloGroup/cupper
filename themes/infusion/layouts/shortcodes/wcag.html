@@ -1,5 +1,6 @@
 {{ $JSON := $.Site.Data.wcag }}
-{{ $included := split (.Get "include") ", " }}
+{{ $included := replace (.Get "include") ", " "," }}
+{{ $included := split $included "," }}
 {{ $descriptions := .Get "descriptions" }}
 <ul class="wcag {{ if $descriptions }}with-desc{{ end }}">
   {{ range $JSON }}

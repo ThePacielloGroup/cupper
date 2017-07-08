@@ -82,4 +82,8 @@
     <priority>0</priority>
   </url>
   
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/coding/tested/</loc>
+  </url>
+  
 </urlset>

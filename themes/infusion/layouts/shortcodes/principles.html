@@ -1,6 +1,6 @@
 {{ $JSON := $.Site.Data.principles }}
-{{ $included := .Get "include" }}
-{{ $included := apply (split $included ", ") "lower" "." }}
+{{ $included := replace (.Get "include") ", " "," }}
+{{ $included := apply (split $included ",") "lower" "." }}
 {{ $descriptions := .Get "descriptions" }}
 <ul class="principles {{ if $descriptions }}with-desc{{ end }}">
   {{ range $JSON.principles }}

@@ -30,6 +30,10 @@ This generates a list of references that includes the names of each criterion an
 
 {{% wcag include="2.1.1, 4.1.2" %}}
 
+{{% note %}}
+You don't have to leave spaces after the comma separators. They are optional.
+{{% /note %}}
+
 ### Full descriptions
 
 Sometimes, you'll want to include the full descriptions of the success criteria inline. This is possible by setting `descriptions` to `true`:
@@ -52,4 +56,4 @@ Some inclusive design concepts are not reducible to success or fail criteria. Th
 
 Here's the output with `descriptions="true"`:
 
-{{% principles include="Add value, Be consistent" descriptions="true" %}}
+{{% principles include="Add value,Be consistent" descriptions="true" %}}
