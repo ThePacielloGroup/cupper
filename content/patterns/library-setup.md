@@ -33,14 +33,14 @@ baseURL = "https://heydon.github.io/infusion/"
 theme = "infusion"
 
 [params]
-  description = "Documentation for the <strong>Infusion</strong> pattern library builder. This documentation is constructed using the builder itself."
+  description = "Documentation for the **Infusion** pattern library builder. This documentation is constructed using the builder itself."
   codePenUser = "Heydon"
 {{</codeBlock>}}
 
 * **title** — This is the library's name, like "Megacorp 5000 Pattern Library". You don't have to include the term "pattern library" if you don't want to. For **Infusion's** own version of **Infusion**, the `title` is, naturally, _Infusion_ :-)
 * **baseURL** — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site.
 * **theme** — This is the theme the library is using. Don't change this from "infusion".
-* **description** — This is a short description of the library and comes under the logo. You can include HTML like `<em>` and `<strong>`.
+* **description** — This is a short description of the library and comes under the logo. You can include markdown syntax here, like _&#x002a;&#x002a;Infusion&#x002a;&#x002a;_ in the above example for making the name of the library bold.
 * **codePenUser** — If you want to embed codePens in your pattern files, you need to supply a codePen username here.
 
 ## Including a logo

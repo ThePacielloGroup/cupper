@@ -2,6 +2,6 @@
 <figure role="group" aria-describedby="caption-{{ $caption | base64Encode | truncate 20 "" }}">
   {{ .Inner }}
   <figcaption id="caption-{{ $caption | base64Encode | truncate 20 "" }}">
-    {{ .Get "caption" | safeHTML }}
+    {{ .Get "caption" | markdownify }}
   </figcaption>
 </figure>

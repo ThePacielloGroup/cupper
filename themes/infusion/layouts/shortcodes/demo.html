@@ -5,7 +5,7 @@
   {{ end }}
       <div class="demo" id="demo-{{ $uniq }}"></div>
       {{ if .Get "caption" }}
-          <figcaption id="caption-{{ $uniq }}">{{ .Get "caption" }}</figcaption>
+          <figcaption id="caption-{{ $uniq }}">{{ .Get "caption" | markdownify }}</figcaption>
       {{ end }}
   {{ if .Get "caption" }}
   </figure>

@@ -42,7 +42,7 @@
             <a class="logo" href="/" aria-label="{{ .Site.Title }} pattern library home page">
               <img src="{{ .Site.BaseURL }}images/logo.png" alt="">
             </a>
-            <p class="library-desc">{{ .Site.Params.Description | safeHTML }}</p>
+            <p class="library-desc">{{ .Site.Params.Description | markdownify }}</p>
           </div>
           <nav id="patterns-nav" class="patterns" role="navigation">
             <button id="menu-button" aria-expanded="false">Menu</button>
