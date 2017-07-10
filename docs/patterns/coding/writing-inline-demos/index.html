@@ -272,10 +272,10 @@ toggle.addEventListener('click', (e) => {
 <p>
 <div class="demo-container">
   
-      <div class="demo" id="demo-CiZsdDtidXR0b24"></div>
+      <div class="demo" id="demo-CiZsdDtidXR0b24gYXJp"></div>
       
   
-  <template id="template-CiZsdDtidXR0b24">
+  <template id="template-CiZsdDtidXR0b24gYXJp">
       
 <button aria-pressed="false">Toggle Me</button>
 <style>
@@ -307,13 +307,13 @@ toggle.addEventListener('click', (e) => {
   </template>
   <script>
     (function() {
-      var root = document.getElementById('demo-CiZsdDtidXR0b24');
+      var root = document.getElementById('demo-CiZsdDtidXR0b24gYXJp');
       if (document.head.attachShadow) {
         root.attachShadow({mode: 'open'});
-        var template = document.getElementById('template-CiZsdDtidXR0b24');
+        var template = document.getElementById('template-CiZsdDtidXR0b24gYXJp');
         var script = template.content.querySelector('script');
         if (script) {
-          script.textContent = `(function() { var demo = document.getElementById(\'demo-CiZsdDtidXR0b24\').shadowRoot; ${script.textContent} })()`
+          script.textContent = `(function() { var demo = document.getElementById(\'demo-CiZsdDtidXR0b24gYXJp\').shadowRoot; ${script.textContent} })()`
         }
         root.shadowRoot.appendChild(document.importNode(template.content, true));
       } else {

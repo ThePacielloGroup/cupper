@@ -24,17 +24,17 @@ The path to the `/images` folder should begin with a forward slash, so include t
 
 ## Figures
 
-Sometimes you will want to include a caption with your illustration. This is what the `<figure>` and `<figcaption>` elements are for. However, **Infusion** doesn't ask you to code all that manually. A special shortcode is provided, which takes a `caption` parameter. Note that the image markdown is provided between the opening and closing shortcode tags:
+Sometimes you will want to include a caption with your illustration. This is what the `<figure>` and `<figcaption>` elements are for. However, **Infusion** doesn't ask you to code all that manually. A special shortcode is provided, which takes a `caption` parameter. Note that the image markdown is provided between the opening and closing shortcode tags, and that you can use markdown syntax in the `caption` value.
 
 {{<codeBlock>}}
-&#x7b;{% figure caption="Steve Faulkner works for The Paciello Group" %}}
+&#x7b;{% figure caption="[Steve Faulkner](https://twitter.com/stevefaulkner) works for The Paciello Group" %}}
 ![Steve Faulkner's face](/images/steve_faulkner.jpg)
 &#x7b;{% /figure %}}
 {{</codeBlock>}}
 
 This will output the following. Note the automatically incremented **Figure** number.
 
-{{% figure caption="Steve Faulkner works for The Paciello Group" %}}
+{{% figure caption="[Steve Faulkner](https://twitter.com/stevefaulkner) works for The Paciello Group" %}}
 ![Steve Faulkner's face](/images/steve_faulkner.jpg)
 {{% /figure %}}
 

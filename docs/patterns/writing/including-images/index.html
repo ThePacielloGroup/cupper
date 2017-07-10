@@ -256,10 +256,10 @@
 
 <h2 id="figures">Figures</h2>
 
-<p>Sometimes you will want to include a caption with your illustration. This is what the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements are for. However, <strong>Infusion</strong> doesn&rsquo;t ask you to code all that manually. A special shortcode is provided, which takes a <code>caption</code> parameter. Note that the image markdown is provided between the opening and closing shortcode tags:</p>
+<p>Sometimes you will want to include a caption with your illustration. This is what the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements are for. However, <strong>Infusion</strong> doesn&rsquo;t ask you to code all that manually. A special shortcode is provided, which takes a <code>caption</code> parameter. Note that the image markdown is provided between the opening and closing shortcode tags, and that you can use markdown syntax in the <code>caption</code> value.</p>
 
 <pre class=" "><code  data-codeblock-shortcode>
-&#x7b;{% figure caption="Steve Faulkner works for The Paciello Group" %}}
+&#x7b;{% figure caption="[Steve Faulkner](https://twitter.com/stevefaulkner) works for The Paciello Group" %}}
 ![Steve Faulkner's face](/images/steve_faulkner.jpg)
 &#x7b;{% /figure %}}
 </code></pre>
@@ -268,11 +268,11 @@
 <p>This will output the following. Note the automatically incremented <strong>Figure</strong> number.</p>
 
 
-<figure role="group" aria-describedby="caption-U3RldmUgRmF1bGtuZXIg">
+<figure role="group" aria-describedby="caption-W1N0ZXZlIEZhdWxrbmVy">
   <p><img src="https://heydon.github.io/infusion/images/steve_faulkner.jpg" alt="Steve Faulkner's face" /></p>
 
-  <figcaption id="caption-U3RldmUgRmF1bGtuZXIg">
-    Steve Faulkner works for The Paciello Group
+  <figcaption id="caption-W1N0ZXZlIEZhdWxrbmVy">
+    <a href="https://twitter.com/stevefaulkner">Steve Faulkner</a> works for The Paciello Group
   </figcaption>
 </figure>
 

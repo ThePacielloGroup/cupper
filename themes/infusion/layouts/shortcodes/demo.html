@@ -1,4 +1,4 @@
-{{ $uniq := .Inner | htmlEscape | base64Encode | truncate 15 "" }}
+{{ $uniq := .Inner | htmlEscape | base64Encode | truncate 20 "" }}
 <div class="demo-container">
   {{ if .Get "caption" }}
   <figure role="group" aria-labelledby="caption-{{ $uniq }}">
