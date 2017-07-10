@@ -46,7 +46,7 @@ The generated markup includes special provisions for assistive technology suppor
     <img src="/images/steve_faulkner.jpg" alt="Steve Faulkner's face">
   </p>
   <figcaption id="U3RldmUgRmF1bGtuZXIg">
-    Steve Faulkner works for The Paciello Group
+    <a href="https://twitter.com/stevefaulkner">Steve Faulkner</a> works for The Paciello Group
   </figcaption>
 </figure>
 ```
