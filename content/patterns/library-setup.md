@@ -45,6 +45,6 @@ theme = "infusion"
 
 ## Including a logo
 
-In the `static` folder, you'll find a `logo.png` file. Replace this file with your own company or project logo. Currently, only the PNG format is supported.
+In the `images/static` folder, you'll find a `logo.png` file. Replace this file with your own company or project logo. Currently, only the PNG format is supported.
 
 Now that your logo's in place, everything should be ready. Where next? You can learn about {{% pattern "Library structure" %}} to help you get writing, or find out how to serve the library locally and on Github Pages in {{% pattern "Serving" %}}.
