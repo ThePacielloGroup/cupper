@@ -12,6 +12,7 @@ Welcome to **Infusion**: a pattern library builder for inclusive designers. Thes
 * Easily make sections collapsible without writing HTML
 * Choose between plain or line-numbered code blocks
 * A responsive, screen reader and keyboard accessible static website as output
+* Available to read offline, thanks to service worker integration
 {{% /ticks %}}
 
 To get started, take a look at {{% pattern "Installation" %}}.
