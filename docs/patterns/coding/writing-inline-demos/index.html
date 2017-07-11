@@ -227,7 +227,9 @@
   <main id="main">
     <h1>Writing inline demos</h1>
     
-    <p>There are some issues with <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>CodePen embedding</a>, like them not working offline. They also come with CodePen branding, which will clash with the pattern you&rsquo;re trying to illustrate.</p>
+    
+
+<p>There are some issues with <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>CodePen embedding</a>, like them not working offline. They also come with CodePen branding, which will clash with the pattern you&rsquo;re trying to illustrate.</p>
 
 <p><strong>Infusion</strong> offers another option: a special <code>demo</code> shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don&rsquo;t have to worry about broken styles and global JS.</p>
 
@@ -269,7 +271,7 @@ toggle.addEventListener('click', (e) => {
 
 <p>Here&rsquo;s a live demo of&hellip; the demo:</p>
 
-<p>
+
 <div class="demo-container">
   
       <div class="demo" id="demo-CiZsdDtidXR0b24gYXJp"></div>
@@ -322,7 +324,7 @@ toggle.addEventListener('click', (e) => {
     })();
   </script>
 </div>
-</p>
+
 
 <p><aside aria-label="note" class="note">
   <div>
@@ -335,11 +337,24 @@ toggle.addEventListener('click', (e) => {
 </aside>
 </p>
 
+<h2 id="captioned-demos">Captioned demos</h2>
+
+<p>It&rsquo;s possible to give your demo a caption using an accessible <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> structure. All <em>you</em> need to do is supply a <code>caption</code> attribute. For example:</p>
+
+<pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
+&#x7b;{&lt;demo caption="A basic button element">}}
+&lt;!-- demo code here -->
+&#x7b;{&lt;/demo>}}
+</code></pre>
+
+
+<p>Along with the standard <code>figure</code> shortcodes (described in <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/including-images/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Including images</a>), demo figures are numbered automatically according to their order in the page. You can use markdown syntax in the caption text value.</p>
+
   </main>
 
           <footer role="contentinfo">
-            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project<br>
-            For general enquiries, contact us on info@paciellogroup.com
+            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project<br>.
+            For general enquiries, contact us on info@paciellogroup.com.
           </footer>
         </div>
       </div>
@@ -348,5 +363,6 @@ toggle.addEventListener('click', (e) => {
       <script src="https://heydon.github.io/infusion/js/prism.js"></script>
     
     <script src="https://heydon.github.io/infusion/js/dom-scripts.js"></script>
+    
   </body>
 </html>

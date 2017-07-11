@@ -471,7 +471,7 @@ main {
 
 figcaption::before {
   counter-increment: fig;
-  content: 'Figure ' counter(fig) ':';
+  content: 'Figure ' counter(fig) ':\0020';
   font-weight: bold;
 }
 
@@ -708,10 +708,7 @@ h1 svg {
 
 [id^="demo-"] {
   all: initial;
-}
-
-[id^="demo-"] * {
-  all: initial;
+  display: block;
 }
 
 @media (max-width: 45em) {

@@ -82,8 +82,8 @@
           {{ block "main" . }}
           {{ end }}
           <footer role="contentinfo">
-            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project<br>
-            For general enquiries, contact us on info@paciellogroup.com
+            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project<br>.
+            For general enquiries, contact us on info@paciellogroup.com.
           </footer>
         </div>
       </div>
@@ -92,5 +92,8 @@
       <script src="{{ .Site.BaseURL }}js/prism.js"></script>
     {{ end }}
     <script src="{{ .Site.BaseURL }}js/dom-scripts.js"></script>
+    {{ if .Page.IsHome }}
+      <script src="{{ .Site.BaseURL }}js/service-worker-registration.js"></script>
+    {{ end }}
   </body>
 </html>
