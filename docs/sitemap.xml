@@ -19,6 +19,10 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/patterns/media/</loc>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/</loc>
   </url>
   
@@ -49,7 +53,11 @@
   </url>
   
   <url>
-    <loc>https://heydon.github.io/infusion/patterns/writing/including-images/</loc>
+    <loc>https://heydon.github.io/infusion/patterns/media/including-images/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/media/including-videos/</loc>
   </url>
   
   <url>

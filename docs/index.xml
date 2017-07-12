@@ -87,12 +87,22 @@ The expandable shortcode takes three parameters:
     
     <item>
       <title>Including images</title>
-      <link>https://heydon.github.io/infusion/patterns/writing/including-images/</link>
+      <link>https://heydon.github.io/infusion/patterns/media/including-images/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://heydon.github.io/infusion/patterns/writing/including-images/</guid>
+      <guid>https://heydon.github.io/infusion/patterns/media/including-images/</guid>
       <description>From time to time, you&amp;rsquo;ll be wanting to include images illustrating the documented pattern in hand. Images live in the static folder, which is a sibling of the /content folder you&amp;rsquo;ll be mostly working in.
 ├── content └── static └── images ├── logo.png └── menu-button.gif     When you first make a copy of Infusion, Infusion&amp;rsquo;s own logo will be included. You should replace this with your own company or project logo.</description>
+    </item>
+    
+    <item>
+      <title>Including videos</title>
+      <link>https://heydon.github.io/infusion/patterns/media/including-videos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/media/including-videos/</guid>
+      <description>Infusion has a lot of its own shortcodes, but you can still use Hugo&amp;rsquo;s built in shortcodes. These include a simple shortcode for including YouTube videos in your content. The shortcode takes just one parameter — the video&amp;rsquo;s id.
+&amp;#x7b;{}}  </description>
     </item>
     
     <item>

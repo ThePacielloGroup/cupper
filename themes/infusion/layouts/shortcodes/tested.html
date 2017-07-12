@@ -10,12 +10,14 @@
           {{ $parts := split . "+" }}
           {{ $browser := index $parts 0 }}
           {{ $additional := index $parts 1 }}
-          <img src="{{ $.Site.BaseURL }}images/browser-{{ replace $browser " " "-" }}.svg" alt="">
+          {{ $slug := replace $browser " " "-" }}
+          <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
           <span><strong>{{ $browser }}</strong></span>
           <span class="additional">with <strong>{{ $additional }}</strong></span>
         {{ else }}
           {{ $browser := . }}
-          <img src="{{ $.Site.BaseURL }}images/browser-{{ replace $browser " " "-" }}.svg" alt="">
+          {{ $slug := replace $browser " " "-" }}
+          <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
           <span><strong>{{ $browser }}</strong></span>
         {{ end }}
       </td>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/media/including-videos/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://heydon.github.io/infusion/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://heydon.github.io/infusion/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://heydon.github.io/infusion/images/apple-icon-72x72.png">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="https://heydon.github.io/infusion/css/styles.css">
     <title>
       
-        Notes &amp; warnings | Infusion
+        Including videos | Infusion
       
     </title>
   </head>
@@ -149,7 +149,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/" aria-current="page">
+                          <a href="https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/" >
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Notes &amp; warnings</span>
                           </a>
@@ -177,7 +177,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/media/including-videos/" >
+                          <a href="https://heydon.github.io/infusion/patterns/media/including-videos/" aria-current="page">
                             <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Including videos</span>
                           </a>
@@ -237,58 +237,13 @@
         <div>
           
   <main id="main">
-    <h1>Notes &amp; warnings</h1>
+    <h1>Including videos</h1>
     
-    
-
-<p><strong>Infusion</strong> acknowledges that simple markdown is limiting when it comes to writing compelling documentation, so it provides a number of &ldquo;shortcodes&rdquo;. Shortcodes offer a simple syntax for including rich content. For example, <strong>Infusion</strong> provides shortcodes for including notes and warnings.</p>
-
-<h2 id="notes">Notes</h2>
-
-<p>You may wish to pick out some content in your pattern&rsquo;s documentation as a note — an aside to the main thrust of the pattern&rsquo;s description. This is possible using the following syntax:</p>
+    <p><strong>Infusion</strong> has a lot of its own shortcodes, but you can still use Hugo&rsquo;s <a href="https://gohugo.io/extras/shortcodes#built-in-shortcodes">built in shortcodes</a>. These include a simple shortcode for including YouTube videos in your content. The shortcode takes just one parameter — the video&rsquo;s <code>id</code>.</p>
 
 <pre class=" "><code  data-codeblock-shortcode>
-&#x7b;{% note %}}
-This is a note! It's something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.
-&#x7b;{% /note %}}
+&#x7b;{< youtube w7Ft2ymGmfc >}}
 </code></pre>
-
-
-<p>Notes render like this:</p>
-
-<aside aria-label="note" class="note">
-  <div>
-    <svg aria-hidden="true" height="41.667" width="41.667" viewBox="0 0 41.667306 41.66729">
-      <use xlink:href="#info"></use>
-    </svg>
-    <p>This is a note! It&rsquo;s something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.</p>
-
-  </div>
-</aside>
-
-
-<h2 id="warnings">Warnings</h2>
-
-<p>Warnings are like notes, but with more urgency.</p>
-
-<pre class=" "><code  data-codeblock-shortcode>
-&#x7b;{% warning %}}
-This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
-&#x7b;{% /warning %}}
-</code></pre>
-
-
-<p>Warnings render like this:</p>
-
-<aside aria-label="warning" class="note warning">
-  <div>
-    <svg aria-hidden="true" height="41.646" width="48.43" viewBox="0 0 48.430474 41.646302">
-      <use xlink:href="#warning"></use>
-    </svg>
-    <p>This is a warning! It&rsquo;s about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.</p>
-
-  </div>
-</aside>
 
 
   </main>

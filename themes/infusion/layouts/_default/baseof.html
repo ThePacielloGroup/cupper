@@ -22,8 +22,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/prism.css" />
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}css/styles.css">
+    <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" />
+    <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
     <title>
       {{ block "title" . }}
         {{ .Title }} | {{ .Site.Title }}
@@ -38,7 +38,7 @@
         <div>
           <div class="intro">
             <a class="logo" href="/" aria-label="{{ .Site.Title }} pattern library home page">
-              <img src="{{ .Site.BaseURL }}images/logo.png" alt="">
+              <img src="{{ "images/logo.png" | absURL }}" alt="">
             </a>
             <p class="library-desc">{{ .Site.Params.Description | markdownify }}</p>
           </div>
@@ -87,11 +87,11 @@
       </div>
     </div>
     {{ if eq .Type "patterns" }}
-      <script src="{{ .Site.BaseURL }}js/prism.js"></script>
+      <script src="{{ "js/prism.js" | absURL }}"></script>
     {{ end }}
-    <script src="{{ .Site.BaseURL }}js/dom-scripts.js"></script>
+    <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
     {{ if .Page.IsHome }}
-      <script src="{{ .Site.BaseURL }}js/service-worker-registration.js"></script>
+      <script src="{{ "js/service-worker-registration.js" | absURL }}"></script>
     {{ end }}
   </body>
 </html>
