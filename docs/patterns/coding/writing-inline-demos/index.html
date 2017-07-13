@@ -328,49 +328,6 @@ toggle.addEventListener('click', (e) => {
 </div>
 
 
-<p>
-
-
-<div class="demo-container">
-  
-      <demo-elem5b7c6e1c905eca8144b27f3bc6737574 class="demo" id="demo-5b7c6e1c905eca8144b27f3bc6737574"></demo-elem5b7c6e1c905eca8144b27f3bc6737574>
-      
-  
-  <template id="template5b7c6e1c905eca8144b27f3bc6737574">
-      
-<button aria-pressed="false">Toggle Me</button>
-<style>
-button {
-    background: blue;
-    color: white;
-    border: 0;
-    font-size: 1rem;
-    font-family: serif;
-    padding: 0.5em 1em;
-    border-right: 5px solid #000;
-    border-bottom: 5px solid #000;
-}
-
-[aria-pressed="true"] {
-  border: 0;
-  border-top: 5px solid #000;
-  border-left: 5px solid #000;
-}
-</style>
-<script>
-var toggle = demo.querySelector('[aria-pressed]');
-
-toggle.addEventListener('click', (e) => {  
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
-});
-</script>
-
-  </template>
-  <script>(function() { ShadyCSS.prepareTemplate(template5b7c6e1c905eca8144b27f3bc6737574, 'demo-elem5b7c6e1c905eca8144b27f3bc6737574'); var script = template5b7c6e1c905eca8144b27f3bc6737574.content.querySelector('script'); if (script) { script.textContent = `(function() { var demo = document.querySelector('demo-elem5b7c6e1c905eca8144b27f3bc6737574').shadowRoot; ${script.textContent} })()` } class DemoElem extends HTMLElement { connectedCallback() { ShadyCSS.styleElement(this); this.attachShadow({mode: 'open'}); this.shadowRoot.appendChild(template5b7c6e1c905eca8144b27f3bc6737574.content.cloneNode(true)); } } customElements.define('demo-elem5b7c6e1c905eca8144b27f3bc6737574', DemoElem); })();</script>
-</div>
-</p>
-
 <h2 id="captioned-demos">Captioned demos</h2>
 
 <p>It&rsquo;s possible to give your demo a caption using an accessible <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> structure. All <em>you</em> need to do is supply a <code>caption</code> attribute. For example:</p>
