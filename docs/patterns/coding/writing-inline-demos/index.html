@@ -291,10 +291,10 @@ toggle.addEventListener('click', (e) => {
 
 <div class="demo-container">
   
-      <demo-elemcizsddtidxr0b24gyxjp class="demo" id="demo-cizsddtidxr0b24gyxjp"></demo-elemcizsddtidxr0b24gyxjp>
+      <demo-elem34e756fc953627a51e20255208dbdb57 class="demo" id="demo-34e756fc953627a51e20255208dbdb57"></demo-elem34e756fc953627a51e20255208dbdb57>
       
   
-  <template id="templatecizsddtidxr0b24gyxjp">
+  <template id="template34e756fc953627a51e20255208dbdb57">
       
 <button aria-pressed="false">Toggle Me</button>
 <style>
@@ -324,31 +324,20 @@ toggle.addEventListener('click', (e) => {
 </script>
 
   </template>
-  <script>ShadyCSS.prepareTemplate(templatecizsddtidxr0b24gyxjp, 'demo-elemcizsddtidxr0b24gyxjp'); var script = templatecizsddtidxr0b24gyxjp.content.querySelector('script'); if (script) { script.textContent = `(function() { var demo = document.querySelector('demo-elemcizsddtidxr0b24gyxjp').shadowRoot; ${script.textContent} })()` } class DemoElem extends HTMLElement { connectedCallback() { ShadyCSS.styleElement(this); this.attachShadow({mode: 'open'}); this.shadowRoot.appendChild(templatecizsddtidxr0b24gyxjp.content.cloneNode(true)); } } customElements.define('demo-elemcizsddtidxr0b24gyxjp', DemoElem);</script>
+  <script>ShadyCSS.prepareTemplate(template34e756fc953627a51e20255208dbdb57, 'demo-elem34e756fc953627a51e20255208dbdb57'); var script = template34e756fc953627a51e20255208dbdb57.content.querySelector('script'); if (script) { script.textContent = `(function() { var demo = document.querySelector('demo-elem34e756fc953627a51e20255208dbdb57').shadowRoot; ${script.textContent} })()` } class DemoElem extends HTMLElement { connectedCallback() { ShadyCSS.styleElement(this); this.attachShadow({mode: 'open'}); this.shadowRoot.appendChild(template34e756fc953627a51e20255208dbdb57.content.cloneNode(true)); } } customElements.define('demo-elem34e756fc953627a51e20255208dbdb57', DemoElem);</script>
 </div>
-
-
-<aside aria-label="note" class="note">
-  <div>
-    <svg aria-hidden="true" height="41.667" width="41.667" viewBox="0 0 41.667306 41.66729">
-      <use xlink:href="#info"></use>
-    </svg>
-    <p>Firefox does not currently support Shadow DOM and <strong>Infusion</strong> does not include a polyfill. Firefox will output an error message. These demos function correctly in Chrome, Safari, and Opera.</p>
-
-  </div>
-</aside>
 
 
 <h2 id="captioned-demos">Captioned demos</h2>
 
 <p>It&rsquo;s possible to give your demo a caption using an accessible <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> structure. All <em>you</em> need to do is supply a <code>caption</code> attribute. For example:</p>
 
-<pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
+<p><pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo caption="A basic button element">}}
 &lt;!-- demo code here -->
 &#x7b;{&lt;/demo>}}
 </code></pre>
-
+</p>
 
 <p>Along with the standard <code>figure</code> shortcodes (described in <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/media/including-images/"><svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Including images</a>), demo figures are numbered automatically according to their order in the page. You can use markdown syntax in the caption text value.</p>
 

@@ -73,10 +73,6 @@ toggle.addEventListener('click', (e) => {
 </script>
 {{</demo>}}
 
-{{% note %}}
-Firefox does not currently support Shadow DOM and **Infusion** does not include a polyfill. Firefox will output an error message. These demos function correctly in Chrome, Safari, and Opera.
-{{% /note %}}
-
 ## Captioned demos
 
 It's possible to give your demo a caption using an accessible `<figure>` and `<figcaption>` structure. All _you_ need to do is supply a `caption` attribute. For example:
