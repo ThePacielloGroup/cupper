@@ -73,6 +73,36 @@ toggle.addEventListener('click', (e) => {
 </script>
 {{</demo>}}
 
+{{<demo>}}
+<button aria-pressed="false">Toggle Me</button>
+<style>
+button {
+    background: blue;
+    color: white;
+    border: 0;
+    font-size: 1rem;
+    font-family: serif;
+    padding: 0.5em 1em;
+    border-right: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+
+[aria-pressed="true"] {
+  border: 0;
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+}
+</style>
+<script>
+var toggle = demo.querySelector('[aria-pressed]');
+
+toggle.addEventListener('click', (e) => {  
+  let pressed = e.target.getAttribute('aria-pressed') === 'true';
+  e.target.setAttribute('aria-pressed', !pressed);
+});
+</script>
+{{</demo>}}
+
 ## Captioned demos
 
 It's possible to give your demo a caption using an accessible `<figure>` and `<figcaption>` structure. All _you_ need to do is supply a `caption` attribute. For example:

@@ -1,6 +1,6 @@
 {{ $uniq := .Inner | htmlEscape | md5 | lower }}
 {{ $template := printf "template-%s" $uniq }}
-{{ $string := replace "<script>ShadyCSS.prepareTemplate(template%s, 'demo-elem%s'); var script = template%s.content.querySelector('script'); if (script) { script.textContent = `(function() { var demo = document.querySelector('demo-elem%s').shadowRoot; ${script.textContent} })()` } class DemoElem extends HTMLElement { connectedCallback() { ShadyCSS.styleElement(this); this.attachShadow({mode: 'open'}); this.shadowRoot.appendChild(template%s.content.cloneNode(true)); } } customElements.define('demo-elem%s', DemoElem);</script>" "%s" $uniq }}
+{{ $string := replace "<script>(function() { ShadyCSS.prepareTemplate(template%s, 'demo-elem%s'); var script = template%s.content.querySelector('script'); if (script) { script.textContent = `(function() { var demo = document.querySelector('demo-elem%s').shadowRoot; ${script.textContent} })()` } class DemoElem extends HTMLElement { connectedCallback() { ShadyCSS.styleElement(this); this.attachShadow({mode: 'open'}); this.shadowRoot.appendChild(template%s.content.cloneNode(true)); } } customElements.define('demo-elem%s', DemoElem); })();</script>" "%s" $uniq }}
 <div class="demo-container">
   {{ if .Get "caption" }}
   <figure role="group" aria-labelledby="caption-{{ $uniq }}">
