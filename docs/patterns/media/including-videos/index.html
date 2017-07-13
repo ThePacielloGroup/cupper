@@ -49,7 +49,7 @@
    <path style="fill:#111111;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m91.355 46.132c0 6.104-1.624 11.234-4.862 15.394-3.248 4.158-7.45 6.237-12.607 6.237-3.882 0-7.263-1.238-10.148-3.702-2.885-2.47-5.02-5.812-6.406-10.022l6.82-2.829c1.001 2.552 2.317 4.562 3.953 6.028 1.636 1.469 3.56 2.207 5.781 2.207 2.329 0 4.3-1.306 5.909-3.911 1.609-2.606 2.411-5.738 2.411-9.401 0-4.049-.861-7.179-2.582-9.399-1.995-2.604-5.129-3.912-9.397-3.912h-3.327v-3.991l11.646-20.133h-14.062l-3.911 6.655h-2.493v-14.976h32.441v4.075l-12.31 21.217c4.324 1.385 7.596 3.911 9.815 7.571 2.22 3.659 3.329 7.953 3.329 12.892z"/>
    <path style="fill:#111111;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.21 0 1.414 8.6-5.008 9.583s-1.924-4.064-5.117-6.314c-2.693-1.899-4.447-2.309-7.186-1.746-3.527.73-7.516 4.938-9.258 10.13-2.084 6.21-2.104 9.218-2.178 11.978-.115 4.428.58 7.043.58 7.043s-3.04-5.626-3.011-13.866c.018-5.882.947-11.218 3.666-16.479 2.404-4.627 5.954-7.404 9.114-7.728 3.264-.343 5.848 1.229 7.841 2.938 2.089 1.788 4.213 5.698 4.213 5.698l4.94-9.837z"/>
    <path style="fill:#111111;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.82 48.674s-2.208 3.957-3.589 5.48c-1.379 1.524-3.849 4.209-6.896 5.555-3.049 1.343-4.646 1.598-7.661 1.306-3.01-.29-5.807-2.032-6.786-2.764-.979-.722-3.486-2.864-4.897-4.854-1.42-2-3.634-5.995-3.634-5.995s1.233 4.001 2.007 5.699c.442.977 1.81 3.965 3.749 6.572 1.805 2.425 5.315 6.604 10.652 7.545 5.336.945 9.002-1.449 9.907-2.031.907-.578 2.819-2.178 4.032-3.475 1.264-1.351 2.459-3.079 3.116-4.108.487-.758 1.276-2.286 1.276-2.286l-1.276-6.644z"/>
- </symbol>
+  </symbol>
 
   <symbol id="tag">
     <g transform="translate(0 -875.2)">
@@ -78,15 +78,21 @@
      <path style="stroke-width:0;fill:currentColor" transform="scale(-1)" d="m-73.193-1024.5a2.3719 2.3719 0 0 1 -2.8807 1.7142 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
     </g>
    </g>
- </symbol>
+  </symbol>
 
- <symbol id="warning">
-  <g transform="translate(-1.1273 -1010.2)">
-   <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
-   <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
-   <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
-  </g>
-</symbol>
+  <symbol id="warning">
+    <g transform="translate(-1.1273 -1010.2)">
+     <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
+     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
+     <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
+    </g>
+  </symbol>
+
+  <symbol id="menu">
+   <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="0" x="0"/>
+   <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="20" x="0"/>
+   <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="40" x="0"/>
+ </symbol>
 </svg>
 
     <div class="wrapper">
@@ -99,28 +105,33 @@
             <p class="library-desc">Documentation for the <strong>Infusion</strong> pattern library builder. This documentation is constructed using the builder itself.</p>
           </div>
           <nav id="patterns-nav" class="patterns" role="navigation">
-            <button id="menu-button" aria-expanded="false">Menu</button>
+            <button id="menu-button" aria-expanded="false">
+              <svg viewBox="0 0 50 50">
+                <use xlink:href="#menu"></use>
+              </svg>
+              Menu
+            </button>
             
             
               <ul id="patterns-list">
                 
                   <li class="pattern">
                     <a href="https://heydon.github.io/infusion/patterns/installation/" >
-                      <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span class="text">Installation</span>
                     </a>
                   </li>
                 
                   <li class="pattern">
                     <a href="https://heydon.github.io/infusion/patterns/library-setup/" >
-                      <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span class="text">Library setup</span>
                     </a>
                   </li>
                 
                   <li class="pattern">
                     <a href="https://heydon.github.io/infusion/patterns/serving/" >
-                      <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span class="text">Serving</span>
                     </a>
                   </li>
@@ -132,35 +143,35 @@
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/writing/library-structure/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Library structure</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Markdown &amp; metadata</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/writing/expandable-sections/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Expandable sections</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Notes &amp; warnings</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/writing/references/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">References</span>
                           </a>
                         </li>
@@ -174,14 +185,14 @@
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/media/including-images/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Including images</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/media/including-videos/" aria-current="page">
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Including videos</span>
                           </a>
                         </li>
@@ -195,35 +206,35 @@
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/coding/code-blocks/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Code blocks</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">CodePen embedding</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Writing inline demos</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/coding/color-palettes/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Color palettes</span>
                           </a>
                         </li>
                       
                         <li class="pattern">
                           <a href="https://heydon.github.io/infusion/patterns/coding/tested/" >
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Tested using...</span>
                           </a>
                         </li>
@@ -252,7 +263,7 @@
   </main>
 
           <footer role="contentinfo">
-            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project<br>.
+            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project.<br>
             For general enquiries, contact us on info@paciellogroup.com.
           </footer>
         </div>

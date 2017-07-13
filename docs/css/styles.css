@@ -682,23 +682,10 @@ p:empty {
 
 /* SVG icons */
 
-a svg {
+a svg, button svg {
   height: 0.75em;
   width: auto;
   margin-right: 0.125rem;
-}
-
-a .bookmark-icon {
-  width: 0.75em;
-}
-
-a .balloon-icon {
-  height: 1.125em;
-  width: 0.85em;
-}
-
-a .wcag-icon {
-  width: 1.5em;
 }
 
 h1 svg {

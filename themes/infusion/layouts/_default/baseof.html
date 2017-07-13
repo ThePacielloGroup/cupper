@@ -46,14 +46,19 @@
             <p class="library-desc">{{ .Site.Params.Description | markdownify }}</p>
           </div>
           <nav id="patterns-nav" class="patterns" role="navigation">
-            <button id="menu-button" aria-expanded="false">Menu</button>
+            <button id="menu-button" aria-expanded="false">
+              <svg viewBox="0 0 50 50">
+                <use xlink:href="#menu"></use>
+              </svg>
+              Menu
+            </button>
             {{ $current := . }}
             {{ range $.Site.Home.Sections }}
               <ul id="patterns-list">
                 {{ range .Pages.ByWeight }}
                   <li class="pattern">
                     <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
-                      <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                       <span class="text">{{ .Title }}</span>
                     </a>
                   </li>
@@ -65,7 +70,7 @@
                       {{ range .Pages.ByWeight }}
                         <li class="pattern">
                           <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
-                            <svg class="bookmark-icon" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">{{ .Title }}</span>
                           </a>
                         </li>
@@ -83,7 +88,7 @@
           {{ block "main" . }}
           {{ end }}
           <footer role="contentinfo">
-            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project<br>.
+            Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project.<br>
             For general enquiries, contact us on info@paciellogroup.com.
           </footer>
         </div>
