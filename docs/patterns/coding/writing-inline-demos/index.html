@@ -24,6 +24,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://heydon.github.io/infusion/css/prism.css" />
     <link rel="stylesheet" type="text/css" href="https://heydon.github.io/infusion/css/styles.css">
+    
+      <script src="https://heydon.github.io/infusion/js/webcomponents.js"></script>
+    
     <title>
       
         Writing inline demos | Infusion
@@ -284,12 +287,14 @@ toggle.addEventListener('click', (e) => {
 <p>Here&rsquo;s a live demo of&hellip; the demo:</p>
 
 
+
+
 <div class="demo-container">
   
-      <div class="demo" id="demo-CiZsdDtidXR0b24gYXJp"></div>
+      <demo-elemcizsddtidxr0b24gyxjp class="demo" id="demo-cizsddtidxr0b24gyxjp"></demo-elemcizsddtidxr0b24gyxjp>
       
   
-  <template id="template-CiZsdDtidXR0b24gYXJp">
+  <template id="templatecizsddtidxr0b24gyxjp">
       
 <button aria-pressed="false">Toggle Me</button>
 <style>
@@ -319,26 +324,11 @@ toggle.addEventListener('click', (e) => {
 </script>
 
   </template>
-  <script>
-    (function() {
-      var root = document.getElementById('demo-CiZsdDtidXR0b24gYXJp');
-      if (document.head.attachShadow) {
-        root.attachShadow({mode: 'open'});
-        var template = document.getElementById('template-CiZsdDtidXR0b24gYXJp');
-        var script = template.content.querySelector('script');
-        if (script) {
-          script.textContent = `(function() { var demo = document.getElementById(\'demo-CiZsdDtidXR0b24gYXJp\').shadowRoot; ${script.textContent} })()`
-        }
-        root.shadowRoot.appendChild(document.importNode(template.content, true));
-      } else {
-        root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> Shadow DOM is needed to display encapsulated demos. The browser does not have an issue with the demo code itself.</p>';
-      }
-    })();
-  </script>
+  <script>ShadyCSS.prepareTemplate(templatecizsddtidxr0b24gyxjp, 'demo-elemcizsddtidxr0b24gyxjp'); var script = templatecizsddtidxr0b24gyxjp.content.querySelector('script'); if (script) { script.textContent = `(function() { var demo = document.querySelector('demo-elemcizsddtidxr0b24gyxjp').shadowRoot; ${script.textContent} })()` } class DemoElem extends HTMLElement { connectedCallback() { ShadyCSS.styleElement(this); this.attachShadow({mode: 'open'}); this.shadowRoot.appendChild(templatecizsddtidxr0b24gyxjp.content.cloneNode(true)); } } customElements.define('demo-elemcizsddtidxr0b24gyxjp', DemoElem);</script>
 </div>
 
 
-<p><aside aria-label="note" class="note">
+<aside aria-label="note" class="note">
   <div>
     <svg aria-hidden="true" height="41.667" width="41.667" viewBox="0 0 41.667306 41.66729">
       <use xlink:href="#info"></use>
@@ -347,7 +337,7 @@ toggle.addEventListener('click', (e) => {
 
   </div>
 </aside>
-</p>
+
 
 <h2 id="captioned-demos">Captioned demos</h2>
 

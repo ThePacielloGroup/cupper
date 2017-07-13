@@ -24,6 +24,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" />
     <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
+    {{ if eq .Type "patterns" }}
+      <script src="{{ "js/webcomponents.js" | absURL }}"></script>
+    {{ end }}
     <title>
       {{ block "title" . }}
         {{ .Title }} | {{ .Site.Title }}
