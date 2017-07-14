@@ -9,24 +9,16 @@ Pattern pages in **Infusion** that have two or more subheadings — `<h2>`s — 
   <h2 id="toc-heading">Table of contents</h2>
   <ol>
     <li>
-      <a href="#cleaning-the-content-folder">
-        “Cleaning” the content folder
-      </a>
+      <a href="#cleaning-the-content-folder">“Cleaning” the content folder</a>
     </li>
     <li>
-      <a href="#the-setup-command">
-        The setup command
-      </a>
+      <a href="#the-setup-command">The setup command</a>
     </li>
     <li>
-      <a href="#the-config-file">
-        The config file
-      </a>
+      <a href="#the-config-file">The config file</a>
     </li>
     <li>
-      <a href="#including-a-logo">
-        Including a logo
-      </a>
+      <a href="#including-a-logo">Including a logo</a>
     </li>
   </ol>
 </nav>
