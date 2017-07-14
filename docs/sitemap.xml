@@ -86,6 +86,10 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/patterns/writing/tables-of-contents/</loc>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/tags/</loc>
     <priority>0</priority>
   </url>

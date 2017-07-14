@@ -20,6 +20,9 @@
         </ul>
       </div>
     {{ end }}
+    {{ if ne .Params.TOC false }}
+      {{ partial "toc" . }}
+    {{ end }}
     {{ .Content }}
   </main>
 {{ end }}

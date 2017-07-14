@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/writing/tables-of-contents/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://heydon.github.io/infusion/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://heydon.github.io/infusion/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://heydon.github.io/infusion/images/apple-icon-72x72.png">
@@ -29,7 +29,7 @@
     
     <title>
       
-        Markdown &amp; metadata | Infusion
+        Tables of contents | Infusion
       
     </title>
   </head>
@@ -149,7 +149,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/" aria-current="page">
+                          <a href="https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/" >
                             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Markdown &amp; metadata</span>
                           </a>
@@ -177,7 +177,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/writing/tables-of-contents/" >
+                          <a href="https://heydon.github.io/infusion/patterns/writing/tables-of-contents/" aria-current="page">
                             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Tables of contents</span>
                           </a>
@@ -258,61 +258,49 @@
         <div>
           
   <main id="main">
-    <h1>Markdown &amp; metadata</h1>
+    <h1>Tables of contents</h1>
     
     
       
 
 
     
-    
+    <p>Pattern pages in <strong>Infusion</strong> that have two or more subheadings — <code>&lt;h2&gt;</code>s — automatically get a <strong>table of contents</strong>: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &ldquo;Table of contents&rdquo; label and uses an ordered list. The table of contents markup for the <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library setup</a> page looks something like this:</p>
 
-<p>In <strong>Infusion</strong>, design patterns are documented using markdown. To create a new pattern file, just add a file with the <code>.md</code> extension to the <code>/patterns</code> folder. It&rsquo;s recommended you use &ldquo;kebab case&rdquo; to name the file ( words separated by hyphens). For example, a pattern with the title &ldquo;Menu button&rdquo; should probably have the filename <code>menu-button</code>. Then you get a nice clean URL: <code>your-company.com/patterns/menu-button</code>.</p>
-
-<p>If you&rsquo;re not familiar with writing markdown, there are a number of tutorials available. One of the best is <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a> offered by Github. There&rsquo;s also a <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">nice cheatsheet here</a>.</p>
-
-<h2 id="the-metadata">The metadata</h2>
-
-<p>Like many static site generators, Hugo lets you add metadata to its markdown files. Hugo&rsquo;s brand of metadata is called TOML (although YAML is also accepted). The only thing you <em>have</em> to put in the TOML is a <code>title</code> — like this:</p>
-
-<pre><code>+++
-title = &quot;Menu button&quot;
-+++
+<pre><code class="language-html">&lt;nav class=&quot;toc&quot; aria-labelledby=&quot;toc-heading&quot;&gt;
+  &lt;h2 id=&quot;toc-heading&quot;&gt;Table of contents&lt;/h2&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#cleaning-the-content-folder&quot;&gt;
+        “Cleaning” the content folder
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#the-setup-command&quot;&gt;
+        The setup command
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#the-config-file&quot;&gt;
+        The config file
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#including-a-logo&quot;&gt;
+        Including a logo
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
 </code></pre>
 
-<h3 id="tags">Tags</h3>
-
-<p>If you like, you can also tag the pattern so that it turns up in lists of similar content. You add tags in an array format. Note that all the TOML data is found at the top of the markdown file, between the <code>+++</code> lines.</p>
+<p>Tables of contents are a neat way to break down the content of the page and give users a navigable overview. However, they may not be to your taste. Never fear, you can turn tables of contents off by adding <code>toc = false</code> to the TOML metadata for your pattern:</p>
 
 <pre><code>+++
-title = &quot;Menu button&quot;
-tags = [&quot;interactive&quot;, &quot;popup&quot;, &quot;javascript&quot;]
+title = &quot;My page with a few headings&quot;
+toc = false
 +++
 </code></pre>
-
-<p>This will create links to pages listing content tagged with the same terms using the URL schema <code>/tag/[tag name]</code>.</p>
-
-<h3 id="weight">Weight</h3>
-
-<p>By default, patterns are listed in alphabetical order. However, sometimes you might like to change the order around. This is possible by adding a <code>weight</code> parameter. To make my menu button pattern appear at the top of its subsection, I would give it a <code>weight</code> of <code>1</code>:</p>
-
-<pre><code>+++
-title = &quot;Menu button&quot;
-tags = [&quot;interactive&quot;, &quot;popup&quot;, &quot;javascript&quot;]
-weight = 1
-+++
-</code></pre>
-
-<aside aria-label="warning" class="note warning">
-  <div>
-    <svg aria-hidden="true" height="41.646" width="48.43" viewBox="0 0 48.430474 41.646302">
-      <use xlink:href="#warning"></use>
-    </svg>
-    <p>The <code>weight</code> parameter should be an integer, not a string, so don&rsquo;t use scare quotes around the value!</p>
-
-  </div>
-</aside>
-
 
   </main>
 

@@ -135,9 +135,14 @@ h3 {
   font-size: 1.25rem;
 }
 
-h4 {
+h4, h5 {
   font-size: 1rem;
   font-family: PT Sans, sans-serif;
+}
+
+h5 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
 }
 
 kbd {
@@ -188,7 +193,7 @@ code {
 
 /* Lists */
 
-main ul {
+main ul, main ol {
   margin-left: 2.25rem;
 }
 
@@ -385,6 +390,23 @@ caption {
 #menu-button:focus {
   outline: none;
   box-shadow: inset 0 0 0 0.25rem #ccc;
+}
+
+/* Tables of contents */
+
+.toc {
+  font-size: 0.85rem;
+  border: 1px solid;
+  padding: 1.5rem;
+}
+
+.toc h2 {
+  font-size: 1rem;
+}
+
+.toc ol {
+  margin-left: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 /* Pattern lists */
