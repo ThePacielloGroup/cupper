@@ -7,12 +7,12 @@ Welcome to **Infusion**: a pattern library builder for inclusive designers. Thes
 
 {{% ticks %}}
 * Built with Hugo, so easy to structure content and fast to compile it
+* Available to read offline, thanks to service worker integration
 * Include live code demos easily, using either CodePen embeds or via inline demo sections (that use Shadow DOM)
 * Quickly include WCAG and Inclusive Design Principles references by key
 * Easily make sections collapsible without writing HTML
 * Choose between plain or line-numbered code blocks
 * A responsive, screen reader and keyboard accessible static website as output
-* Available to read offline, thanks to service worker integration
 {{% /ticks %}}
 
 To get started, take a look at {{% pattern "Installation" %}}.
