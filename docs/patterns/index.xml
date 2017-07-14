@@ -17,7 +17,7 @@
       
       <guid>https://heydon.github.io/infusion/patterns/installation/</guid>
       <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get set up step-by-step.
-1. Install Hugo First we need to install Hugo globally.
+Install Hugo First we need to install Hugo globally.
 OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
 brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
     </item>

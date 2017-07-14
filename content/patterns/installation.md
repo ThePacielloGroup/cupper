@@ -4,7 +4,7 @@ title = "Installation"
 
 **Infusion** is built using the static site engine, [Hugo](https://gohugo.io/), and NPM. The codebase is available to download on Github. Let's get set up step-by-step.
 
-## 1. Install Hugo
+## Install Hugo
 
 First we need to install Hugo globally.
 
@@ -22,11 +22,11 @@ Alternatively, you can manually [install Hugo from a package](https://github.com
 
 Installing on Windows is a bit more involved than on OSX. The authors of Hugo provide [a guide](https://gohugo.io/tutorials/installing-on-windows/) with instructions for technical and less technical users.
 
-## 2. Install Node & NPM
+## Install Node & NPM
 
 It is likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, [refer to NPM's own guide](https://docs.npmjs.com/getting-started/installing-node), which includes a video tutorial.
 
-## 3. Getting the files
+## Getting the files
 
 **Infusion** is hosted on Github. To start using it, you'll need to get the files from there. If you are comfortable with the command line, just fork the [github.com/heydon/inclusive-pattern-library](https://github.com/heydon/inclusive-pattern-library) repository, then do a `git clone` to your local system. Replace `[your username]` in the following:
 
