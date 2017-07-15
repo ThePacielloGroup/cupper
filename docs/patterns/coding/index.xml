@@ -54,6 +54,19 @@ Infusion offers another option: a special demo shortcode that allows you to writ
     </item>
     
     <item>
+      <title>Command line</title>
+      <link>https://heydon.github.io/infusion/patterns/coding/command-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/coding/command-line/</guid>
+      <description>Your pattern documentation may need to include commands for installing packages or using CLIs. Infusion offers the cmd shortcode for making code blocks look like terminal commands.
+Here&amp;rsquo;s how you write it:
+&amp;#x7b;{&amp;lt;cmd}} npm run start &amp;#x7b;{&amp;lt;/cmd}}  And here&amp;rsquo;s how it looks:
+npm run start    The cmd shortcode currently only supports single commands. If you want to show multiple, successive commands use separate cmd blocks.
+  </description>
+    </item>
+    
+    <item>
       <title>Tested using...</title>
       <link>https://heydon.github.io/infusion/patterns/coding/tested/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -12,7 +12,9 @@ Before you can start documenting patterns, there are a few things still to do in
 If you are contributing to an existing **Infusion** library, do not run the following command. It will delete all of the patterns in that library. The `clean` command is just for libraries that you are starting from scratch.
 {{% /warning %}}
 
-{{<cmd>}}npm run clean{{</cmd>}}
+{{<cmd>}}
+  npm run clean
+{{</cmd>}}
 
 This will leave your `content` folder with just an `_index.md` file and a `patterns` folder containing a single demonstration pattern file. Find out more about these in {{% pattern "Library structure" %}}.
 

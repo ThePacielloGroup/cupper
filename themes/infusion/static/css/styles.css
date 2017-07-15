@@ -73,6 +73,12 @@ a {
   border-bottom: 1px solid;
 }
 
+abbr {
+  text-decoration: none;
+  cursor: help;
+  border-bottom: 1px dashed;
+}
+
 img {
   max-width: 100%;
 }
@@ -189,6 +195,7 @@ code {
   height: 1.25em;
   background: #fff;
   margin-left: 0.25em;
+  vertical-align: -0.125rem;
 }
 
 /* Lists */

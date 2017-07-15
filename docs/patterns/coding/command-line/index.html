@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/writing/library-structure/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/coding/command-line/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://heydon.github.io/infusion/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://heydon.github.io/infusion/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://heydon.github.io/infusion/images/apple-icon-72x72.png">
@@ -29,7 +29,7 @@
     
     <title>
       
-        Library structure | Infusion
+        Command line | Infusion
       
     </title>
   </head>
@@ -142,7 +142,7 @@
                     <ul>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/writing/library-structure/" aria-current="page">
+                          <a href="https://heydon.github.io/infusion/patterns/writing/library-structure/" >
                             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Library structure</span>
                           </a>
@@ -240,7 +240,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/coding/command-line/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/command-line/" aria-current="page">
                             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">Command line</span>
                           </a>
@@ -265,66 +265,39 @@
         <div>
           
   <main id="main">
-    <h1>Library structure</h1>
+    <h1>Command line</h1>
     
     
       
 
 
     
-    
+    <p>Your pattern documentation may need to include commands for installing packages or using <abbr title="command line interface">CLI</abbr>s. <strong>Infusion</strong> offers the <code>cmd</code> shortcode for making code blocks look like terminal commands.</p>
 
-<p>Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:</p>
+<p>Here&rsquo;s how you write it:</p>
 
-<pre><code>└── content
-    ├── _index.md
-    └── patterns
-        ├── name-of-my-pattern.md
-        └── name-of-my-other-pattern.md
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{&lt;cmd>}}
+npm run start
+&#x7b;{&lt;/cmd>}}
 </code></pre>
 
-<ul>
-<li><strong>/content</strong> - This is where all of your content lives. You won&rsquo;t need to visit any other folders very frequently.</li>
-<li><strong>_index.md</strong> — This is the content for your home page.</li>
-<li><strong>/patterns</strong> — This is the folder where individual pattern files are kept.</li>
-</ul>
 
-<h2 id="subsections">Subsections</h2>
+<p>And here&rsquo;s how it looks:</p>
 
-<p>You may have noticed that this site&rsquo;s navigation is divided partly into subsections, with labels like &ldquo;Writing&rdquo;. <strong>Infusion</strong> (or, rather, Hugo) allows you to create such subsections by simply nesting folders under the <code>/patterns</code> folder. In the following example, I have a subsection about different types of &ldquo;popup&rdquo; pattern.</p>
+<pre class="cmd"><code>npm run start</code></pre>
 
-<pre><code>└── content
-    ├── _index.md
-    └── patterns
-        ├── name-of-my-pattern.md
-        ├── name-of-my-other-pattern.md
-        └── popups
-            ├── _index.md
-            ├── popup-menu.md
-            └── tooltip.md
-</code></pre>
 
-<aside aria-label="note" class="note">
+<aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" height="41.667" width="41.667" viewBox="0 0 41.667306 41.66729">
-      <use xlink:href="#info"></use>
+    <svg aria-hidden="true" height="41.646" width="48.43" viewBox="0 0 48.430474 41.646302">
+      <use xlink:href="#warning"></use>
     </svg>
-    <p>Note that subfolders like <code>/popups</code> must each have an <code>_index.md</code> file. This file doesn&rsquo;t need any content except the TOML metadata defining the title (name) of that subsection:</p>
-
-<pre><code>+++
-title = &quot;Popups&quot;
-+++
-</code></pre>
-
-<p>The <code>/patterns</code> folder itself does not need indexing explicitly in this way.</p>
-
-<p><strong>Infusion</strong> does not currently support <em>sub</em>-subsections.</p>
+    <p>The <code>cmd</code> shortcode currently only supports single commands. If you want to show multiple, successive commands use separate <code>cmd</code> blocks.</p>
 
   </div>
 </aside>
 
-
-<p>Now that you know where to put everything, it&rsquo;s time to talk about how to actually write individual patterns. Don&rsquo;t worry, it&rsquo;s pretty straightforward. Turn to <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Markdown &amp; metadata</a>.</p>
 
   </main>
 
