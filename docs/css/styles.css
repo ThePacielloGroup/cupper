@@ -256,6 +256,7 @@ th:empty {
 
 .tested td {
   vertical-align: top;
+  overflow: hidden;
 }
 
 .tested th {
@@ -864,6 +865,14 @@ h1 svg {
 
   [aria-expanded="true"] + #patterns-list {
     display: block;
+  }
+
+  .tested th, .tested td {
+    display: block;
+  }
+
+  .tested td + td {
+    border-top: 0;
   }
 
 }
