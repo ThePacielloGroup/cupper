@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/media/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/coding/file-trees/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://heydon.github.io/infusion/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://heydon.github.io/infusion/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://heydon.github.io/infusion/images/apple-icon-72x72.png">
@@ -29,7 +29,7 @@
     
     <title>
       
-        Media | Infusion
+        File trees | Infusion
       
     </title>
   </head>
@@ -247,7 +247,7 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/coding/file-trees/" >
+                          <a href="https://heydon.github.io/infusion/patterns/coding/file-trees/" aria-current="page">
                             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
                             <span class="text">File trees</span>
                           </a>
@@ -272,32 +272,84 @@
         <div>
           
   <main id="main">
-    <h1>
-      Media
-    </h1>
-    <ul class="patterns-list">
+    <h1>File trees</h1>
+    
+    
       
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/infusion/patterns/media/including-images/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Including images
-    </a>
-  </h2>
-</li>
 
-      
-          <li>
-  <h2>
-    <a href="https://heydon.github.io/infusion/patterns/media/including-videos/">
-      <svg class="bookmark" aria-hidden="true" height="50" width="40" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-      Including videos
-    </a>
-  </h2>
-</li>
 
-      
-    </ul>
+    
+    <p>Representing folder/file structures is simple and accessible in <strong>Infusion</strong>. Which is just as well, because some components may need to conform to a certain folder structure.</p>
+
+<p>The file tree is described using a markdown nested list structure:</p>
+
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% fileTree %}}
+* Level 1 folder
+    * Level 2 file
+    * Level 2 folder
+        * Level 3 file
+        * Level 3 folder
+            * Level 4 file
+        * Level 3 folder
+            * Level 4 file
+            * Level 4 file
+    * Level 2 folder
+        * Level 3 file
+        * Level 3 file
+        * Level 3 file
+&#x7b;{% /fileTree %}}
+</code></pre>
+
+
+<p>This is drawn in the following fashion, but preserves the underlying nested list structure for assistive technologies such as screen readers:</p>
+
+<p><div class="file-tree">
+  <ul>
+<li>Level 1 folder
+
+<ul>
+<li>Level 2 file</li>
+<li>Level 2 folder
+
+<ul>
+<li>Level 3 file</li>
+<li>Level 3 folder
+
+<ul>
+<li>Level 4 file</li>
+</ul></li>
+<li>Level 3 folder
+
+<ul>
+<li>Level 4 file</li>
+<li>Level 4 file</li>
+</ul></li>
+</ul></li>
+<li>Level 2 folder
+
+<ul>
+<li>Level 3 file</li>
+<li>Level 3 file</li>
+<li>Level 3 file</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</div>
+</p>
+
+<aside aria-label="warning" class="note warning">
+  <div>
+    <svg aria-hidden="true" height="41.646" width="48.43" viewBox="0 0 48.430474 41.646302">
+      <use xlink:href="#warning"></use>
+    </svg>
+    <p>The only reliable way to nest unordered lists in markdown is to indent the nested item by exactly four spaces. Using tabs and less than four spaces are unreliable methods.</p>
+
+  </div>
+</aside>
+
+
   </main>
 
           <footer role="contentinfo">

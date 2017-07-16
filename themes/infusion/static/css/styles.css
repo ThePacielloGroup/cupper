@@ -161,7 +161,7 @@ kbd {
   vertical-align: 0.33em;
 }
 
-pre {
+pre, .file-tree {
   overflow-x: auto;
   padding: 1.5rem;
   border: 1px solid;
@@ -349,7 +349,6 @@ caption {
 .patterns h3 {
   font-size: 1rem;
 }
-
 
 .patterns li {
   line-height: 1.125;
@@ -624,6 +623,49 @@ pre[class*=language-] code * {
 
 .line-numbers-rows > span:before {
   color: inherit;
+}
+
+/* file tree lists */
+
+.file-tree ul {
+  font-family: courier;
+  margin: 0;
+  padding-left: 3rem;
+  list-style: none;
+  line-height: 1.25;
+  position: relative;
+  overflow: hidden;
+}
+
+.file-tree li:not(:last-child) ul::before {
+  content: '\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020\2502\0020';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1em;
+}
+
+.file-tree > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.file-tree li {
+  background: #fff;
+  position: relative;
+}
+
+.file-tree li + li {
+  margin-top: 0;
+}
+
+.file-tree li::before {
+  content: '\251C\2500\2500\0020';
+}
+
+.file-tree li:last-child::before {
+  content: '\2514\2500\2500\0020';
 }
 
 /* Expandable sections */

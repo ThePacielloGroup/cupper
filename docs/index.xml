@@ -30,7 +30,7 @@ So, this&amp;hellip;
       
       <guid>https://heydon.github.io/infusion/patterns/writing/library-structure/</guid>
       <description>Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:
-└── content ├── _index.md └── patterns ├── name-of-my-pattern.md └── name-of-my-other-pattern.md   /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content for your home page. /patterns — This is the folder where individual pattern files are kept.</description>
+ content  _index.md patterns  name-of-my-pattern.md name-of-my-other-pattern.md      /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content for your home page. /patterns — This is the folder where individual pattern files are kept.</description>
     </item>
     
     <item>
@@ -96,6 +96,17 @@ Here&amp;rsquo;s how you write it:
 &amp;#x7b;{&amp;lt;cmd}} npm run start &amp;#x7b;{&amp;lt;/cmd}}  And here&amp;rsquo;s how it looks:
 npm run start    The cmd shortcode currently only supports single commands. If you want to show multiple, successive commands use separate cmd blocks.
   </description>
+    </item>
+    
+    <item>
+      <title>File trees</title>
+      <link>https://heydon.github.io/infusion/patterns/coding/file-trees/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/coding/file-trees/</guid>
+      <description>Representing folder/file structures is simple and accessible in Infusion. Which is just as well, because some components may need to conform to a certain folder structure.
+The file tree is described using a markdown nested list structure:
+&amp;#x7b;{% fileTree %}} * Level 1 folder * Level 2 file * Level 2 folder * Level 3 file * Level 3 folder * Level 4 file * Level 3 folder * Level 4 file * Level 4 file * Level 2 folder * Level 3 file * Level 3 file * Level 3 file &amp;#x7b;{% /fileTree %}}  This is drawn in the following fashion, but preserves the underlying nested list structure for assistive technologies such as screen readers:</description>
     </item>
     
     <item>
