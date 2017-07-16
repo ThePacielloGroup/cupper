@@ -24,4 +24,4 @@ This URL will be in the following format:
 [your user name].github.io/[your library repo name]
 ```
 
-You'll also need to add it to your `config.toml` file. See {{% pattern "Library setup" %}} for more information.
+You'll also need to add it to your `config.toml` file as the `baseURL` value. See {{% pattern "Library setup" %}} for more information.
