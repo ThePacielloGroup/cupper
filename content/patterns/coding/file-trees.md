@@ -40,6 +40,8 @@ This is drawn in the following fashion, but preserves the underlying nested list
         * Level 3 file
         * Level 3 file
         * Level 3 file
+    * Level 2 file
+* Level 1 file
 {{% /fileTree %}}
 
 {{% warning %}}
