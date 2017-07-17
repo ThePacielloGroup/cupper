@@ -17,10 +17,13 @@ The file tree is described using a markdown nested list structure:
         * Level 3 folder
             * Level 4 file
             * Level 4 file
+        * Level 3 file
     * Level 2 folder
         * Level 3 file
         * Level 3 file
         * Level 3 file
+    * Level 2 file
+* Level 1 file
 &#x7b;{% /fileTree %}}
 {{</codeBlock>}}
 
@@ -36,6 +39,7 @@ This is drawn in the following fashion, but preserves the underlying nested list
         * Level 3 folder
             * Level 4 file
             * Level 4 file
+        * Level 3 file
     * Level 2 folder
         * Level 3 file
         * Level 3 file
@@ -45,5 +49,5 @@ This is drawn in the following fashion, but preserves the underlying nested list
 {{% /fileTree %}}
 
 {{% warning %}}
-The only reliable way to nest unordered lists in markdown is to indent the nested item by exactly four spaces. Using tabs and less than four spaces are unreliable methods.
+The only reliable way to nest unordered lists in markdown is to indent the nested item by exactly four spaces. Using tabs or less than four spaces are unreliable methods.
 {{% /warning %}}

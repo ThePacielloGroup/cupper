@@ -106,7 +106,7 @@ npm run start    The cmd shortcode currently only supports single commands. If y
       <guid>https://heydon.github.io/infusion/patterns/coding/file-trees/</guid>
       <description>Representing folder/file structures is simple and accessible in Infusion. Which is just as well, because some components may need to conform to a certain folder structure.
 The file tree is described using a markdown nested list structure:
-&amp;#x7b;{% fileTree %}} * Level 1 folder * Level 2 file * Level 2 folder * Level 3 file * Level 3 folder * Level 4 file * Level 3 folder * Level 4 file * Level 4 file * Level 2 folder * Level 3 file * Level 3 file * Level 3 file &amp;#x7b;{% /fileTree %}}  This is drawn in the following fashion, but preserves the underlying nested list structure for assistive technologies such as screen readers:</description>
+&amp;#x7b;{% fileTree %}} * Level 1 folder * Level 2 file * Level 2 folder * Level 3 file * Level 3 folder * Level 4 file * Level 3 folder * Level 4 file * Level 4 file * Level 3 file * Level 2 folder * Level 3 file * Level 3 file * Level 3 file * Level 2 file * Level 1 file &amp;#x7b;{% /fileTree %}}  This is drawn in the following fashion, but preserves the underlying nested list structure for assistive technologies such as screen readers:</description>
     </item>
     
     <item>
