@@ -188,16 +188,6 @@ code {
   padding-right: 0.25em;
 }
 
-.cmd code::after {
-  content: '';
-  display: inline-block;
-  width: 0.75em;
-  height: 1.25em;
-  background: #fff;
-  margin-left: 0.25em;
-  vertical-align: -0.125rem;
-}
-
 /* Lists */
 
 main ul, main ol {

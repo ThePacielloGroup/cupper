@@ -27,7 +27,7 @@
       
       <guid>https://heydon.github.io/infusion/patterns/media/including-videos/</guid>
       <description>Infusion has a lot of its own shortcodes, but you can still use Hugo&amp;rsquo;s built in shortcodes. These include a simple shortcode for including YouTube videos in your content. The shortcode takes just one parameter — the video&amp;rsquo;s id.
-&amp;#x7b;{}}  </description>
+&amp;#x7b;{&amp;lt;youtube w7Ft2ymGmfc}}  </description>
     </item>
     
   </channel>

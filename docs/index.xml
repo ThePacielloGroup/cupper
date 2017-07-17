@@ -126,7 +126,7 @@ The file tree is described using a markdown nested list structure:
       
       <guid>https://heydon.github.io/infusion/patterns/media/including-videos/</guid>
       <description>Infusion has a lot of its own shortcodes, but you can still use Hugo&amp;rsquo;s built in shortcodes. These include a simple shortcode for including YouTube videos in your content. The shortcode takes just one parameter — the video&amp;rsquo;s id.
-&amp;#x7b;{}}  </description>
+&amp;#x7b;{&amp;lt;youtube w7Ft2ymGmfc}}  </description>
     </item>
     
     <item>
@@ -136,7 +136,7 @@ The file tree is described using a markdown nested list structure:
       
       <guid>https://heydon.github.io/infusion/patterns/installation/</guid>
       <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get set up step-by-step.
-Install Hugo First we need to install Hugo globally.
+Install Hugo First you need to install Hugo globally.
 OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
 brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
     </item>
