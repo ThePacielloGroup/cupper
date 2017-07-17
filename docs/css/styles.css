@@ -304,7 +304,7 @@ caption {
 
 .library-desc {
   font-style: italic;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 30rem;
@@ -330,7 +330,7 @@ caption {
 
 .patterns {
   overflow: auto;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .patterns * {
@@ -341,10 +341,17 @@ caption {
   font-size: 1rem;
 }
 
+.patterns h3 + ul {
+  margin-top: 0.75rem;
+}
+
 .patterns li {
   line-height: 1.125;
-  margin-top: 0.75rem;
   list-style: none;
+}
+
+.patterns li + li {
+  margin-top: 0.75rem;
 }
 
 .patterns ul ul {
@@ -747,7 +754,7 @@ p:empty {
 a svg, button svg {
   height: 0.75em;
   width: auto;
-  margin-right: 0.125rem;
+  margin-right: 0.25em;
 }
 
 h1 svg {
@@ -825,6 +832,10 @@ h1 svg {
     padding: 0.75rem 0;
   }
 
+  .patterns li:not(.pattern) {
+    margin-top: 0;
+  }
+
   .patterns ul ul {
     margin: 0;
   }
@@ -843,6 +854,7 @@ h1 svg {
 
   .pattern + .pattern {
     border-top: 1px solid;
+    margin-top: 0;
   }
 
   #menu-button {
