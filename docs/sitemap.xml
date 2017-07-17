@@ -73,6 +73,11 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/tags/library/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/library-setup/</loc>
   </url>
   
@@ -91,6 +96,16 @@
   
   <url>
     <loc>https://heydon.github.io/infusion/patterns/serving/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/tags/structure/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/tags/stuff/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

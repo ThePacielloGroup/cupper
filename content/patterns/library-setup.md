@@ -18,12 +18,6 @@ If you are contributing to an existing **Infusion** library, do not run the foll
 
 This will leave your `content` folder with just an `_index.md` file and a `patterns` folder containing a single demonstration pattern file. Find out more about these in {{% pattern "Library structure" %}}.
 
-## The `setup` command
-
-There's another command, `setup`, which you need to run to create an initial build and make sure git is aware of the `/docs` folder it generates.
-
-{{<cmd>}}npm run setup{{</cmd>}}
-
 ## The config file
 
 You'll also want to name your library and configure one or two other things in the `config.toml` file that's found at the root of your project. Here's how that file looks:

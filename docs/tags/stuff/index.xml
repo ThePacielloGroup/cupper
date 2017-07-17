@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stuff on Infusion</title>
+    <link>https://heydon.github.io/infusion/tags/stuff/</link>
+    <description>Recent content in Stuff on Infusion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://heydon.github.io/infusion/tags/stuff/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Library structure</title>
+      <link>https://heydon.github.io/infusion/patterns/writing/library-structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/writing/library-structure/</guid>
+      <description>Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:
+ content  _index.md patterns  name-of-my-pattern.md name-of-my-other-pattern.md      /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content for your home page. /patterns — This is the folder where individual pattern files are kept.</description>
+    </item>
+    
+  </channel>
+</rss>

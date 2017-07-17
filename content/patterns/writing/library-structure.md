@@ -1,6 +1,7 @@
 +++
 title = "Library structure"
 weight = 1
+tags = ['structure', 'library', 'stuff']
 +++
 
 Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:
