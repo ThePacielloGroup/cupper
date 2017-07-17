@@ -3,16 +3,15 @@ date = "2017-06-26T18:27:58+01:00"
 title = "The Infusion Pattern Library Builder"
 +++
 
-Welcome to **Infusion**: a pattern library builder for inclusive designers. These are **Infusion's** docs, but they are also an example of a pattern library built with **Infusion**. Here are some of its features:
+Welcome to **Infusion**: a pattern library builder for inclusive designers and those trying to be inclusive designers. These are **Infusion's** docs, but they are also an example of a pattern library built with **Infusion**. Here are some of its features:
 
 {{% ticks %}}
 * Built with Hugo, so easy to structure content and fast to compile it
 * Available to read offline, thanks to service worker integration
-* Include live code demos easily, using either CodePen embeds or via inline demo sections (that use Shadow DOM)
+* Include encapsulated live demos, inline with your markdown
 * Quickly include WCAG and Inclusive Design Principles references
-* Easily make sections collapsible without writing HTML
-* Choose between plain or line-numbered code blocks
-* A responsive, screen reader and keyboard accessible static website as output
+* A responsive, screen reader and keyboard accessible static site as output
+* Automated Github Pages deployment
 {{% /ticks %}}
 
 To get started, take a look at {{% pattern "Installation" %}}.
