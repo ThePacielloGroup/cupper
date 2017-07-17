@@ -28,7 +28,7 @@ It is likely you already have Node and NPM installed on your system. If so, you 
 
 ## Getting the files
 
-**Infusion** is hosted on Github. To start using it, you'll need to get the files from there. If you are comfortable with the command line, just fork the [github.com/heydon/inclusive-pattern-library](https://github.com/heydon/inclusive-pattern-library) repository, then do a `git clone` to your local system. Replace `[your username]` in the following:
+**Infusion** is hosted on Github. To start using it, you'll need to get the files from there. If you are comfortable with the command line, just fork the [github.com/heydon/infusion](https://github.com/heydon/infusion) repository, then do a `git clone` to your local system. Replace `[your username]` in the following:
 
 {{<cmd>}}git clone https://github.com/[your username]/infusion.git{{</cmd>}}
 
