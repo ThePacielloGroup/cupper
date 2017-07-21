@@ -29,12 +29,12 @@
 
 /* persist navigation scroll point */
 (function () {
-  window.addEventListener('unload', function() {
+  window.onunload = function () {
     var scrollPoint = document.getElementById('patterns-nav').scrollTop
     localStorage.setItem('scrollPoint', scrollPoint)
-  })
+  }
 
-  window.addEventListener('load', function() {
+  window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('patterns-nav').scrollTop = parseInt(localStorage.getItem('scrollPoint'))
   })
 }());
