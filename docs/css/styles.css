@@ -468,6 +468,11 @@ caption {
   font-size: 0.85rem;
 }
 
+.note svg {
+  height: 2.25rem;
+  width: auto;
+}
+
 .note > div {
   margin-left: 0.75rem;
 }
