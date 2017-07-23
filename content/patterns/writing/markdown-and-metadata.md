@@ -1,6 +1,7 @@
 +++
 title = "Markdown & metadata"
 weight = 3
+tags = ['metadata', 'markdown']
 +++
 
 In **Infusion**, design patterns are documented using markdown. To create a new pattern file, just add a file with the `.md` extension to the `/patterns` folder. It's recommended you use "kebab case" to name the file ( words separated by hyphens). For example, a pattern with the title "Menu button" should probably have the filename `menu-button`. Then you get a nice clean URL: `username.github.io/your-library/patterns/menu-button`.
@@ -28,7 +29,7 @@ tags = ["interactive", "popup", "javascript"]
 +++
 ```
 
-This will create links to pages listing content tagged with the same terms using the URL schema `/tag/[tag name]`.
+This will create links to pages listing content tagged with the same terms using the URL schema `/tag/[tag name]`. Some example tags links are provided for this page, which you can see listed under the main heading.
 
 ### Weight
 

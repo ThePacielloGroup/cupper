@@ -82,6 +82,16 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/tags/markdown/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/tags/metadata/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/</loc>
   </url>
   
