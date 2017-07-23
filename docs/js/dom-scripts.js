@@ -35,6 +35,10 @@
   }
 
   window.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('patterns-nav').scrollTop = parseInt(localStorage.getItem('scrollPoint'))
+    if (window.location.href.indexOf('patterns/') !== -1) {
+      document.getElementById('patterns-nav').scrollTop = parseInt(localStorage.getItem('scrollPoint'))
+    } else {
+      document.getElementById('patterns-nav').scrollTop = 0
+    }
   })
 }());
