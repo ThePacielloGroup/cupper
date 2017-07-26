@@ -1,0 +1,5 @@
+{{ if .IsNamedParams }}
+  <iframe src="https://jsbin.com/{{ .Get "id" }}/embed?{{ .Get "show" }}" title="JS Bin demo" height="300" width="100%"></iframe>
+{{ else }}
+  <iframe src="https://jsbin.com/{{ .Get "id" }}/embed?output" title="JS Bin demo" height="300" width="100%"></iframe>
+{{ end }}

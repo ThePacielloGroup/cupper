@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/">
+    <link rel="canonical" href="https://heydon.github.io/infusion/patterns/coding/demo-embedding/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://heydon.github.io/infusion/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://heydon.github.io/infusion/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://heydon.github.io/infusion/images/apple-icon-72x72.png">
@@ -29,7 +29,7 @@
     
     <title>
       
-        CodePen embedding | Infusion
+        Demo embedding | Infusion
       
     </title>
   </head>
@@ -219,9 +219,9 @@
                         </li>
                       
                         <li class="pattern">
-                          <a href="https://heydon.github.io/infusion/patterns/coding/codepen-embedding/" aria-current="page">
+                          <a href="https://heydon.github.io/infusion/patterns/coding/demo-embedding/" aria-current="page">
                             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                            <span class="text">CodePen embedding</span>
+                            <span class="text">Demo embedding</span>
                           </a>
                         </li>
                       
@@ -272,14 +272,43 @@
         <div>
           
   <main id="main">
-    <h1>CodePen embedding</h1>
+    <h1>Demo embedding</h1>
     
     
       
 
+  <nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
+      
+        <li>
+          <a href="#codepen">
+            CodePen
+          </a>
+        </li>
+      
+        <li>
+          <a href="#jsbin">
+            jsBin
+          </a>
+        </li>
+      
+        <li>
+          <a href="#inline-demos">
+            Inline demos
+          </a>
+        </li>
+      
+    </ol>
+  </nav>
+
 
     
-    <p>Sometimes just pictures of the pattern you&rsquo;re documenting aren&rsquo;t enough. Interactive patterns benefit from live demos, so that readers can test their functionality.</p>
+    
+
+<p>Sometimes just pictures of the pattern you&rsquo;re documenting aren&rsquo;t enough. Interactive patterns benefit from live demos, so that readers can test their functionality.</p>
+
+<h2 id="codepen">CodePen</h2>
 
 <p><strong>Infusion</strong> offers a couple of ways to do this. The first is by embedding CodePen demos into the content. The <code>codePen</code> shortcode takes just one argument: the codePen&rsquo;s <code>ID</code>.</p>
 
@@ -291,7 +320,7 @@
 <p>This will embed the identified codePen into the content wherever you placed the shortcode, with the result view showing by default:</p>
 
 
-  <iframe height='300' scrolling='no' title="code demonstration with codePen" src='//codepen.io/heydon/embed/VpVNKW/?height=265&theme-id=dark&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
+  <iframe height="300" scrolling="no" title="code demonstration with codePen" src="//codepen.io/heydon/embed/VpVNKW/?height=265&theme-id=dark&default-tab=result,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">
     <div>
       <a href="//codepen.io/heydon/pen/VpVNKW">See the demo on codePen</a>
     </div>
@@ -309,6 +338,39 @@
   </div>
 </aside>
 
+
+<h2 id="jsbin">jsBin</h2>
+
+<p>You can embed JS Bins just like CodePens, supplying a single <code>id</code> parameter.</p>
+
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% jsBin juwowaq %}}
+</code></pre>
+
+
+<p>However, you can also have finer control over which panes are displayed. Use two parameters: one for the <code>id</code> and another, <code>show</code>,  listing the panes you want to include.</p>
+
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% jsBin id="juwowaq" show="css,output" %}}
+</code></pre>
+
+
+<p>The options for the <code>show</code> parameter are:</p>
+
+<ul>
+<li>html</li>
+<li>css</li>
+<li>js</li>
+<li>console</li>
+<li>output</li>
+</ul>
+
+
+  <iframe src="https://jsbin.com/juwowaq/embed?css%2coutput" title="JS Bin demo" height="300" width="100%"></iframe>
+
+
+
+<h2 id="inline-demos">Inline demos</h2>
 
 <p><strong>Infusion</strong> also supports the ability to write inline demos directly in markdown files. See <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Writing inline demos</a>.</p>
 
