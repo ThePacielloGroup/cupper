@@ -43,6 +43,8 @@ The options for the `show` parameter are:
 * console
 * output
 
+(Note that, under some circumstances, the `html` pane is added whether you select it or not.)
+
 {{% jsBin id="juwowaq" show="css,output" %}}
 
 

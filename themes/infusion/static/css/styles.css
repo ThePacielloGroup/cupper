@@ -883,3 +883,49 @@ h1 svg {
   }
 
 }
+
+@media print {
+
+  .intro-and-nav, [role="contentinfo"] {
+    display: none;
+  }
+
+  .main-and-footer {
+    margin-left: 0;
+  }
+
+  a {
+    border: 0;
+  }
+
+  a::after {
+    content:" (" attr(href) ")";
+    word-break: break-word;
+  }
+
+  nav a::after, .tags a::after {
+    content: '';
+  }
+
+  .cmd {
+    background: #fff;
+    color: #111;
+  }
+
+  pre code {
+    white-space: pre-wrap !important;
+  }
+
+  .line-numbers .line-numbers-rows {
+    display: none;
+  }
+
+  .line-numbers code {
+    padding-left: 0;
+  }
+
+  main * {
+    page-break-inside: avoid;
+  }
+
+}

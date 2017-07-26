@@ -32,7 +32,7 @@ It is likely you already have Node and NPM installed on your system. If so, you 
 
 {{<cmd>}}git clone https://github.com/[your username]/infusion.git{{</cmd>}}
 
-If the command line is not your thing, fork  [github.com/heydon/inclusive-pattern-library](https://github.com/heydon/inclusive-pattern-library) and choose **Open in Desktop** from **Clone or download** (see figure 1, below).
+If the command line is not your thing, fork  [github.com/heydon/infusion](https://github.com/heydon/infusion) and choose **Open in Desktop** from **Clone or download** (see figure 1, below).
 
 {{% figure caption="The Github web interface" %}}
 ![The open in desktop option, revealed when clicking clone or download](/images/open_in_desktop.png)
