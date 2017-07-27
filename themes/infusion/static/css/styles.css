@@ -684,9 +684,13 @@ pre[class*=language-] code * {
   padding: 1.5rem 0 0.75rem;
 }
 
-.expandable-section + .expandable-section {
-  margin-top: 0;
-  border-top: 0;
+@media screen {
+
+  .expandable-section + .expandable-section {
+    margin-top: 0;
+    border-top: 0;
+  }
+
 }
 
 [data-expands] {
@@ -938,6 +942,23 @@ h1 svg {
 
   .line-numbers code {
     padding-left: 0;
+  }
+
+  .expandable-section {
+    border: 0;
+    padding: 0;
+  }
+
+  .expandable-section + p {
+    margin-top: 0.75rem;
+  }
+
+  [id^="expandable-"] {
+    display: block;
+  }
+
+  [data-expands] svg {
+    display: none;
   }
 
   main * {
