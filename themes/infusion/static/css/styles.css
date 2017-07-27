@@ -806,6 +806,22 @@ h1 svg {
   display: block;
 }
 
+/* Section links */
+
+.h2-container {
+  position: relative;
+  font-size: 1.66rem;
+}
+
+.h2-container a {
+  position: absolute;
+  margin-top: 0;
+  top: 0;
+  line-height: 1;
+  left: -1em;
+  border: 0;
+}
+
 @media (max-width: 45em) {
 
   [role="banner"] {

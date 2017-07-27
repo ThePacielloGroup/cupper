@@ -42,3 +42,31 @@
     }
   })
 }());
+
+/* Add "link here" links to <h2> headings */
+(function () {
+  var headings = document.querySelectorAll('main > h2')
+
+  Array.prototype.forEach.call(headings, function (heading) {
+    var id = heading.getAttribute('id')
+
+    if (id) {
+      var newHeading = heading.cloneNode(true)
+
+      var container = document.createElement('div')
+      container.setAttribute('class', 'h2-container')
+      container.appendChild(newHeading)
+
+      heading.parentNode.insertBefore(container, heading)
+
+      var link = document.createElement('a')
+      link.setAttribute('href', '#' + id)
+      link.setAttribute('aria-label', 'link for this section')
+      link.innerHTML = '<svg aria-hidden="true" viewBox="0 0 50 50"><use xlink:href="#link"></use></svg>'
+
+      container.appendChild(link)
+
+      heading.parentNode.removeChild(heading);
+    }
+  })
+}());
