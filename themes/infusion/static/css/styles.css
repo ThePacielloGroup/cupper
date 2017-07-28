@@ -451,12 +451,6 @@ caption {
   margin: 0;
 }
 
-.tag-icon {
-  height: 1em;
-  width: auto;
-  vertical-align: middle;
-}
-
 .tags strong {
   margin-right: 0.25rem;
 }
@@ -765,14 +759,16 @@ p:empty {
 
 /* SVG icons */
 
-a svg, button svg {
+a svg, button svg, h1 svg {
   height: 0.75em;
   width: auto;
   margin-right: 0.25em;
 }
 
 h1 svg {
-  vertical-align: -0.5rem;
+  height: 1em;
+  margin-right: 0;
+  vertical-align: middle;
 }
 
 /* color palettes */
