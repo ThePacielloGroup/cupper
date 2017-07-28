@@ -378,9 +378,14 @@ caption {
   margin-left: 0.125rem;
 }
 
-.pattern [aria-current] span {
-  text-decoration: underline;
-  text-decoration-skip: ink;
+.pattern [aria-current] {
+  background-color: #111;
+  background-image: url(images/arrow_effect.svg);
+  background-position: right center;
+  background-size: 125%;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 0.5em 1em 0.5em;
 }
 
 /* menu button */
@@ -875,6 +880,10 @@ h1 svg {
 
   .pattern a {
     padding: 0.75rem 0;
+  }
+
+  .pattern [aria-current] {
+    background-image: none;
   }
 
   .pattern + .pattern {
