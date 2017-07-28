@@ -762,16 +762,25 @@ p:empty {
 a svg, button svg, h1 svg {
   height: 0.75em;
   width: auto;
-  margin-right: 0.25em;
+  margin-right: 0.125em;
 }
 
-h1 svg {
+h1 svg, li > svg, h2 a svg {
   height: 1em;
-  margin-right: 0;
   vertical-align: middle;
 }
 
-/* color palettes */
+h1 svg {
+  margin-right: 0;
+}
+
+.svg-outer {
+  width: 0.75em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Color palettes */
 
 .colors {
   display: flex;

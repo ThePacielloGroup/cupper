@@ -70,3 +70,34 @@
     }
   })
 }());
+
+
+// SVG scaling fix for IE10-11
+(function () {
+  if (window.matchMedia('(-ms-high-contrast: none), (-ms-high-contrast: active)').matches) {
+  // Get all the SVGs on the page except the symbol defs
+    var svgs = document.querySelectorAll('a svg, button svg, h1 svg')
+    // ... iterate over SVGs
+    Array.prototype.forEach.call(svgs, function(svg) {
+      // Set preserveAspectRatio to 'XMidYMin slice'
+      svg.setAttribute('preserveAspectRatio', 'xMidYMin slice')
+
+      // Turn the viewBox values into an array
+      var viewBox = svg.getAttribute('viewBox').split(' ')
+
+      // Calculate padding value needed (width/height x 100)
+      var padding = (viewBox[2] / viewBox[3]) * 100
+
+      // Set inline styles
+      svg.setAttribute('style', 'width: 100%; padding-bottom: ' + padding + '%; height: 1px; overflow: visible')
+
+      // Create span wrapper
+      var span = document.createElement('span')
+      span.setAttribute('class', 'svg-outer')
+      span.style.width = '0.75em'
+
+      svg.parentNode.insertBefore(span, svg)
+      span.appendChild(svg)
+    })
+  }
+}());
