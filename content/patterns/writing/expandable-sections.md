@@ -42,3 +42,7 @@ Unfortunately, it is not currently possible to include shortcodes inside other s
 &lt;p>Here is a pattern reference shortcode: &#x7b;{% pattern "Writing inline demos" %}}.&lt;/p>
 &#x7b;{&lt;/expandable>}}
 {{</codeBlock>}}
+
+{{% note %}}
+When you go to print a pattern from your library, some print styles take care of collapsible sections, making them appear expanded and like any other section.
+{{% /note %}}

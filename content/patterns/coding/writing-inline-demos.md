@@ -51,6 +51,7 @@ button {
     background: DarkCyan;
     color: white;
     border: 0;
+    border-radius: 0.25em;
     font-size: 1.5rem;
     padding: 0.5em 1em;
     border-right: 5px solid #000;
