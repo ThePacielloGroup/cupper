@@ -131,11 +131,11 @@ The file tree is described using a markdown nested list structure:
     
     <item>
       <title>Infusion</title>
-      <link>https://heydon.github.io/infusion/onepage/</link>
+      <link>https://heydon.github.io/infusion/print-version/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://heydon.github.io/infusion/onepage/</guid>
-      <description></description>
+      <guid>https://heydon.github.io/infusion/print-version/</guid>
+      <description>You don&amp;rsquo;t want to edit this file :-)</description>
     </item>
     
     <item>

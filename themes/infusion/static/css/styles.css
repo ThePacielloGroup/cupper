@@ -302,6 +302,11 @@ caption {
   border: 0;
 }
 
+.logo img {
+  width: 100%;
+  max-width: 12rem;
+}
+
 .library-desc {
   font-style: italic;
   margin-top: 0.5rem;
@@ -678,7 +683,7 @@ pre[class*=language-] code * {
   padding: 0.75rem 0;
 }
 
-[id^="expandable-"] {
+[id^="js-expandable-"] {
   margin: 0;
   padding: 1.5rem 0 0.75rem;
 }
@@ -838,11 +843,11 @@ h1 svg {
 
 /* Single page layout */
 
-.wrapper.one-page .main-and-footer {
+.wrapper.print-version .main-and-footer {
   margin-left: 0;
 }
 
-.wrapper.one-page .intro-and-nav {
+.wrapper.print-version .intro-and-nav {
   position: static;
   border: 0;
   width: auto;
@@ -852,34 +857,44 @@ h1 svg {
   justify-content: center;
 }
 
-.wrapper.one-page main {
+.wrapper.print-version main {
   min-height: 0;
 }
 
-.wrapper.one-page .library-desc {
+.wrapper.print-version .library-desc {
   font-size: 1rem;
 }
 
-.wrapper.one-page .intro-and-nav > div {
+.wrapper.print-version .intro-and-nav > div {
   height: auto;
 }
 
-.wrapper.one-page #patterns-list {
+.wrapper.print-version #patterns-list {
   margin-left: 0;
   margin-top: 1.5rem;
   display: block;
 }
 
-.wrapper.one-page .toc {
+.wrapper.print-version .toc {
   font-size: 1rem;
 }
 
-.wrapper.one-page .toc h2 {
+.wrapper.print-version .toc h2 {
   font-size: 1.66rem;
 }
 
-.wrapper.one-page #patterns-list h3 {
+.wrapper.print-version #patterns-list h3 {
   font-size: 1.25rem;
+}
+
+.pattern-section + .pattern-section {
+  padding-top: 5rem;
+  margin-top: 5rem;
+  border-top: 2px solid;
+}
+
+.pattern-section h1 {
+  padding: 0 !important;
 }
 
 @media screen and (max-width: 45em) {
@@ -896,10 +911,6 @@ h1 svg {
 
   .intro-and-nav > div {
     padding: 1.5rem;
-  }
-
-  .logo img {
-    max-width: 15rem;
   }
 
   .main-and-footer {
@@ -966,8 +977,8 @@ h1 svg {
 
 @media print {
 
-  .wrapper:not(.one-page) .intro-and-nav,
-  .wrapper:not(.one-page) [role="contentinfo"] {
+  .wrapper:not(.print-version) .intro-and-nav,
+  .wrapper:not(.print-version) [role="contentinfo"] {
     display: none;
   }
 
@@ -1010,7 +1021,7 @@ h1 svg {
     margin-top: 0.75rem;
   }
 
-  [id^="expandable-"] {
+  [id^="js-expandable-"] {
     display: block;
   }
 

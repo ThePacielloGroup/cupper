@@ -34,11 +34,11 @@
     </title>
   </head>
   <body>
-    {{ if ne .Type "onepage" }}
+    {{ if ne .Type "print-version" }}
       <a href="#main">skip to content</a>
     {{ end }}
     {{ partial "svg.html" . }}
-    <div class="wrapper {{ if eq .Type "onepage" }}one-page{{ end }}">
+    <div class="wrapper {{ if eq .Type "print-version" }}print-version{{ end }}">
         <header class="intro-and-nav" role="banner">
           <div>
             <div class="intro">
@@ -46,7 +46,7 @@
                 <img src="{{ "images/logo.png" | absURL }}" alt="">
               </a>
               <p class="library-desc">{{ .Site.Params.Description | markdownify }}</p>
-              {{ if eq .Type "onepage" }}
+              {{ if eq .Type "print-version" }}
                 <p><a href="#toc">Table of contents</a> <span aria-hidden="true">&#x21e9;</span></p>
               {{ end }}
             </div>
@@ -104,7 +104,7 @@
     {{ if eq .Type "patterns" }}
       <script src="{{ "js/prism.js" | absURL }}"></script>
     {{ end }}
-    {{ if ne .Type "onepage" }}
+    {{ if ne .Type "print-version" }}
       <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
     {{ end }}
     {{ if .Page.IsHome }}
