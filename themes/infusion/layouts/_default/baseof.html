@@ -34,55 +34,62 @@
     </title>
   </head>
   <body>
-    <a href="#main">skip to content</a>
+    {{ if ne .Type "onepage" }}
+      <a href="#main">skip to content</a>
+    {{ end }}
     {{ partial "svg.html" . }}
-    <div class="wrapper">
-      <header class="intro-and-nav" role="banner">
-        <div>
-          <div class="intro">
-            <a class="logo" href="/" aria-label="{{ .Site.Title }} pattern library home page">
-              <img src="{{ "images/logo.png" | absURL }}" alt="">
-            </a>
-            <p class="library-desc">{{ .Site.Params.Description | markdownify }}</p>
-          </div>
-          <nav id="patterns-nav" class="patterns" role="navigation">
-            <button id="menu-button" aria-expanded="false">
-              <svg viewBox="0 0 50 50" width="50" height="50">
-                <use xlink:href="#menu"></use>
-              </svg>
-              Menu
-            </button>
-            {{ $current := . }}
-            {{ range $.Site.Home.Sections }}
-              <ul id="patterns-list">
-                {{ range .Pages.ByWeight }}
-                  <li class="pattern">
-                    <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
-                      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                      <span class="text">{{ .Title }}</span>
-                    </a>
-                  </li>
+    <div class="wrapper {{ if eq .Type "onepage" }}one-page{{ end }}">
+        <header class="intro-and-nav" role="banner">
+          <div>
+            <div class="intro">
+              <a class="logo" href="/" aria-label="{{ .Site.Title }} pattern library home page">
+                <img src="{{ "images/logo.png" | absURL }}" alt="">
+              </a>
+              <p class="library-desc">{{ .Site.Params.Description | markdownify }}</p>
+              {{ if eq .Type "onepage" }}
+                <p><a href="#toc">Table of contents</a> <span aria-hidden="true">&#x21e9;</span></p>
+              {{ end }}
+            </div>
+            {{ block "nav" . }}
+              <nav id="patterns-nav" class="patterns" role="navigation">
+                <button id="menu-button" aria-expanded="false">
+                  <svg viewBox="0 0 50 50" width="50" height="50">
+                    <use xlink:href="#menu"></use>
+                  </svg>
+                  Menu
+                </button>
+                {{ $current := . }}
+                {{ range $.Site.Home.Sections }}
+                  <ul id="patterns-list">
+                    {{ range .Pages.ByWeight }}
+                      <li class="pattern">
+                        <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
+                          <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                          <span class="text">{{ .Title }}</span>
+                        </a>
+                      </li>
+                    {{ end }}
+                    {{ range .Sections.ByWeight }}
+                      <li>
+                        <h3>{{ .Title }}</h3>
+                        <ul>
+                          {{ range .Pages.ByWeight }}
+                            <li class="pattern">
+                              <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
+                                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
+                                <span class="text">{{ .Title }}</span>
+                              </a>
+                            </li>
+                          {{ end }}
+                        </ul>
+                      </li>
+                    {{ end }}
+                  </ul>
                 {{ end }}
-                {{ range .Sections.ByWeight }}
-                  <li>
-                    <h3>{{ .Title }}</h3>
-                    <ul>
-                      {{ range .Pages.ByWeight }}
-                        <li class="pattern">
-                          <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
-                            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>
-                            <span class="text">{{ .Title }}</span>
-                          </a>
-                        </li>
-                      {{ end }}
-                    </ul>
-                  </li>
-                {{ end }}
-              </ul>
+              </nav>
             {{ end }}
-          </nav>
-        </div>
-      </header>
+          </div>
+        </header>
       <div class="main-and-footer">
         <div>
           {{ block "main" . }}
@@ -97,7 +104,9 @@
     {{ if eq .Type "patterns" }}
       <script src="{{ "js/prism.js" | absURL }}"></script>
     {{ end }}
-    <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
+    {{ if ne .Type "onepage" }}
+      <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
+    {{ end }}
     {{ if .Page.IsHome }}
       <script src="{{ "js/service-worker-registration.js" | absURL }}"></script>
     {{ end }}

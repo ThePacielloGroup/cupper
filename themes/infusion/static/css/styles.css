@@ -836,7 +836,53 @@ h1 svg {
   border: 0;
 }
 
-@media (max-width: 45em) {
+/* Single page layout */
+
+.wrapper.one-page .main-and-footer {
+  margin-left: 0;
+}
+
+.wrapper.one-page .intro-and-nav {
+  position: static;
+  border: 0;
+  width: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper.one-page main {
+  min-height: 0;
+}
+
+.wrapper.one-page .library-desc {
+  font-size: 1rem;
+}
+
+.wrapper.one-page .intro-and-nav > div {
+  height: auto;
+}
+
+.wrapper.one-page #patterns-list {
+  margin-left: 0;
+  margin-top: 1.5rem;
+  display: block;
+}
+
+.wrapper.one-page .toc {
+  font-size: 1rem;
+}
+
+.wrapper.one-page .toc h2 {
+  font-size: 1.66rem;
+}
+
+.wrapper.one-page #patterns-list h3 {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 45em) {
 
   [role="banner"] {
     position: static;
@@ -920,7 +966,8 @@ h1 svg {
 
 @media print {
 
-  .intro-and-nav, [role="contentinfo"] {
+  .wrapper:not(.one-page) .intro-and-nav,
+  .wrapper:not(.one-page) [role="contentinfo"] {
     display: none;
   }
 
@@ -932,13 +979,9 @@ h1 svg {
     border: 0;
   }
 
-  a::after {
+  main a::after {
     content:" (" attr(href) ")";
     word-break: break-word;
-  }
-
-  nav a::after, .tags a::after {
-    content: '';
   }
 
   .cmd {
