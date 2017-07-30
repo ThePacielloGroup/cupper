@@ -887,10 +887,9 @@ h1 svg {
   font-size: 1.25rem;
 }
 
-.pattern-section + .pattern-section {
-  padding-top: 5rem;
-  margin-top: 5rem;
-  border-top: 2px solid;
+.pattern-section:not(:last-child) {
+  padding-bottom: 2.25rem;
+  border-bottom: 2px solid;
 }
 
 .pattern-section h1 {
@@ -995,6 +994,10 @@ h1 svg {
     word-break: break-word;
   }
 
+  main nav a::after {
+    content: '';
+  }
+
   .cmd {
     background: #fff;
     color: #111;
@@ -1029,8 +1032,13 @@ h1 svg {
     display: none;
   }
 
-  main * {
+  main *:not(.with-desc) {
     page-break-inside: avoid;
+  }
+
+  .note.warning {
+    border-left: 0.5rem solid;
+    background: none;
   }
 
 }
