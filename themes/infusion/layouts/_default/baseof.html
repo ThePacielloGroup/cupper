@@ -24,9 +24,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" />
     <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
-    {{ if eq .Type "patterns" }}
-      <script src="{{ "js/webcomponents.js" | absURL }}"></script>
-    {{ end }}
+    <script src="{{ "js/webcomponents.js" | absURL }}"></script>
     <title>
       {{ block "title" . }}
         {{ .Title }} | {{ .Site.Title }}
@@ -112,12 +110,8 @@
         </div>
       </div>
     </div>
-    {{ if eq .Type "patterns" }}
-      <script src="{{ "js/prism.js" | absURL }}"></script>
-    {{ end }}
-    {{ if ne .Type "print-version" }}
-      <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
-    {{ end }}
+    <script src="{{ "js/prism.js" | absURL }}"></script>
+    <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
     {{ if .Page.IsHome }}
       <script src="{{ "js/service-worker-registration.js" | absURL }}"></script>
     {{ end }}

@@ -280,6 +280,7 @@ caption {
 .wrapper {
   position: relative;
   margin-top: 0;
+  overflow-x: hidden;
 }
 
 .intro-and-nav {
@@ -568,10 +569,6 @@ pre[class*=language-] code * {
   margin-top: -1rem;
 }
 
-*:not(pre) > code {
-  white-space: nowrap;
-}
-
 .token.property,
 .token.tag,
 .token.boolean,
@@ -635,14 +632,23 @@ pre[class*=language-] code * {
 
 /* file tree lists */
 
+.file-tree {
+  overflow-x: auto;
+}
+
 .file-tree ul {
-  font-family: courier;
+  font-family: Courier, monospace;
   margin: 0;
+  padding: 0;
   padding-left: 3rem;
   list-style: none;
   line-height: 1.25;
   position: relative;
   overflow: hidden;
+}
+
+.file-tree > ul {
+   padding-left: 0;
 }
 
 .file-tree li:not(:last-child) > ul::before {
@@ -654,14 +660,10 @@ pre[class*=language-] code * {
   width: 1em;
 }
 
-.file-tree > ul {
-  margin: 0;
-  padding: 0;
-}
-
 .file-tree li {
   background: #fff;
   position: relative;
+  white-space: nowrap;
 }
 
 .file-tree li + li {
@@ -674,6 +676,11 @@ pre[class*=language-] code * {
 
 .file-tree li:last-child::before {
   content: '\2514\2500\2500\0020';
+}
+
+.file-tree li::before,
+.file-tree ul::before {
+  white-space: normal;
 }
 
 /* Expandable sections */

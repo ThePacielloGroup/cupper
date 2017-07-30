@@ -20,25 +20,30 @@
 /* menu button */
 (function () {
   var button = document.getElementById('menu-button')
-  var menu = document.getElementById('patterns-list')
-  button.addEventListener('click', function() {
-    var expanded = this.getAttribute('aria-expanded') === 'true'
-    this.setAttribute('aria-expanded', !expanded)
-  })
+  if (button) {
+    var menu = document.getElementById('patterns-list')
+    button.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true'
+      this.setAttribute('aria-expanded', !expanded)
+    })
+  }
 }());
 
 /* persist navigation scroll point */
 (function () {
-  window.onunload = function () {
-    var scrollPoint = document.getElementById('patterns-nav').scrollTop
-    localStorage.setItem('scrollPoint', scrollPoint)
+  var patternsNav = document.getElementById('patterns-nav')
+  if (patternsNav) {
+    var scrollPoint = patternsNav.scrollTop
+    window.onunload = function () {
+      localStorage.setItem('scrollPoint', scrollPoint)
+    }
   }
 
   window.addEventListener('DOMContentLoaded', function () {
     if (window.location.href.indexOf('patterns/') !== -1) {
-      document.getElementById('patterns-nav').scrollTop = parseInt(localStorage.getItem('scrollPoint'))
+      scrollPoint = parseInt(localStorage.getItem('scrollPoint'))
     } else {
-      document.getElementById('patterns-nav').scrollTop = 0
+      scrollPoint = 0
     }
   })
 }());
