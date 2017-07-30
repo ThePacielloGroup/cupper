@@ -5,7 +5,7 @@
   {{ if .Get "caption" }}
   <figure role="group" aria-labelledby="caption-{{ $uniq }}">
   {{ end }}
-      <demo-elem{{ $uniq }} class="demo" id="demo-{{ $uniq }}"></demo-elem{{ $uniq }}>
+      <demo-elem{{ $uniq }} class="demo" id="js-demo-{{ $uniq }}"></demo-elem{{ $uniq }}>
       {{ if .Get "caption" }}
           <figcaption id="caption-{{ $uniq }}">{{ .Get "caption" | markdownify }}</figcaption>
       {{ end }}

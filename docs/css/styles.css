@@ -99,6 +99,7 @@ figure p img {
 }
 
 /* fix for IE :( */
+[tabindex="-1"]:focus,
 div:not([tabindex]):focus {
   outline: none;
 }
@@ -767,7 +768,7 @@ p:empty {
 a svg, button svg, h1 svg {
   height: 0.75em;
   width: auto;
-  margin-right: 0.125em;
+  margin-right: 0.25em;
 }
 
 h1 svg, li > svg, h2 a svg {
@@ -777,6 +778,10 @@ h1 svg, li > svg, h2 a svg {
 
 h1 svg {
   margin-right: 0;
+}
+
+.print {
+  white-space: nowrap;
 }
 
 .svg-outer {
@@ -820,7 +825,7 @@ h1 svg {
 
 /* inline demos */
 
-[id^="demo-"] {
+[id^="js-demo-"] {
   all: initial;
   display: block;
 }
