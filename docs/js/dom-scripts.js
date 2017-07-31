@@ -31,19 +31,21 @@
 
 /* persist navigation scroll point */
 (function () {
-  var patternsNav = document.getElementById('patterns-nav')
-  if (patternsNav) {
-    var scrollPoint = patternsNav.scrollTop
-    window.onunload = function () {
+  window.onunload = function () {
+    var patternsNav = document.getElementById('patterns-nav')
+    if (patternsNav) {
+      var scrollPoint = patternsNav.scrollTop
       localStorage.setItem('scrollPoint', scrollPoint)
     }
   }
 
   window.addEventListener('DOMContentLoaded', function () {
-    if (window.location.href.indexOf('patterns/') !== -1) {
-      scrollPoint = parseInt(localStorage.getItem('scrollPoint'))
-    } else {
-      scrollPoint = 0
+    if (document.getElementById('patterns-nav')) {
+      if (window.location.href.indexOf('patterns/') !== -1) {
+        document.getElementById('patterns-nav').scrollTop = parseInt(localStorage.getItem('scrollPoint'))
+      } else {
+        document.getElementById('patterns-nav').scrollTop = 0
+      }
     }
   })
 }());
