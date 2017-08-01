@@ -29,7 +29,9 @@
         {{ .Title }} | {{ .Site.Title }}
       {{ end }}
     </title>
-    <link rel="manifest" href="{{ "manifest.json" | absURL }}">
+    {{ if .IsHome }}
+      <link rel="manifest" href="manifest.json">
+    {{ end }}
   </head>
   <body>
     {{ if ne .Type "print-version" }}
