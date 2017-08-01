@@ -1257,12 +1257,23 @@ toc = false
 
 <p>From time to time, you&rsquo;ll be wanting to include images illustrating the documented pattern in hand. Images live in the static folder, which is a sibling of the <code>/content</code> folder you&rsquo;ll be mostly working in.</p>
 
-<pre><code>├── content
-└── static
-    └── images
-        ├── logo.png
-        └── menu-button.gif
-</code></pre>
+<div class="file-tree">
+  <ul>
+<li>content</li>
+<li>static
+
+<ul>
+<li>images
+
+<ul>
+<li>logo.png</li>
+<li>menu-button.gif</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</div>
+
 
 <aside aria-label="note" class="note">
   <div>
@@ -1285,8 +1296,8 @@ toc = false
 <p>Sometimes you will want to include a caption with your illustration. This is what the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements are for. However, <strong>Infusion</strong> doesn&rsquo;t ask you to code all that manually. A special shortcode is provided, which takes a <code>caption</code> parameter. Note that the image markdown is provided between the opening and closing shortcode tags, and that you can use markdown syntax in the <code>caption</code> value.</p>
 
 <pre class=" "><code  data-codeblock-shortcode>
-&#x7b;{% figure caption="[Steve Faulkner](https://twitter.com/stevefaulkner) works for The Paciello Group" %}}
-![Steve Faulkner's face](/images/steve_faulkner.jpg)
+&#x7b;{% figure caption="A design system that uses a bad code example as a **single source of truth** only serves to proliferate bad code." %}}
+![Diagram of a design pattern represented by a turd emoji begetting three bad implementations](/images/bad_design_system.png)
 &#x7b;{% /figure %}}
 </code></pre>
 
@@ -1294,23 +1305,21 @@ toc = false
 <p>This will output the following. Note the automatically incremented <strong>Figure</strong> number.</p>
 
 
-<figure role="group" aria-describedby="caption-8e57b013acffbeb34ebb09e52c193120">
-  <p><img src="https://heydon.github.io/infusion/images/steve_faulkner.jpg" alt="Steve Faulkner's face" /></p>
+<figure role="group" aria-describedby="caption-e259e3056337abf60723ee4eb78ed9b6">
+  <p><img src="https://heydon.github.io/infusion/images/bad_design_system.png" alt="Diagram of a design pattern represented by a turd emoji begetting three bad implementations" /></p>
 
-  <figcaption id="caption-8e57b013acffbeb34ebb09e52c193120">
-    <a href="https://twitter.com/stevefaulkner">Steve Faulkner</a> works for The Paciello Group
+  <figcaption id="caption-e259e3056337abf60723ee4eb78ed9b6">
+    A design system that uses a bad code example as a <strong>single source of truth</strong> only serves to proliferate bad code.
   </figcaption>
 </figure>
 
 
 <p>The generated markup includes special provisions for assistive technology support:</p>
 
-<pre><code class="language-html">&lt;figure role=&quot;group&quot; aria-describedby=&quot;U3RldmUgRmF1bGtuZXIg&quot;&gt;
-  &lt;p&gt;
-    &lt;img src=&quot;/images/steve_faulkner.jpg&quot; alt=&quot;Steve Faulkner's face&quot;&gt;
-  &lt;/p&gt;
-  &lt;figcaption id=&quot;U3RldmUgRmF1bGtuZXIg&quot;&gt;
-    &lt;a href=&quot;https://twitter.com/stevefaulkner&quot;&gt;Steve Faulkner&lt;/a&gt; works for The Paciello Group
+<pre><code class="language-html">&lt;figure role=&quot;group&quot; aria-describedby=&quot;caption-5fbafefe946c724e7a5d3d2d447a8684&quot;&gt;
+  &lt;p&gt;&lt;img src=&quot;http://localhost:1313/images/bad_design_system.png&quot; alt=&quot;Diagram of a design pattern represented by a turd emoji begetting three bad implementations&quot;&gt;&lt;/p&gt;
+  &lt;figcaption id=&quot;caption-5fbafefe946c724e7a5d3d2d447a8684&quot;&gt;
+    A design system that uses a bad code example as a &lt;strong&gt;single source of truth&lt;/strong&gt; only serves to proliferate bad code.
   &lt;/figcaption&gt;
 &lt;/figure&gt;
 </code></pre>
