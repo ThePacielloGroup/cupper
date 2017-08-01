@@ -1,5 +1,6 @@
 {
- "name": "App",
+ "name": "Infusion Pattern Library",
+ "short_name": "Infusion",
  "icons": [
   {
    "src": "\/images/android-icon-36x36.png",
@@ -37,5 +38,9 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ]
+],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#111",
+  "theme_color": "#fff"
 }
