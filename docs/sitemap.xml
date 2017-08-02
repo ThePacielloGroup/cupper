@@ -7,6 +7,10 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/patterns/installation/</loc>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/writing/library-structure/</loc>
   </url>
   
@@ -19,6 +23,10 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/patterns/library-setup/</loc>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/media/</loc>
   </url>
   
@@ -27,7 +35,15 @@
   </url>
   
   <url>
+    <loc>https://heydon.github.io/infusion/patterns/serving/</loc>
+  </url>
+  
+  <url>
     <loc>https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/</loc>
+  </url>
+  
+  <url>
+    <loc>https://heydon.github.io/infusion/patterns/printing/</loc>
   </url>
   
   <url>
@@ -74,14 +90,6 @@
   </url>
   
   <url>
-    <loc>https://heydon.github.io/infusion/patterns/installation/</loc>
-  </url>
-  
-  <url>
-    <loc>https://heydon.github.io/infusion/patterns/library-setup/</loc>
-  </url>
-  
-  <url>
     <loc>https://heydon.github.io/infusion/tags/markdown/</loc>
     <priority>0</priority>
   </url>
@@ -102,10 +110,6 @@
   
   <url>
     <loc>https://heydon.github.io/infusion/patterns/writing/references/</loc>
-  </url>
-  
-  <url>
-    <loc>https://heydon.github.io/infusion/patterns/serving/</loc>
   </url>
   
   <url>

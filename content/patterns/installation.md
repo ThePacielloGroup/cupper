@@ -1,5 +1,6 @@
 +++
 title = "Installation"
+weight = 1
 +++
 
 **Infusion** is built using the static site engine, [Hugo](https://gohugo.io/), and NPM. The codebase is available to download on Github. Let's get set up step-by-step.

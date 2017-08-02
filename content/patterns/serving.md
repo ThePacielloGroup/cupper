@@ -1,5 +1,6 @@
 +++
 title = "Serving"
+weight = 3
 +++
 
 ## Serving locally

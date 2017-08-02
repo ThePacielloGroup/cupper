@@ -12,6 +12,7 @@ Welcome to **Infusion**: a pattern library builder for inclusive designers and t
 * Quickly include WCAG and [Inclusive Design Principles](http://inclusivedesignprinciples.org/) references
 * A responsive, screen reader and keyboard accessible static site as output
 * Automated Github Pages deployment
+* Includes a single-page printable version suitable for PDF conversion
 {{% /ticks %}}
 
 To get started, take a look at {{% pattern "Installation" %}}.

@@ -1,6 +1,6 @@
 +++
 date = "2017-07-29T22:48:43+01:00"
-title = "Infusion"
+title = "Print version"
 type = "print-version"
 
 +++

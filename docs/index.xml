@@ -24,6 +24,18 @@ So, this&amp;hellip;
     </item>
     
     <item>
+      <title>Installation</title>
+      <link>https://heydon.github.io/infusion/patterns/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/installation/</guid>
+      <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get set up step-by-step.
+Install Hugo First you need to install Hugo globally.
+OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
+brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
+    </item>
+    
+    <item>
       <title>Library structure</title>
       <link>https://heydon.github.io/infusion/patterns/writing/library-structure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -45,6 +57,16 @@ CodePen Infusion offers a couple of ways to do this. The first is by embedding C
     </item>
     
     <item>
+      <title>Library setup</title>
+      <link>https://heydon.github.io/infusion/patterns/library-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/library-setup/</guid>
+      <description>By now, you should have followed the Installation instructions. You should have Hugo and Node installed, and a local copy of a forked version of Infusion. You should also have run npm install in the root of that codebase.
+&amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start documenting patterns, there are a few things still to do in order to get set up. At the moment, your version of Infusion is a facsimile of the original, containing all this documentation content.</description>
+    </item>
+    
+    <item>
       <title>Markdown &amp; metadata</title>
       <link>https://heydon.github.io/infusion/patterns/writing/markdown-and-metadata/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -55,6 +77,17 @@ If you&amp;rsquo;re not familiar with writing markdown, there are a number of tu
     </item>
     
     <item>
+      <title>Serving</title>
+      <link>https://heydon.github.io/infusion/patterns/serving/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/serving/</guid>
+      <description>Serving locally While you&amp;rsquo;re creating content for your library, you&amp;rsquo;ll probably want to see what the finished product looks like. Fortunately, Infusion is easy to serve locally using the serve command:
+npm run serve This will serve your working library from localhost:1313. Whenever you make changes to your library&amp;rsquo;s files, the site will automatically rebuild. No need to refresh the web page!
+Publishing on Github Pages Infusion creates a /docs folder containing the latest version of your library whenever you do an npm run build or a git commit.</description>
+    </item>
+    
+    <item>
       <title>Writing inline demos</title>
       <link>https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -62,6 +95,17 @@ If you&amp;rsquo;re not familiar with writing markdown, there are a number of tu
       <guid>https://heydon.github.io/infusion/patterns/coding/writing-inline-demos/</guid>
       <description>There are some issues with , like them not working offline. They also come with CodePen branding, which will clash with the pattern you&amp;rsquo;re trying to illustrate.
 Infusion offers another option: a special demo shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don&amp;rsquo;t have to worry about broken styles and global JS.</description>
+    </item>
+    
+    <item>
+      <title>Printing</title>
+      <link>https://heydon.github.io/infusion/patterns/printing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://heydon.github.io/infusion/patterns/printing/</guid>
+      <description>Infusion&amp;rsquo;s output site includes a one-page Print version of the generated library, available at /print-version. So, if your library base URL is https://yourName.github.io/your-library, you can print the whole library — to PDF if wanted — from the following address:
+https://yourName.github.io/your-library/print-version     Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, go ahead!
+  </description>
     </item>
     
     <item>
@@ -76,7 +120,7 @@ The expandable shortcode takes three parameters:
     </item>
     
     <item>
-      <title>Infusion</title>
+      <title>Print version</title>
       <link>https://heydon.github.io/infusion/print-version/</link>
       <pubDate>Sat, 29 Jul 2017 22:48:43 +0100</pubDate>
       
@@ -139,28 +183,6 @@ The file tree is described using a markdown nested list structure:
     </item>
     
     <item>
-      <title>Installation</title>
-      <link>https://heydon.github.io/infusion/patterns/installation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://heydon.github.io/infusion/patterns/installation/</guid>
-      <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get set up step-by-step.
-Install Hugo First you need to install Hugo globally.
-OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
-brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
-    </item>
-    
-    <item>
-      <title>Library setup</title>
-      <link>https://heydon.github.io/infusion/patterns/library-setup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://heydon.github.io/infusion/patterns/library-setup/</guid>
-      <description>By now, you should have followed the Installation instructions. You should have Hugo and Node installed, and a local copy of a forked version of Infusion. You should also have run npm install in the root of that codebase.
-&amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start documenting patterns, there are a few things still to do in order to get set up. At the moment, your version of Infusion is a facsimile of the original, containing all this documentation content.</description>
-    </item>
-    
-    <item>
       <title>Notes &amp; warnings</title>
       <link>https://heydon.github.io/infusion/patterns/writing/notes-and-warnings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -178,17 +200,6 @@ Notes You may wish to pick out some content in your pattern&amp;rsquo;s document
       <guid>https://heydon.github.io/infusion/patterns/writing/references/</guid>
       <description>Cross-references Infusion provides an easy mechanism to cross-reference patterns, by title, using the pattern shortcode. For example, I can reference the Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
 I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
-    </item>
-    
-    <item>
-      <title>Serving</title>
-      <link>https://heydon.github.io/infusion/patterns/serving/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://heydon.github.io/infusion/patterns/serving/</guid>
-      <description>Serving locally While you&amp;rsquo;re creating content for your library, you&amp;rsquo;ll probably want to see what the finished product looks like. Fortunately, Infusion is easy to serve locally using the serve command:
-npm run serve This will serve your working library from localhost:1313. Whenever you make changes to your library&amp;rsquo;s files, the site will automatically rebuild. No need to refresh the web page!
-Publishing on Github Pages Infusion creates a /docs folder containing the latest version of your library whenever you do an npm run build or a git commit.</description>
     </item>
     
     <item>
