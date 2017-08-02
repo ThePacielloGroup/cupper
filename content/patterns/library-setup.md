@@ -40,6 +40,22 @@ theme = "infusion"
 * **description** — This is a short description of the library and comes under the logo. You can include markdown syntax here, like _&#x002a;&#x002a;Infusion&#x002a;&#x002a;_ in the above example for making the name of the library bold.
 * **codePenUser** — If you want to embed codePens in your pattern files, you need to supply a codePen username here.
 
+## The Web App Manifest
+
+**Infusion** libraries work as progressive web applications, meaning users can save them to their home screen and read them offline. The web app manifest, found at the root of the `static` folder defines names and icons for the app. You'll probably want to open `/static/manifest.json` and personalize the `name` and `short_name` values.
+
+```
+{
+ "name": "Infusion Pattern Library",
+ "short_name": "Infusion",
+ "icons": [
+  {...
+```
+
+{{% note %}}
+The 
+{{% /note %}}
+
 ## Including a logo
 
 In the `images/static` folder, you'll find a `logo.svg` file. Replace this file with your own company or project logo. Currently, only the SVG is supported this easily because SVG the superior format for logotypes. However, if you must use a different format, you can open up the `themes/infusion/layouts/_default/baseof.html` file and edit the image reference:
