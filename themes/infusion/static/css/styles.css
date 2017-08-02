@@ -433,6 +433,7 @@ main {
     display: block;
     counter-reset: fig;
     min-height: 100vh;
+    overflow: hidden;
 }
 figcaption::before {
     counter-increment: fig;
@@ -798,6 +799,9 @@ h1 svg {
     }
     [aria-expanded="true"] + #patterns-list {
         display: block;
+    }
+    code {
+      word-break: break-all;
     }
     .tested th,
     .tested td {
