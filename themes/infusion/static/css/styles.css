@@ -734,6 +734,9 @@ h1 svg {
 .wrapper.print-version #patterns-list h3 {
     font-size: 1.25rem;
 }
+.wrapper.print-version .patterns {
+  margin-top: 0;
+}
 .pattern-section:not(:last-child) {
     padding-bottom: 2.25rem;
     border-bottom: 2px solid;
