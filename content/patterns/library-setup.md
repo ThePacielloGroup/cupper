@@ -42,6 +42,12 @@ theme = "infusion"
 
 ## Including a logo
 
-In the `images/static` folder, you'll find a `logo.png` file. Replace this file with your own company or project logo. Currently, only the PNG format is supported.
+In the `images/static` folder, you'll find a `logo.svg` file. Replace this file with your own company or project logo. Currently, only the SVG is supported this easily because SVG the superior format for logotypes. However, if you must use a different format, you can open up the `themes/infusion/layouts/_default/baseof.html` file and edit the image reference:
+
+```html
+<a class="logo" href="/" aria-label="{{ .Site.Title }} pattern library home page">
+  <img src="{{ "images/logo.svg" | absURL }}" alt="">
+</a>
+```
 
 Now that your logo's in place, everything should be ready. Where next? You can learn about {{% pattern "Library structure" %}} to help you get writing, or find out how to serve the library locally and on Github Pages in {{% pattern "Serving" %}}.

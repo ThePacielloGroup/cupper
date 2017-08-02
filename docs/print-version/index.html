@@ -115,10 +115,10 @@
           <div>
             <div class="intro">
               <a class="logo" href="https://heydon.github.io/infusion/" aria-label="Infusion pattern library home page">
-                <img src="https://heydon.github.io/infusion/images/logo.png" alt="">
+                <img src="https://heydon.github.io/infusion/images/logo.svg" alt="">
               </a>
               <p class="library-desc">
-                Documentation for the <strong>Infusion</strong> pattern library builder. This documentation is constructed using the builder itself.
+                Documentation for the <strong>Infusion</strong> pattern library builder, built with <strong>Infusion</strong> itself.
                 
                </a>
               </p>
@@ -429,7 +429,12 @@ theme = "infusion"
 
 <h2 id="including-a-logo">Including a logo</h2>
 
-<p>In the <code>images/static</code> folder, you&rsquo;ll find a <code>logo.png</code> file. Replace this file with your own company or project logo. Currently, only the PNG format is supported.</p>
+<p>In the <code>images/static</code> folder, you&rsquo;ll find a <code>logo.svg</code> file. Replace this file with your own company or project logo. Currently, only the SVG is supported this easily because SVG the superior format for logotypes. However, if you must use a different format, you can open up the <code>themes/infusion/layouts/_default/baseof.html</code> file and edit the image reference:</p>
+
+<pre><code class="language-html">&lt;a class=&quot;logo&quot; href=&quot;/&quot; aria-label=&quot;{{ .Site.Title }} pattern library home page&quot;&gt;
+  &lt;img src=&quot;{{ &quot;images/logo.svg&quot; | absURL }}&quot; alt=&quot;&quot;&gt;
+&lt;/a&gt;
+</code></pre>
 
 <p>Now that your logo&rsquo;s in place, everything should be ready. Where next? You can learn about <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/writing/library-structure/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Library structure</a> to help you get writing, or find out how to serve the library locally and on Github Pages in <a class="pattern-link" href="https://heydon.github.io/infusion/patterns/serving/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50"><use xlink:href="#bookmark"></use></svg>Serving</a>.</p>
 

@@ -676,6 +676,8 @@ h1 svg {
 
 .pattern-link {
     font-weight: bold;
+    display: inline-block;
+    hyphens: auto;
 }
 /* inline demos */
 
