@@ -793,6 +793,9 @@ h1 svg {
     #patterns-list {
         display: none;
     }
+    .toc-link {
+      display: none;
+    }
     [aria-expanded="true"] + #patterns-list {
         display: block;
     }
