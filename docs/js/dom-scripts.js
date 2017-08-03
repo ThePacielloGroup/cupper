@@ -82,7 +82,7 @@
 // SVG scaling fix for IE10-11
 (function () {
   if (window.matchMedia('(-ms-high-contrast: none), (-ms-high-contrast: active)').matches) {
-  // Get all the SVGs on the page except the symbol defs
+    // Get all the SVGs on the page except the symbol defs
     var svgs = document.querySelectorAll('a svg, button svg, h1 svg')
     // ... iterate over SVGs
     Array.prototype.forEach.call(svgs, function(svg) {

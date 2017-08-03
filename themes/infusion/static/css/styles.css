@@ -433,7 +433,6 @@ main {
     display: block;
     counter-reset: fig;
     min-height: 100vh;
-    overflow: hidden;
 }
 figcaption::before {
     counter-increment: fig;
@@ -833,7 +832,7 @@ h1 svg {
     main nav a::after {
         content: '';
     }
-    .cmd {
+    .cmd code {
         background: #fff;
         color: #111;
     }
