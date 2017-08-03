@@ -46,14 +46,14 @@ theme = "infusion"
 
 ```
 {
- "name": "Infusion Pattern Library",
- "short_name": "Infusion",
+ "name": "Infusion Pattern Library Docs",
+ "short_name": "Infusion Docs",
  "icons": [
   {...
 ```
 
 {{% note %}}
-The 
+The `short_name` value refers to the text that appears under the icon on your homescreen. As the name suggests, it should be as short as possible to fit well.
 {{% /note %}}
 
 ## Including a logo
