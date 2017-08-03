@@ -528,6 +528,7 @@ pre[class*=language-] code * {
 .file-tree > ul {
     padding-left: 0;
     overflow-x: auto;
+    overflow-y: hidden;
 }
 .file-tree li {
     background: #fff;
