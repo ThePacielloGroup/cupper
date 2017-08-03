@@ -57,7 +57,7 @@ Notes You may wish to pick out some content in your pattern&amp;rsquo;s document
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://heydon.github.io/infusion/patterns/writing/references/</guid>
-      <description>Cross-references Infusion provides an easy mechanism to cross-reference patterns, by title, using the pattern shortcode. For example, I can reference the Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
+      <description>Cross-references Infusion provides an easy mechanism to cross-reference patterns, by title, using the pattern shortcode. For example, I can reference the  Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
 I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
     </item>
     
@@ -67,7 +67,7 @@ I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} patt
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://heydon.github.io/infusion/patterns/writing/tables-of-contents/</guid>
-      <description>Pattern pages in Infusion that have two or more subheadings — &amp;lt;h2&amp;gt;s — automatically get a table of contents: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &amp;ldquo;Table of contents&amp;rdquo; label and uses an ordered list. The table of contents markup for the Library setup page looks something like this:
+      <description>Pattern pages in Infusion that have two or more subheadings — &amp;lt;h2&amp;gt;s — automatically get a table of contents: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &amp;ldquo;Table of contents&amp;rdquo; label and uses an ordered list. The table of contents markup for the  Library setup page looks something like this:
 &amp;lt;nav class=&amp;quot;toc&amp;quot; aria-labelledby=&amp;quot;toc-heading&amp;quot;&amp;gt; &amp;lt;h2 id=&amp;quot;toc-heading&amp;quot;&amp;gt;Table of contents&amp;lt;/h2&amp;gt; &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#cleaning-the-content-folder&amp;quot;&amp;gt;“Cleaning” the content folder&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#the-setup-command&amp;quot;&amp;gt;The setup command&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#the-config-file&amp;quot;&amp;gt;The config file&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#including-a-logo&amp;quot;&amp;gt;Including a logo&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;/nav&amp;gt;  Tables of contents are a neat way to break down the content of the page and give users a navigable overview.</description>
     </item>
     

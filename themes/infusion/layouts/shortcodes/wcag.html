@@ -7,7 +7,9 @@
     {{ if in $included .ref_id }}
       <li>
         <strong><a href="{{ .url }}">
-          <svg class="wcag-icon" viewBox="0 0 127.09899 67.763" aria-hidden="true"><use xlink:href="#w3c"></use></svg>
+          <svg class="wcag-icon" viewBox="0 0 127.09899 67.763" aria-hidden="true" focusable="false">
+            <use xlink:href="#w3c"></use>
+          </svg>
           {{ .ref_id }} {{ .title }}</a> (level {{ .level }}){{ if $descriptions }}:{{ end }}
         </strong>
         {{ if $descriptions }}
