@@ -1711,7 +1711,7 @@ toggle.addEventListener('click', (e) => {
         }
         root.shadowRoot.appendChild(document.importNode(template.content, true));
       } else {
-        root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> Shadow DOM is needed to display encapsulated demos. The browser does not have an issue with the demo code itself.</p>';
+        root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> A browser supporting Shadow DOM is needed to run encapsulated demos. The browser does not have an issue with the demo code itself.</p>';
       }
     })();
   </script>
