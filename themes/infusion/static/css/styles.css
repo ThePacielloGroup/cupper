@@ -866,3 +866,9 @@ h1 svg {
         background: none;
     }
 }
+@media (-ms-high-contrast: active) {
+  img[src*=".svg"] {
+    filter: invert(100%);
+    background: #fff;
+  }
+}
