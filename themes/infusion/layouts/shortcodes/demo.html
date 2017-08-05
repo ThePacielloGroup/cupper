@@ -13,20 +13,35 @@
   <template id="template-{{ $uniq }}">
       {{ .Inner }}
   </template>
+  <button data-launch="demo-{{ $uniq }}">Launch in separate window</button>
   <script>
     (function() {
       var root = document.getElementById('demo-{{ $uniq }}');
+      var template = document.getElementById('template-{{ $uniq }}');
+      var script = template.content.querySelector('script');
+
+      if (script) {
+        var standaloneScript = '(function() { var demo = document; ' + script.textContent + ' })()';
+        var wrappedScript = '(function() { var demo = document.getElementById(\'demo-{{ $uniq }}\').shadowRoot;' + script.textContent + '})()';
+        script.textContent = wrappedScript;
+      }
+
       if (document.head.attachShadow) {
         root.attachShadow({mode: 'open'});
-        var template = document.getElementById('template-{{ $uniq }}');
-        var script = template.content.querySelector('script');
-        if (script) {
-          script.textContent = `(function() { var demo = document.getElementById(\'demo-{{ $uniq }}\').shadowRoot; ${script.textContent} })()`
-        }
         root.shadowRoot.appendChild(document.importNode(template.content, true));
       } else {
         root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> A browser supporting Shadow DOM is needed to run encapsulated demos. The browser does not have an issue with the demo code itself.</p>';
       }
+
+      var launchButton = document.querySelector('[data-launch="demo-{{ $uniq }}"]');
+      launchButton.addEventListener('click', function () {
+        //var wrap = '<!DOCTYPE html><html lang="en"><head><title>demo</title></head><body></body></html>';
+        var demoContent = template.content;
+        var standalone = window.open();
+        //standalone.document.write(wrap);
+        script.textContent = standaloneScript;
+        standalone.document.body.appendChild(document.importNode(template.content, true));
+      });
     })();
   </script>
 </div>

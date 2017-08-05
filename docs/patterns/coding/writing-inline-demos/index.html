@@ -440,20 +440,35 @@ toggle.addEventListener('click', (e) => {
 </script>
 
   </template>
+  <button data-launch="demo-414e06a48e755bf9e43e5e2596f9ea7a">Launch in separate window</button>
   <script>
     (function() {
       var root = document.getElementById('demo-414e06a48e755bf9e43e5e2596f9ea7a');
+      var template = document.getElementById('template-414e06a48e755bf9e43e5e2596f9ea7a');
+      var script = template.content.querySelector('script');
+
+      if (script) {
+        var standaloneScript = '(function() { var demo = document; ' + script.textContent + ' })()';
+        var wrappedScript = '(function() { var demo = document.getElementById(\'demo-414e06a48e755bf9e43e5e2596f9ea7a\').shadowRoot;' + script.textContent + '})()';
+        script.textContent = wrappedScript;
+      }
+
       if (document.head.attachShadow) {
         root.attachShadow({mode: 'open'});
-        var template = document.getElementById('template-414e06a48e755bf9e43e5e2596f9ea7a');
-        var script = template.content.querySelector('script');
-        if (script) {
-          script.textContent = `(function() { var demo = document.getElementById(\'demo-414e06a48e755bf9e43e5e2596f9ea7a\').shadowRoot; ${script.textContent} })()`
-        }
         root.shadowRoot.appendChild(document.importNode(template.content, true));
       } else {
         root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> A browser supporting Shadow DOM is needed to run encapsulated demos. The browser does not have an issue with the demo code itself.</p>';
       }
+
+      var launchButton = document.querySelector('[data-launch="demo-414e06a48e755bf9e43e5e2596f9ea7a"]');
+      launchButton.addEventListener('click', function () {
+        
+        var demoContent = template.content;
+        var standalone = window.open();
+        
+        script.textContent = standaloneScript;
+        standalone.document.body.appendChild(document.importNode(template.content, true));
+      });
     })();
   </script>
 </div>
