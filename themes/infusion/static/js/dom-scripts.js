@@ -68,7 +68,8 @@
 
       var link = document.createElement('a')
       link.setAttribute('href', '#' + id)
-      link.setAttribute('aria-label', 'link for this section')
+      var headingText = heading.textContent
+      link.setAttribute('aria-label', 'To this ' + headingText + ' section')
       link.innerHTML = '<svg aria-hidden="true" viewBox="0 0 50 50" focusable="false"> <use xlink:href="#link"></use> </svg>'
 
       container.appendChild(link)
