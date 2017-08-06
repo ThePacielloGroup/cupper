@@ -357,6 +357,25 @@
     
       
 
+  <nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
+      
+        <li>
+          <a href="#launch-in-a-separate-window">
+            Launch in a separate window
+          </a>
+        </li>
+      
+        <li>
+          <a href="#captioned-demos">
+            Captioned demos
+          </a>
+        </li>
+      
+    </ol>
+  </nav>
+
 
     
     
@@ -472,6 +491,15 @@ toggle.addEventListener('click', (e) => {
   </script>
 </div>
 
+
+<h2 id="launch-in-a-separate-window">Launch in a separate window</h2>
+
+<p>The &ldquo;Launch in separate window&rdquo; takes the demo code and pushes it to a new browser window. This serves two purposes:</p>
+
+<ul>
+<li>It provides a fallback for browsers that do not support Shadow DOM encapsulation (a warning message will replace the inline demo).</li>
+<li>It creates an isolated test case for the demo, allowing you to run browser extensions and bookmarklets on the the demo code and <em>just</em> the demo code.</li>
+</ul>
 
 <h2 id="captioned-demos">Captioned demos</h2>
 
