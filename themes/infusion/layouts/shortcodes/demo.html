@@ -39,7 +39,7 @@
         var standalone = window.open();
         script.textContent = standaloneScript;
         standalone.document.body.appendChild(document.importNode(template.content, true));
-        standalone.document.title = 'demo' + {{ $uniq }}
+        standalone.document.title = 'demo ' + {{ $uniq }}
       });
     })();
   </script>
