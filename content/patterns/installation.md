@@ -23,6 +23,8 @@ Alternatively, you can manually [install Hugo from a package](https://github.com
 
 Installing on Windows is a bit more involved than on OSX. The authors of Hugo provide [a guide](https://gohugo.io/tutorials/installing-on-windows/) with instructions for technical and less technical users.
 
+It's also best you install a Windows Subsystem for running Linux, and therefore [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (**Infusion** incorporates some bash commands in its scripts). [Microsoft offer a complete guide](https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide).
+
 ## Install Node & NPM
 
 It is likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, [refer to NPM's own guide](https://docs.npmjs.com/getting-started/installing-node), which includes a video tutorial.
