@@ -76,7 +76,7 @@ toggle.addEventListener('click', (e) => {
 
 ## Launch in a separate window
 
-The "Launch in separate window" takes the demo code and pushes it to a new browser window. This serves two purposes:
+The "Launch in separate window" button takes the demo code and pushes it to a new browser window. This serves two purposes:
 
 * It provides a fallback for browsers that do not support Shadow DOM encapsulation (a warning message will replace the inline demo).
 * It creates an isolated test case for the demo, allowing you to run browser extensions and bookmarklets on the the demo code and _just_ the demo code.

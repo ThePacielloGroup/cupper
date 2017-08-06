@@ -1665,7 +1665,10 @@ toggle.addEventListener('click', (e) => {
 
 <div class="demo-container">
   
-      <div class="demo" id="js-demo-414e06a48e755bf9e43e5e2596f9ea7a"></div>
+      <div class="demo-inner">
+        <div class="demo" id="js-demo-414e06a48e755bf9e43e5e2596f9ea7a"></div>
+        <button data-launch="js-demo-414e06a48e755bf9e43e5e2596f9ea7a">Launch in separate window</button>
+      </div>
       
   
   <template id="template-414e06a48e755bf9e43e5e2596f9ea7a">
@@ -1699,7 +1702,6 @@ toggle.addEventListener('click', (e) => {
 </script>
 
   </template>
-  <button data-launch="js-demo-414e06a48e755bf9e43e5e2596f9ea7a">Launch in separate window</button>
   <script>
     (function() {
       var root = document.getElementById('js-demo-414e06a48e755bf9e43e5e2596f9ea7a');
@@ -1734,7 +1736,7 @@ toggle.addEventListener('click', (e) => {
 
 <h2 id="launch-in-a-separate-window">Launch in a separate window</h2>
 
-<p>The &ldquo;Launch in separate window&rdquo; takes the demo code and pushes it to a new browser window. This serves two purposes:</p>
+<p>The &ldquo;Launch in separate window&rdquo; button takes the demo code and pushes it to a new browser window. This serves two purposes:</p>
 
 <ul>
 <li>It provides a fallback for browsers that do not support Shadow DOM encapsulation (a warning message will replace the inline demo).</li>

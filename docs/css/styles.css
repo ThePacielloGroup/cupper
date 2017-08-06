@@ -687,7 +687,7 @@ h1 svg {
 }
 /* inline demos */
 
-.demo-container {
+.demo-inner {
   border-top: 1px solid;
   border-bottom: 1px solid;
   padding: 1.5rem 0 0;
