@@ -162,11 +162,15 @@ main ul ul {
 button {
     font-size: 1.25rem;
     font-family: inherit;
-    font-weight: inherit;
     background: #111;
     color: #fff;
     padding: 0.75rem;
     border: 0;
+}
+[data-launch] {
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
+  padding: 0.5rem;
 }
 /* Tables */
 
@@ -682,6 +686,13 @@ h1 svg {
     font-weight: bold;
 }
 /* inline demos */
+
+.demo-container {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 1.5rem 0 0;
+  text-align: right;
+}
 
 [id^="js-demo-"] {
     all: initial;

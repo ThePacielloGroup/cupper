@@ -74,6 +74,13 @@ toggle.addEventListener('click', (e) => {
 </script>
 {{</demo>}}
 
+## Launch in a separate window
+
+The "Launch in separate window" takes the demo code and pushes it to a new browser window. This serves two purposes:
+
+* It provides a fallback for browsers that do not support Shadow DOM encapsulation (a warning message will replace the inline demo).
+* It creates an isolated test case for the demo, allowing you to run browser extensions and bookmarklets on the the demo code and _just_ the demo code.
+
 ## Captioned demos
 
 It's possible to give your demo a caption using an accessible `<figure>` and `<figcaption>` structure. All _you_ need to do is supply a `caption` attribute. For example:
