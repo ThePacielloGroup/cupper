@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Infusion"
-baseURL = "https://heydon.github.io/infusion/"
+baseURL = "https://thepaciellogroup.github.io/infusion/"
 canonifyURLs = true
 theme = "infusion"
 publishDir = "docs"

@@ -26,7 +26,7 @@ You'll also want to name your library and configure one or two other things in t
 {{<codeBlock lang="html" numbered="true">}}
 languageCode = "en-us"
 title = "Infusion"
-baseURL = "https://heydon.github.io/infusion/"
+baseURL = "https://thepaciellogroup.github.io/infusion/"
 theme = "infusion"
 
 [params]

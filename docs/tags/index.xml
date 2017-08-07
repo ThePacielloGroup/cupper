@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Infusion</title>
-    <link>https://heydon.github.io/infusion/tags/</link>
+    <link>https://thepaciellogroup.github.io/infusion/tags/</link>
     <description>Recent content in Tags on Infusion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://heydon.github.io/infusion/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://thepaciellogroup.github.io/infusion/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Markdown</title>
-      <link>https://heydon.github.io/infusion/tags/markdown/</link>
+      <link>https://thepaciellogroup.github.io/infusion/tags/markdown/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://heydon.github.io/infusion/tags/markdown/</guid>
+      <guid>https://thepaciellogroup.github.io/infusion/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Metadata</title>
-      <link>https://heydon.github.io/infusion/tags/metadata/</link>
+      <link>https://thepaciellogroup.github.io/infusion/tags/metadata/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://heydon.github.io/infusion/tags/metadata/</guid>
+      <guid>https://thepaciellogroup.github.io/infusion/tags/metadata/</guid>
       <description></description>
     </item>
     

@@ -31,11 +31,11 @@ It is likely you already have Node and NPM installed on your system. If so, you 
 
 ## Get the files
 
-**Infusion** is hosted on Github. To start using it, you'll need to get the files from there. If you are comfortable with the command line, just fork the [github.com/heydon/infusion](https://github.com/heydon/infusion) repository, then do a `git clone` to your local system. Replace `[your username]` in the following:
+**Infusion** is hosted on Github. To start using it, you'll need to get the files from there. If you are comfortable with the command line, just fork the [github.com/ThePacielloGroup/infusion](https://github.com/ThePacielloGroup/infusion) repository, then do a `git clone` to your local system. Replace `[your username]` in the following:
 
 {{<cmd>}}git clone https://github.com/[your username]/infusion.git{{</cmd>}}
 
-If the command line is not your thing, fork  [github.com/heydon/infusion](https://github.com/heydon/infusion) and choose **Open in Desktop** from **Clone or download** (see figure 1, below).
+If the command line is not your thing, fork  [github.com/ThePacielloGroup/infusion](https://github.com/ThePacielloGroup/infusion) and choose **Open in Desktop** from **Clone or download** (see figure 1, below).
 
 {{% figure caption="The Github web interface" %}}
 ![The open in desktop option, revealed when clicking clone or download](/images/open_in_desktop.png)

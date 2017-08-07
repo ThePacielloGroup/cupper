@@ -2,4 +2,5 @@
 
 **Infusion** is a pattern library builder for inclusive designers.
 
-[Documentation →](https://heydon.github.io/infusion)
+* [Documentation →](https://thepaciellogroup.github.io/infusion)
+* [Contributing →](https://github.com/ThePacielloGroup/infusion/blob/master/CONTRIBUTING.md)

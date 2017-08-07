@@ -14,14 +14,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Heydon/infusion.git"
+    "url": "git+https://github.com/ThePacielloGroup/infusion.git"
   },
   "author": "Heydon Pickering <heydon@heydonworks.com> (http://www.heydonworks.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Heydon/infusion/issues"
+    "url": "https://github.com/ThePacielloGroup/infusion/issues"
   },
-  "homepage": "https://github.com/Heydon/infusion#readme",
+  "homepage": "https://github.com/ThePacielloGroup/infusion#readme",
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "sw-precache": "^5.2.0"
