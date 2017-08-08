@@ -879,7 +879,7 @@ h1 svg {
 }
 @media (-ms-high-contrast: active) {
   img[src*=".svg"] {
-    filter: invert(100%);
     background: #fff;
+    padding: 0.5rem;
   }
 }
