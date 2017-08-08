@@ -391,18 +391,30 @@
 
 <h2 id="publishing-on-github-pages">Publishing on Github Pages</h2>
 
-<p><strong>Infusion</strong> creates a <code>/docs</code> folder containing the latest version of your library whenever you do an <code>npm run build</code> or a <code>git commit</code>. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
-
-<p><img src="https://thepaciellogroup.github.io/infusion/images/serve_from_docs.png" alt="The publishing source dropdown menu on Github" /></p>
-
-<p>Then, whenever you push to master, you will also be updating the site found at your Github Pages URL.</p>
+<p><strong>Infusion</strong> creates a <code>/docs</code> folder containing the latest version of your library whenever you do an <code>npm run build</code> or a <code>git commit</code>. So long as you forked the <strong>Infusion</strong> repository when making your own library (see <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library setup</a>), whenever you push to master, you will also be updating the site found at your Github Pages URL.</p>
 
 <p>This URL will be in the following format:</p>
 
 <pre><code>[your user name].github.io/[your library repo name]
 </code></pre>
 
-<p>You&rsquo;ll also need to add it to your <code>config.toml</code> file as the <code>baseURL</code> value. See <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library setup</a> for more information.</p>
+<p>You&rsquo;ll also need to add this value to your <code>config.toml</code> file as the <code>baseURL</code>. For <strong>Infusion</strong>&rsquo;s own documentation it looks like the following. Just overwrite it.</p>
+
+<pre><code>baseURL = &quot;https://thepaciellogroup.github.io/infusion/&quot;
+</code></pre>
+
+<aside aria-label="note" class="note">
+  <div>
+    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+      <use xlink:href="#info"></use>
+    </svg>
+    <p>If you created a new library repo manually (without forking) you will find the <code>docs</code> folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
+
+<p><img src="https://thepaciellogroup.github.io/infusion/images/serve_from_docs.png" alt="The publishing source dropdown menu on Github" /></p>
+
+  </div>
+</aside>
+
 
   </main>
 
