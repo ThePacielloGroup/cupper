@@ -882,4 +882,10 @@ h1 svg {
     background: #fff;
     padding: 0.5rem;
   }
+  .ticks li::before {
+    content: '✓';
+    background: none;
+    width: auto;
+    top: 0;
+  }
 }
