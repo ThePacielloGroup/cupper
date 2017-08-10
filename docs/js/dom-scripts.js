@@ -97,7 +97,7 @@
       var padding = (viewBox[2] / viewBox[3]) * 100
 
       // Set inline styles
-      svg.setAttribute('style', 'width: 100%; padding-bottom: ' + padding + '%; overflow: visible')
+      svg.setAttribute('style', 'width: 100%; height: 1px; padding-bottom: ' + padding + '%; overflow: visible')
 
       // Create span wrapper
       var span = document.createElement('span')
