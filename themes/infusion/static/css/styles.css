@@ -244,6 +244,12 @@ caption {
     flex-direction: column;
     height: 100%;
 }
+.intro {
+  flex: 1 0 auto;
+}
+.patterns {
+  flex: 1 1 auto;
+}
 .logo {
     border: 0;
 }
@@ -385,7 +391,7 @@ caption {
 }
 .note svg {
     height: 2.25rem;
-    width: auto;
+    width: 2.25rem;
 }
 .note > div {
     margin-left: 0.75rem;
