@@ -230,7 +230,7 @@ caption {
     overflow-x: hidden;
 }
 .intro-and-nav {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     width: 15rem;
     height: 100vh;
     position: fixed;
@@ -258,11 +258,10 @@ caption {
     max-width: 12rem;
 }
 .library-desc {
-    font-style: italic;
     margin-top: 0.5rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 30rem;
+    max-width: 25rem;
 }
 .main-and-footer {
     margin-left: 15rem;
@@ -318,7 +317,7 @@ caption {
 .pattern [aria-current] {
     background-color: #111;
     background-image: url(images/arrow_effect.svg);
-    background-position: right center;
+    background-position: 98% center;
     background-size: 125%;
     background-repeat: no-repeat;
     color: #fff;
@@ -656,6 +655,7 @@ h1 svg {
 }
 .print {
     white-space: nowrap;
+    font-style: normal;
 }
 .svg-outer {
     width: 0.75em;
