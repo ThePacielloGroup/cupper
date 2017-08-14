@@ -467,7 +467,7 @@ pre[class*=language-] code * {
     margin-top: 0 !important;
 }
 [data-codeblock-shortcode] {
-    display: block;
+    display: inline-block;
     margin-top: -1rem;
 }
 .token.property,
@@ -506,11 +506,12 @@ pre[class*=language-] code * {
 .line-numbers code {
     padding-left: 3rem;
     margin-top: -1rem;
-    overflow-x: auto;
+    overflow-x: visible;
     overflow-y: hidden;
 }
 .line-numbers {
     padding: 1.5rem !important;
+    overflow-x: auto;
 }
 .line-numbers .line-numbers-rows {
     margin-left: 2.25rem;

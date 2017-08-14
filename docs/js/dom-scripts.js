@@ -110,40 +110,15 @@
   }
 }());
 
-/* Contrast calculation */
-function hexToRgb(hex) {
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? [
-    parseInt(result[1], 16),
-    parseInt(result[2], 16),
-    parseInt(result[3], 16)
-  ] : null;
-}
+/* Enable scrolling by keyboard of code samples */
+(function () {
+  var codeBlocks = document.querySelectorAll('pre');
 
-function luminance(r, g, b) {
-  var a = [r, g, b].map(function (v) {
-    v /= 255;
-    return v <= 0.03928
-      ? v / 12.92
-    : Math.pow( (v + 0.055) / 1.055, 2.4 );
+  Array.prototype.forEach.call(codeBlocks, function (block) {
+    if (block.querySelector('code')) {
+      block.setAttribute('role', 'region');
+      block.setAttribute('tabindex', '0');
+      block.setAttribute('aria-label', 'code sample');
+    }
   });
-  return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
-}
-
-function ratio(hex1, hex2) {
-  var rgb1 = hexToRgb(hex1);
-  var rgb2 = hexToRgb(hex2);
-  var luminance1 = luminance(rgb1[0], rgb1[1], rgb1[2]) + 0.05;
-  var luminance2 = luminance(rgb2[0], rgb2[1], rgb2[2]) + 0.05;
-  var ratio = luminance1 > luminance2 ? luminance1 / luminance2 : luminance2 / luminance1;
-  var level;
-  if (ratio > 4.5) {
-    level = ratio > 7 ? "AAA" : "AA";
-  } else {
-    level = "Fails";
-  }
-  return {
-    ratio: ratio.toFixed(2)+':1',
-    level: level
-  }
-}
+}());
