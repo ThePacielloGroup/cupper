@@ -3,20 +3,20 @@
 {{ $tested := split $tested "," }}
 <table class="tested">
   <tr>
-    <th scope="row">Tested using</th>
+    <th scope="row">Tested successfully using</th>
     {{ range $tested }}
       <td>
         {{ if in . "+" }}
           {{ $parts := split . "+" }}
           {{ $browser := index $parts 0 }}
           {{ $additional := index $parts 1 }}
-          {{ $slug := replace $browser " " "-" }}
+          {{ $slug := replace $browser " " "-" | lower }}
           <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
           <span><strong>{{ $browser }}</strong></span>
           <span class="additional">with <strong>{{ $additional }}</strong></span>
         {{ else }}
           {{ $browser := . }}
-          {{ $slug := replace $browser " " "-" }}
+          {{ $slug := replace $browser " " "-" | lower }}
           <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
           <span><strong>{{ $browser }}</strong></span>
         {{ end }}
