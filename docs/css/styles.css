@@ -524,7 +524,6 @@ pre[class*=language-] code * {
     color: inherit;
 }
 /* file tree lists */
-
 .file-tree {
     overflow-x: auto;
 }
@@ -566,7 +565,6 @@ pre[class*=language-] code * {
     content: '\2514\2500\2500\0020';
 }
 /* Expandable sections */
-
 .expandable-section {
     border-top: 1px solid;
     border-bottom: 1px solid;
@@ -613,8 +611,7 @@ p:empty {
     margin-top: 2.25rem;
 }
 /* WCAG and principles */
-
-.wcag ul li {
+.wcag li {
     font-size: 0.85em;
 }
 .principles p {
@@ -663,7 +660,6 @@ h1 svg {
     vertical-align: middle;
 }
 /* Color palettes */
-
 .colors {
     display: flex;
     height: 5rem;
@@ -687,12 +683,10 @@ h1 svg {
     right: 0.25rem;
 }
 /* cross references */
-
 .pattern-link {
     font-weight: bold;
 }
 /* inline demos */
-
 .demo-inner {
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -705,7 +699,6 @@ h1 svg {
     display: block;
 }
 /* Section links */
-
 .h2-container {
     position: relative;
     font-size: 1.66rem;
