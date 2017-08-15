@@ -52,6 +52,10 @@ theme = "infusion"
   {...
 ```
 
+{{% figure caption="Infusion's Docs, with `short_name` displayed, available from the homescreen of a Samsung/Android phone." %}}
+![Teacup Infusion app icon with Infusion Docs written underneath](/images/samsung_homescreen.png)
+{{% /figure %}}
+
 {{% note %}}
 The `short_name` value refers to the text that appears under the icon on your homescreen. As the name suggests, it should be as short as possible to fit well.
 {{% /note %}}
