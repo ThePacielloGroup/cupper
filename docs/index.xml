@@ -203,6 +203,16 @@ I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} patt
     </item>
     
     <item>
+      <title>Snippets</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/writing/snippets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/snippets/</guid>
+      <description>A lot of the time, your larger patterns will share some common techniques and utilities. For this reason, Infusion lets you save snippets of markdown in a snippets folder, alongside the main content folder.
+The example visually-hidden.md snippet describes the CSS needed to create content that is visually hidden but still available to screen readers. Since this is a technique/utility you are likely to use often, it&amp;rsquo;s nice to be able to just drop a snippet into your markdown content.</description>
+    </item>
+    
+    <item>
       <title>Tables of contents</title>
       <link>https://thepaciellogroup.github.io/infusion/patterns/writing/tables-of-contents/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

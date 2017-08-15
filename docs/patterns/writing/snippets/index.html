@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://thepaciellogroup.github.io/infusion/patterns/writing/">
+    <link rel="canonical" href="https://thepaciellogroup.github.io/infusion/patterns/writing/snippets/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://thepaciellogroup.github.io/infusion/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://thepaciellogroup.github.io/infusion/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://thepaciellogroup.github.io/infusion/images/apple-icon-72x72.png">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="https://thepaciellogroup.github.io/infusion/css/styles.css">
     <title>
       
-        Writing | Infusion
+        Snippets | Infusion
       
     </title>
     
@@ -242,7 +242,7 @@
                             </li>
                           
                             <li class="pattern">
-                              <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/snippets/" >
+                              <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/snippets/" aria-current="page">
                                 <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                                   <use xlink:href="#bookmark"></use>
                                 </svg>
@@ -368,95 +368,37 @@
           
   <main id="main">
     <h1>
-      Writing
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/library-structure/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      Library structure
-    </a>
-  </h2>
-</li>
-
-      
-          <li>
-  <h2>
-    <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/markdown-and-metadata/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      Markdown &amp; metadata
-    </a>
-  </h2>
-</li>
-
-      
-          <li>
-  <h2>
-    <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/expandable-sections/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      Expandable sections
-    </a>
-  </h2>
-</li>
-
-      
-          <li>
-  <h2>
-    <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/notes-and-warnings/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      Notes &amp; warnings
-    </a>
-  </h2>
-</li>
-
-      
-          <li>
-  <h2>
-    <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/references/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      References
-    </a>
-  </h2>
-</li>
-
-      
-          <li>
-  <h2>
-    <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/snippets/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
       Snippets
-    </a>
-  </h2>
-</li>
-
+    </h1>
+    
+    
       
-          <li>
-  <h2>
-    <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/tables-of-contents/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      Tables of contents
-    </a>
-  </h2>
-</li>
 
-      
-    </ul>
+
+    
+    <p>A lot of the time, your larger patterns will share some common techniques and utilities. For this reason, <strong>Infusion</strong> lets you save snippets of markdown in a <strong>snippets</strong> folder, alongside the main content folder.</p>
+
+<p>The example <code>visually-hidden.md</code> snippet describes the CSS needed to create content that is visually hidden but still available to screen readers. Since this is a technique/utility you are likely to use often, it&rsquo;s nice to be able to just drop a snippet into your markdown content. The <code>snippet</code> shortcode lets you do exactly that:</p>
+
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% snippet file="visually-hidden.md" %}}
+</code></pre>
+
+
+<aside aria-label="note" class="note">
+  <div>
+    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+      <use xlink:href="#info"></use>
+    </svg>
+    <p>To make your snippets truly reusable, try to write them in such a way that they make sense independent of surrounding text, a little bit like this note does.</p>
+
+  </div>
+</aside>
+
+
   </main>
 
           <footer role="contentinfo">

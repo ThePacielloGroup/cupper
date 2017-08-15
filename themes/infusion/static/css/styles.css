@@ -1,5 +1,4 @@
 /* fonts */
-
 @font-face {
     font-family: 'Miriam Libre';
     src: url('fonts/miriamlibre-bold.woff2') format('woff2'), url('fonts/miriamlibre-bold.woff') format('woff');
@@ -198,14 +197,23 @@ th:empty {
 .tested {
     text-align: center;
 }
-.tested td {
-    vertical-align: top;
+.tested tr {
+  display: flex;
+  flex-flow: row wrap;
+}
+.tested td, .tested th {
+    vertical-align: middle;
     overflow: hidden;
+    flex: 1 0 auto;
+    border: 0;
+    outline: 2px solid;
+    outline-offset: -1px;
 }
 .tested th {
+    width: 100%;
     background-color: #111;
-    border-color: #111;
     color: #fff;
+    outline-color: #111;
 }
 .tested img {
     max-width: 3rem;
@@ -484,7 +492,8 @@ pre[class*=language-] code * {
 .token.string,
 .token.char,
 .token.builtin,
-.token.inserted {
+.token.inserted,
+.token.important {
     color: #111;
 }
 .token.operator,
@@ -636,7 +645,8 @@ p:empty {
 /* SVG icons */
 a svg,
 button svg,
-h1 svg {
+h1 svg,
+th svg {
     height: 0.75em;
     width: auto;
     margin-right: 0.25em;
@@ -645,6 +655,7 @@ h1 svg,
 li > svg,
 h2 a svg {
     height: 1em;
+    width: auto;
     vertical-align: middle;
 }
 h1 svg {
@@ -815,13 +826,6 @@ h1 svg {
     }
     code {
       word-break: break-all;
-    }
-    .tested th,
-    .tested td {
-        display: block;
-    }
-    .tested td + td {
-        border-top: 0;
     }
 }
 @media print {
