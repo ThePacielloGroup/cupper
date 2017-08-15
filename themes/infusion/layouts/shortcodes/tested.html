@@ -3,7 +3,12 @@
 {{ $tested := split $tested "," }}
 <table class="tested">
   <tr>
-    <th scope="row">Tested successfully using</th>
+    <th scope="row">
+      <svg viewBox="0 0 177.16535 177.16535" focusable="false" aria-hidden="true">
+        <use xlink:href="#tick"></use>
+      </svg>
+      Tested using
+    </th>
     {{ range $tested }}
       <td>
         {{ if in . "+" }}

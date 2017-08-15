@@ -113,6 +113,13 @@
     </g>
    </g>
  </symbol>
+
+ <symbol id="tick" viewBox="0 0 177.16535 177.16535">
+  <g transform="translate(0 -875.2)">
+   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="155" width="40" y="702.99" x="556.82"/>
+   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="40" width="90.404" y="817.99" x="506.42"/>
+  </g>
+ </symbol>
 </svg>
 
     <div class="wrapper print-version">
@@ -229,6 +236,15 @@
                         <use xlink:href="#bookmark"></use>
                       </svg>
                       <span class="text">References</span>
+                    </a>
+                  </li>
+                
+                  <li class="pattern">
+                    <a href="#snippets" >
+                      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                        <use xlink:href="#bookmark"></use>
+                      </svg>
+                      <span class="text">Snippets</span>
                     </a>
                   </li>
                 
@@ -1366,6 +1382,35 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
           </div>
         
           <div class="pattern-section">
+            <h1 id="snippets" tabindex="-1">
+              <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                <use xlink:href="#bookmark"></use>
+              </svg>
+              Snippets
+            </h1>
+            <p>A lot of the time, your larger patterns will share some common techniques and utilities. For this reason, <strong>Infusion</strong> lets you save snippets of markdown in a <strong>snippets</strong> folder, alongside the main content folder.</p>
+
+<p>The example <code>visually-hidden.md</code> snippet describes the CSS needed to create content that is visually hidden but still available to screen readers. Since this is a technique/utility you are likely to use often, it&rsquo;s nice to be able to just drop a snippet into your markdown content. The <code>snippet</code> shortcode lets you do exactly that:</p>
+
+<pre class=" "><code  data-codeblock-shortcode>
+&#x7b;{% snippet file="visually-hidden.md" %}}
+</code></pre>
+
+
+<aside aria-label="note" class="note">
+  <div>
+    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+      <use xlink:href="#info"></use>
+    </svg>
+    <p>To make your snippets truly reusable, try to write them in such a way that they make sense independent of surrounding text, a little bit like this note does.</p>
+
+  </div>
+</aside>
+
+
+          </div>
+        
+          <div class="pattern-section">
             <h1 id="tables-of-contents" tabindex="-1">
               <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                 <use xlink:href="#bookmark"></use>
@@ -1994,7 +2039,12 @@ npm run start
 
 <table class="tested">
   <tr>
-    <th scope="row">Tested successfully using</th>
+    <th scope="row">
+      <svg viewBox="0 0 177.16535 177.16535" focusable="false" aria-hidden="true">
+        <use xlink:href="#tick"></use>
+      </svg>
+      Tested using
+    </th>
     
       <td>
         
