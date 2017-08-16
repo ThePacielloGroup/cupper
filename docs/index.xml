@@ -229,7 +229,7 @@ The example visually-hidden.md snippet describes the CSS needed to create conten
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/coding/tested/</guid>
       <description>When you&amp;rsquo;re an inclusive designer, it&amp;rsquo;s pertinent to do some testing. Following specs is one thing, but you need to verify that your component works okay for users.
-Infusion provided a tested shortcode that let&amp;rsquo;s you show which browsers and assistive technologies you&amp;rsquo;ve tried your design out in. Here&amp;rsquo;s an example. Note the commas and &amp;ldquo;+&amp;rdquo; signs.
+Infusion provided a tested shortcode that lets you show which browsers and assistive technologies you&amp;rsquo;ve tried your design out in. Here&amp;rsquo;s an example. Note the commas and &amp;ldquo;+&amp;rdquo; signs.
 &amp;#x7b;{% tested using=&#34;Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge&#34; %}}  This outputs:</description>
     </item>
     
