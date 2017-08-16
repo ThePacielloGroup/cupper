@@ -196,18 +196,17 @@ th:empty {
 
 .tested {
     text-align: center;
+    border: 1px solid #111;
 }
 .tested tr {
-  display: flex;
-  flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 }
 .tested td, .tested th {
     vertical-align: middle;
     overflow: hidden;
     flex: 1 0 auto;
-    border: 0;
-    outline: 2px solid;
-    outline-offset: -1px;
+    border: 1px solid #111;
 }
 .tested th {
     width: 100%;
