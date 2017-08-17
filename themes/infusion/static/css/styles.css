@@ -9,6 +9,7 @@
 *::before,
 *::after {
     font-family: inherit;
+    background-color: inherit;
     color: inherit;
     margin: 0;
     padding: 0;
@@ -19,6 +20,7 @@ html {
     font-family: PT Sans, sans-serif;
     line-height: 1.5;
     color: #111;
+    background-color: #fefefe;
 }
 * + * {
     margin-top: 2.25rem;
@@ -58,8 +60,9 @@ figure p img {
 }
 :focus:not([tabindex="-1"]),
 [data-expands]:focus svg,
-.patterns a:focus .text {
-    outline: 3px solid #ccc;
+.patterns a:focus .text,
+[for="themer"] :focus + [aria-hidden] {
+    outline: 3px solid #888;
     outline-offset: 2px;
 }
 /* fix for IE :( */
@@ -86,7 +89,6 @@ div:not([tabindex]):focus {
     outline: none;
 }
 /* text styles */
-
 h1,
 h2,
 h3,
@@ -160,6 +162,7 @@ main ul ul {
 
 button {
     font-size: 1.25rem;
+    border-radius: 0.125em;
     font-family: inherit;
     background: #111;
     color: #fff;
@@ -170,6 +173,28 @@ button {
   font-size: 0.75rem;
   margin-top: 0.75rem;
   padding: 0.5rem;
+}
+
+/* Forms */
+label {
+  display: inline-block;
+  font-weight: bold;
+}
+
+[for="themer"] {
+  background: #111;
+  border-radius: 0.125em;
+  color: #fff;
+  padding: 0.25em 0.75em;
+  margin: 0.5rem;
+}
+
+[for="themer"] [aria-hidden]::before {
+  content: 'off';
+}
+
+[for="themer"] :checked + [aria-hidden]::before {
+  content: 'on';
 }
 /* Tables */
 
@@ -466,6 +491,7 @@ pre[class*=language-] {
 }
 code[class*="language-"], pre[class*="language-"] {
   text-shadow: none;
+  filter: grayscale(100%);
 }
 pre[class*=language-][data-line] {
     padding: 1em 0 0 2.25rem;
@@ -476,40 +502,6 @@ pre[class*=language-] code * {
 [data-codeblock-shortcode] {
     display: inline-block;
     margin-top: -1rem;
-}
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-    color: #888;
-}
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted,
-.token.important {
-    color: #111;
-}
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-    color: #333;
-    background: none;
-}
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-    color: #666;
-}
-.token.function {
-    color: #888;
 }
 .line-numbers code {
     padding-left: 3rem;
@@ -767,6 +759,15 @@ h1 svg {
 }
 .pattern-section h1 {
     padding: 0 !important;
+}
+/* Utilities */
+.vh {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 @media screen and (max-width: 45em) {
     [role="banner"] {

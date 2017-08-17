@@ -24,6 +24,11 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet" media="none" onload="this.media='all';">
     <link rel="stylesheet" href="https://thepaciellogroup.github.io/infusion/css/prism.css">
     <link rel="stylesheet" type="text/css" href="https://thepaciellogroup.github.io/infusion/css/styles.css">
+    <style id="inverter" media="none">
+      html { filter: invert(100%) }
+      * { background-color: inherit }
+      img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
+    </style>
     <title>
       
         File trees | Infusion
@@ -459,6 +464,12 @@
   </main>
 
           <footer role="contentinfo">
+            <div>
+              <label for="themer">
+                dark theme: <input type="checkbox" id="themer" class="vh">
+                <span aria-hidden="true"></span>
+              </label>
+            </div>
             Powered by <strong>Infusion</strong>, a <strong>The Paciello Group</strong> project.<br>
             For general enquiries, contact us on info@paciellogroup.com.
           </footer>

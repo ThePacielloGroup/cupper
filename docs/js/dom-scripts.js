@@ -122,3 +122,25 @@
     }
   });
 }());
+
+/* Switch and persist theme */
+(function () {
+  var checkbox = document.getElementById('themer');
+  var invertor = document.getElementById('inverter');
+
+  function darkTheme(media) {
+    invertor.setAttribute('media', media);
+    invertor.textContent = invertor.textContent.trim();
+    localStorage.setItem('darkTheme', media);
+  }
+
+  checkbox.addEventListener('change', function () {
+    darkTheme(this.checked ? 'screen' : 'none');
+  });
+
+  window.addEventListener('DOMContentLoaded', function () {
+    if (localStorage.getItem('darkTheme') === 'screen') {
+      checkbox.click();
+    }
+  });
+}());
