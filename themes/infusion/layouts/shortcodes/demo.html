@@ -3,7 +3,7 @@
   {{ if .Get "caption" }}
   <figure role="group" aria-labelledby="caption-{{ $uniq }}">
   {{ end }}
-      <div class="demo-inner">
+      <div class="demo-inner" {{ if .Get "backgroundColor" }}style="background-color: {{ .Get "backgroundColor" | safeCSS }}"{{ end }}>
         <div class="demo" id="js-demo-{{ $uniq }}"></div>
         <button data-launch="js-demo-{{ $uniq }}">Launch in separate window</button>
       </div>
@@ -41,7 +41,10 @@
         var standalone = window.open();
         script.textContent = standaloneScript;
         standalone.document.body.appendChild(document.importNode(template.content, true));
-        standalone.document.title = 'demo ' + {{ $uniq }}
+        {{ if .Get "backgroundColor" }}
+          standalone.document.body.style.backgroundColor = {{ .Get "backgroundColor" | safeCSS }};
+        {{ end }}
+        standalone.document.title = 'demo ' + {{ $uniq }};
       });
     })();
   </script>

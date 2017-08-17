@@ -9,7 +9,7 @@ There are some issues with {{% pattern "CodePen embedding" %}}, like them not wo
 
 Here's the example code for an inline demo of a toggle button:
 
-{{<codeBlock lang="html" numbered="true">}}
+{{<codeBlock lang="html">}}
 &#x7b;{&lt;demo>}}
 &lt;button aria-pressed="false">Toggle Me&lt;/button>
 &lt;style>
@@ -85,10 +85,20 @@ The "Launch in separate window" button takes the demo code and pushes it to a ne
 
 It's possible to give your demo a caption using an accessible `<figure>` and `<figcaption>` structure. All _you_ need to do is supply a `caption` attribute. For example:
 
-{{<codeBlock lang="html" numbered="true">}}
+{{<codeBlock lang="html">}}
 &#x7b;{&lt;demo caption="A basic button element">}}
 &lt;!-- demo code here -->
 &#x7b;{&lt;/demo>}}
 {{</codeBlock>}}
 
 Along with the standard `figure` shortcodes (described in {{% pattern "Including images" %}}), demo figures are numbered automatically according to their order in the page. You can use markdown syntax in the caption text value.
+
+## Background colors
+
+Sometimes your component will be expected to appear in a context where the parent element has a background color. You can add a backgroundColor for your demo block using the `backgroundColor` attribute. Any valid CSS color value is acceptable:
+
+{{<codeBlock lang="html">}}
+&#x7b;{&lt;demo backgroundColor="hsla(163, 100%, 50%, 0.43)">}}
+&lt;!-- demo code here -->
+&#x7b;{&lt;/demo>}}
+{{</codeBlock>}}

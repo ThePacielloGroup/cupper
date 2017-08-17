@@ -1717,7 +1717,7 @@ toggle.addEventListener('click', (e) => {
 
 <p>Here&rsquo;s the example code for an inline demo of a toggle button:</p>
 
-<pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
+<pre class="language-html "><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo>}}
 &lt;button aria-pressed="false">Toggle Me&lt;/button>
 &lt;style>
@@ -1756,7 +1756,7 @@ toggle.addEventListener('click', (e) => {
 
 <div class="demo-container">
   
-      <div class="demo-inner">
+      <div class="demo-inner" >
         <div class="demo" id="js-demo-414e06a48e755bf9e43e5e2596f9ea7a"></div>
         <button data-launch="js-demo-414e06a48e755bf9e43e5e2596f9ea7a">Launch in separate window</button>
       </div>
@@ -1818,7 +1818,8 @@ toggle.addEventListener('click', (e) => {
         var standalone = window.open();
         script.textContent = standaloneScript;
         standalone.document.body.appendChild(document.importNode(template.content, true));
-        standalone.document.title = 'demo ' + "414e06a48e755bf9e43e5e2596f9ea7a"
+        
+        standalone.document.title = 'demo ' + "414e06a48e755bf9e43e5e2596f9ea7a";
       });
     })();
   </script>
@@ -1838,7 +1839,7 @@ toggle.addEventListener('click', (e) => {
 
 <p>It&rsquo;s possible to give your demo a caption using an accessible <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> structure. All <em>you</em> need to do is supply a <code>caption</code> attribute. For example:</p>
 
-<p><pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
+<p><pre class="language-html "><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo caption="A basic button element">}}
 &lt;!-- demo code here -->
 &#x7b;{&lt;/demo>}}
@@ -1846,6 +1847,17 @@ toggle.addEventListener('click', (e) => {
 </p>
 
 <p>Along with the standard <code>figure</code> shortcodes (described in <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/media/including-images/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Including images</a>), demo figures are numbered automatically according to their order in the page. You can use markdown syntax in the caption text value.</p>
+
+<h2 id="background-colors">Background colors</h2>
+
+<p>Sometimes your component will be expected to appear in a context where the parent element has a background color. You can add a backgroundColor for your demo block using the <code>backgroundColor</code> attribute. Any valid CSS color value is acceptable:</p>
+
+<pre class="language-html "><code class="language-html" data-codeblock-shortcode>
+&#x7b;{&lt;demo backgroundColor="hsla(163, 100%, 50%, 0.43)">}}
+&lt;!-- demo code here -->
+&#x7b;{&lt;/demo>}}
+</code></pre>
+
 
           </div>
         
