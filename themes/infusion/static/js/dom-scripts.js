@@ -117,8 +117,10 @@
   Array.prototype.forEach.call(codeBlocks, function (block) {
     if (block.querySelector('code')) {
       block.setAttribute('role', 'region');
-      block.setAttribute('tabindex', '0');
       block.setAttribute('aria-label', 'code sample');
+      if (block.scrollWidth > block.clientWidth) {
+        block.setAttribute('tabindex', '0');
+      }
     }
   });
 }());
