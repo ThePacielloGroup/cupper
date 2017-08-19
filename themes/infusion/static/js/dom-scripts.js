@@ -128,11 +128,16 @@
 /* Switch and persist theme */
 (function () {
   var checkbox = document.getElementById('themer');
-  var invertor = document.getElementById('inverter');
+  var inverter = document.getElementById('inverter');
 
   function darkTheme(media) {
-    invertor.setAttribute('media', media);
-    invertor.textContent = invertor.textContent.trim();
+    if (!('filter' in document.body.style)) {
+      checkbox.parentNode.hidden = true;
+      return;
+    }
+
+    inverter.setAttribute('media', media);
+    inverter.textContent = inverter.textContent.trim();
     localStorage.setItem('darkTheme', media);
   }
 
@@ -141,8 +146,10 @@
   });
 
   window.addEventListener('DOMContentLoaded', function () {
-    if (localStorage.getItem('darkTheme') === 'screen') {
-      checkbox.click();
+    if ('filter' in document.body.style) {
+      if (localStorage.getItem('darkTheme') === 'screen') {
+        checkbox.click();
+      }
     }
   });
 }());

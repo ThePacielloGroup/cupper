@@ -71,6 +71,10 @@ figure p img {
 div:not([tabindex]):focus {
     outline: none;
 }
+[hidden] {
+  display: none;
+}
+
 /* skip link */
 
 [href="#main"] {
