@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "hugo server --baseURL http://localhost:1313",
     "clean": "rm -rf content && mkdir content && mkdir content/patterns && hugo new patterns/pattern.md && hugo new _index.md && hugo new print-version.md --kind print-version && cat themes/infusion/data/README_BLANK.md > README.md",
-    "build": "rm -rfv docs/* && hugo && sw-precache --root=docs && git add -A"
+    "build": "rm -rfv docs/* && hugo && sw-precache --root=docs && git add -A",
+    "update": "node scripts/update.js"
   },
   "pre-commit": [
     "build"
