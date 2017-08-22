@@ -133,6 +133,7 @@
             <div class="intro">
               <a class="logo" href="https://thepaciellogroup.github.io/infusion/" aria-label="Infusion pattern library home page">
                 <img src="https://thepaciellogroup.github.io/infusion/images/logo.svg" alt="">
+                Pooooooo
               </a>
               <p class="library-desc">
                 Documentation for the <strong>Infusion</strong> pattern library builder, built with <strong>Infusion</strong> itself.
@@ -191,6 +192,15 @@
                   <use xlink:href="#bookmark"></use>
                 </svg>
                 <span class="text">Printing</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#updating-infusion" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Updating Infusion</span>
               </a>
             </li>
           
@@ -611,6 +621,69 @@ theme = "infusion"
   </div>
 </aside>
 </p>
+
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="updating-infusion" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Updating Infusion
+          </h1>
+          <p>The core of <strong>Infusion&rsquo;s</strong> functionality is in its Hugo theme, also called <strong>Infusion</strong>. This is found in the theme folder.</p>
+
+<div class="file-tree">
+  <ul>
+<li>content</li>
+<li>docs</li>
+<li>lib</li>
+<li>snippets</li>
+<li>static</li>
+<li>themes
+
+<ul>
+<li>infusion</li>
+</ul></li>
+</ul>
+
+</div>
+
+
+<p>Do not &ldquo;hack the core&rdquo;. If you have any issues with <strong>Infusion</strong>, please report them to <a href="https://github.com/ThePacielloGroup/infusion/issues">the <strong>Infusion</strong> Github repository</a> and they will be dealt with ASAP.</p>
+
+<p>Infusion is undergoing constant development, so keep an eye out for new releases. To update to a new version of <strong>Infusion</strong>, simply run the <code>update</code> command from inside your local project folder.</p>
+
+<pre class="cmd"><code>npm run update</code></pre>
+
+
+<p>This will save a timestamped backup of the current version, and download the latest version. Your theme folder will now look something like the following.</p>
+
+<div class="file-tree">
+  <ul>
+<li>themes
+
+<ul>
+<li>infusion</li>
+<li>infusion-old-1503389765972</li>
+</ul></li>
+</ul>
+
+</div>
+
+
+<p>If you experience breaking changes and are having trouble fixing them, you can rename the old folder and revert to using it. In the meantime, you can <a href="https://github.com/ThePacielloGroup/infusion/issues">submit an issue</a> with the &ldquo;help&rdquo; tag describing your problem.</p>
+
+<aside aria-label="warning" class="note warning">
+  <div>
+    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+      <use xlink:href="#warning"></use>
+    </svg>
+    <p>The described update process relies on SVN because Github does not support downloading individual repository folders. If you have a Mac, SVN should be installed already. If not, or you are on Windows, you can either install SVN or download the latests <strong>Infusion</strong> theme folder manually, using the Github web interface.</p>
+
+  </div>
+</aside>
+
 
         </div>
       

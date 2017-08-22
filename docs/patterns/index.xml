@@ -54,5 +54,16 @@ https://yourName.github.io/your-library/print-version     Print styles are also 
   </description>
     </item>
     
+    <item>
+      <title>Updating Infusion</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/updating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/updating/</guid>
+      <description>The core of Infusion&amp;rsquo;s functionality is in its Hugo theme, also called Infusion. This is found in the theme folder.
+ content docs lib snippets static themes  infusion    Do not &amp;ldquo;hack the core&amp;rdquo;. If you have any issues with Infusion, please report them to the Infusion Github repository and they will be dealt with ASAP.
+Infusion is undergoing constant development, so keep an eye out for new releases.</description>
+    </item>
+    
   </channel>
 </rss>

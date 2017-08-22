@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://thepaciellogroup.github.io/infusion/patterns/installation/">
+    <link rel="canonical" href="https://thepaciellogroup.github.io/infusion/patterns/updating/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://thepaciellogroup.github.io/infusion/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://thepaciellogroup.github.io/infusion/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://thepaciellogroup.github.io/infusion/images/apple-icon-72x72.png">
@@ -31,7 +31,7 @@
     </style>
     <title>
       
-        Installation | Infusion
+        Updating Infusion | Infusion
       
     </title>
     
@@ -162,7 +162,7 @@
                   <ul id="patterns-list">
                     
                       <li class="pattern">
-                        <a href="https://thepaciellogroup.github.io/infusion/patterns/installation/" aria-current="page">
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/installation/" >
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
                           </svg>
@@ -198,7 +198,7 @@
                       </li>
                     
                       <li class="pattern">
-                        <a href="https://thepaciellogroup.github.io/infusion/patterns/updating/" >
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/updating/" aria-current="page">
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
                           </svg>
@@ -386,105 +386,67 @@
       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      Installation
+      Updating Infusion
     </h1>
     
     
       
 
-  <nav class="toc" aria-labelledby="toc-heading">
-    <h2 id="toc-heading">Table of contents</h2>
-    <ol>
-      
-        <li>
-          <a href="#install-hugo">
-            Install Hugo
-          </a>
-        </li>
-      
-        <li>
-          <a href="#install-node--npm">
-            Install Node &amp; NPM
-          </a>
-        </li>
-      
-        <li>
-          <a href="#get-the-files">
-            Get the files
-          </a>
-        </li>
-      
-    </ol>
-  </nav>
-
 
     
-    
+    <p>The core of <strong>Infusion&rsquo;s</strong> functionality is in its Hugo theme, also called <strong>Infusion</strong>. This is found in the theme folder.</p>
 
-<p><strong>Infusion</strong> is built using the static site engine, <a href="https://gohugo.io/">Hugo</a>, and NPM. The codebase is available to download on Github. Let&rsquo;s get set up step-by-step.</p>
+<div class="file-tree">
+  <ul>
+<li>content</li>
+<li>docs</li>
+<li>lib</li>
+<li>snippets</li>
+<li>static</li>
+<li>themes
 
-<h2 id="install-hugo">Install Hugo</h2>
+<ul>
+<li>infusion</li>
+</ul></li>
+</ul>
 
-<p>First you need to install Hugo globally.</p>
-
-<h3 id="osx-users">OSX users</h3>
-
-<p>If you are a Mac user and have <a href="https://brew.sh/">Homebrew</a> on your system, installing Hugo is simple:</p>
-
-<pre class="cmd"><code>brew install hugo</code></pre>
-
-
-<p>Alternatively, you can manually <a href="https://github.com/gohugoio/hugo/releases">install Hugo from a package</a>. You can verify the installation was successful by typing:</p>
-
-<pre class="cmd"><code>hugo version</code></pre>
-
-
-<h3 id="windows-users">Windows users</h3>
-
-<p>Installing on Windows is a bit more involved than on OSX. The authors of Hugo provide <a href="https://gohugo.io/tutorials/installing-on-windows/">a guide</a> with instructions for technical and less technical users.</p>
-
-<p>It&rsquo;s also best you install a Windows Subsystem for running Linux, and therefore <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">bash</a> (<strong>Infusion</strong> incorporates some bash commands in its scripts). <a href="https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide">Microsoft offer a complete guide</a>.</p>
-
-<h2 id="install-node-npm">Install Node &amp; NPM</h2>
-
-<p>It is likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, <a href="https://docs.npmjs.com/getting-started/installing-node">refer to NPM&rsquo;s own guide</a>, which includes a video tutorial.</p>
-
-<h2 id="get-the-files">Get the files</h2>
-
-<p><strong>Infusion</strong> is hosted on Github. To start using it, you&rsquo;ll need to get the files from there. If you are comfortable with the command line, just fork the <a href="https://github.com/ThePacielloGroup/infusion">github.com/ThePacielloGroup/infusion</a> repository, then do a <code>git clone</code> to your local system. Replace <code>[your username]</code> in the following:</p>
-
-<pre class="cmd"><code>git clone https://github.com/[your username]/infusion.git</code></pre>
+</div>
 
 
-<p>If the command line is not your thing, fork  <a href="https://github.com/ThePacielloGroup/infusion">github.com/ThePacielloGroup/infusion</a> and choose <strong>Open in Desktop</strong> from <strong>Clone or download</strong> (see figure 1, below).</p>
+<p>Do not &ldquo;hack the core&rdquo;. If you have any issues with <strong>Infusion</strong>, please report them to <a href="https://github.com/ThePacielloGroup/infusion/issues">the <strong>Infusion</strong> Github repository</a> and they will be dealt with ASAP.</p>
+
+<p>Infusion is undergoing constant development, so keep an eye out for new releases. To update to a new version of <strong>Infusion</strong>, simply run the <code>update</code> command from inside your local project folder.</p>
+
+<pre class="cmd"><code>npm run update</code></pre>
 
 
-<figure role="group" aria-describedby="caption-4f6ff97ad7397f1735a833534d0e2e4d">
-  <p><img src="https://thepaciellogroup.github.io/infusion/images/open_in_desktop.png" alt="The open in desktop option, revealed when clicking clone or download" /></p>
+<p>This will save a timestamped backup of the current version, and download the latest version. Your theme folder will now look something like the following.</p>
 
-  <figcaption id="caption-4f6ff97ad7397f1735a833534d0e2e4d">
-    The Github web interface
-  </figcaption>
-</figure>
+<div class="file-tree">
+  <ul>
+<li>themes
+
+<ul>
+<li>infusion</li>
+<li>infusion-old-1503389765972</li>
+</ul></li>
+</ul>
+
+</div>
 
 
-<aside aria-label="note" class="note">
+<p>If you experience breaking changes and are having trouble fixing them, you can rename the old folder and revert to using it. In the meantime, you can <a href="https://github.com/ThePacielloGroup/infusion/issues">submit an issue</a> with the &ldquo;help&rdquo; tag describing your problem.</p>
+
+<aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
-      <use xlink:href="#info"></use>
+    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+      <use xlink:href="#warning"></use>
     </svg>
-    <p>If you do not have a version of the Github desktop client installed, follow the prompts after clicking <strong>Open in Desktop</strong>.</p>
+    <p>The described update process relies on SVN because Github does not support downloading individual repository folders. If you have a Mac, SVN should be installed already. If not, or you are on Windows, you can either install SVN or download the latests <strong>Infusion</strong> theme folder manually, using the Github web interface.</p>
 
   </div>
 </aside>
 
-
-<p>Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:</p>
-
-<pre class="cmd"><code>npm install</code></pre>
-
-
-<p>Now it&rsquo;s time to consult the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library setup</a> pattern.</p>
 
   </main>
 
