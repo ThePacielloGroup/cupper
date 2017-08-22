@@ -33,5 +33,5 @@ This will save a timestamped backup of the current version, and download the lat
 If you experience breaking changes and are having trouble fixing them, you can rename the old folder and revert to using it. In the meantime, you can [submit an issue](https://github.com/ThePacielloGroup/infusion/issues) with the "help" tag describing your problem.
 
 {{% warning %}}
-The described update process relies on SVN because Github does not support downloading individual repository folders. If you have a Mac, SVN should be installed already. If not, or if you are on Windows, you can either install SVN or download the latest []**Infusion** theme folder](https://github.com/ThePacielloGroup/infusion/tree/master/themes/infusion) manually, using the Github web interface.
+The described update process relies on SVN because Github does not support downloading individual repository folders. If you have a Mac, SVN should be installed already. If not, or if you are on Windows, you can either install SVN or download the latest [**Infusion** theme folder](https://github.com/ThePacielloGroup/infusion/tree/master/themes/infusion) manually, using the Github web interface.
 {{% /warning %}}
