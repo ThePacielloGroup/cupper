@@ -18,6 +18,10 @@ title = "Menu button"
 +++
 ```
 
+{{% note %}}
+The title automatically becomes the page's main `<h1>` heading. The highest heading level you should use in the body of your markdown file is `<h2>`.
+{{% /note %}}
+
 ### Tags
 
 If you like, you can also tag the pattern so that it turns up in lists of similar content. You add tags in an array format. Note that all the TOML data is found at the top of the markdown file, between the `+++` lines.
