@@ -642,29 +642,37 @@ p:empty {
 a svg,
 button svg,
 h1 svg,
-th svg {
+th svg,
+li > svg {
     height: 0.75em;
-    width: auto;
+    width: 0.75em;
     margin-right: 0.25em;
 }
-h1 svg,
-li > svg,
-h2 a svg {
-    height: 1em;
-    width: auto;
-    vertical-align: middle;
-}
 h1 svg {
-    margin-right: 0;
+  margin-right: 0;
+  width: 0.85em;
+  height: 0.85em;
+}
+.wcag-icon {
+  width: 1.25em;
+}
+.bookmark-icon {
+  vertical-align: middle;
+}
+.link-icon {
+  width: 0.75em;
+  height: 0.75em;
+}
+.tags svg, .link-icon {
+  vertical-align: middle;
+}
+.balloon-icon {
+  width: 0.75em;
+  margin-right: 0;
 }
 .print {
     white-space: nowrap;
     font-style: normal;
-}
-.svg-outer {
-    width: 0.75em;
-    display: inline-block;
-    vertical-align: middle;
 }
 /* Color palettes */
 .colors {
