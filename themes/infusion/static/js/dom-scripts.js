@@ -96,11 +96,19 @@
 
 /* Switch and persist theme */
 (function () {
+  function CSSSupported (property, value) {
+    var prop = property + ':',
+        el = document.createElement('test'),
+        mStyle = el.style;
+    el.style.cssText = prop + value;
+    return mStyle[property];
+  }
+
   var checkbox = document.getElementById('themer');
   var inverter = document.getElementById('inverter');
 
   function darkTheme(media) {
-    if (!('filter' in document.body.style)) {
+    if (!CSSSupported('filter', 'invert(100%)')) {
       checkbox.parentNode.hidden = true;
       return;
     }
