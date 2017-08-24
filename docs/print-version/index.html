@@ -1900,7 +1900,7 @@ toggle.addEventListener('click', (e) => {
         var demoContent = template.content;
         var standalone = window.open();
         script.textContent = standaloneScript;
-        standalone.document.body.appendChild(document.importNode(template.content, true));
+        standalone.document.body.appendChild(template.content.cloneNode(true));
         
         standalone.document.title = 'demo ' + "414e06a48e755bf9e43e5e2596f9ea7a";
       });

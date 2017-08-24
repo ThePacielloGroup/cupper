@@ -40,7 +40,7 @@
         var demoContent = template.content;
         var standalone = window.open();
         script.textContent = standaloneScript;
-        standalone.document.body.appendChild(document.importNode(template.content, true));
+        standalone.document.body.appendChild(template.content.cloneNode(true));
         {{ if .Get "backgroundColor" }}
           standalone.document.body.style.backgroundColor = {{ .Get "backgroundColor" | safeCSS }};
         {{ end }}
