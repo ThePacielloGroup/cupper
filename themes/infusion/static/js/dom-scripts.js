@@ -107,12 +107,12 @@
   var checkbox = document.getElementById('themer');
   var inverter = document.getElementById('inverter');
 
-  function darkTheme(media) {
-    if (!CSSSupported('filter', 'invert(100%)')) {
-      checkbox.parentNode.hidden = true;
-      return;
-    }
+  if (!CSSSupported('filter', 'invert(100%)')) {
+    checkbox.parentNode.hidden = true;
+    return;
+  }
 
+  function darkTheme(media) {
     inverter.setAttribute('media', media);
     inverter.textContent = inverter.textContent.trim();
     localStorage.setItem('darkTheme', media);
