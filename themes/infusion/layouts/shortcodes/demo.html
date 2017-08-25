@@ -23,8 +23,8 @@
       var script = template.content.querySelector('script');
 
       if (script) {
-        var standaloneScript = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + script.textContent + ' })()';
-        var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-{{ $uniq }}\').shadowRoot;' + script.textContent + '})()';
+        var standaloneScript = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + script.textContent + ' })();';
+        var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-{{ $uniq }}\').shadowRoot;' + script.textContent + '})();';
         script.textContent = wrappedScript;
       }
 
@@ -35,7 +35,7 @@
         root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> A browser supporting Shadow DOM is needed to run encapsulated demos. You can launch the demo in a separate window ↓</p>';
       }
 
-      var launchButton = document.querySelector('[data-launch="js-demo-{{ $uniq }}"]');
+      /*var launchButton = document.querySelector('[data-launch="js-demo-{{ $uniq }}"]');
       launchButton.addEventListener('click', function () {
         var standalone = window.open();
         script.textContent = standaloneScript;
@@ -43,6 +43,27 @@
         {{ if .Get "backgroundColor" }}
           standalone.document.body.style.backgroundColor = {{ .Get "backgroundColor" | safeCSS }};
         {{ end }}
+        standalone.document.title = 'demo ' + {{ $uniq }};
+      });*/
+      var launchButton = document.querySelector('[data-launch="js-demo-{{ $uniq }}"]');
+      launchButton.addEventListener('click', function () {
+        var standalone = window.open();
+        script.innerHTML = standaloneScript;
+        var demoDiv = document.createElement('div');
+        demoDiv.innerHTML = template.innerHTML;
+        standalone.document.body.appendChild(demoDiv);
+        
+        // For activating the script :-(
+        var newScript = standalone.document.createElement('script');
+        var oldScript = standalone.document.querySelector('script');
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.removeChild(oldScript);
+        standalone.document.body.appendChild(newScript);
+
+        {{ if .Get "backgroundColor" }}
+          standalone.document.body.style.backgroundColor = {{ .Get "backgroundColor" | safeCSS }};
+        {{ end }}
+
         standalone.document.title = 'demo ' + {{ $uniq }};
       });
     })();

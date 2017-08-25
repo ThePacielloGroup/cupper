@@ -24,29 +24,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet" media="none" onload="this.media='all';">
     <link rel="stylesheet" href="https://thepaciellogroup.github.io/infusion/css/prism.css">
     <link rel="stylesheet" type="text/css" href="https://thepaciellogroup.github.io/infusion/css/styles.css">
-    <script>
-       
-      (function templatePolyfill(document) {
-        if ('content' in document.createElement('template')) {
-          return false;
-        }
-
-        var templates = document.getElementsByTagName('template');
-        var plateLen = templates.length;
-
-        for (var x = 0; x < plateLen; ++x) {
-          var template = templates[x];
-          var content = template.childNodes;
-          var fragment = document.createDocumentFragment();
-
-          while (content[0]) {
-            fragment.appendChild(content[0]);
-          }
-
-          template.content = fragment;
-        }
-      })(document);
-    </script>
     <style id="inverter" media="none">
       html { filter: invert(100%) }
       * { background-color: inherit }
@@ -532,8 +509,8 @@ toggle.addEventListener('click', (e) => {
       var script = template.content.querySelector('script');
 
       if (script) {
-        var standaloneScript = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + script.textContent + ' })()';
-        var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-414e06a48e755bf9e43e5e2596f9ea7a\').shadowRoot;' + script.textContent + '})()';
+        var standaloneScript = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + script.textContent + ' })();';
+        var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-414e06a48e755bf9e43e5e2596f9ea7a\').shadowRoot;' + script.textContent + '})();';
         script.textContent = wrappedScript;
       }
 
@@ -544,12 +521,27 @@ toggle.addEventListener('click', (e) => {
         root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> A browser supporting Shadow DOM is needed to run encapsulated demos. You can launch the demo in a separate window ↓</p>';
       }
 
+       
+
+
+
       var launchButton = document.querySelector('[data-launch="js-demo-414e06a48e755bf9e43e5e2596f9ea7a"]');
       launchButton.addEventListener('click', function () {
         var standalone = window.open();
-        script.textContent = standaloneScript;
-        standalone.document.body.appendChild(template.content.cloneNode(true));
+        script.innerHTML = standaloneScript;
+        var demoDiv = document.createElement('div');
+        demoDiv.innerHTML = template.innerHTML;
+        standalone.document.body.appendChild(demoDiv);
         
+        
+        var newScript = standalone.document.createElement('script');
+        var oldScript = standalone.document.querySelector('script');
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.removeChild(oldScript);
+        standalone.document.body.appendChild(newScript);
+
+        
+
         standalone.document.title = 'demo ' + "414e06a48e755bf9e43e5e2596f9ea7a";
       });
     })();

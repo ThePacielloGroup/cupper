@@ -24,29 +24,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet" media="none" onload="this.media='all';">
     <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}">
     <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
-    <script>
-      /* Template element polyfill */
-      (function templatePolyfill(document) {
-        if ('content' in document.createElement('template')) {
-          return false;
-        }
-
-        var templates = document.getElementsByTagName('template');
-        var plateLen = templates.length;
-
-        for (var x = 0; x < plateLen; ++x) {
-          var template = templates[x];
-          var content = template.childNodes;
-          var fragment = document.createDocumentFragment();
-
-          while (content[0]) {
-            fragment.appendChild(content[0]);
-          }
-
-          template.content = fragment;
-        }
-      })(document);
-    </script>
     <style id="inverter" media="none">
       html { filter: invert(100%) }
       * { background-color: inherit }
