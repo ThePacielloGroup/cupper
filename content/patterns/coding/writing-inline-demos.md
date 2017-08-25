@@ -67,9 +67,9 @@ button {
 <script>
 var toggle = demo.querySelector('[aria-pressed]');
 
-toggle.addEventListener('click', (e) => {  
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
+toggle.addEventListener('click', function () {  
+  var pressed = this.getAttribute('aria-pressed') === 'true';
+  this.setAttribute('aria-pressed', !pressed);
 });
 </script>
 {{</demo>}}
