@@ -22,6 +22,9 @@ html {
     color: #111;
     background-color: #fefefe;
 }
+template {
+  display: none !important;
+}
 * + * {
     margin-top: 2.25rem;
 }
