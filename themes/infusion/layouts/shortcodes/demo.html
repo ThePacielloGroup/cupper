@@ -40,7 +40,7 @@
       var launchButton = document.querySelector('[data-launch="js-demo-{{ $uniq }}"]');
       launchButton.addEventListener('click', function () {
         var standalone = window.open();
-        standalone.document.body.appendChild(demoDiv);
+        standalone.document.body.innerHTML = demoDiv.innerHTML;
 
         // For activating the script :-(
         var newScript = standalone.document.createElement('script');
