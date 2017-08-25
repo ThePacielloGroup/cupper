@@ -37,7 +37,6 @@
 
       var launchButton = document.querySelector('[data-launch="js-demo-{{ $uniq }}"]');
       launchButton.addEventListener('click', function () {
-        var demoContent = template.content;
         var standalone = window.open();
         script.textContent = standaloneScript;
         standalone.document.body.appendChild(template.content.cloneNode(true));

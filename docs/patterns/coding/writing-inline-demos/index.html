@@ -24,6 +24,29 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet" media="none" onload="this.media='all';">
     <link rel="stylesheet" href="https://thepaciellogroup.github.io/infusion/css/prism.css">
     <link rel="stylesheet" type="text/css" href="https://thepaciellogroup.github.io/infusion/css/styles.css">
+    <script>
+       
+      (function templatePolyfill(document) {
+        if ('content' in document.createElement('template')) {
+          return false;
+        }
+
+        var templates = document.getElementsByTagName('template');
+        var plateLen = templates.length;
+
+        for (var x = 0; x < plateLen; ++x) {
+          var template = templates[x];
+          var content = template.childNodes;
+          var fragment = document.createDocumentFragment();
+
+          while (content[0]) {
+            fragment.appendChild(content[0]);
+          }
+
+          template.content = fragment;
+        }
+      })(document);
+    </script>
     <style id="inverter" media="none">
       html { filter: invert(100%) }
       * { background-color: inherit }
@@ -523,7 +546,6 @@ toggle.addEventListener('click', (e) => {
 
       var launchButton = document.querySelector('[data-launch="js-demo-414e06a48e755bf9e43e5e2596f9ea7a"]');
       launchButton.addEventListener('click', function () {
-        var demoContent = template.content;
         var standalone = window.open();
         script.textContent = standaloneScript;
         standalone.document.body.appendChild(template.content.cloneNode(true));
