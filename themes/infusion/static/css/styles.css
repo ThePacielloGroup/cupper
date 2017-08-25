@@ -84,7 +84,7 @@ div:not([tabindex]):focus {
     display: block;
     width: 100%;
     padding: 0.75rem;
-    color: #fff;
+    color: #fefefe;
     background: #000;
     position: absolute;
     top: -3rem;
@@ -145,7 +145,7 @@ code {
     background: #111;
 }
 .cmd code {
-    color: #fff;
+    color: #fefefe;
     white-space: nowrap;
 }
 .cmd code::before {
@@ -172,15 +172,18 @@ button {
     border-radius: 0.125em;
     font-family: inherit;
     background: #111;
-    color: #fff;
+    color: #fefefe;
     padding: 0.75rem;
     border: 0;
 }
 [data-launch] {
-  font-size: 0.75rem;
-  margin-top: 0.75rem;
-  padding: 0.5rem;
-  border-radius: 0;
+  font-size: 0.75rem !important;
+  margin-top: 0.75rem !important;
+  padding: 0.5rem !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: #111 !important;
+  color: #fefefe !important
 }
 
 /* Forms */
@@ -192,7 +195,7 @@ label {
 [for="themer"] {
   background: #111;
   border-radius: 0.125em;
-  color: #fff;
+  color: #fefefe;
   padding: 0.25em 0.75em;
   margin: 0.5rem;
 }
@@ -244,7 +247,7 @@ th:empty {
 .tested th {
     width: 100%;
     background-color: #111;
-    color: #fff;
+    color: #fefefe;
     outline-color: #111;
 }
 .tested img {
@@ -360,7 +363,7 @@ caption {
     background-position: 98% center;
     background-size: 125%;
     background-repeat: no-repeat;
-    color: #fff;
+    color: #fefefe;
     padding: 0.5em 1em 0.5em;
 }
 /* menu button */
@@ -550,7 +553,7 @@ pre[class*=language-] code * {
     overflow-y: hidden;
 }
 .file-tree li {
-    background: #fff;
+    background: #fefefe;
     position: relative;
     white-space: nowrap;
 }
@@ -693,7 +696,7 @@ h1 svg {
 .colors span {
     line-height: 1;
     background-color: #111;
-    color: #fff;
+    color: #fefefe;
     font-size: 0.75rem;
     padding: 0.25rem;
     position: absolute;
@@ -863,7 +866,7 @@ h1 svg {
         content: '';
     }
     .cmd code {
-        background: #fff;
+        background: #fefefe;
         color: #111;
     }
     pre code {
@@ -898,7 +901,7 @@ h1 svg {
 }
 @media (-ms-high-contrast: active) {
   img[src*=".svg"] {
-    background: #fff;
+    background: #fefefe;
     padding: 0.5rem;
   }
   .ticks li::before {
