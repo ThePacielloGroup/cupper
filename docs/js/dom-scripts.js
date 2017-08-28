@@ -59,6 +59,7 @@
 
     if (id) {
       var newHeading = heading.cloneNode(true);
+      newHeading.setAttribute('tabindex', '-1');
 
       var container = document.createElement('div');
       container.setAttribute('class', 'h2-container');
