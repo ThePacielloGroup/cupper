@@ -96,6 +96,7 @@ div:not([tabindex]):focus {
     outline: none;
 }
 /* text styles */
+
 h1,
 h2,
 h3,
@@ -162,8 +163,13 @@ main ol {
 main li + li {
     margin-top: 0.5rem;
 }
-main ul ul {
-    margin-top: 0;
+main ul ul, main ol ol {
+    margin-top: 0.5rem;
+}
+/* Blockquotes */
+blockquote {
+  font-size: 0.75rem;
+  font-style: italic;
 }
 /* Buttons */
 
