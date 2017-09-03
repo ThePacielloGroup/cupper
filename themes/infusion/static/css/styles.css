@@ -796,6 +796,11 @@ h1 svg {
   width: 1px;
 }
 @media screen and (max-width: 45em) {
+
+    body {
+      hyphens: auto;
+    }
+
     [role="banner"] {
         position: static;
         width: auto;
