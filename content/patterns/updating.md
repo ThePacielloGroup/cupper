@@ -1,5 +1,6 @@
 +++
 title = "Updating Infusion"
+weight = 5
 +++
 
 The core of **Infusion's** functionality is in its Hugo theme, also called **Infusion**. This is found in the theme folder.

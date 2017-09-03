@@ -47,7 +47,15 @@
   </url>
   
   <url>
+    <loc>https://thepaciellogroup.github.io/infusion/patterns/updating/</loc>
+  </url>
+  
+  <url>
     <loc>https://thepaciellogroup.github.io/infusion/patterns/writing/expandable-sections/</loc>
+  </url>
+  
+  <url>
+    <loc>https://thepaciellogroup.github.io/infusion/patterns/help/</loc>
   </url>
   
   <url>
@@ -127,10 +135,6 @@
   
   <url>
     <loc>https://thepaciellogroup.github.io/infusion/patterns/coding/tested/</loc>
-  </url>
-  
-  <url>
-    <loc>https://thepaciellogroup.github.io/infusion/patterns/updating/</loc>
   </url>
   
 </urlset>
