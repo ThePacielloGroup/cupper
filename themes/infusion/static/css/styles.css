@@ -797,7 +797,7 @@ h1 svg {
 }
 @media screen and (max-width: 45em) {
 
-    body {
+    body a {
       hyphens: auto;
     }
 
