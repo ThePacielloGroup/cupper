@@ -137,7 +137,7 @@ The expandable shortcode takes three parameters:
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/help/</guid>
       <description>Should you need assistance using Infusion, you have a couple of options:
- Create a topic on the official Google Groups forum Write an issue at the Github repository, using the provided tag &amp;ldquo;help&amp;rdquo;: https://github.com/ThePacielloGroup/infusion/issues  </description>
+ Create a topic on the official Google Groups forum Write an issue at the Github repository, using the provided tag &amp;ldquo;help&amp;rdquo;  </description>
     </item>
     
     <item>
