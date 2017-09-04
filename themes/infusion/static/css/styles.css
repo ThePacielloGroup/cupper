@@ -786,6 +786,16 @@ h1 svg {
 .pattern-section h1 {
     padding: 0 !important;
 }
+/* Custom 404 */
+.custom-404 {
+  text-align: center;
+}
+.custom-404 * {
+  margin: 0;
+}
+.custom-404 svg {
+  max-width: 100%;
+}
 /* Utilities */
 .vh {
   clip: rect(1px, 1px, 1px, 1px);
