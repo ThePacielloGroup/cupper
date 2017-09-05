@@ -382,7 +382,7 @@ caption {
 }
 #menu-button:focus {
     outline: none;
-    box-shadow: inset 0 0 0 0.25rem #ccc;
+    box-shadow: inset 0 0 0 0.25rem #888;
 }
 /* Tables of contents */
 
