@@ -4,7 +4,7 @@ title = "References"
 
 ## Cross-references
 
-**Infusion** provides an easy mechanism to cross-reference patterns, by title, using the `pattern` shortcode. For example, I can reference the {{% pattern "Notes & warnings" %}} pattern. Here's what the markdown looks like, including the shortcode:
+**Infusion** identifies the main content files in your documentation as _patterns_, and they're kept in the **content → patterns** folder. It's easy to cross-reference patterns using the `pattern` shortcode. For example, I can reference the {{% pattern "Notes & warnings" %}} pattern. Here's what the markdown looks like, including the shortcode:
 
 {{<codeBlock>}}
 I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.

@@ -722,7 +722,7 @@ theme = "infusion"
             </h1>
             
 
-<p>Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:</p>
+<p>Before you can set about making documentation, you need to know where everything goes. The simplest folder structure looks like this:</p>
 
 <div class="file-tree">
   <ul>
@@ -747,7 +747,7 @@ theme = "infusion"
 <li><strong>/content</strong> - This is where all of your content lives. You won&rsquo;t need to visit any other folders very frequently.</li>
 <li><strong>_index.md</strong> — This is the content file for your home page.</li>
 <li><strong>print-version.md</strong> — This is a placeholder for the single-page / print-friendly version of you library. Leave this file as it is.</li>
-<li><strong>/patterns</strong> — This is the folder where individual pattern files are kept.</li>
+<li><strong>/patterns</strong> — This is the folder where individual content files are kept. <strong>Infusion</strong> refers to each individual documentation file/page as a &ldquo;pattern&rdquo;.</li>
 </ul>
 
 <h2 id="subsections">Subsections</h2>
@@ -812,7 +812,7 @@ title = &quot;Popups&quot;
             </h1>
             
 
-<p>In <strong>Infusion</strong>, design patterns are documented using markdown. To create a new pattern file, just add a file with the <code>.md</code> extension to the <code>/patterns</code> folder. It&rsquo;s recommended you use &ldquo;kebab case&rdquo; to name the file ( words separated by hyphens). For example, a pattern with the title &ldquo;Menu button&rdquo; should probably have the filename <code>menu-button</code>. Then you get a nice clean URL: <code>username.github.io/your-library/patterns/menu-button</code>.</p>
+<p>In <strong>Infusion</strong> everything is documented using markdown, as a &ldquo;pattern&rdquo;. To create a new pattern file, just add a file with the <code>.md</code> extension to the <code>content/patterns</code> folder. It&rsquo;s recommended you use &ldquo;kebab case&rdquo; to name the file (words separated by hyphens). For example, a pattern with the title &ldquo;Menu button&rdquo; should probably have the filename <code>menu-button</code>. Then you get a nice clean URL: <code>username.github.io/your-library/patterns/menu-button</code>.</p>
 
 <p>If you&rsquo;re not familiar with writing markdown, there are a number of tutorials available. One of the best is <a href="https://guides.github.com/features/mastering-markdown/">Mastering Markdown</a> offered by Github. There&rsquo;s also a <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">nice cheatsheet here</a>.</p>
 
@@ -830,7 +830,7 @@ title = &quot;Menu button&quot;
     <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
-    <p>The title automatically becomes the page&rsquo;s main <code>&lt;h1&gt;</code> heading. The highest heading level you should use in the body of your markdown file is <code>&lt;h2&gt;</code>.</p>
+    <p>The title automatically becomes the page&rsquo;s main <code>&lt;h1&gt;</code> heading. The highest heading level you should use in the body of your markdown file is therefore <code>&lt;h2&gt;</code>.</p>
 
   </div>
 </aside>
@@ -1065,7 +1065,7 @@ This is a warning! It's about something the reader should be careful to do or to
 
 <h2 id="cross-references">Cross-references</h2>
 
-<p><strong>Infusion</strong> provides an easy mechanism to cross-reference patterns, by title, using the <code>pattern</code> shortcode. For example, I can reference the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/notes-and-warnings/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Notes &amp; warnings</a> pattern. Here&rsquo;s what the markdown looks like, including the shortcode:</p>
+<p><strong>Infusion</strong> identifies the main content files in your documentation as <em>patterns</em>, and they&rsquo;re kept in the <strong>content → patterns</strong> folder. It&rsquo;s easy to cross-reference patterns using the <code>pattern</code> shortcode. For example, I can reference the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/notes-and-warnings/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Notes &amp; warnings</a> pattern. Here&rsquo;s what the markdown looks like, including the shortcode:</p>
 
 <pre class=" "><code  data-codeblock-shortcode>
 I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.

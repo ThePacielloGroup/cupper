@@ -41,7 +41,7 @@ brew install hugo Alternatively, you can manually install Hugo from a package. Y
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/library-structure/</guid>
-      <description>Before you can set about documenting patterns, you need to know where everything goes. The simplest folder structure looks like this:
+      <description>Before you can set about making documentation, you need to know where everything goes. The simplest folder structure looks like this:
  content  _index.md print-version.md patterns  name-of-my-pattern.md name-of-my-other-pattern.md      /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content file for your home page. print-version.md — This is a placeholder for the single-page / print-friendly version of you library.</description>
     </item>
     
@@ -72,7 +72,7 @@ CodePen Infusion offers a couple of ways to do this. The first is by embedding C
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/markdown-and-metadata/</guid>
-      <description>In Infusion, design patterns are documented using markdown. To create a new pattern file, just add a file with the .md extension to the /patterns folder. It&amp;rsquo;s recommended you use &amp;ldquo;kebab case&amp;rdquo; to name the file ( words separated by hyphens). For example, a pattern with the title &amp;ldquo;Menu button&amp;rdquo; should probably have the filename menu-button. Then you get a nice clean URL: username.github.io/your-library/patterns/menu-button.
+      <description>In Infusion everything is documented using markdown, as a &amp;ldquo;pattern&amp;rdquo;. To create a new pattern file, just add a file with the .md extension to the content/patterns folder. It&amp;rsquo;s recommended you use &amp;ldquo;kebab case&amp;rdquo; to name the file (words separated by hyphens). For example, a pattern with the title &amp;ldquo;Menu button&amp;rdquo; should probably have the filename menu-button. Then you get a nice clean URL: username.github.io/your-library/patterns/menu-button.
 If you&amp;rsquo;re not familiar with writing markdown, there are a number of tutorials available.</description>
     </item>
     
@@ -219,7 +219,7 @@ Notes You may wish to pick out some content in your pattern&amp;rsquo;s document
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/references/</guid>
-      <description>Cross-references Infusion provides an easy mechanism to cross-reference patterns, by title, using the pattern shortcode. For example, I can reference the  Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
+      <description>Cross-references Infusion identifies the main content files in your documentation as patterns, and they&amp;rsquo;re kept in the content → patterns folder. It&amp;rsquo;s easy to cross-reference patterns using the pattern shortcode. For example, I can reference the  Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
 I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
     </item>
     
