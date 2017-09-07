@@ -29,18 +29,18 @@ So, this&amp;hellip;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/installation/</guid>
-      <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get set up step-by-step.
+      <description>Infusion is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get everything installed step-by-step.
 Install Hugo First you need to install Hugo globally.
 OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
 brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
     </item>
     
     <item>
-      <title>Library structure</title>
-      <link>https://thepaciellogroup.github.io/infusion/patterns/writing/library-structure/</link>
+      <title>Project structure</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/writing/project-structure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/library-structure/</guid>
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/project-structure/</guid>
       <description>Before you can set about making documentation, you need to know where everything goes. The simplest folder structure looks like this:
  content  _index.md print-version.md patterns  name-of-my-pattern.md name-of-my-other-pattern.md      /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content file for your home page. print-version.md — This is a placeholder for the single-page / print-friendly version of you library.</description>
     </item>
@@ -57,13 +57,13 @@ CodePen Infusion offers a couple of ways to do this. The first is by embedding C
     </item>
     
     <item>
-      <title>Library setup</title>
-      <link>https://thepaciellogroup.github.io/infusion/patterns/library-setup/</link>
+      <title>Setup</title>
+      <link>https://thepaciellogroup.github.io/infusion/patterns/setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thepaciellogroup.github.io/infusion/patterns/library-setup/</guid>
+      <guid>https://thepaciellogroup.github.io/infusion/patterns/setup/</guid>
       <description>By now, you should have followed the  Installation instructions. You should have Hugo and Node installed, and a local copy of a forked version of Infusion. You should also have run npm install in the root of that codebase.
-&amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start documenting patterns, there are a few things still to do in order to get set up. At the moment, your version of Infusion is a facsimile of the original, containing all this documentation content.</description>
+&amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start writing documentation, there are a few things still to do in order to get set up. At the moment, your version of Infusion is a facsimile of the original, containing all the content you&amp;rsquo;re reading right now.</description>
     </item>
     
     <item>
@@ -82,9 +82,9 @@ If you&amp;rsquo;re not familiar with writing markdown, there are a number of tu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/serving/</guid>
-      <description>Serving locally While you&amp;rsquo;re creating content for your library, you&amp;rsquo;ll probably want to see what the finished product looks like. Fortunately, Infusion is easy to serve locally using the serve command:
-npm run serve This will serve your working library from localhost:1313. Whenever you make changes to your library&amp;rsquo;s files, the site will automatically rebuild. No need to refresh the web page!
-Publishing on Github Pages Infusion creates a /docs folder containing the latest version of your library whenever you do an npm run build or a git commit.</description>
+      <description>Serving locally While you&amp;rsquo;re creating content for your project, you&amp;rsquo;ll probably want to see what the finished product looks like. Fortunately, Infusion is easy to serve locally using the serve command:
+npm run serve This will serve your working project from localhost:1313. Whenever you make changes to your files, the site will automatically rebuild. No need to refresh the web page!
+Publishing on Github Pages Infusion creates a /docs folder containing the latest version of your site whenever you do an npm run build or a git commit.</description>
     </item>
     
     <item>
@@ -104,7 +104,7 @@ Infusion offers another option: a special demo shortcode that allows you to writ
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/printing/</guid>
       <description>Infusion&amp;rsquo;s output site includes a one-page  Print version of the generated library, available at /print-version. So, if your library base URL is https://yourName.github.io/your-library, you can print the whole library — to PDF if wanted — from the following address:
-https://yourName.github.io/your-library/print-version     Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, go ahead!
+https://yourName.github.io/your-library/print-version     Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, you can!
   </description>
     </item>
     
@@ -219,7 +219,7 @@ Notes You may wish to pick out some content in your pattern&amp;rsquo;s document
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/references/</guid>
-      <description>Cross-references Infusion identifies the main content files in your documentation as patterns, and they&amp;rsquo;re kept in the content → patterns folder. It&amp;rsquo;s easy to cross-reference patterns using the pattern shortcode. For example, I can reference the  Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
+      <description>Cross-references Infusion identifies the main content files in your documentation as patterns, and they&amp;rsquo;re kept in the content/ patterns folder. It&amp;rsquo;s easy to cross-reference patterns using the pattern shortcode. For example, I can reference the  Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
 I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
     </item>
     
@@ -229,7 +229,7 @@ I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} patt
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/snippets/</guid>
-      <description>A lot of the time, your larger patterns will share some common techniques and utilities. For this reason, Infusion lets you save snippets of markdown in a snippets folder, alongside the main content folder.
+      <description>A lot of the time, your larger documentation patterns will share some common techniques and utilities. For this reason, Infusion lets you save snippets of markdown in a snippets folder, alongside the main content folder.
 The example visually-hidden.md snippet describes the CSS needed to create content that is visually hidden but still available to screen readers. Since this is a technique/utility you are likely to use often, it&amp;rsquo;s nice to be able to just drop a snippet into your markdown content.</description>
     </item>
     
@@ -239,8 +239,8 @@ The example visually-hidden.md snippet describes the CSS needed to create conten
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/infusion/patterns/writing/tables-of-contents/</guid>
-      <description>Pattern pages in Infusion that have two or more subheadings — &amp;lt;h2&amp;gt;s — automatically get a table of contents: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &amp;ldquo;Table of contents&amp;rdquo; label and uses an ordered list. The table of contents markup for the  Library setup page looks something like this:
-&amp;lt;nav class=&amp;quot;toc&amp;quot; aria-labelledby=&amp;quot;toc-heading&amp;quot;&amp;gt; &amp;lt;h2 id=&amp;quot;toc-heading&amp;quot;&amp;gt;Table of contents&amp;lt;/h2&amp;gt; &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#cleaning-the-content-folder&amp;quot;&amp;gt;“Cleaning” the content folder&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#the-setup-command&amp;quot;&amp;gt;The setup command&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#the-config-file&amp;quot;&amp;gt;The config file&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#including-a-logo&amp;quot;&amp;gt;Including a logo&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;/nav&amp;gt;  Tables of contents are a neat way to break down the content of the page and give users a navigable overview.</description>
+      <description>Pattern pages in Infusion that have two or more subheadings (&amp;lt;h2&amp;gt;s) automatically get a table of contents: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &amp;ldquo;Table of contents&amp;rdquo; label and uses an ordered list. The table of contents markup for the  Setup page looks something like this:
+&amp;lt;nav class=&amp;quot;toc&amp;quot; aria-labelledby=&amp;quot;toc-heading&amp;quot;&amp;gt; &amp;lt;h2 id=&amp;quot;toc-heading&amp;quot;&amp;gt;Table of contents&amp;lt;/h2&amp;gt; &amp;lt;ol&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#cleaning-the-content-folder&amp;quot;&amp;gt;“Cleaning” the content folder&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#the-setup-command&amp;quot;&amp;gt;The setup command&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#the-config-file&amp;quot;&amp;gt;The config file&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;a href=&amp;quot;#including-a-logo&amp;quot;&amp;gt;Including a logo&amp;lt;/a&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ol&amp;gt; &amp;lt;/nav&amp;gt;  Tables of content are a neat way to break down the content of the page and give users a navigable overview.</description>
     </item>
     
     <item>

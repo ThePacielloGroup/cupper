@@ -8,7 +8,7 @@ In some cases, where there is a lot of content, it's helpful to collapse certain
 The `expandable` shortcode takes three parameters:
 
 * **label** — This is the label for the the section heading.
-* **level** — This is the heading level (e.g. `level="2"` for a `<h2>`) that will contain the label. If you omit a level parameter, no heading is used; it's just a button.
+* **level** — This is the heading level (e.g. `level="2"` for an `<h2>`) that will contain the label. If you omit a level parameter, no heading is used; it's just a button.
 * **open** — Include this and give it a value of "true" or "yes" to make the section expanded on page load.
 
 Here's what the code might look like for a simple expandable section containing markdown:

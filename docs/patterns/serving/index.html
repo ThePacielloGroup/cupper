@@ -170,11 +170,11 @@
                       </li>
                     
                       <li class="pattern">
-                        <a href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/" >
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/setup/" >
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
                           </svg>
-                          <span class="text">Library setup</span>
+                          <span class="text">Setup</span>
                         </a>
                       </li>
                     
@@ -220,11 +220,11 @@
                         <ul>
                           
                             <li class="pattern">
-                              <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/library-structure/" >
+                              <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/project-structure/" >
                                 <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                                   <use xlink:href="#bookmark"></use>
                                 </svg>
-                                <span class="text">Library structure</span>
+                                <span class="text">Project structure</span>
                               </a>
                             </li>
                           
@@ -425,16 +425,16 @@
 
 <h2 id="serving-locally">Serving locally</h2>
 
-<p>While you&rsquo;re creating content for your library, you&rsquo;ll probably want to see what the finished product looks like. Fortunately, <strong>Infusion</strong> is easy to serve locally using the <code>serve</code> command:</p>
+<p>While you&rsquo;re creating content for your project, you&rsquo;ll probably want to see what the finished product looks like. Fortunately, <strong>Infusion</strong> is easy to serve locally using the <code>serve</code> command:</p>
 
 <pre class="cmd"><code>npm run serve</code></pre>
 
 
-<p>This will serve your working library from <code>localhost:1313</code>. Whenever you make changes to your library&rsquo;s files, the site will automatically rebuild. No need to refresh the web page!</p>
+<p>This will serve your working project from <code>localhost:1313</code>. Whenever you make changes to your files, the site will automatically rebuild. No need to refresh the web page!</p>
 
 <h2 id="publishing-on-github-pages">Publishing on Github Pages</h2>
 
-<p><strong>Infusion</strong> creates a <code>/docs</code> folder containing the latest version of your library whenever you do an <code>npm run build</code> or a <code>git commit</code>. So long as you forked the <strong>Infusion</strong> repository when making your own library (see <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library setup</a>), whenever you push to master, you will also be updating the site found at your Github Pages URL.</p>
+<p><strong>Infusion</strong> creates a <code>/docs</code> folder containing the latest version of your site whenever you do an <code>npm run build</code> or a <code>git commit</code>. So long as you forked the <strong>Infusion</strong> repository when making your own version (see <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Setup</a>), whenever you push to master, you will also be updating the site found at your Github Pages URL.</p>
 
 <p>This URL will be in the following format:</p>
 
@@ -451,7 +451,7 @@
     <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
-    <p>If you created a new library repo manually (without forking) you will find the <code>docs</code> folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
+    <p>If you created a new repo&rsquo; manually (without forking) you will find the <code>docs</code> folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
 
 <p><img src="https://thepaciellogroup.github.io/infusion/images/serve_from_docs.png" alt="The publishing source dropdown menu on Github" /></p>
 

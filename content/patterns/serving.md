@@ -5,15 +5,15 @@ weight = 3
 
 ## Serving locally
 
-While you're creating content for your library, you'll probably want to see what the finished product looks like. Fortunately, **Infusion** is easy to serve locally using the `serve` command:
+While you're creating content for your project, you'll probably want to see what the finished product looks like. Fortunately, **Infusion** is easy to serve locally using the `serve` command:
 
 {{<cmd>}}npm run serve{{</cmd>}}
 
-This will serve your working library from `localhost:1313`. Whenever you make changes to your library's files, the site will automatically rebuild. No need to refresh the web page!
+This will serve your working project from `localhost:1313`. Whenever you make changes to your files, the site will automatically rebuild. No need to refresh the web page!
 
 ## Publishing on Github Pages
 
-**Infusion** creates a `/docs` folder containing the latest version of your library whenever you do an `npm run build` or a `git commit`. So long as you forked the **Infusion** repository when making your own library (see {{% pattern "Library setup" %}}), whenever you push to master, you will also be updating the site found at your Github Pages URL.
+**Infusion** creates a `/docs` folder containing the latest version of your site whenever you do an `npm run build` or a `git commit`. So long as you forked the **Infusion** repository when making your own version (see {{% pattern "Setup" %}}), whenever you push to master, you will also be updating the site found at your Github Pages URL.
 
 This URL will be in the following format:
 
@@ -28,7 +28,7 @@ baseURL = "https://thepaciellogroup.github.io/infusion/"
 ```
 
 {{% note %}}
-If you created a new library repo manually (without forking) you will find the `docs` folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  **Settings → Github Pages → Source** in the web interface.
+If you created a new repo' manually (without forking) you will find the `docs` folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  **Settings → Github Pages → Source** in the web interface.
 
 ![The publishing source dropdown menu on Github](/images/serve_from_docs.png)
 {{% /note %}}

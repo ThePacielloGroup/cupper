@@ -10,5 +10,5 @@ https://yourName.github.io/your-library/print-version
 ```
 
 {{% note %}}
-Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, go ahead!
+Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, you can!
 {{% /note %}}

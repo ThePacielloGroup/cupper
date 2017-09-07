@@ -168,11 +168,11 @@
             </li>
           
             <li class="pattern">
-              <a href="#library-setup" >
+              <a href="#setup" >
                 <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                   <use xlink:href="#bookmark"></use>
                 </svg>
-                <span class="text">Library setup</span>
+                <span class="text">Setup</span>
               </a>
             </li>
           
@@ -218,11 +218,11 @@
               <ul>
                 
                   <li class="pattern">
-                    <a href="#library-structure" >
+                    <a href="#project-structure" >
                       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                         <use xlink:href="#bookmark"></use>
                       </svg>
-                      <span class="text">Library structure</span>
+                      <span class="text">Project structure</span>
                     </a>
                   </li>
                 
@@ -393,7 +393,7 @@
           </h1>
           
 
-<p><strong>Infusion</strong> is built using the static site engine, <a href="https://gohugo.io/">Hugo</a>, and NPM. The codebase is available to download on Github. Let&rsquo;s get set up step-by-step.</p>
+<p><strong>Infusion</strong> is built using the static site engine, <a href="https://gohugo.io/">Hugo</a>, and NPM. The codebase is available to download on Github. Let&rsquo;s get everything installed step-by-step.</p>
 
 <h2 id="install-hugo">Install Hugo</h2>
 
@@ -428,7 +428,7 @@
 <pre class="cmd"><code>git clone https://github.com/[your username]/infusion.git</code></pre>
 
 
-<p>If the command line is not your thing, fork  <a href="https://github.com/ThePacielloGroup/infusion">github.com/ThePacielloGroup/infusion</a> and choose <strong>Open in Desktop</strong> from <strong>Clone or download</strong> (see figure 1, below).</p>
+<p>If the command line is not your thing, use Github&rsquo;s web interface to fork  <a href="https://github.com/ThePacielloGroup/infusion">github.com/ThePacielloGroup/infusion</a> and choose <strong>Open in Desktop</strong> from <strong>Clone or download</strong> (see figure 1, below).</p>
 
 
 <figure role="group" aria-describedby="caption-4f6ff97ad7397f1735a833534d0e2e4d">
@@ -456,16 +456,16 @@
 <pre class="cmd"><code>npm install</code></pre>
 
 
-<p>Now it&rsquo;s time to consult the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library setup</a> pattern.</p>
+<p>Now it&rsquo;s time to consult the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Setup</a> pattern.</p>
 
         </div>
       
         <div class="pattern-section">
-          <h1 id="library-setup" tabindex="-1">
+          <h1 id="setup" tabindex="-1">
             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
               <use xlink:href="#bookmark"></use>
             </svg>
-            Library setup
+            Setup
           </h1>
           
 
@@ -473,7 +473,7 @@
 
 <h2 id="cleaning-the-content-folder">&ldquo;Cleaning&rdquo; the content folder</h2>
 
-<p>Before you can start documenting patterns, there are a few things still to do in order to get set up. At the moment, your version of <strong>Infusion</strong> is a facsimile of the original, containing all this documentation content. We want to delete that content and replace it with some starter content. There&rsquo;s a simple <code>clean</code> command for this.</p>
+<p>Before you can start writing documentation, there are a few things still to do in order to get set up. At the moment, your version of <strong>Infusion</strong> is a facsimile of the original, containing all the content you&rsquo;re reading right now. We want to delete that content and replace it with some starter content. There&rsquo;s a simple <code>clean</code> command for this.</p>
 
 <aside aria-label="warning" class="note warning">
   <div>
@@ -489,11 +489,11 @@
 <pre class="cmd"><code>  npm run clean</code></pre>
 
 
-<p>This will leave your <code>content</code> folder with just an <code>_index.md</code> file and a <code>patterns</code> folder containing a single demonstration pattern file. Find out more about these in <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/library-structure/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library structure</a>.</p>
+<p>This will leave your <code>content</code> folder with just an <code>_index.md</code> file and a <code>patterns</code> folder containing a single demonstration pattern file. Individual content pages in <strong>Infusion</strong> are referred to as &ldquo;patterns&rdquo; — think pattern libraries). Find out more about these in <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/project-structure/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Project structure</a>.</p>
 
 <h2 id="the-config-file">The config file</h2>
 
-<p>You&rsquo;ll also want to name your library and configure one or two other things in the <code>config.toml</code> file that&rsquo;s found at the root of your project. Here&rsquo;s how that file looks:</p>
+<p>You&rsquo;ll also want to name your project and configure one or two other things in the <code>config.toml</code> file that&rsquo;s found at the root of your project. Here&rsquo;s how that file looks:</p>
 
 <pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
 languageCode = "en-us"
@@ -502,25 +502,25 @@ baseURL = "https://thepaciellogroup.github.io/infusion/"
 theme = "infusion"
 
 [params]
-  description = "Documentation for the **Infusion** pattern library builder. This documentation is constructed using the builder itself."
+  description = "Documentation for the **Infusion** pattern documentation builder. This documentation is constructed using the builder itself."
   codePenUser = "Heydon"
 </code></pre>
 
 
 <ul>
-<li><strong>title</strong> — This is the library&rsquo;s name, like &ldquo;Megacorp 5000 Pattern Library&rdquo;. You don&rsquo;t have to include the term &ldquo;pattern library&rdquo; if you don&rsquo;t want to. For <strong>Infusion&rsquo;s</strong> own version of <strong>Infusion</strong>, the <code>title</code> is, naturally, <em>Infusion</em> :-)</li>
+<li><strong>title</strong> — This is the project&rsquo;s name, like &ldquo;Megacorp 5000 Pattern Library&rdquo;. You don&rsquo;t have to include the term &ldquo;documentation&rdquo; if you don&rsquo;t want to. For <strong>Infusion&rsquo;s</strong> own version of <strong>Infusion</strong>, the <code>title</code> is, predictably, <em>Infusion</em> :-)</li>
 <li><strong>baseURL</strong> — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site.</li>
 <li><strong>theme</strong> — This is the theme the library is using. Don&rsquo;t change this from &ldquo;infusion&rdquo;.</li>
-<li><strong>description</strong> — This is a short description of the library and comes under the logo. You can include markdown syntax here, like <em>&#x002a;&#x002a;Infusion&#x002a;&#x002a;</em> in the above example for making the name of the library bold.</li>
+<li><strong>description</strong> — This is a short description of your documentation project and comes under the logo. You can include markdown syntax here, like <em>&#x002a;&#x002a;Infusion&#x002a;&#x002a;</em> in the above example for making the name of the library bold.</li>
 <li><strong>codePenUser</strong> — If you want to embed codePens in your pattern files, you need to supply a codePen username here.</li>
 </ul>
 
 <h2 id="the-web-app-manifest">The Web App Manifest</h2>
 
-<p><strong>Infusion</strong> libraries work as progressive web applications, meaning users can save them to their home screen and read them offline. The web app manifest, found at the root of the <code>static</code> folder defines names and icons for the app. You&rsquo;ll probably want to open <code>/static/manifest.json</code> and personalize the <code>name</code> and <code>short_name</code> values.</p>
+<p><strong>Infusion</strong> projects work as progressive web applications, meaning users can save them to their home screen and read them offline. The web app manifest, found at the root of the <code>static</code> folder, defines names and icons for the app. You&rsquo;ll probably want to open <code>/static/manifest.json</code> and personalize the <code>name</code> and <code>short_name</code> values.</p>
 
 <pre><code>{
- &quot;name&quot;: &quot;Infusion Pattern Library Docs&quot;,
+ &quot;name&quot;: &quot;Infusion Documentation Builder&quot;,
  &quot;short_name&quot;: &quot;Infusion Docs&quot;,
  &quot;icons&quot;: [
   {...
@@ -541,7 +541,7 @@ theme = "infusion"
     <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
-    <p>The <code>short_name</code> value refers to the text that appears under the icon on your homescreen. As the name suggests, it should be as short as possible to fit well.</p>
+    <p>The <code>short_name</code> value refers to the text that appears under the icon on your homescreen. As the name suggests, it should be as short as possible to fit well (12 characters or fewer is ideal).</p>
 
   </div>
 </aside>
@@ -549,14 +549,14 @@ theme = "infusion"
 
 <h2 id="including-a-logo">Including a logo</h2>
 
-<p>In the <code>images/static</code> folder, you&rsquo;ll find a <code>logo.svg</code> file. Replace this file with your own company or project logo. Currently, only the SVG is supported this easily because SVG the superior format for logotypes. However, if you must use a different format, you can open up the <code>themes/infusion/layouts/_default/baseof.html</code> file and edit the image reference:</p>
+<p>In the <code>images/static</code> folder, you&rsquo;ll find a <code>logo.svg</code> file. Replace this file with your own company or project logo, under the same file name. Currently, only SVG is supported this easily because SVG is the superior format for logos. However, if you must use a different format, you can open up the <code>themes/infusion/layouts/_default/baseof.html</code> file and edit the image reference:</p>
 
 <pre><code class="language-html">&lt;a class=&quot;logo&quot; href=&quot;/&quot; aria-label=&quot;{{ .Site.Title }} pattern library home page&quot;&gt;
   &lt;img src=&quot;{{ &quot;images/logo.svg&quot; | absURL }}&quot; alt=&quot;&quot;&gt;
 &lt;/a&gt;
 </code></pre>
 
-<p>Now that your logo&rsquo;s in place, everything should be ready. Where next? You can learn about <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/library-structure/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library structure</a> to help you get writing, or find out how to serve the library locally and on Github Pages in <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/serving/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Serving</a>.</p>
+<p>Now that your logo is in place, everything should be ready. Where next? You can learn about <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/project-structure/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Project structure</a> to help you get writing, or find out how to serve the site locally and on Github Pages in <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/serving/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Serving</a>.</p>
 
         </div>
       
@@ -571,16 +571,16 @@ theme = "infusion"
 
 <h2 id="serving-locally">Serving locally</h2>
 
-<p>While you&rsquo;re creating content for your library, you&rsquo;ll probably want to see what the finished product looks like. Fortunately, <strong>Infusion</strong> is easy to serve locally using the <code>serve</code> command:</p>
+<p>While you&rsquo;re creating content for your project, you&rsquo;ll probably want to see what the finished product looks like. Fortunately, <strong>Infusion</strong> is easy to serve locally using the <code>serve</code> command:</p>
 
 <pre class="cmd"><code>npm run serve</code></pre>
 
 
-<p>This will serve your working library from <code>localhost:1313</code>. Whenever you make changes to your library&rsquo;s files, the site will automatically rebuild. No need to refresh the web page!</p>
+<p>This will serve your working project from <code>localhost:1313</code>. Whenever you make changes to your files, the site will automatically rebuild. No need to refresh the web page!</p>
 
 <h2 id="publishing-on-github-pages">Publishing on Github Pages</h2>
 
-<p><strong>Infusion</strong> creates a <code>/docs</code> folder containing the latest version of your library whenever you do an <code>npm run build</code> or a <code>git commit</code>. So long as you forked the <strong>Infusion</strong> repository when making your own library (see <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library setup</a>), whenever you push to master, you will also be updating the site found at your Github Pages URL.</p>
+<p><strong>Infusion</strong> creates a <code>/docs</code> folder containing the latest version of your site whenever you do an <code>npm run build</code> or a <code>git commit</code>. So long as you forked the <strong>Infusion</strong> repository when making your own version (see <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Setup</a>), whenever you push to master, you will also be updating the site found at your Github Pages URL.</p>
 
 <p>This URL will be in the following format:</p>
 
@@ -597,7 +597,7 @@ theme = "infusion"
     <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
-    <p>If you created a new library repo manually (without forking) you will find the <code>docs</code> folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
+    <p>If you created a new repo&rsquo; manually (without forking) you will find the <code>docs</code> folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
 
 <p><img src="https://thepaciellogroup.github.io/infusion/images/serve_from_docs.png" alt="The publishing source dropdown menu on Github" /></p>
 
@@ -624,7 +624,7 @@ theme = "infusion"
     <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
-    <p>Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, go ahead!</p>
+    <p>Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, you can!</p>
 
   </div>
 </aside>
@@ -714,11 +714,11 @@ theme = "infusion"
       
         
           <div class="pattern-section">
-            <h1 id="library-structure" tabindex="-1">
+            <h1 id="project-structure" tabindex="-1">
               <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                 <use xlink:href="#bookmark"></use>
               </svg>
-              Library structure
+              Project structure
             </h1>
             
 
@@ -791,7 +791,7 @@ title = &quot;Popups&quot;
 +++
 </code></pre>
 
-<p>The <code>/patterns</code> folder itself does not need indexing explicitly in this way.</p>
+<p>For each subfolder you create, you must also create one of these <code>_index.md</code> files. The <code>/patterns</code> folder itself does not need indexing explicitly in this way.</p>
 
 <p><strong>Infusion</strong> does not currently support <em>sub</em>-subsections.</p>
 
@@ -850,7 +850,7 @@ tags = [&quot;interactive&quot;, &quot;popup&quot;, &quot;javascript&quot;]
 
 <h3 id="weight">Weight</h3>
 
-<p>By default, patterns are listed in alphabetical order. However, sometimes you might like to change the order around. This is possible by adding a <code>weight</code> parameter. To make my menu button pattern appear at the top of its subsection, I would give it a <code>weight</code> of <code>1</code>:</p>
+<p>By default, patterns are listed alphabetically in the navigation. However, sometimes you might like to change the order around. This is possible by adding a <code>weight</code> parameter. To make my menu button pattern appear at the top of its subsection, I would give it a <code>weight</code> of <code>1</code>:</p>
 
 <pre><code>+++
 title = &quot;Menu button&quot;
@@ -885,7 +885,7 @@ weight = 1
 
 <ul>
 <li><strong>label</strong> — This is the label for the the section heading.</li>
-<li><strong>level</strong> — This is the heading level (e.g. <code>level=&quot;2&quot;</code> for a <code>&lt;h2&gt;</code>) that will contain the label. If you omit a level parameter, no heading is used; it&rsquo;s just a button.</li>
+<li><strong>level</strong> — This is the heading level (e.g. <code>level=&quot;2&quot;</code> for an <code>&lt;h2&gt;</code>) that will contain the label. If you omit a level parameter, no heading is used; it&rsquo;s just a button.</li>
 <li><strong>open</strong> — Include this and give it a value of &ldquo;true&rdquo; or &ldquo;yes&rdquo; to make the section expanded on page load.</li>
 </ul>
 
@@ -1065,7 +1065,7 @@ This is a warning! It's about something the reader should be careful to do or to
 
 <h2 id="cross-references">Cross-references</h2>
 
-<p><strong>Infusion</strong> identifies the main content files in your documentation as <em>patterns</em>, and they&rsquo;re kept in the <strong>content → patterns</strong> folder. It&rsquo;s easy to cross-reference patterns using the <code>pattern</code> shortcode. For example, I can reference the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/notes-and-warnings/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Notes &amp; warnings</a> pattern. Here&rsquo;s what the markdown looks like, including the shortcode:</p>
+<p><strong>Infusion</strong> identifies the main content files in your documentation as <em>patterns</em>, and they&rsquo;re kept in the <strong>content/ patterns</strong> folder. It&rsquo;s easy to cross-reference patterns using the <code>pattern</code> shortcode. For example, I can reference the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/notes-and-warnings/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Notes &amp; warnings</a> pattern. Here&rsquo;s what the markdown looks like, including the shortcode:</p>
 
 <pre class=" "><code  data-codeblock-shortcode>
 I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
@@ -1087,7 +1087,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <h2 id="wcag-references">WCAG References</h2>
 
-<p><a href="https://www.w3.org/TR/WCAG/">WCAG 2.0</a> is the <em>de facto</em> standard for accessible interfaces. When writing about inclusive design patterns, sometimes you&rsquo;ll want to refer to WCAG to highlight which success criteria the pattern meets.</p>
+<p><a href="https://www.w3.org/TR/WCAG/">WCAG 2.0</a> is the <em>de facto</em> standard for accessible interfaces. When writing about inclusive interfaces, sometimes you&rsquo;ll want to refer to WCAG to highlight which success criteria the pattern meets.</p>
 
 <p>Instead of having to copy and paste content and links to WCAG, <strong>Infusion</strong> provides a shortcode mechanism that lets you simply list the success criteria by number:</p>
 
@@ -1501,7 +1501,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
               </svg>
               Snippets
             </h1>
-            <p>A lot of the time, your larger patterns will share some common techniques and utilities. For this reason, <strong>Infusion</strong> lets you save snippets of markdown in a <strong>snippets</strong> folder, alongside the main content folder.</p>
+            <p>A lot of the time, your larger documentation patterns will share some common techniques and utilities. For this reason, <strong>Infusion</strong> lets you save snippets of markdown in a <strong>snippets</strong> folder, alongside the main content folder.</p>
 
 <p>The example <code>visually-hidden.md</code> snippet describes the CSS needed to create content that is visually hidden but still available to screen readers. Since this is a technique/utility you are likely to use often, it&rsquo;s nice to be able to just drop a snippet into your markdown content. The <code>snippet</code> shortcode lets you do exactly that:</p>
 
@@ -1530,7 +1530,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
               </svg>
               Tables of contents
             </h1>
-            <p>Pattern pages in <strong>Infusion</strong> that have two or more subheadings — <code>&lt;h2&gt;</code>s — automatically get a <strong>table of contents</strong>: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &ldquo;Table of contents&rdquo; label and uses an ordered list. The table of contents markup for the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library setup</a> page looks something like this:</p>
+            <p>Pattern pages in <strong>Infusion</strong> that have two or more subheadings (<code>&lt;h2&gt;</code>s) automatically get a <strong>table of contents</strong>: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &ldquo;Table of contents&rdquo; label and uses an ordered list. The table of contents markup for the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Setup</a> page looks something like this:</p>
 
 <pre><code class="language-html">&lt;nav class=&quot;toc&quot; aria-labelledby=&quot;toc-heading&quot;&gt;
   &lt;h2 id=&quot;toc-heading&quot;&gt;Table of contents&lt;/h2&gt;
@@ -1551,7 +1551,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 &lt;/nav&gt;
 </code></pre>
 
-<p>Tables of contents are a neat way to break down the content of the page and give users a navigable overview. However, they may not be to your taste. Never fear, you can turn tables of contents off by adding <code>toc = false</code> to the TOML metadata for your pattern:</p>
+<p>Tables of content are a neat way to break down the content of the page and give users a navigable overview. However, they may not be to your taste. Never fear, you can turn tables of content off by adding <code>toc = false</code> to the TOML metadata for your pattern:</p>
 
 <pre><code>+++
 title = &quot;My page with a few headings&quot;

@@ -4,7 +4,7 @@ title = "References"
 
 ## Cross-references
 
-**Infusion** identifies the main content files in your documentation as _patterns_, and they're kept in the **content → patterns** folder. It's easy to cross-reference patterns using the `pattern` shortcode. For example, I can reference the {{% pattern "Notes & warnings" %}} pattern. Here's what the markdown looks like, including the shortcode:
+**Infusion** identifies the main content files in your documentation as _patterns_, and they're kept in the **content/ patterns** folder. It's easy to cross-reference patterns using the `pattern` shortcode. For example, I can reference the {{% pattern "Notes & warnings" %}} pattern. Here's what the markdown looks like, including the shortcode:
 
 {{<codeBlock>}}
 I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
@@ -18,7 +18,7 @@ The title argument you supply to the shortcode must be exactly the same as the r
 
 ## WCAG References
 
-[WCAG 2.0](https://www.w3.org/TR/WCAG/) is the _de facto_ standard for accessible interfaces. When writing about inclusive design patterns, sometimes you'll want to refer to WCAG to highlight which success criteria the pattern meets.
+[WCAG 2.0](https://www.w3.org/TR/WCAG/) is the _de facto_ standard for accessible interfaces. When writing about inclusive interfaces, sometimes you'll want to refer to WCAG to highlight which success criteria the pattern meets.
 
 Instead of having to copy and paste content and links to WCAG, **Infusion** provides a shortcode mechanism that lets you simply list the success criteria by number:
 

@@ -2,7 +2,7 @@
 title = "Snippets"
 +++
 
-A lot of the time, your larger patterns will share some common techniques and utilities. For this reason, **Infusion** lets you save snippets of markdown in a **snippets** folder, alongside the main content folder.
+A lot of the time, your larger documentation patterns will share some common techniques and utilities. For this reason, **Infusion** lets you save snippets of markdown in a **snippets** folder, alongside the main content folder.
 
 The example `visually-hidden.md` snippet describes the CSS needed to create content that is visually hidden but still available to screen readers. Since this is a technique/utility you are likely to use often, it's nice to be able to just drop a snippet into your markdown content. The `snippet` shortcode lets you do exactly that:
 

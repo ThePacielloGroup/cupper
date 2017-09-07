@@ -1,5 +1,5 @@
 +++
-title = "Library structure"
+title = "Project structure"
 weight = 1
 +++
 
@@ -17,7 +17,7 @@ Before you can set about making documentation, you need to know where everything
 * **/content** - This is where all of your content lives. You won't need to visit any other folders very frequently.
 * **_index.md** — This is the content file for your home page.
 * **print-version.md** — This is a placeholder for the single-page / print-friendly version of you library. Leave this file as it is.
-* **/patterns** — This is the folder where individual content files are kept. **Infusion** refers to each individual documentation file/page as a "pattern". 
+* **/patterns** — This is the folder where individual content files are kept. **Infusion** refers to each individual documentation file/page as a "pattern".
 
 ## Subsections
 
@@ -44,7 +44,7 @@ title = "Popups"
 +++
 ```
 
-The `/patterns` folder itself does not need indexing explicitly in this way.
+For each subfolder you create, you must also create one of these `_index.md` files. The `/patterns` folder itself does not need indexing explicitly in this way.
 
 **Infusion** does not currently support _sub_-subsections.
 {{% /note %}}

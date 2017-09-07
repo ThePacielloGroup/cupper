@@ -3,7 +3,7 @@ title = "Installation"
 weight = 1
 +++
 
-**Infusion** is built using the static site engine, [Hugo](https://gohugo.io/), and NPM. The codebase is available to download on Github. Let's get set up step-by-step.
+**Infusion** is built using the static site engine, [Hugo](https://gohugo.io/), and NPM. The codebase is available to download on Github. Let's get everything installed step-by-step.
 
 ## Install Hugo
 
@@ -35,7 +35,7 @@ It is likely you already have Node and NPM installed on your system. If so, you 
 
 {{<cmd>}}git clone https://github.com/[your username]/infusion.git{{</cmd>}}
 
-If the command line is not your thing, fork  [github.com/ThePacielloGroup/infusion](https://github.com/ThePacielloGroup/infusion) and choose **Open in Desktop** from **Clone or download** (see figure 1, below).
+If the command line is not your thing, use Github's web interface to fork  [github.com/ThePacielloGroup/infusion](https://github.com/ThePacielloGroup/infusion) and choose **Open in Desktop** from **Clone or download** (see figure 1, below).
 
 {{% figure caption="The Github web interface" %}}
 ![The open in desktop option, revealed when clicking clone or download](/images/open_in_desktop.png)
@@ -49,4 +49,4 @@ Once you have your local copy of the files, move to the root of that folder and 
 
 {{<cmd>}}npm install{{</cmd>}}
 
-Now it's time to consult the {{% pattern "Library setup" %}} pattern.
+Now it's time to consult the {{% pattern "Setup" %}} pattern.

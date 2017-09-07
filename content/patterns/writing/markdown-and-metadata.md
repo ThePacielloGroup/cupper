@@ -37,7 +37,7 @@ This will create links to pages listing content tagged with the same terms using
 
 ### Weight
 
-By default, patterns are listed in alphabetical order. However, sometimes you might like to change the order around. This is possible by adding a `weight` parameter. To make my menu button pattern appear at the top of its subsection, I would give it a `weight` of `1`:
+By default, patterns are listed alphabetically in the navigation. However, sometimes you might like to change the order around. This is possible by adding a `weight` parameter. To make my menu button pattern appear at the top of its subsection, I would give it a `weight` of `1`:
 
 ```
 +++

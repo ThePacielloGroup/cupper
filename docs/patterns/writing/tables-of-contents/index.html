@@ -170,11 +170,11 @@
                       </li>
                     
                       <li class="pattern">
-                        <a href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/" >
+                        <a href="https://thepaciellogroup.github.io/infusion/patterns/setup/" >
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
                           </svg>
-                          <span class="text">Library setup</span>
+                          <span class="text">Setup</span>
                         </a>
                       </li>
                     
@@ -220,11 +220,11 @@
                         <ul>
                           
                             <li class="pattern">
-                              <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/library-structure/" >
+                              <a href="https://thepaciellogroup.github.io/infusion/patterns/writing/project-structure/" >
                                 <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                                   <use xlink:href="#bookmark"></use>
                                 </svg>
-                                <span class="text">Library structure</span>
+                                <span class="text">Project structure</span>
                               </a>
                             </li>
                           
@@ -402,7 +402,7 @@
 
 
     
-    <p>Pattern pages in <strong>Infusion</strong> that have two or more subheadings — <code>&lt;h2&gt;</code>s — automatically get a <strong>table of contents</strong>: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &ldquo;Table of contents&rdquo; label and uses an ordered list. The table of contents markup for the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/library-setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Library setup</a> page looks something like this:</p>
+    <p>Pattern pages in <strong>Infusion</strong> that have two or more subheadings (<code>&lt;h2&gt;</code>s) automatically get a <strong>table of contents</strong>: a list of links to the main subsections for the page. This feature is made accessible as a navigation region with the &ldquo;Table of contents&rdquo; label and uses an ordered list. The table of contents markup for the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/setup/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Setup</a> page looks something like this:</p>
 
 <pre><code class="language-html">&lt;nav class=&quot;toc&quot; aria-labelledby=&quot;toc-heading&quot;&gt;
   &lt;h2 id=&quot;toc-heading&quot;&gt;Table of contents&lt;/h2&gt;
@@ -423,7 +423,7 @@
 &lt;/nav&gt;
 </code></pre>
 
-<p>Tables of contents are a neat way to break down the content of the page and give users a navigable overview. However, they may not be to your taste. Never fear, you can turn tables of contents off by adding <code>toc = false</code> to the TOML metadata for your pattern:</p>
+<p>Tables of content are a neat way to break down the content of the page and give users a navigable overview. However, they may not be to your taste. Never fear, you can turn tables of content off by adding <code>toc = false</code> to the TOML metadata for your pattern:</p>
 
 <pre><code>+++
 title = &quot;My page with a few headings&quot;
