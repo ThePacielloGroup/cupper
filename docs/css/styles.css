@@ -295,7 +295,7 @@ caption {
     height: 100%;
 }
 .intro {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
 }
 .patterns {
   flex: 1 1 auto;
