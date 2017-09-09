@@ -6,5 +6,5 @@ theme = "infusion"
 publishDir = "docs"
 
 [params]
-  description = "Documentation for the **Infusion** pattern library builder, built with **Infusion** itself."
+  description = "Documentation for the **Infusion** documentation builder, built with **Infusion** itself."
   codePenUser = "Heydon"
