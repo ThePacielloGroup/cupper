@@ -826,7 +826,7 @@ h1 svg {
         margin: 0;
     }
     main {
-      min-height: none;
+      min-height: auto;
     }
     .patterns h3 {
         font-size: 1.125rem;
