@@ -34,7 +34,7 @@ theme = "infusion"
   codePenUser = "Heydon"
 {{</codeBlock>}}
 
-* **title** — This is the project's name, like "Megacorp 5000 Pattern Library". You don't have to include the term "documentation" if you don't want to. For **Infusion's** own version of **Infusion**, the `title` is, predictably, _Infusion_ :-)
+* **title** — This is the project's name, like "Megacorp 5000 Pattern Library" or "Assplosion.js Documentation". For **Infusion's** own version of **Infusion**, the `title` is simply _Infusion_ :-)
 * **baseURL** — This is the root of the live site. Typically you will publish the site to Github Pages, so this should be the base URL for your Github Pages site.
 * **theme** — This is the theme the library is using. Don't change this from "infusion".
 * **description** — This is a short description of your documentation project and comes under the logo. You can include markdown syntax here, like _&#x002a;&#x002a;Infusion&#x002a;&#x002a;_ in the above example for making the name of the library bold.
