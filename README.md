@@ -4,4 +4,3 @@
 
 * [Documentation →](https://thepaciellogroup.github.io/infusion)
 * [Contributing →](https://github.com/ThePacielloGroup/infusion/blob/master/CONTRIBUTING.md)
-* [Help forum →](https://groups.google.com/forum/#!forum/infusion-pattern-library-builder)
