@@ -39,11 +39,11 @@ Subfolders like `/popups` must each have an `_index.md` file. This file doesn't 
 
 ```
 +++
-title = "Popups"
+title = "Popup windows"
 +++
 ```
 
-This title is what labels the subsection in the navigation (examples: "Writing" and "Media" for **Infusion**'s documentation). For each subfolder you create, you must also create one of these `_index.md` files. The `/patterns` folder itself does not need one, however.
+This title is what labels the subsection in the navigation, *not* the folder name (`/popups`, in this case). In **Infusion**'s documentation, "Writing" and "Media", and "Coding" are subsection titles. For each subfolder you create, you must also create one of these `_index.md` files. The `/patterns` folder itself does not need one, however.
 
 {{% note %}}
 **Infusion** does not currently support _sub_-subsections. You can only create child folders under `/patterns`.
