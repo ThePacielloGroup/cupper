@@ -35,8 +35,7 @@ You may have noticed that this site's navigation is divided partly into subsecti
             * tooltips.md
 {{% /fileTree %}}
 
-{{% note %}}
-Note that subfolders like `/popups` must each have an `_index.md` file. This file doesn't need any content except the TOML metadata defining the title (name) of that subsection:
+Subfolders like `/popups` must each have an `_index.md` file. This file doesn't need any content except the TOML metadata defining the title (name) of that subsection:
 
 ```
 +++
@@ -44,9 +43,10 @@ title = "Popups"
 +++
 ```
 
-For each subfolder you create, you must also create one of these `_index.md` files. The `/patterns` folder itself does not need indexing explicitly in this way.
+This title is what labels the subsection in the navigation (examples: "Writing" and "Media" for **Infusion**'s documentation). For each subfolder you create, you must also create one of these `_index.md` files. The `/patterns` folder itself does not need one, however.
 
-**Infusion** does not currently support _sub_-subsections.
+{{% note %}}
+**Infusion** does not currently support _sub_-subsections. You can only create child folders under `/patterns`.
 {{% /note %}}
 
 Now that you know where to put everything, it's time to talk about how to actually write individual patterns. Don't worry, it's pretty straightforward. Turn to {{% pattern "Markdown & metadata" %}}.

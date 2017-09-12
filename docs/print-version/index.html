@@ -783,21 +783,21 @@ theme = "infusion"
 </div>
 
 
-<aside aria-label="note" class="note">
-  <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
-      <use xlink:href="#info"></use>
-    </svg>
-    <p>Note that subfolders like <code>/popups</code> must each have an <code>_index.md</code> file. This file doesn&rsquo;t need any content except the TOML metadata defining the title (name) of that subsection:</p>
+<p>Subfolders like <code>/popups</code> must each have an <code>_index.md</code> file. This file doesn&rsquo;t need any content except the TOML metadata defining the title (name) of that subsection:</p>
 
 <pre><code>+++
 title = &quot;Popups&quot;
 +++
 </code></pre>
 
-<p>For each subfolder you create, you must also create one of these <code>_index.md</code> files. The <code>/patterns</code> folder itself does not need indexing explicitly in this way.</p>
+<p>This title is what labels the subsection in the navigation (examples: &ldquo;Writing&rdquo; and &ldquo;Media&rdquo; for <strong>Infusion</strong>&rsquo;s documentation). For each subfolder you create, you must also create one of these <code>_index.md</code> files. The <code>/patterns</code> folder itself does not need one, however.</p>
 
-<p><strong>Infusion</strong> does not currently support <em>sub</em>-subsections.</p>
+<aside aria-label="note" class="note">
+  <div>
+    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+      <use xlink:href="#info"></use>
+    </svg>
+    <p><strong>Infusion</strong> does not currently support <em>sub</em>-subsections. You can only create child folders under <code>/patterns</code>.</p>
 
   </div>
 </aside>
