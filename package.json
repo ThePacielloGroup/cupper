@@ -1,7 +1,7 @@
 {
   "name": "infusion",
   "version": "0.1.0",
-  "description": "A pattern library builder for inclusive designers",
+  "description": "A documentation builder for inclusive designers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
