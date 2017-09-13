@@ -12,4 +12,4 @@ The `visually-hidden` utility class uses a set of special properties to hide con
 }
 ```
 
-Use it sparingly since, in most cases, what is identified in screen readers should also be presented visually. Bear in mind that not all screen reader users are blind users.
+Use it sparingly since, in most cases, what is identified non-visually should also be presented visually. Bear in mind that not all screen reader users are blind users.
