@@ -13,3 +13,7 @@ The example `visually-hidden.md` snippet describes the CSS needed to create cont
 {{% note %}}
 To make your snippets truly reusable, try to write them in such a way that they make sense independent of surrounding text, a little bit like this note does.
 {{% /note %}}
+
+## Visually hidden snippet
+
+{{% snippet file="visually-hidden.md" %}}

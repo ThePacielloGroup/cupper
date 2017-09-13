@@ -403,7 +403,9 @@
 
 
     
-    <p>A lot of the time, your larger documentation patterns will share some common techniques and utilities. For this reason, <strong>Infusion</strong> lets you save snippets of markdown in a <strong>snippets</strong> folder, alongside the main content folder.</p>
+    
+
+<p>A lot of the time, your larger documentation patterns will share some common techniques and utilities. For this reason, <strong>Infusion</strong> lets you save snippets of markdown in a <strong>snippets</strong> folder, alongside the main content folder.</p>
 
 <p>The example <code>visually-hidden.md</code> snippet describes the CSS needed to create content that is visually hidden but still available to screen readers. Since this is a technique/utility you are likely to use often, it&rsquo;s nice to be able to just drop a snippet into your markdown content. The <code>snippet</code> shortcode lets you do exactly that:</p>
 
@@ -421,6 +423,29 @@
 
   </div>
 </aside>
+
+
+<h2 id="visually-hidden-snippet">Visually hidden snippet</h2>
+
+
+
+
+<!-- snippet -->
+
+<p>The <code>visually-hidden</code> utility class uses a set of special properties to hide content visually without making it unavailable to screen readers and other non-visual user agents. The class is defined like this:</p>
+
+<pre><code class="language-CSS">.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+}
+</code></pre>
+
+<p>Use it sparingly since, in most cases, what is identified non-visually should also be presented visually. Bear in mind that not all screen reader users are blind users.
 
 
   </main>
