@@ -22,8 +22,8 @@
     <meta name="msapplication-TileImage" content="{{ "images/ms-icon-144x144.png" | absURL }}">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700" rel="stylesheet" media="none" onload="this.media='all';">
-    <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
-    <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/prism.css" | relURL }}" media="none" onload="this.media='all';">
+    <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | relURL }}">
     <style id="inverter" media="none">
       html { filter: invert(100%) }
       * { background-color: inherit }
@@ -47,13 +47,13 @@
         <header class="intro-and-nav" role="banner">
           <div>
             <div class="intro">
-              <a class="logo" href="/" aria-label="{{ .Site.Title }} home page">
-                <img src="{{ "images/logo.svg" | absURL }}" alt="">
+              <a class="logo" href="{{ "/" | relURL }}" aria-label="{{ .Site.Title }} home page">
+                <img src="{{ "images/logo.svg" | relURL }}" alt="">
               </a>
               <p class="library-desc">
                 {{ .Site.Params.Description | markdownify }}
                 {{ if ne .Type "print-version" }}
-                  <a class="print" href="{{ "print-version" | absURL }}">
+                  <a class="print" href="{{ "print-version" | relURL }}">
                     <svg viewBox="0 0 35 45" aria-hidden="true" focusable="false">
                       <use xlink:href="#doc"></use>
                     </svg>Print version
@@ -130,10 +130,10 @@
         </div>
       </div>
     </div>
-    <script src="{{ "js/prism.js" | absURL }}"></script>
-    <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
+    <script src="{{ "js/prism.js" | relURL }}"></script>
+    <script src="{{ "js/dom-scripts.js" | relURL }}"></script>
     {{ if .Page.IsHome }}
-      <script src="{{ "js/service-worker-registration.js" | absURL }}"></script>
+      <script src="{{ "js/service-worker-registration.js" | relURL }}"></script>
     {{ end }}
   </body>
 </html>
