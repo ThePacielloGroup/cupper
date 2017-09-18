@@ -521,26 +521,6 @@ pre[class*=language-] code * {
     display: inline-block;
     margin-top: -1rem;
 }
-.line-numbers code {
-    padding-left: 3rem;
-    margin-top: -1rem;
-    overflow-x: visible;
-    overflow-y: hidden;
-}
-.line-numbers {
-    padding: 1.5rem !important;
-    overflow-x: auto;
-}
-.line-numbers .line-numbers-rows {
-    margin-left: 2.25rem;
-    left: -3.5em;
-    top: 1.25rem;
-    color: #111;
-    border-color: #111;
-}
-.line-numbers-rows > span:before {
-    color: inherit;
-}
 /* file tree lists */
 .file-tree {
     overflow-x: auto;
@@ -896,12 +876,6 @@ h1 svg {
     }
     pre code {
         white-space: pre-wrap !important;
-    }
-    .line-numbers .line-numbers-rows {
-        display: none;
-    }
-    .line-numbers code {
-        padding-left: 0;
     }
     .expandable-section {
         border: 0;
