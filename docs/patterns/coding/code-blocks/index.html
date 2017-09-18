@@ -394,13 +394,11 @@
 
 
     
-    
-
-<p>Markdown already supports code samples both inline (using single backticks like `some code here`) and in blocks. <strong>Infusion</strong> will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.</p>
+    <p>Markdown already supports code samples both inline (using single backticks like `some code here`) and in blocks. <strong>Infusion</strong> will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.</p>
 
 <p>So, this&hellip;</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 ```html
 &lt;button aria-pressed="false">toggle me&lt;/button>
 ```
@@ -413,34 +411,6 @@
 </code></pre>
 
 <p>Note that the syntax highlighting uses a greyscale theme. <strong>Infusion</strong> is careful not to use color as part of its own design, because these colors may clash with those of the design being illustrated and discussed.</p>
-
-<h2 id="line-numbered-code-blocks">Line-numbered code blocks</h2>
-
-<p>In addition to the basic markdown support, <strong>Infusion</strong> provides a mechanism to display code blocks with line numbers. This is via the <code>codeBlock</code> shortcode. Here is the code for a block of JavaScript with line numbers:</p>
-
-<pre class=" "><code  data-codeblock-shortcode>
-&#x7b;{&lt;codeBlock lang="js" numbered="true">}}
-var toggle = demo.querySelector('[aria-pressed]');
-
-toggle.addEventListener('click', (e) => {  
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
-});
-&#x7b;{&lt;/codeBlock>}}
-</code></pre>
-
-
-<p>The output will look like the following. Now you can refer to particular bits of the code by line number, like the arrow function on line <code>3</code>.</p>
-
-<pre class="language-js line-numbers"><code class="language-js" data-codeblock-shortcode>
-var toggle = demo.querySelector('[aria-pressed]');
-
-toggle.addEventListener('click', (e) => {  
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
-});
-</code></pre>
-
 
 <aside aria-label="note" class="note">
   <div>

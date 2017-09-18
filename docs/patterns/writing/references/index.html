@@ -425,7 +425,7 @@
 
 <p><strong>Infusion</strong> identifies the main content files in your documentation as <em>patterns</em>, and they&rsquo;re kept in the <strong>content/ patterns</strong> folder. It&rsquo;s easy to cross-reference patterns using the <code>pattern</code> shortcode. For example, I can reference the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/notes-and-warnings/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Notes &amp; warnings</a> pattern. Here&rsquo;s what the markdown looks like, including the shortcode:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 </code></pre>
 
@@ -449,7 +449,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <p>Instead of having to copy and paste content and links to WCAG, <strong>Infusion</strong> provides a shortcode mechanism that lets you simply list the success criteria by number:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% wcag include="1.2.1, 1.3.1, 4.1.2" %}}
 </code></pre>
 
@@ -622,7 +622,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <p>Sometimes, you&rsquo;ll want to include the full descriptions of the success criteria inline. This is possible by setting <code>descriptions</code> to <code>true</code>:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% wcag include="1.3.1, 4.1.2" descriptions="true" %}}
 </code></pre>
 
@@ -790,7 +790,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <p>Some inclusive design concepts are not reducible to success or fail criteria. This is why The Paciello Group wrote the <a href="http://inclusivedesignprinciples.org/">Inclusive Design Principles</a>. These can be listed by name.</p>
 
-<p><pre class=" "><code  data-codeblock-shortcode>
+<p><pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% principles include="Add value, Be consistent" descriptions="true" %}}
 </code></pre>
 </p>

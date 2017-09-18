@@ -492,7 +492,7 @@
 
 <p>You&rsquo;ll also want to name your project and configure one or two other things in the <code>config.toml</code> file that&rsquo;s found at the root of your project. Here&rsquo;s how that file looks:</p>
 
-<pre class="language-html line-numbers"><code class="language-html" data-codeblock-shortcode>
+<pre class="language-html"><code class="language-html" data-codeblock-shortcode>
 languageCode = "en-us"
 title = "Infusion"
 baseURL = "https://thepaciellogroup.github.io/infusion/"
@@ -865,7 +865,7 @@ weight = 1
 
 <p>Here&rsquo;s what the code might look like for a simple expandable section containing markdown:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% expandable label="A section of dummy text" level="2" %}}
 Here is some markdown including [a link](https://twitter.com/heydonworks). Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.
 &#x7b;{% /expandable %}}
@@ -947,7 +947,7 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
 
 <p>Unfortunately, it is not currently possible to include shortcodes inside other shortcodes, using the &ldquo;<code>%</code>&rdquo; notation (which is designated for markdown content). If you use the angle brackets notation (illustrated below) it is possible, but markdown will no longer be permitted. You will have to code HTML inside such a section manually.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{&lt;expandable label="A section of dummy text" level="2">}}
 &lt;p>Here is a pattern reference shortcode: &#x7b;{% pattern "Writing inline demos" %}}.&lt;/p>
 &#x7b;{&lt;/expandable>}}
@@ -982,7 +982,7 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
 
 <p>You may wish to pick out some content in your pattern&rsquo;s documentation as a note — an aside to the main thrust of the pattern&rsquo;s description. This is possible using the following syntax:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% note %}}
 This is a note! It's something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.
 &#x7b;{% /note %}}
@@ -1006,7 +1006,7 @@ This is a note! It's something the reader may like to know about but is suppleme
 
 <p>Warnings are like notes, but with more urgency.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% warning %}}
 This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
 &#x7b;{% /warning %}}
@@ -1041,7 +1041,7 @@ This is a warning! It's about something the reader should be careful to do or to
 
 <p><strong>Infusion</strong> identifies the main content files in your documentation as <em>patterns</em>, and they&rsquo;re kept in the <strong>content/ patterns</strong> folder. It&rsquo;s easy to cross-reference patterns using the <code>pattern</code> shortcode. For example, I can reference the <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/writing/notes-and-warnings/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Notes &amp; warnings</a> pattern. Here&rsquo;s what the markdown looks like, including the shortcode:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 </code></pre>
 
@@ -1065,7 +1065,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <p>Instead of having to copy and paste content and links to WCAG, <strong>Infusion</strong> provides a shortcode mechanism that lets you simply list the success criteria by number:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% wcag include="1.2.1, 1.3.1, 4.1.2" %}}
 </code></pre>
 
@@ -1238,7 +1238,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <p>Sometimes, you&rsquo;ll want to include the full descriptions of the success criteria inline. This is possible by setting <code>descriptions</code> to <code>true</code>:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% wcag include="1.3.1, 4.1.2" descriptions="true" %}}
 </code></pre>
 
@@ -1406,7 +1406,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <p>Some inclusive design concepts are not reducible to success or fail criteria. This is why The Paciello Group wrote the <a href="http://inclusivedesignprinciples.org/">Inclusive Design Principles</a>. These can be listed by name.</p>
 
-<p><pre class=" "><code  data-codeblock-shortcode>
+<p><pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% principles include="Add value, Be consistent" descriptions="true" %}}
 </code></pre>
 </p>
@@ -1481,7 +1481,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <p>The example <code>visually-hidden.md</code> snippet describes the CSS needed to create content that is visually hidden but still available to screen readers. Since this is a technique/utility you are likely to use often, it&rsquo;s nice to be able to just drop a snippet into your markdown content. The <code>snippet</code> shortcode lets you do exactly that:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% snippet file="visually-hidden.md" %}}
 </code></pre>
 
@@ -1611,7 +1611,7 @@ toc = false
 
 <p>Sometimes you will want to include a caption with your illustration. This is what the <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> elements are for. However, <strong>Infusion</strong> doesn&rsquo;t ask you to code all that manually. A special shortcode is provided, which takes a <code>caption</code> parameter. Note that the image markdown is provided between the opening and closing shortcode tags, and that you can use markdown syntax in the <code>caption</code> value.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% figure caption="A design system that uses a bad code example as a **single source of truth** only serves to proliferate bad code." %}}
 ![Diagram of a design pattern represented by a turd emoji begetting three bad implementations](/images/bad_design_system.png)
 &#x7b;{% /figure %}}
@@ -1651,7 +1651,7 @@ toc = false
             </h1>
             <p><strong>Infusion</strong> has a lot of its own shortcodes, but you can still use Hugo&rsquo;s <a href="https://gohugo.io/extras/shortcodes#built-in-shortcodes">built in shortcodes</a>. These include a simple shortcode for including YouTube videos in your content. The shortcode takes just one parameter — the video&rsquo;s <code>id</code>.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{&lt;youtube w7Ft2ymGmfc>}}
 </code></pre>
 
@@ -1667,13 +1667,11 @@ toc = false
               </svg>
               Code blocks
             </h1>
-            
-
-<p>Markdown already supports code samples both inline (using single backticks like `some code here`) and in blocks. <strong>Infusion</strong> will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.</p>
+            <p>Markdown already supports code samples both inline (using single backticks like `some code here`) and in blocks. <strong>Infusion</strong> will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.</p>
 
 <p>So, this&hellip;</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 ```html
 &lt;button aria-pressed="false">toggle me&lt;/button>
 ```
@@ -1686,34 +1684,6 @@ toc = false
 </code></pre>
 
 <p>Note that the syntax highlighting uses a greyscale theme. <strong>Infusion</strong> is careful not to use color as part of its own design, because these colors may clash with those of the design being illustrated and discussed.</p>
-
-<h2 id="line-numbered-code-blocks">Line-numbered code blocks</h2>
-
-<p>In addition to the basic markdown support, <strong>Infusion</strong> provides a mechanism to display code blocks with line numbers. This is via the <code>codeBlock</code> shortcode. Here is the code for a block of JavaScript with line numbers:</p>
-
-<pre class=" "><code  data-codeblock-shortcode>
-&#x7b;{&lt;codeBlock lang="js" numbered="true">}}
-var toggle = demo.querySelector('[aria-pressed]');
-
-toggle.addEventListener('click', (e) => {  
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
-});
-&#x7b;{&lt;/codeBlock>}}
-</code></pre>
-
-
-<p>The output will look like the following. Now you can refer to particular bits of the code by line number, like the arrow function on line <code>3</code>.</p>
-
-<pre class="language-js line-numbers"><code class="language-js" data-codeblock-shortcode>
-var toggle = demo.querySelector('[aria-pressed]');
-
-toggle.addEventListener('click', (e) => {  
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
-});
-</code></pre>
-
 
 <aside aria-label="note" class="note">
   <div>
@@ -1743,7 +1713,7 @@ toggle.addEventListener('click', (e) => {
 
 <p><strong>Infusion</strong> offers a couple of ways to do this. The first is by embedding CodePen demos into the content. The <code>codePen</code> shortcode takes just one argument: the codePen&rsquo;s <code>ID</code>.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% codePen VpVNKW %}}
 </code></pre>
 
@@ -1774,14 +1744,14 @@ toggle.addEventListener('click', (e) => {
 
 <p>You can embed JS Bins just like CodePens, supplying a single <code>id</code> parameter.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% jsBin juwowaq %}}
 </code></pre>
 
 
 <p>However, you can also have finer control over which panes are displayed. Use two parameters: one for the <code>id</code> and another, <code>show</code>,  listing the panes you want to include.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% jsBin id="juwowaq" show="css,output" %}}
 </code></pre>
 
@@ -1824,7 +1794,7 @@ toggle.addEventListener('click', (e) => {
 
 <p>Here&rsquo;s the example code for an inline demo of a toggle button:</p>
 
-<pre class="language-html "><code class="language-html" data-codeblock-shortcode>
+<pre class="language-html"><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo>}}
 &lt;button aria-pressed="false">Toggle Me&lt;/button>
 &lt;style>
@@ -1957,7 +1927,7 @@ toggle.addEventListener('click', function () {
 
 <p>It&rsquo;s possible to give your demo a caption using an accessible <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> structure. All <em>you</em> need to do is supply a <code>caption</code> attribute. For example:</p>
 
-<p><pre class="language-html "><code class="language-html" data-codeblock-shortcode>
+<p><pre class="language-html"><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo caption="A basic button element">}}
 &lt;!-- demo code here -->
 &#x7b;{&lt;/demo>}}
@@ -1970,7 +1940,7 @@ toggle.addEventListener('click', function () {
 
 <p>Sometimes your component will be expected to appear in a context where the parent element has a background color. You can add a backgroundColor for your demo block using the <code>backgroundColor</code> attribute. Any valid CSS color value is acceptable:</p>
 
-<pre class="language-html "><code class="language-html" data-codeblock-shortcode>
+<pre class="language-html"><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo backgroundColor="hsla(163, 100%, 50%, 0.43)">}}
 &lt;!-- demo code here -->
 &#x7b;{&lt;/demo>}}
@@ -1988,7 +1958,7 @@ toggle.addEventListener('click', function () {
             </h1>
             <p>There&rsquo;s no reason why your <strong>Infusion</strong>-powered pattern library has to be all about functionality. You can include style guide-like information such as color palettes too. The <code>colors</code> shortcode makes it easy to exhibit colors and their values together. Just supply a comma-separated list of CSS color values.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% colors "#111111, #cccccc, #ffffff" %}}
 </code></pre>
 
@@ -2040,7 +2010,7 @@ toggle.addEventListener('click', function () {
 
 <p>Here&rsquo;s how you write it:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{&lt;cmd>}}
 npm run start
 &#x7b;{&lt;/cmd>}}
@@ -2076,7 +2046,7 @@ npm run start
 
 <p>The file tree is described using a markdown nested list structure:</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% fileTree %}}
 * Level 1 folder
     * Level 2 file
@@ -2162,7 +2132,7 @@ npm run start
 
 <p><strong>Infusion</strong> provided a <code>tested</code> shortcode that lets you show which browsers and assistive technologies you&rsquo;ve tried your design out in. Here&rsquo;s an example. Note the commas and &ldquo;+&rdquo; signs.</p>
 
-<pre class=" "><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" %}}
 </code></pre>
 
