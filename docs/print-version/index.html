@@ -446,7 +446,7 @@
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>If you do not have a version of the Github desktop client installed, follow the prompts after clicking <strong>Open in Desktop</strong>.</p>
@@ -454,6 +454,8 @@
   </div>
 </aside>
 
+
+<p>While you&rsquo;re in the Github interface, you might as well set up the publishing source for the live site. Choose the Master branch/docs option under <strong>Settings → Github Pages → Source</strong>. See <a class="pattern-link" href="https://thepaciellogroup.github.io/infusion/patterns/serving/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Serving</a> for more details.</p>
 
 <p>Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:</p>
 
@@ -481,7 +483,7 @@
 
 <aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
       <use xlink:href="#warning"></use>
     </svg>
     <p>If you are contributing to an existing <strong>Infusion</strong> library, do not run the following command. It will delete all of the patterns in that library. The <code>clean</code> command is just for libraries that you are starting from scratch.</p>
@@ -542,7 +544,7 @@ theme = "infusion"
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>The <code>short_name</code> value refers to the text that appears under the icon on your homescreen. As the name suggests, it should be as short as possible to fit well (12 characters or fewer is ideal).</p>
@@ -596,18 +598,11 @@ theme = "infusion"
 <pre><code>baseURL = &quot;https://thepaciellogroup.github.io/infusion/&quot;
 </code></pre>
 
-<aside aria-label="note" class="note">
-  <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
-      <use xlink:href="#info"></use>
-    </svg>
-    <p>If you created a new repo&rsquo; manually (without forking) you will find the <code>docs</code> folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
+<h3 id="set-the-publishing-source">Set the publishing source</h3>
+
+<p>You will find the <code>docs</code> folder is not automatically setup as the publishing source, even when forking the repo. In which case, you must set it under  <strong>Settings → Github Pages → Source</strong> in the web interface.</p>
 
 <p><img src="https://thepaciellogroup.github.io/infusion/images/serve_from_docs.png" alt="The publishing source dropdown menu on Github" /></p>
-
-  </div>
-</aside>
-
 
         </div>
       
@@ -625,7 +620,7 @@ theme = "infusion"
 
 <p><aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, you can!</p>
@@ -688,7 +683,7 @@ theme = "infusion"
 
 <aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
       <use xlink:href="#warning"></use>
     </svg>
     <p>The described update process relies on SVN because Github does not support downloading individual repository folders. If you have a Mac, SVN should be installed already. If not, or if you are on Windows, you can either install SVN or download the latest <a href="https://github.com/ThePacielloGroup/infusion/tree/master/themes/infusion"><strong>Infusion</strong> theme folder</a> manually, using the Github web interface.</p>
@@ -794,7 +789,7 @@ title = &quot;Popup windows&quot;
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p><strong>Infusion</strong> does not currently support <em>sub</em>-subsections. You can only create child folders under <code>/patterns</code>.</p>
@@ -831,7 +826,7 @@ title = &quot;Menu button&quot;
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>The title automatically becomes the page&rsquo;s main <code>&lt;h1&gt;</code> heading. The highest heading level you should use in the body of your markdown file is therefore <code>&lt;h2&gt;</code>.</p>
@@ -865,7 +860,7 @@ weight = 1
 
 <aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
       <use xlink:href="#warning"></use>
     </svg>
     <p>The <code>weight</code> parameter should be an integer, not a string, so don&rsquo;t use scare quotes around the value!</p>
@@ -986,7 +981,7 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>When you go to print a pattern from your library, some print styles take care of collapsible sections, making them appear expanded and like any other section.</p>
@@ -1023,7 +1018,7 @@ This is a note! It's something the reader may like to know about but is suppleme
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>This is a note! It&rsquo;s something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.</p>
@@ -1047,7 +1042,7 @@ This is a warning! It's about something the reader should be careful to do or to
 
 <aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
       <use xlink:href="#warning"></use>
     </svg>
     <p>This is a warning! It&rsquo;s about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.</p>
@@ -1080,7 +1075,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>The title argument you supply to the shortcode must be exactly the same as the referenced pattern&rsquo;s <code>title</code> metadata value and is case sensitive.</p>
@@ -1255,7 +1250,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>You don&rsquo;t have to leave spaces after the comma separators. They are optional.</p>
@@ -1518,7 +1513,7 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>To make your snippets truly reusable, try to write them in such a way that they make sense independent of surrounding text, a little bit like this note does.</p>
@@ -1623,7 +1618,7 @@ toc = false
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>When you first make a copy of <strong>Infusion</strong>, <strong>Infusion&rsquo;s</strong> own logo will be included. You should replace this with your own company or project logo.</p>
@@ -1747,7 +1742,7 @@ toggle.addEventListener('click', (e) => {
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>To preserve the wrapping inside code blocks, horizontal scrolling is implemented. To make sure scrolling is keyboard accessible, code blocks are focusable. An <code>aria-label</code> is provided to identify the code block to screen reader users.</p>
@@ -1791,7 +1786,7 @@ toggle.addEventListener('click', (e) => {
 
 <aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
       <use xlink:href="#warning"></use>
     </svg>
     <p>The compiled site will output an error if your <code>config.toml</code> does not include your CodePen username (in the  <code>codePenUser</code> parameter). This is needed to construct the embed URL.</p>
@@ -2048,7 +2043,7 @@ toggle.addEventListener('click', function () {
 
 <aside aria-label="note" class="note">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
     <p>If you&rsquo;re wondering whether you need to put a space after the commas in the shortcode, don&rsquo;t worry: <code>&quot;#254f7b, #579a6d, #666666&quot;</code> and <code>&quot;#254f7b,#579a6d,#666666&quot;</code> are both accepted. Any CSS color value is acceptable, not just hex colors.</p>
@@ -2084,7 +2079,7 @@ npm run start
 
 <aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
       <use xlink:href="#warning"></use>
     </svg>
     <p>The <code>cmd</code> shortcode currently only supports single commands. If you want to show multiple, successive commands use separate <code>cmd</code> blocks.</p>
@@ -2170,7 +2165,7 @@ npm run start
 
 <aside aria-label="warning" class="note warning">
   <div>
-    <svg aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
+    <svg class="sign" aria-hidden="true" viewBox="0 0 48.430474 41.646302" focusable="false">
       <use xlink:href="#warning"></use>
     </svg>
     <p>The only reliable way to nest unordered lists in markdown is to indent the nested item by exactly four spaces. Using tabs or less than four spaces are unreliable methods.</p>

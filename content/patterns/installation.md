@@ -45,6 +45,8 @@ If the command line is not your thing, use Github's web interface to fork  [gith
 If you do not have a version of the Github desktop client installed, follow the prompts after clicking **Open in Desktop**.
 {{% /note %}}
 
+While you're in the Github interface, you might as well set up the publishing source for the live site. Choose the Master branch/docs option under **Settings → Github Pages → Source**. See {{% pattern "Serving" %}} for more details.
+
 Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:
 
 {{<cmd>}}npm install{{</cmd>}}

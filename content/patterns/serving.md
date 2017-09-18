@@ -27,8 +27,8 @@ You'll also need to add this value to your `config.toml` file as the `baseURL`. 
 baseURL = "https://thepaciellogroup.github.io/infusion/"
 ```
 
-{{% note %}}
-If you created a new repo' manually (without forking) you will find the `docs` folder is not automatically setup as the publishing source. This folder can be made the source for your Github Pages site by selecting it under  **Settings → Github Pages → Source** in the web interface.
+### Set the publishing source
+
+You will find the `docs` folder is not automatically setup as the publishing source, even when forking the repo. In which case, you must set it under  **Settings → Github Pages → Source** in the web interface.
 
 ![The publishing source dropdown menu on Github](/images/serve_from_docs.png)
-{{% /note %}}

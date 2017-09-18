@@ -438,7 +438,7 @@ caption {
     border-left: 0.5rem solid;
     font-size: 0.85rem;
 }
-.note svg {
+.note .sign {
     height: 2.25rem;
     width: 2.25rem;
 }
@@ -934,5 +934,9 @@ h1 svg {
     background: none;
     width: auto;
     top: 0;
+  }
+  .note.warning {
+      border-left: 0.5rem solid;
+      background: none;
   }
 }
