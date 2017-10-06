@@ -512,7 +512,9 @@ toggle.addEventListener('click', function () {
       var demoDiv = document.createElement('div');
       demoDiv.innerHTML = template.innerHTML;
       var standaloneScript = demoDiv.querySelector('script');
-      standaloneScript.textContent = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + standaloneScript.textContent + ' })();';
+      if (standaloneScript) {
+        standaloneScript.textContent = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + standaloneScript.textContent + ' })();';
+      }
 
       if (document.head.attachShadow) {
         var templateScript = template.content.querySelector('script');
@@ -534,10 +536,11 @@ toggle.addEventListener('click', function () {
         
         var newScript = standalone.document.createElement('script');
         var oldScript = standalone.document.querySelector('script');
-        newScript.textContent = oldScript.textContent;
-        oldScript.parentNode.removeChild(oldScript);
-        standalone.document.body.appendChild(newScript);
-
+        if (oldScript) {
+          newScript.textContent = oldScript.textContent;
+          oldScript.parentNode.removeChild(oldScript);
+          standalone.document.body.appendChild(newScript);
+        }
         
 
         standalone.document.title = 'demo ' + "285170a1c0812ad34ac4b853a052c8bd";

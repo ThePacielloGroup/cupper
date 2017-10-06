@@ -25,7 +25,9 @@
       var demoDiv = document.createElement('div');
       demoDiv.innerHTML = template.innerHTML;
       var standaloneScript = demoDiv.querySelector('script');
-      standaloneScript.textContent = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + standaloneScript.textContent + ' })();';
+      if (standaloneScript) {
+        standaloneScript.textContent = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + standaloneScript.textContent + ' })();';
+      }
 
       if (document.head.attachShadow) {
         var templateScript = template.content.querySelector('script');
@@ -47,10 +49,11 @@
         // For activating the script :-(
         var newScript = standalone.document.createElement('script');
         var oldScript = standalone.document.querySelector('script');
-        newScript.textContent = oldScript.textContent;
-        oldScript.parentNode.removeChild(oldScript);
-        standalone.document.body.appendChild(newScript);
-
+        if (oldScript) {
+          newScript.textContent = oldScript.textContent;
+          oldScript.parentNode.removeChild(oldScript);
+          standalone.document.body.appendChild(newScript);
+        }
         {{ if .Get "backgroundColor" }}
           standalone.document.body.style.backgroundColor = {{ .Get "backgroundColor" | safeCSS }};
         {{ end }}
