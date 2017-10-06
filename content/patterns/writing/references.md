@@ -46,6 +46,10 @@ Here's the more verbose output:
 
 {{% wcag include="2.1.1, 4.1.2" descriptions="true" %}}
 
+{{% note %}}
+Both omitting the `descriptions` attribute and including it with a "false" value will omit descriptions. If it is included it _must_ have a value. A boolean attribute will break the output.
+{{% /note %}}
+
 ## Inclusive Design Principle references
 
 Some inclusive design concepts are not reducible to success or fail criteria. This is why The Paciello Group wrote the [Inclusive Design Principles](http://inclusivedesignprinciples.org/). These can be listed by name.

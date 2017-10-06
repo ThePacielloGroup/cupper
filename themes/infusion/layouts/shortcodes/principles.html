@@ -2,7 +2,7 @@
 {{ $included := replace (.Get "include") ", " "," }}
 {{ $included := apply (split $included ",") "lower" "." }}
 {{ $descriptions := .Get "descriptions" }}
-<ul class="principles {{ if $descriptions }}with-desc{{ end }}">
+<ul class="principles {{ if and ($descriptions) (ne $descriptions "false") }}with-desc{{ end }}">
   {{ range $JSON.principles }}
     {{ if in $included (lower .title) }}
       <li>
@@ -15,7 +15,7 @@
           </a>:
         </strong>
         <em>{{ .strapline }}</em>
-        {{ if $descriptions }}
+        {{ if and ($descriptions) (ne $descriptions "false") }}
           <p>{{ .description }}</p>
         {{ end }}
       </li>

@@ -1402,14 +1402,25 @@ I can reference the &#x7b;{% pattern "Notes & warnings" %}} pattern here.
 </ul>
 
 
+<aside aria-label="note" class="note">
+  <div>
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+      <use xlink:href="#info"></use>
+    </svg>
+    <p>Both omitting the <code>descriptions</code> attribute and including it with a &ldquo;false&rdquo; value will omit descriptions. If it is included it <em>must</em> have a value. A boolean attribute will break the output.</p>
+
+  </div>
+</aside>
+
+
 <h2 id="inclusive-design-principle-references">Inclusive Design Principle references</h2>
 
 <p>Some inclusive design concepts are not reducible to success or fail criteria. This is why The Paciello Group wrote the <a href="http://inclusivedesignprinciples.org/">Inclusive Design Principles</a>. These can be listed by name.</p>
 
-<p><pre class=""><code  data-codeblock-shortcode>
+<pre class=""><code  data-codeblock-shortcode>
 &#x7b;{% principles include="Add value, Be consistent" descriptions="true" %}}
 </code></pre>
-</p>
+
 
 <p>Here&rsquo;s the output with <code>descriptions=&quot;true&quot;</code>:</p>
 
