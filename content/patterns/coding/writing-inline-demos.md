@@ -3,7 +3,7 @@ title = "Writing inline demos"
 weight = 3
 +++
 
-There are some issues with {{% pattern "CodePen embedding" %}}, like them not working offline. They also come with CodePen branding, which will clash with the pattern you're trying to illustrate.
+There are some issues with {{% pattern "Demo embedding" %}}, like the embeds not working offline. They also come with their own branding, which will clash with the pattern you're trying to illustrate.
 
 **Infusion** offers another option: a special `demo` shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don't have to worry about broken styles and global JS.
 
