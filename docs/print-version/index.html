@@ -1709,19 +1709,72 @@ toc = false
 </aside>
 
 
-<h2 id="annotated">Annotated</h2>
+<h2 id="annotated-html">Annotated HTML</h2>
+
+<p>Since the structure of HTML is critical to interoperable web interfaces, <strong>Infusion</strong> offers the ability to highlight and annotate specific HTML elements and attributes using the <code>html</code> shortcode.</p>
+
+<p>Take an accessible dialog. You may wish to point out key attributes that make that dialog support assistive technologies:</p>
 
 
 
 
-<div class="html-annotated"><code>
-&lt;ul&gt;
-  &lt;li&gt;Here&#39;s a thing&lt;/li&gt;
-  &lt;li <span class='highlight'>role=&#34;separator&#34;</span>&gt;Here&#39;s a thing&lt;/li&gt;
-  &lt;li&gt;Here&#39;s a <span class='highlight'>thing</span>&lt;/li&gt;
-  &lt;li&gt;Here&#39;s a thing &lt;span <span class='highlight'>aria-hidden=&#34;true&#34;</span>&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
+
+<div class="html-annotated "><code>
+&lt;div <span class='highlight'>role=&#34;dialog&#34;</span> <span class='highlight'>aria-labelledby=&#34;dialog-heading&#34;</span>&gt;
+  &lt;button <span class='highlight'>aria-label=&#34;close&#34;</span>&gt;x&lt;/button&gt;
+  &lt;h2 <span class='highlight'>id=&#34;dialog-heading&#34;</span>&gt;Confirmation&lt;/h2&gt;
+  &lt;p&gt;Press &lt;strong&gt;Okay&lt;/strong&gt; to confirm or &lt;strong&gt;Cancel&lt;/strong&gt;&lt;/p&gt;
+  &lt;button&gt;Okay&lt;/button&gt;
+  &lt;button&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
 </code></div>
+
+
+<p>You mark out the highlighted areas with double parentheses like so:</p>
+
+<pre class=""><code  data-codeblock-shortcode>
+&#x7b;{&lt;html>}}
+&lt;div ((role="dialog")) ((aria-labelledby="dialog-heading"))>
+  &lt;button ((aria-label="close"))>x&lt;/button>
+  &lt;h2 ((id="dialog-heading"))>Confirmation&lt;/h2>
+  &lt;p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong>&lt;/p>
+  &lt;button>Okay&lt;/button>
+  &lt;button>Cancel&lt;/button>
+&lt;/div>
+&#x7b;{&lt;/html>}}
+</code></pre>
+
+
+<p>Better still, if you include <code>numbered=&quot;true&quot;</code>, each highlight is enumberated so you can reference it directly in the ensuing text.</p>
+
+
+
+
+
+<div class="html-annotated numbered"><code>
+&lt;div <span class='highlight'>role=&#34;dialog&#34;</span> <span class='highlight'>aria-labelledby=&#34;dialog-heading&#34;</span>&gt;
+  &lt;button <span class='highlight'>aria-label=&#34;close&#34;</span>&gt;x&lt;/button&gt;
+  &lt;h2 <span class='highlight'>id=&#34;dialog-heading&#34;</span>&gt;Confirmation&lt;/h2&gt;
+  &lt;p&gt;Press &lt;strong&gt;Okay&lt;/strong&gt; to confirm or &lt;strong&gt;Cancel&lt;/strong&gt;&lt;/p&gt;
+  &lt;button&gt;Okay&lt;/button&gt;
+  &lt;button&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+</code></div>
+
+
+<p>You just include <code>numbered=&quot;true&quot;</code> on the opening shortcode tag:</p>
+
+<pre class=""><code  data-codeblock-shortcode>
+&#x7b;{&lt;html numbered="true">}}
+&lt;div ((role="dialog")) ((aria-labelledby="dialog-heading"))>
+  &lt;button ((aria-label="close"))>x&lt;/button>
+  &lt;h2 ((id="dialog-heading"))>Confirmation&lt;/h2>
+  &lt;p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong>&lt;/p>
+  &lt;button>Okay&lt;/button>
+  &lt;button>Cancel&lt;/button>
+&lt;/div>
+&#x7b;{&lt;/html>}}
+</code></pre>
 
 
           </div>

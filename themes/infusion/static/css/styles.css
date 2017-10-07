@@ -65,8 +65,10 @@ figure p img {
 [data-expands]:focus svg,
 .patterns a:focus .text,
 [for="themer"] :focus + [aria-hidden] {
-    outline: 3px solid #888;
-    outline-offset: 2px;
+    outline: 4px solid #999;
+}
+a {
+  outline-offset: 2px;
 }
 /* fix for IE :( */
 
@@ -382,7 +384,7 @@ caption {
 }
 #menu-button:focus {
     outline: none;
-    box-shadow: inset 0 0 0 0.25rem #888;
+    box-shadow: inset 0 0 0 0.25rem #999;
 }
 /* Tables of contents */
 
@@ -522,37 +524,30 @@ pre[class*=language-] code * {
     margin-top: -1rem;
 }
 .html-annotated {
-  overflow-y: hidden;
-  overflow-x: auto;
-  padding: 1.5rem;
-  border: 1px solid;
-  white-space: pre;
-  counter-reset: annotation;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 1.5rem;
+    border: 1px solid;
+    white-space: pre;
+    counter-reset: annotation;
 }
 .highlight {
-  background: #ddd;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+    background: #ddd;
+    padding: 0.0625rem 0.33rem;
+    border-radius: 0.5rem;
 }
-.highlight::after {
-  counter-increment: annotation;
-  content: counter(annotation);
-  font-weight: bold;
-  font-size: 0.5rem;
-  background: #111;
-  color: #fefefe;
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  line-height: 0.75rem;
-  text-align: center;
-  border-radius: 1rem;
-  vertical-align: middle;
-  margin-left: 0.25rem;
+.numbered .highlight::after {
+    counter-increment: annotation;
+    content: counter(annotation);
+    font-weight: bold;
+    font-size: 0.5rem;
+    background: #111;
+    color: #fefefe;
+    border-radius: 1rem;
+    margin-left: 0.25rem;
+    padding: 0.125em 0.5em;
+    vertical-align: 0.33em;
 }
-
-
-
 /*main {
     display: block;
     counter-reset: fig;

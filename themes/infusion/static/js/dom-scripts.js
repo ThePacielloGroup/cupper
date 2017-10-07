@@ -82,7 +82,7 @@
 
 /* Enable scrolling by keyboard of code samples */
 (function () {
-  var codeBlocks = document.querySelectorAll('pre');
+  var codeBlocks = document.querySelectorAll('pre, .html-annotated');
 
   Array.prototype.forEach.call(codeBlocks, function (block) {
     if (block.querySelector('code')) {
