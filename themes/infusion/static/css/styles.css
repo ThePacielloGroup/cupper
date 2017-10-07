@@ -517,10 +517,52 @@ pre[class*=language-][data-line] {
 pre[class*=language-] code * {
     margin-top: 0 !important;
 }
-[data-codeblock-shortcode] {
+[data-codeblock-shortcode], .html-annotated code {
     display: inline-block;
     margin-top: -1rem;
 }
+.html-annotated {
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding: 1.5rem;
+  border: 1px solid;
+  white-space: pre;
+  counter-reset: annotation;
+}
+.highlight {
+  background: #ddd;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+.highlight::after {
+  counter-increment: annotation;
+  content: counter(annotation);
+  font-weight: bold;
+  font-size: 0.5rem;
+  background: #111;
+  color: #fefefe;
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  text-align: center;
+  border-radius: 1rem;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+
+
+
+/*main {
+    display: block;
+    counter-reset: fig;
+    min-height: 100vh;
+}
+figcaption::before {
+    counter-increment: fig;
+    content: 'Figure ' counter(fig) ':\0020';
+    font-weight: bold;
+}*/
 /* file tree lists */
 .file-tree {
     overflow-x: auto;
