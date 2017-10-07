@@ -55,7 +55,7 @@ You mark out the highlighted areas with double parentheses like so:
 &#x7b;{&lt;/html>}}
 {{</codeBlock>}}
 
-Better still, if you include `numbered="true"`, each highlight is enumberated so you can reference it directly in the ensuing text.
+Better still, if you include `numbered="true"`, each highlight is enumerated so you can reference it directly in the ensuing text.
 
 {{<html numbered="true">}}
 <div ((role="dialog")) ((aria-labelledby="dialog-heading"))>
@@ -80,3 +80,7 @@ You just include `numbered="true"` on the opening shortcode tag:
 &lt;/div>
 &#x7b;{&lt;/html>}}
 {{</codeBlock>}}
+
+{{% note %}}
+As you may have noticed, using specified highlights with the `html` shortcode sacrifices syntax highlighting.
+{{% /note %}}
