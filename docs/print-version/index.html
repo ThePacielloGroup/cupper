@@ -1709,17 +1709,15 @@ toc = false
 </aside>
 
 
-<h2 id="annotated-html">Annotated HTML</h2>
+<h2 id="annotated-code">Annotated code</h2>
 
-<p>Since the structure of HTML is critical to interoperable web interfaces, <strong>Infusion</strong> offers the ability to highlight and annotate specific HTML elements and attributes using the <code>html</code> shortcode.</p>
-
-<p>Take an accessible dialog. You may wish to point out key attributes that make that dialog support assistive technologies:</p>
+<p><strong>Infusion</strong> offers the ability to highlight and annotate specific parts of your code examples using the <code>code</code> shortcode. Take an accessible dialog. You may wish to point out key attributes that make that dialog support assistive technologies:</p>
 
 
 
 
 
-<div class="html-annotated "><code>
+<div class="code-annotated "><code>
 &lt;div <span class='highlight'>role=&#34;dialog&#34;</span> <span class='highlight'>aria-labelledby=&#34;dialog-heading&#34;</span>&gt;
   &lt;button <span class='highlight'>aria-label=&#34;close&#34;</span>&gt;x&lt;/button&gt;
   &lt;h2 <span class='highlight'>id=&#34;dialog-heading&#34;</span>&gt;Confirmation&lt;/h2&gt;
@@ -1730,28 +1728,28 @@ toc = false
 </code></div>
 
 
-<p>You mark out the highlighted areas with double parentheses like so:</p>
+<p>You mark out the highlighted areas using triple square brackets like so:</p>
 
 <pre class=""><code  data-codeblock-shortcode>
-&#x7b;{&lt;html>}}
-&lt;div ((role="dialog")) ((aria-labelledby="dialog-heading"))>
-  &lt;button ((aria-label="close"))>x&lt;/button>
-  &lt;h2 ((id="dialog-heading"))>Confirmation&lt;/h2>
+&#x7b;{&lt;code>}}
+&lt;div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
+  &lt;button [[[aria-label="close"]]]>x&lt;/button>
+  &lt;h2 [[[id="dialog-heading"]]]>Confirmation&lt;/h2>
   &lt;p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong>&lt;/p>
   &lt;button>Okay&lt;/button>
   &lt;button>Cancel&lt;/button>
 &lt;/div>
-&#x7b;{&lt;/html>}}
+&#x7b;{&lt;/code>}}
 </code></pre>
 
 
-<p>Better still, if you include <code>numbered=&quot;true&quot;</code>, each highlight is enumerated so you can reference it directly in the ensuing text.</p>
+<p>Better still, if you include <code>numbered=&quot;true&quot;</code>, each highlight is enumerated so you can reference it directly in the ensuing text. If you follow the shortcode directly with an ordered list, the styles match:</p>
 
 
 
 
 
-<div class="html-annotated numbered"><code>
+<div class="code-annotated numbered"><code>
 &lt;div <span class='highlight'>role=&#34;dialog&#34;</span> <span class='highlight'>aria-labelledby=&#34;dialog-heading&#34;</span>&gt;
   &lt;button <span class='highlight'>aria-label=&#34;close&#34;</span>&gt;x&lt;/button&gt;
   &lt;h2 <span class='highlight'>id=&#34;dialog-heading&#34;</span>&gt;Confirmation&lt;/h2&gt;
@@ -1761,28 +1759,69 @@ toc = false
 &lt;/div&gt;
 </code></div>
 
+
+<ol>
+<li>The dialog is only announced as a dialog if it takes the <code>dialog</code> ARIA role</li>
+<li>The <code>aria-labelledby</code> relationship attribute makes the element carrying the <code>id</code> it points to its label</li>
+<li>The close button uses <code>aria-label</code> to provide the text label &ldquo;close&rdquo;, overriding the text content</li>
+<li>The heading is used as the dialog&rsquo;s label. The <code>aria-labelledby</code> attribute points to its <code>id</code></li>
+</ol>
 
 <p>You just include <code>numbered=&quot;true&quot;</code> on the opening shortcode tag:</p>
 
 <pre class=""><code  data-codeblock-shortcode>
-&#x7b;{&lt;html numbered="true">}}
-&lt;div ((role="dialog")) ((aria-labelledby="dialog-heading"))>
-  &lt;button ((aria-label="close"))>x&lt;/button>
-  &lt;h2 ((id="dialog-heading"))>Confirmation&lt;/h2>
+&#x7b;{&lt;code numbered="true">}}
+&lt;div [[[role="dialog"]]] [[[aria-labelledby="dialog-heading"]]]>
+  &lt;button [[[aria-label="close"]]]>x&lt;/button>
+  &lt;h2 [[[id="dialog-heading"]]]>Confirmation&lt;/h2>
   &lt;p>Press <strong>Okay</strong> to confirm or <strong>Cancel</strong>&lt;/p>
   &lt;button>Okay&lt;/button>
   &lt;button>Cancel&lt;/button>
 &lt;/div>
-&#x7b;{&lt;/html>}}
+&#x7b;{&lt;/code>}}
+
+1. The dialog is only announced as a dialog if it takes the `dialog` ARIA role
+2. The `aria-labelledby` relationship attribute makes the element carrying the `id` it points to its label
+3. The close button uses `aria-label` to provide the text label "close", overriding the text content
+4. The heading is used as the dialog's label. The `aria-labelledby` attribute points to its `id`
 </code></pre>
 
+
+<h3 id="javascript-example">JavaScript example</h3>
+
+
+
+
+
+<div class="code-annotated numbered"><code>
+/* Enable scrolling by keyboard of code samples */
+(function () {
+  var codeBlocks = document.querySelectorAll(&#39;pre, .code-annotated&#39;);
+
+  Array.prototype.forEach.call(codeBlocks, function (block) {
+    if (block.querySelector(&#39;code&#39;)) {
+      block.setAttribute(<span class='highlight'>&#39;role&#39;, &#39;region&#39;</span>);
+      block.setAttribute(<span class='highlight'>&#39;aria-label&#39;, &#39;code sample&#39;</span>);
+      if (block.scrollWidth &gt; block.clientWidth) {
+        block.setAttribute(&#39;tabindex&#39;, &#39;0&#39;);
+      }
+    }
+  });
+}());
+</code></div>
+
+
+<ol>
+<li>The <code>region</code> role announces the block as a region</li>
+<li>The <code>aria-label</code> describes the kind of content to be expected in the region</li>
+</ol>
 
 <aside aria-label="note" class="note">
   <div>
     <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
     </svg>
-    <p>As you may have noticed, using specified highlights with the <code>html</code> shortcode sacrifices syntax highlighting.</p>
+    <p>As you may have noticed, using specified highlights with the <code>code</code> shortcode sacrifices syntax highlighting. If you want syntax highlighting you must use the markdown triple back-tick syntax and annotation is not available.</p>
 
   </div>
 </aside>

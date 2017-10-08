@@ -2,4 +2,4 @@
 {{ $html := replace $html "((" "<span class='highlight'>" }}
 {{ $html := replace $html "))" "</span>" }}
 {{ $numbered := .Get "numbered" }}
-<div class="html-annotated {{ if and ($numbered) (ne $numbered "false") }}numbered{{ end }}"><code>{{ $html | safeHTML }}</code></div>
+<div class="code-annotated {{ if and ($numbered) (ne $numbered "false") }}numbered{{ end }}"><code>{{ $html | safeHTML }}</code></div>

@@ -519,11 +519,11 @@ pre[class*=language-][data-line] {
 pre[class*=language-] code * {
     margin-top: 0 !important;
 }
-[data-codeblock-shortcode], .html-annotated code {
+[data-codeblock-shortcode], .code-annotated code {
     display: inline-block;
     margin-top: -1rem;
 }
-.html-annotated {
+.code-annotated {
     overflow-y: hidden;
     overflow-x: auto;
     padding: 1.5rem;
@@ -536,7 +536,8 @@ pre[class*=language-] code * {
     padding: 0.0625rem 0.33rem;
     border-radius: 0.5rem;
 }
-.numbered .highlight::after {
+.numbered .highlight::after,
+.code-annotated.numbered + ol li::before  {
     counter-increment: annotation;
     content: counter(annotation);
     font-weight: bold;
@@ -548,16 +549,17 @@ pre[class*=language-] code * {
     padding: 0.125em 0.5em;
     vertical-align: 0.33em;
 }
-/*main {
-    display: block;
-    counter-reset: fig;
-    min-height: 100vh;
+
+.code-annotated.numbered + ol {
+    list-style: none;
+    counter-reset: annotation;
 }
-figcaption::before {
-    counter-increment: fig;
-    content: 'Figure ' counter(fig) ':\0020';
-    font-weight: bold;
-}*/
+
+.code-annotated.numbered + ol li::before {
+    font-size: 0.66em;
+    margin-right: 0.33em;
+    vertical-align: 0.25em;
+}
 /* file tree lists */
 .file-tree {
     overflow-x: auto;
