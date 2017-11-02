@@ -3,7 +3,7 @@ title = "Expandable sections"
 weight = 6
 +++
 
-In some cases, where there is a lot of content, it's helpful to collapse certain sections. That way, readers get an overview of what's in the content and can choose where to focus in. **Infusion** provides a shortcode method for creating expandable sections which generates accessible markup using `aria-expanded`.
+In some cases, where there is a lot of content, it's helpful to collapse certain sections. That way, readers get an overview of what's in the content and can choose where to focus in. **Cupper** provides a shortcode method for creating expandable sections which generates accessible markup using `aria-expanded`.
 
 The `expandable` shortcode takes three parameters:
 

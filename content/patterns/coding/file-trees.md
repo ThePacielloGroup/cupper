@@ -2,7 +2,7 @@
 title = "File trees"
 +++
 
-Representing folder/file structures is simple and accessible in **Infusion**. Which is just as well, because some components may need to conform to a certain folder structure.
+Representing folder/file structures is simple and accessible in **Cupper**. Which is just as well, because some components may need to conform to a certain folder structure.
 
 The file tree is described using a markdown nested list structure:
 

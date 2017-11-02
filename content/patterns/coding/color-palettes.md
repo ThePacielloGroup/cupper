@@ -2,13 +2,13 @@
 title = "Color palettes"
 +++
 
-There's no reason why your **Infusion**-powered pattern library has to be all about functionality. You can include style guide-like information such as color palettes too. The `colors` shortcode makes it easy to exhibit colors and their values together. Just supply a comma-separated list of CSS color values.
+There's no reason why your **Cupper**-powered pattern library has to be all about functionality. You can include style guide-like information such as color palettes too. The `colors` shortcode makes it easy to exhibit colors and their values together. Just supply a comma-separated list of CSS color values.
 
 {{<codeBlock>}}
 &#x7b;{% colors "#111111, #cccccc, #ffffff" %}}
 {{</codeBlock>}}
 
-The result is a one row strip showing each color supplied in order. The colors for **Infusion** are greyscale:
+The result is a one row strip showing each color supplied in order. The colors for **Cupper** are greyscale:
 
 {{% colors "#111111, #cccccc, #ffffff" %}}
 

@@ -13,7 +13,7 @@ From time to time, you'll be wanting to include images illustrating the document
 {{% /fileTree %}}
 
 {{% note %}}
-When you first make a copy of **Infusion**, **Infusion's** own logo will be included. You should replace this with your own company or project logo.
+When you first make a copy of **Cupper**, **Cupper's** own logo will be included. You should replace this with your own company or project logo.
 {{% /note %}}
 
 The path to the `/images` folder should begin with a forward slash, so include that when referencing images in your markdown.
@@ -24,7 +24,7 @@ The path to the `/images` folder should begin with a forward slash, so include t
 
 ## Figures
 
-Sometimes you will want to include a caption with your illustration. This is what the `<figure>` and `<figcaption>` elements are for. However, **Infusion** doesn't ask you to code all that manually. A special shortcode is provided, which takes a `caption` parameter. Note that the image markdown is provided between the opening and closing shortcode tags, and that you can use markdown syntax in the `caption` value.
+Sometimes you will want to include a caption with your illustration. This is what the `<figure>` and `<figcaption>` elements are for. However, **Cupper** doesn't ask you to code all that manually. A special shortcode is provided, which takes a `caption` parameter. Note that the image markdown is provided between the opening and closing shortcode tags, and that you can use markdown syntax in the `caption` value.
 
 {{<codeBlock>}}
 &#x7b;{% figure caption="A design system that uses a bad code example as a **single source of truth** only serves to proliferate bad code." %}}

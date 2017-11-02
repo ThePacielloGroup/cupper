@@ -7,7 +7,7 @@ Sometimes just pictures of the pattern you're documenting aren't enough. Interac
 
 ## CodePen
 
-**Infusion** offers a couple of ways to do this. The first is by embedding CodePen demos into the content. The `codePen` shortcode takes just one argument: the codePen's `ID`.
+**Cupper** offers a couple of ways to do this. The first is by embedding CodePen demos into the content. The `codePen` shortcode takes just one argument: the codePen's `ID`.
 
 {{<codeBlock>}}
 &#x7b;{% codePen VpVNKW %}}
@@ -50,4 +50,4 @@ The options for the `show` parameter are:
 
 ## Inline demos
 
-**Infusion** also supports the ability to write inline demos directly in markdown files. See {{% pattern "Writing inline demos" %}}.
+**Cupper** also supports the ability to write inline demos directly in markdown files. See {{% pattern "Writing inline demos" %}}.

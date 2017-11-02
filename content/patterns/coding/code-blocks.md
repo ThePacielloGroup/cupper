@@ -3,7 +3,7 @@ title = "Code blocks"
 weight = 1
 +++
 
-Markdown already supports code samples both inline (using single backticks like \`some code here\`) and in blocks. **Infusion** will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.
+Markdown already supports code samples both inline (using single backticks like \`some code here\`) and in blocks. **Cupper** will syntax highlight HTML, CSS, and JavaScript if you provide the correct language in the formulation of the block.
 
 So, this&hellip;
 
@@ -19,7 +19,7 @@ So, this&hellip;
 <button aria-pressed="false">toggle me</button>
 ```
 
-Note that the syntax highlighting uses a greyscale theme. **Infusion** is careful not to use color as part of its own design, because these colors may clash with those of the design being illustrated and discussed.
+Note that the syntax highlighting uses a greyscale theme. **Cupper** is careful not to use color as part of its own design, because these colors may clash with those of the design being illustrated and discussed.
 
 {{% note %}}
 To preserve the wrapping inside code blocks, horizontal scrolling is implemented. To make sure scrolling is keyboard accessible, code blocks are focusable. An `aria-label` is provided to identify the code block to screen reader users.
@@ -27,7 +27,7 @@ To preserve the wrapping inside code blocks, horizontal scrolling is implemented
 
 ## Annotated code
 
-**Infusion** offers the ability to highlight and annotate specific parts of your code examples using the `code` shortcode. Take an accessible dialog. You may wish to point out key attributes that make that dialog support assistive technologies:
+**Cupper** offers the ability to highlight and annotate specific parts of your code examples using the `code` shortcode. Take an accessible dialog. You may wish to point out key attributes that make that dialog support assistive technologies:
 
 {{<html>}}
 <div ((role="dialog")) ((aria-labelledby="dialog-heading"))>

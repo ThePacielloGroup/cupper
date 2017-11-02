@@ -1,9 +1,9 @@
 +++
 date = "2017-06-26T18:27:58+01:00"
-title = "The Infusion Pattern Library Builder"
+title = "The Cupper Pattern Library Builder"
 +++
 
-Welcome to **Infusion**: a documentation builder for inclusive designers and those trying to be inclusive designers. These are **Infusion's** docs, but they are also an example of a site built with **Infusion**. Here are some of its features:
+Welcome to **Cupper**: a documentation builder for inclusive designers and those trying to be inclusive designers. These are **Cupper's** docs, but they are also an example of a site built with **Cupper**. Here are some of its features:
 
 {{% ticks %}}
 * Built with [Hugo](https://gohugo.io/), so easy to structure content and fast to compile it

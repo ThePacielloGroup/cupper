@@ -1,10 +1,10 @@
 languageCode = "en-us"
-title = "Infusion"
-baseURL = "https://thepaciellogroup.github.io/infusion/"
+title = "Cupper"
+baseURL = "https://thepaciellogroup.github.io/cupper/"
 canonifyURLs = true
-theme = "infusion"
+theme = "cupper"
 publishDir = "docs"
 
 [params]
-  description = "Documentation for the **Infusion** documentation builder, built with **Infusion** itself."
+  description = "Documentation for the **Cupper** documentation builder, built with **Cupper** itself."
   codePenUser = "Heydon"

@@ -5,7 +5,7 @@ weight = 3
 
 There are some issues with {{% pattern "Demo embedding" %}}, like the embeds not working offline. They also come with their own branding, which will clash with the pattern you're trying to illustrate.
 
-**Infusion** offers another option: a special `demo` shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don't have to worry about broken styles and global JS.
+**Cupper** offers another option: a special `demo` shortcode that allows you to write HTML, CSS, and JavaScript directly into the markdown file. The outputted demo is encapsulated using Shadow DOM, so you don't have to worry about broken styles and global JS.
 
 Here's the example code for an inline demo of a toggle button:
 
@@ -40,7 +40,7 @@ toggle.addEventListener('click', (e) => {
 &#x7b;{&lt;/demo>}}
 {{</codeBlock>}}
 
-Note the `demo.querySelector` on line `21`. **Infusion** automatically provides `demo`, representing the root node of the demo. It's like the `document` keyword but for a demo's subtree.
+Note the `demo.querySelector` on line `21`. **Cupper** automatically provides `demo`, representing the root node of the demo. It's like the `document` keyword but for a demo's subtree.
 
 Here's a live demo of&hellip; the demo:
 

@@ -2,7 +2,7 @@
 title = "Notes & warnings"
 +++
 
-**Infusion** acknowledges that simple markdown is limiting when it comes to writing compelling documentation, so it provides a number of "shortcodes". Shortcodes offer a simple syntax for including rich content. For example, **Infusion** provides shortcodes for including notes and warnings.
+**Cupper** acknowledges that simple markdown is limiting when it comes to writing compelling documentation, so it provides a number of "shortcodes". Shortcodes offer a simple syntax for including rich content. For example, **Cupper** provides shortcodes for including notes and warnings.
 
 ## Notes
 

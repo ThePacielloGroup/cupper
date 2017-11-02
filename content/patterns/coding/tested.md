@@ -4,7 +4,7 @@ title = "Tested using..."
 
 When you're an inclusive designer, it's pertinent to do some testing. Following specs is one thing, but you need to verify that your component works okay for users.
 
-**Infusion** provided a `tested` shortcode that lets you show which browsers and assistive technologies you've tried your design out in. Here's an example. Note the commas and "+" signs.
+**Cupper** provided a `tested` shortcode that lets you show which browsers and assistive technologies you've tried your design out in. Here's an example. Note the commas and "+" signs.
 
 {{<codeBlock>}}
 &#x7b;{% tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" %}}

@@ -5,7 +5,7 @@ weight = 3
 
 ## Serving locally
 
-While you're creating content for your project, you'll probably want to see what the finished product looks like. Fortunately, **Infusion** is easy to serve locally using the `serve` command:
+While you're creating content for your project, you'll probably want to see what the finished product looks like. Fortunately, **Cupper** is easy to serve locally using the `serve` command:
 
 {{<cmd>}}npm run serve{{</cmd>}}
 
@@ -13,7 +13,7 @@ This will serve your working project from `localhost:1313`. Whenever you make ch
 
 ## Publishing on Github Pages
 
-**Infusion** creates a `/docs` folder containing the latest version of your site whenever you do an `npm run build` or a `git commit`. So long as you forked the **Infusion** repository when making your own version (see {{% pattern "Setup" %}}), whenever you push to master, you will also be updating the site found at your Github Pages URL.
+**Cupper** creates a `/docs` folder containing the latest version of your site whenever you do an `npm run build` or a `git commit`. So long as you forked the **Cupper** repository when making your own version (see {{% pattern "Setup" %}}), whenever you push to master, you will also be updating the site found at your Github Pages URL.
 
 This URL will be in the following format:
 
@@ -21,10 +21,10 @@ This URL will be in the following format:
 [your user name].github.io/[your library repo name]
 ```
 
-You'll also need to add this value to your `config.toml` file as the `baseURL`. For **Infusion**'s own documentation it looks like the following. Just overwrite it.
+You'll also need to add this value to your `config.toml` file as the `baseURL`. For **Cupper**'s own documentation it looks like the following. Just overwrite it.
 
 ```
-baseURL = "https://thepaciellogroup.github.io/infusion/"
+baseURL = "https://thepaciellogroup.github.io/cupper/"
 ```
 
 ### Set the publishing source

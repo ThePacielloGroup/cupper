@@ -4,7 +4,7 @@ weight = 3
 tags = ['metadata', 'markdown']
 +++
 
-In **Infusion** everything is documented using markdown, as a "pattern". To create a new pattern file, just add a file with the `.md` extension to the `content/patterns` folder. It's recommended you use "kebab case" to name the file (words separated by hyphens). For example, a pattern with the title "Menu button" should probably have the filename `menu-button`. Then you get a nice clean URL: `username.github.io/your-library/patterns/menu-button`.
+In **Cupper** everything is documented using markdown, as a "pattern". To create a new pattern file, just add a file with the `.md` extension to the `content/patterns` folder. It's recommended you use "kebab case" to name the file (words separated by hyphens). For example, a pattern with the title "Menu button" should probably have the filename `menu-button`. Then you get a nice clean URL: `username.github.io/your-library/patterns/menu-button`.
 
 If you're not familiar with writing markdown, there are a number of tutorials available. One of the best is [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) offered by Github. There's also a [nice cheatsheet here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
