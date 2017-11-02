@@ -1,0 +1,7 @@
+{{ $caption := .Get "caption" }}
+<figure role="group" aria-describedby="caption-{{ $caption | md5 }}">
+  {{ .Inner }}
+  <figcaption id="caption-{{ $caption | md5 }}">
+    {{ .Get "caption" | markdownify }}
+  </figcaption>
+</figure>

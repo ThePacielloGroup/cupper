@@ -1,0 +1,74 @@
+{{ define "title" }}
+  {{ .Site.Title }}
+{{ end }}
+
+{{ define "nav" }}
+<!-- silence is golden -->
+{{ end }}
+
+{{ define "main" }}
+  <main id="main">
+    <nav id="toc" class="toc patterns" aria-labelledby="toc-heading">
+      <h2 id="toc-heading">Table of contents</h2>
+      {{ $current := . }}
+      {{ range $.Site.Home.Sections }}
+        <ul id="patterns-list">
+          {{ range .Pages.ByWeight }}
+            <li class="pattern">
+              <a href="#{{ .Title | urlize }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">{{ .Title }}</span>
+              </a>
+            </li>
+          {{ end }}
+          {{ range .Sections.ByWeight }}
+            <li>
+              <h3>{{ .Title }}</h3>
+              <ul>
+                {{ range .Pages.ByWeight }}
+                  <li class="pattern">
+                    <a href="#{{ .Title | urlize }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
+                      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                        <use xlink:href="#bookmark"></use>
+                      </svg>
+                      <span class="text">{{ .Title }}</span>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </nav>
+    {{ $current := . }}
+    {{ range $.Site.Home.Sections }}
+      {{ range .Pages.ByWeight }}
+        <div class="pattern-section">
+          <h1 id="{{ .Title | urlize }}" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            {{ .Title }}
+          </h1>
+          {{ .Content }}
+        </div>
+      {{ end }}
+      {{ range .Sections.ByWeight }}
+        {{ range .Pages.ByWeight }}
+          <div class="pattern-section">
+            <h1 id="{{ .Title | urlize }}" tabindex="-1">
+              <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                <use xlink:href="#bookmark"></use>
+              </svg>
+              {{ .Title }}
+            </h1>
+            {{ .Content }}
+          </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </main>
+{{ end }}

@@ -1,0 +1,5 @@
+{{ $html := .Inner | htmlEscape }}
+{{ $html := replace $html "((" "<span class='highlight'>" }}
+{{ $html := replace $html "))" "</span>" }}
+{{ $numbered := .Get "numbered" }}
+<div class="code-annotated {{ if and ($numbered) (ne $numbered "false") }}numbered{{ end }}"><code>{{ $html | safeHTML }}</code></div>

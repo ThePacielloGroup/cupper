@@ -1,0 +1,31 @@
+{{ $tested := replace (.Get "using") ", " "," }}
+{{ $tested := replace $tested " + " "+" }}
+{{ $tested := split $tested "," }}
+<table class="tested">
+  <tr>
+    <th scope="row">
+      <svg viewBox="0 0 177.16535 177.16535" focusable="false" aria-hidden="true">
+        <use xlink:href="#tick"></use>
+      </svg>
+      Tested using
+    </th>
+    {{ range $tested }}
+      <td>
+        {{ if in . "+" }}
+          {{ $parts := split . "+" }}
+          {{ $browser := index $parts 0 }}
+          {{ $additional := index $parts 1 }}
+          {{ $slug := replace $browser " " "-" | lower }}
+          <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
+          <span><strong>{{ $browser }}</strong></span>
+          <span class="additional">with <strong>{{ $additional }}</strong></span>
+        {{ else }}
+          {{ $browser := . }}
+          {{ $slug := replace $browser " " "-" | lower }}
+          <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
+          <span><strong>{{ $browser }}</strong></span>
+        {{ end }}
+      </td>
+    {{ end }}
+  </tr>
+</table>

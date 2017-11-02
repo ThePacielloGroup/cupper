@@ -1,0 +1,16 @@
+name = "Cupper"
+description = ""
+homepage = "https://www.paciellogroup.com/"
+tags = ["inclusive design", "accessibility"]
+min_version = 0.1
+
+SectionPagesMenu = "main"
+
+[author]
+  name = "Heydon Pickering"
+  homepage = "https://inclusive-components.design"
+
+[taxonomies]
+  tag = "tags"
+  wcag = "wcag"
+  principle = "principles"

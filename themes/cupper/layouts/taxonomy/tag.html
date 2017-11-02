@@ -1,0 +1,18 @@
+{{ define "title" }}
+  Patterns tagged {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <main id="main">
+    <h1>
+      <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+        <use xlink:href="#tag"></use>
+      </svg>
+      Tagged &#x201c;{{ .Title }}&#x201d;
+    </h1>
+    <ul class="patterns-list">
+      {{ range .Data.Pages }}
+          {{ .Render "li"}}
+      {{ end }}
+    </ul>
+  </main>
+{{ end }}

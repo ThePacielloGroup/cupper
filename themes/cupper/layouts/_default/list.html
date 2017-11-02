@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <main id="main">
+    <h1>
+      {{ .Title }}
+    </h1>
+    <ul class="patterns-list">
+      {{ range .Data.Pages }}
+          {{ .Render "li"}}
+      {{ end }}
+    </ul>
+  </main>
+{{ end }}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <main id="main">
+    <h1>
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      {{ .Title }}
+    </h1>
+    {{ if isset .Params "tags" }}
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          {{ range .Params.tags }}
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+    {{ if ne .Params.TOC false }}
+      {{ partial "toc" . }}
+    {{ end }}
+    {{ .Content }}
+  </main>
+{{ end }}

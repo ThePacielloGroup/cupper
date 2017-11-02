@@ -1,0 +1,4 @@
+{{$file := .Get "file"}}
+{{ $contents := (printf "/snippets/%s" $file) | readFile }}
+{{ $commented := add "<!-- snippet -->\r\n" $contents }}
+{{ $commented | markdownify }}
