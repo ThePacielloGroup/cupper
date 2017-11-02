@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patterns on Cupper</title>
+    <link>https://thepaciellogroup.github.io/cupper/patterns/</link>
+    <description>Recent content in Patterns on Cupper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://thepaciellogroup.github.io/cupper/patterns/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installation</title>
+      <link>https://thepaciellogroup.github.io/cupper/patterns/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/cupper/patterns/installation/</guid>
+      <description>Cupper is built using the static site engine, Hugo, and NPM. The codebase is available to download on Github. Let&amp;rsquo;s get everything installed step-by-step.
+Install Hugo First you need to install Hugo globally.
+OSX users If you are a Mac user and have Homebrew on your system, installing Hugo is simple:
+brew install hugo Alternatively, you can manually install Hugo from a package. You can verify the installation was successful by typing:</description>
+    </item>
+    
+    <item>
+      <title>Setup</title>
+      <link>https://thepaciellogroup.github.io/cupper/patterns/setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/cupper/patterns/setup/</guid>
+      <description>By now, you should have followed the  Installation instructions. You should have Hugo and Node installed, and a local copy of a forked version of Cupper. You should also have run npm install in the root of that codebase.
+&amp;ldquo;Cleaning&amp;rdquo; the content folder Before you can start writing documentation, there are a few things still to do in order to get set up. At the moment, your version of Cupper is a facsimile of the original, containing all the content you&amp;rsquo;re reading right now.</description>
+    </item>
+    
+    <item>
+      <title>Serving</title>
+      <link>https://thepaciellogroup.github.io/cupper/patterns/serving/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/cupper/patterns/serving/</guid>
+      <description>Serving locally While you&amp;rsquo;re creating content for your project, you&amp;rsquo;ll probably want to see what the finished product looks like. Fortunately, Cupper is easy to serve locally using the serve command:
+npm run serve This will serve your working project from localhost:1313. Whenever you make changes to your files, the site will automatically rebuild. No need to refresh the web page!
+Publishing on Github Pages Cupper creates a /docs folder containing the latest version of your site whenever you do an npm run build or a git commit.</description>
+    </item>
+    
+    <item>
+      <title>Printing</title>
+      <link>https://thepaciellogroup.github.io/cupper/patterns/printing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/cupper/patterns/printing/</guid>
+      <description>Cupper&amp;rsquo;s output site includes a one-page  Print version of the generated library, available at /print-version. So, if your library base URL is https://yourName.github.io/your-library, you can print the whole library — to PDF if wanted — from the following address:
+https://yourName.github.io/your-library/print-version     Print styles are also provided for individual pattern pages so, if you wanted to print off a single pattern document, you can!
+  </description>
+    </item>
+    
+    <item>
+      <title>Updating Cupper</title>
+      <link>https://thepaciellogroup.github.io/cupper/patterns/updating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://thepaciellogroup.github.io/cupper/patterns/updating/</guid>
+      <description>The core of Cupper&amp;rsquo;s functionality is in its Hugo theme, also called Cupper. This is found in the theme folder.
+ content docs lib snippets static themes  cupper    Do not &amp;ldquo;hack the core&amp;rdquo;. If you have any issues with Cupper, please report them to the Cupper Github repository and they will be dealt with ASAP.
+Cupper is undergoing constant development, so keep an eye out for new releases.</description>
+    </item>
+    
+  </channel>
+</rss>
