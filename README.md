@@ -5,4 +5,4 @@
 * [Documentation →](https://thepaciellogroup.github.io/cupper)
 * [Contributing →](https://github.com/ThePacielloGroup/cupper/blob/master/CONTRIBUTING.md)
 
-**IMPORTANT NOTE:** **Cupper** was originally named **Infusion**. If you forked this repository before the name change, you may experience update troubles (when using `npm run update`). To remedy this, please manually rename your **themes → infusion** folder to **themes → cupper** before running the command.
+**IMPORTANT NOTE:** **Cupper** was originally named **Infusion**. If you forked this repository before the name change, you may experience update troubles (when using `npm run update`). To remedy this, please manually rename your **themes → infusion** folder to **themes → cupper** and reference `cupper` as the theme in your `config.toml`, before running the command.
