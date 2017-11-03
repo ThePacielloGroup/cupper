@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Cupper Pattern Library Builder on Cupper</title>
+    <title>The Cupper Documentation Builder on Cupper</title>
     <link>https://thepaciellogroup.github.io/cupper/</link>
-    <description>Recent content in The Cupper Pattern Library Builder on Cupper</description>
+    <description>Recent content in The Cupper Documentation Builder on Cupper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate>
