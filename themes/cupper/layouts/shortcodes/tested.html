@@ -11,19 +11,16 @@
     </th>
     {{ range $tested }}
       <td>
+        {{ $browser := findRE "^[a-zA-Z ]+" . }}
+        {{ $browser := index $browser 0 }}
+        {{ $version := findRE "[0-9]+$" . }}
+        {{ $slug := replace $browser " " "-" | lower }}
+        <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
+        <span><strong>{{ $browser }} {{ index $version 0 }}</strong></span>
         {{ if in . "+" }}
           {{ $parts := split . "+" }}
-          {{ $browser := index $parts 0 }}
           {{ $additional := index $parts 1 }}
-          {{ $slug := replace $browser " " "-" | lower }}
-          <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
-          <span><strong>{{ $browser }}</strong></span>
           <span class="additional">with <strong>{{ $additional }}</strong></span>
-        {{ else }}
-          {{ $browser := . }}
-          {{ $slug := replace $browser " " "-" | lower }}
-          <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
-          <span><strong>{{ $browser }}</strong></span>
         {{ end }}
       </td>
     {{ end }}
