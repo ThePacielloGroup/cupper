@@ -186,13 +186,17 @@ button {
     border: 0;
 }
 [data-launch] {
-  font-size: 0.75rem !important;
-  margin-top: 0.75rem !important;
+  font-size: 0.66rem !important;
   padding: 0.5rem !important;
+  margin-top: 0 !important;
   border-radius: 0 !important;
+  border-top-left-radius: 0.33rem !important;
   box-shadow: none !important;
   background: #111 !important;
-  color: #fefefe !important
+  color: #fefefe !important;
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
 }
 
 /* Forms */
@@ -737,8 +741,8 @@ h1 svg {
 .demo-inner {
   border-top: 1px solid;
   border-bottom: 1px solid;
-  padding: 1.5rem 0 0;
-  text-align: right;
+  padding: 1.5rem 0;
+  position: relative;
 }
 
 [id^="js-demo-"] {

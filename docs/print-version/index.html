@@ -1959,14 +1959,14 @@ toggle.addEventListener('click', (e) => {
 
 <p>Note the <code>demo.querySelector</code> on line <code>21</code>. <strong>Cupper</strong> automatically provides <code>demo</code>, representing the root node of the demo. It&rsquo;s like the <code>document</code> keyword but for a demo&rsquo;s subtree.</p>
 
-<p>Here&rsquo;s a live demo of&hellip; the demo:</p>
+<p>Here&rsquo;s a live demo <em>of</em> the demo:</p>
 
 
 <div class="demo-container">
   
       <div class="demo-inner" >
         <div class="demo" id="js-demo-285170a1c0812ad34ac4b853a052c8bd"></div>
-        <button data-launch="js-demo-285170a1c0812ad34ac4b853a052c8bd">Launch in separate window</button>
+        <button data-launch="js-demo-285170a1c0812ad34ac4b853a052c8bd">Launch <span aria-hidden="true">↗</span></button>
       </div>
       
   
@@ -2048,38 +2048,49 @@ toggle.addEventListener('click', function () {
 </div>
 
 
-<h2 id="launch-in-a-separate-window">Launch in a separate window</h2>
+<h2 id="styling-the-container">Styling the container</h2>
 
-<p>The &ldquo;Launch in separate window&rdquo; button takes the demo code and pushes it to a new browser window. This serves two purposes:</p>
+<p>Sometimes your component will be expected to appear in a context where the parent element has a background color and possibly other styles. You can add style to your demo block&rsquo;s container element using the <code>style</code> attribute. It works just like standard inline styling.</p>
+
+<p><pre class="language-html"><code class="language-html" data-codeblock-shortcode>
+&#x7b;{&lt;demo style="background-color: pink; padding: 1rem;">}}
+&lt;!-- demo code here -->
+&#x7b;{&lt;/demo>}}
+</code></pre>
+</p>
+
+<h2 id="launch">&ldquo;Launch&rdquo;</h2>
+
+<p>The &ldquo;Launch&rdquo; button takes the demo code and pushes it to a new browser tab. This serves two purposes:</p>
 
 <ul>
 <li>It provides a fallback for browsers that do not support Shadow DOM encapsulation (a warning message will replace the inline demo).</li>
 <li>It creates an isolated test case for the demo, allowing you to run browser extensions and bookmarklets on the the demo code and <em>just</em> the demo code.</li>
 </ul>
 
+<aside aria-label="note" class="note">
+  <div>
+    <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
+      <use xlink:href="#info"></use>
+    </svg>
+    <p>The &ldquo;Launch&rdquo; button is positioned over the styleable demo container. Bear this is mind when styling the container (see the previous section).</p>
+
+  </div>
+</aside>
+
+
 <h2 id="captioned-demos">Captioned demos</h2>
 
 <p>It&rsquo;s possible to give your demo a caption using an accessible <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> structure. All <em>you</em> need to do is supply a <code>caption</code> attribute. For example:</p>
 
-<p><pre class="language-html"><code class="language-html" data-codeblock-shortcode>
+<pre class="language-html"><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo caption="A basic button element">}}
 &lt;!-- demo code here -->
 &#x7b;{&lt;/demo>}}
 </code></pre>
-</p>
+
 
 <p>Along with the standard <code>figure</code> shortcodes (described in <a class="pattern-link" href="https://thepaciellogroup.github.io/cupper/patterns/media/including-images/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Including images</a>), demo figures are numbered automatically according to their order in the page. You can use markdown syntax in the caption text value.</p>
-
-<h2 id="background-colors">Background colors</h2>
-
-<p>Sometimes your component will be expected to appear in a context where the parent element has a background color. You can add a backgroundColor for your demo block using the <code>backgroundColor</code> attribute. Any valid CSS color value is acceptable:</p>
-
-<pre class="language-html"><code class="language-html" data-codeblock-shortcode>
-&#x7b;{&lt;demo backgroundColor="hsla(163, 100%, 50%, 0.43)">}}
-&lt;!-- demo code here -->
-&#x7b;{&lt;/demo>}}
-</code></pre>
-
 
           </div>
         

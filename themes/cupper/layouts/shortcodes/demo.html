@@ -3,9 +3,9 @@
   {{ if .Get "caption" }}
   <figure role="group" aria-labelledby="caption-{{ $uniq }}">
   {{ end }}
-      <div class="demo-inner" {{ if .Get "backgroundColor" }}style="background-color: {{ .Get "backgroundColor" | safeCSS }}"{{ end }}>
+      <div class="demo-inner" {{ if .Get "style" }}style="{{ .Get "style" | safeCSS }}"{{ end }}>
         <div class="demo" id="js-demo-{{ $uniq }}"></div>
-        <button data-launch="js-demo-{{ $uniq }}">Launch in separate window</button>
+        <button data-launch="js-demo-{{ $uniq }}">Launch <span aria-hidden="true">↗</span></button>
       </div>
       {{ if .Get "caption" }}
           <figcaption id="caption-{{ $uniq }}">{{ .Get "caption" | markdownify }}</figcaption>
@@ -26,7 +26,7 @@
       demoDiv.innerHTML = template.innerHTML;
       var standaloneScript = demoDiv.querySelector('script');
       if (standaloneScript) {
-        standaloneScript.textContent = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; ' + standaloneScript.textContent + ' })();';
+        standaloneScript.textContent = '(function() { document.getElementsByTagName(\'html\')[0].setAttribute(\'lang\', \'en\'); var demo = document; {{ if .Get "style" }}document.body.setAttribute(\'style\', \'{{ .Get "style" | safeCSS }}\'){{ end }}' + standaloneScript.textContent + ' })();';
       }
 
       if (document.head.attachShadow) {

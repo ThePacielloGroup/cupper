@@ -42,7 +42,7 @@ toggle.addEventListener('click', (e) => {
 
 Note the `demo.querySelector` on line `21`. **Cupper** automatically provides `demo`, representing the root node of the demo. It's like the `document` keyword but for a demo's subtree.
 
-Here's a live demo of&hellip; the demo:
+Here's a live demo _of_ the demo:
 
 {{<demo>}}
 <button aria-pressed="false">Toggle Me</button>
@@ -74,12 +74,26 @@ toggle.addEventListener('click', function () {
 </script>
 {{</demo>}}
 
-## Launch in a separate window
+## Styling the container
 
-The "Launch in separate window" button takes the demo code and pushes it to a new browser window. This serves two purposes:
+Sometimes your component will be expected to appear in a context where the parent element has a background color and possibly other styles. You can add style to your demo block's container element using the `style` attribute. It works just like standard inline styling.
+
+{{<codeBlock lang="html">}}
+&#x7b;{&lt;demo style="background-color: pink; padding: 1rem;">}}
+&lt;!-- demo code here -->
+&#x7b;{&lt;/demo>}}
+{{</codeBlock>}}
+
+## "Launch"
+
+The "Launch" button takes the demo code and pushes it to a new browser tab. This serves two purposes:
 
 * It provides a fallback for browsers that do not support Shadow DOM encapsulation (a warning message will replace the inline demo).
 * It creates an isolated test case for the demo, allowing you to run browser extensions and bookmarklets on the the demo code and _just_ the demo code.
+
+{{% note %}}
+The "Launch" button is positioned over the styleable demo container. Bear this is mind when styling the container (see the previous section).
+{{% /note %}}
 
 ## Captioned demos
 
@@ -92,13 +106,3 @@ It's possible to give your demo a caption using an accessible `<figure>` and `<f
 {{</codeBlock>}}
 
 Along with the standard `figure` shortcodes (described in {{% pattern "Including images" %}}), demo figures are numbered automatically according to their order in the page. You can use markdown syntax in the caption text value.
-
-## Background colors
-
-Sometimes your component will be expected to appear in a context where the parent element has a background color. You can add a backgroundColor for your demo block using the `backgroundColor` attribute. Any valid CSS color value is acceptable:
-
-{{<codeBlock lang="html">}}
-&#x7b;{&lt;demo backgroundColor="hsla(163, 100%, 50%, 0.43)">}}
-&lt;!-- demo code here -->
-&#x7b;{&lt;/demo>}}
-{{</codeBlock>}}
