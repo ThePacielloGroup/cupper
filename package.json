@@ -8,8 +8,9 @@
     "serve": "hugo server --baseURL http://localhost:1313",
     "clean": "node lib/clean.js",
     "build": "node lib/build.js",
-    "update": "node lib/update.js"
-    },
+    "update": "node lib/update.js",
+    "a11y": "(npm list pa11y-ci || npm install -g pa11y-ci) && pa11y-ci --sitemap http://localhost:1313/sitemap.xml --config lib/.pa11yci"
+  },
   "pre-commit": [
     "build"
   ],
