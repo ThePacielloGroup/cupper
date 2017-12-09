@@ -842,6 +842,9 @@ h1 svg {
     .intro {
         text-align: center;
     }
+    .intro-and-nav {
+        border-right: none;
+    }
     .intro-and-nav > div {
         padding: 1.5rem;
     }
