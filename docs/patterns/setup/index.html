@@ -475,7 +475,7 @@ theme = "cupper"
 
 <h2 id="the-web-app-manifest">The Web App Manifest</h2>
 
-<p><strong>Cupper</strong> projects work as progressive web applications, meaning users can save them to their home screen and read them offline. The web app manifest, found at the root of the <code>static</code> folder, defines names and icons for the app. You&rsquo;ll probably want to open <code>/static/manifest.json</code> and personalize the <code>name</code> and <code>short_name</code> values.</p>
+<p><strong>Cupper</strong> projects work as progressive web applications, meaning users can save them to their home screen and read them offline. The web app manifest, found at the root of the <code>themes/cupper/static</code> folder, defines names and icons for the app. You&rsquo;ll probably want to open <code>themes/cupper/static/manifest.json</code> and personalize the <code>name</code> and <code>short_name</code> values.</p>
 
 <pre><code>{
  &quot;name&quot;: &quot;Cupper Documentation Builder&quot;,
@@ -507,7 +507,7 @@ theme = "cupper"
 
 <h2 id="including-a-logo">Including a logo</h2>
 
-<p>In the <code>images/static</code> folder, you&rsquo;ll find a <code>logo.svg</code> file. Replace this file with your own company or project logo, under the same file name. Currently, only SVG is supported this easily because SVG is the superior format for logos. However, if you must use a different format, you can open up the <code>themes/cupper/layouts/_default/baseof.html</code> file and edit the image reference:</p>
+<p>In the <code>/static/images</code> folder, you&rsquo;ll find a <code>logo.svg</code> file. Replace this file with your own company or project logo, under the same file name. Currently, only SVG is supported this easily because SVG is the superior format for logos. However, if you must use a different format, you can open up the <code>themes/cupper/layouts/_default/baseof.html</code> file and edit the image reference:</p>
 
 <pre><code class="language-html">&lt;a class=&quot;logo&quot; href=&quot;/&quot; aria-label=&quot;{{ .Site.Title }} pattern library home page&quot;&gt;
   &lt;img src=&quot;{{ &quot;images/logo.svg&quot; | absURL }}&quot; alt=&quot;&quot;&gt;
