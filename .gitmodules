@@ -1,0 +1,3 @@
+[submodule "themes/cupper"]
+	path = themes/cupper
+	url = https://github.com/aral/cupper-hugo-theme.git
