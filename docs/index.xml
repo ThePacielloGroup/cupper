@@ -114,9 +114,8 @@ https://yourName.github.io/your-library/print-version     Print styles are also 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/updating/</guid>
-      <description>The core of Cupper&amp;rsquo;s functionality is in its Hugo theme, also called Cupper. This is found in the theme folder.
- content docs lib snippets static themes  cupper    Do not &amp;ldquo;hack the core&amp;rdquo;. If you have any issues with Cupper, please report them to the Cupper Github repository and they will be dealt with ASAP.
-Cupper is undergoing constant development, so keep an eye out for new releases.</description>
+      <description>The core of Cupper&amp;rsquo;s functionality is in its Hugo theme, called Cupper Hugo Theme. This is installed in the theme folder when you run the installation script. You can also install it separately into any Hugo instance.
+ content docs lib snippets static themes  cupper    Do not &amp;ldquo;hack the core&amp;rdquo;. If you have any issues with Cupper, please report them to the Cupper Github repository and they will be dealt with ASAP.</description>
     </item>
     
     <item>

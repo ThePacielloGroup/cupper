@@ -9,7 +9,7 @@
     "clean": "node lib/clean.js",
     "build": "node lib/build.js",
     "update": "node lib/update.js"
-    },
+  },
   "pre-commit": [
     "build"
   ],

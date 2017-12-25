@@ -1,0 +1,2 @@
+git submodule add https://github.com/aral/cupper-hugo-theme.git themes/cupper
+npm install
