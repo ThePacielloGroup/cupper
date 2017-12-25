@@ -47,8 +47,8 @@ If you do not have a version of the Github desktop client installed, follow the 
 
 While you're in the Github interface, you might as well set up the publishing source for the live site. Choose the Master branch/docs option under **Settings → Github Pages → Source**. See {{% pattern "Serving" %}} for more details.
 
-Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:
+Once you have your local copy of the files, move to the root of that folder and in your terminal run the installation script:
 
-{{<cmd>}}npm install{{</cmd>}}
+{{<cmd>}}./install{{</cmd>}}
 
 Now it's time to consult the {{% pattern "Setup" %}} pattern.
