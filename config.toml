@@ -5,6 +5,10 @@ canonifyURLs = true
 theme = "cupper"
 publishDir = "docs"
 
+# Search
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
 [params]
   description = "Documentation for the **Cupper** documentation builder, built with **Cupper** itself."
   codePenUser = "Heydon"
