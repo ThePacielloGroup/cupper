@@ -53,7 +53,7 @@ theme = "cupper"
 ```
 
 {{% figure caption="Cupper's Docs, with `short_name` displayed, available from the homescreen of a Samsung/Android phone." %}}
-![Teacup Cupper app icon with Cupper Docs written underneath](/images/samsung_homescreen.png)
+![Teacup Cupper app icon with Cupper Docs written underneath](/images/samsung_homescreen.jpg)
 {{% /figure %}}
 
 {{% note %}}
