@@ -43,6 +43,9 @@ body,
 p + p {
     margin-top: 0.75rem;
 }
+.priority {
+  margin-top: 0;
+}
 a {
     text-decoration: none;
     border-bottom: 1px solid;
@@ -54,6 +57,7 @@ abbr {
 }
 img {
     max-width: 100%;
+    max-height: 50vh;
 }
 p img {
     margin: 0.75rem 0;
@@ -165,8 +169,26 @@ main ol {
 main li + li {
     margin-top: 0.5rem;
 }
-main ul ul, main ol ol {
+main ul ul, main ol ol, main li ul, main li ol {
     margin-top: 0.5rem;
+}
+ol ol {
+  list-style: lower-latin;
+}
+ol ol ol {
+  list-style: lower-roman;
+}
+main dt {
+    font-weight: bold;
+}
+main dd {
+  padding-left: 2rem;
+}
+dd ul {
+  margin-left: 0;
+}
+dd li + li {
+  margin: 0;
 }
 /* Blockquotes */
 
@@ -363,6 +385,7 @@ caption {
     flex-wrap: nowrap;
     align-items: baseline;
     font-weight: bold;
+    padding: 0 1rem;
 }
 .pattern a:focus {
     outline: none;
@@ -370,15 +393,15 @@ caption {
 .pattern span {
     margin-left: 0.125rem;
 }
+
+/* after */
 .pattern [aria-current] {
-    background-color: #111;
-    background-image: url(images/arrow_effect.svg);
-    background-position: 98% center;
-    background-size: 125%;
-    background-repeat: no-repeat;
-    color: #fefefe;
-    padding: 0.5em 1em 0.5em;
+  background-color: #111;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  color: #fefefe;
+  padding: 0.5em 1em 0.5em;
 }
+
 /* menu button */
 
 #menu-button {
@@ -854,11 +877,15 @@ h1 svg {
     main {
       min-height: auto;
     }
+
+    #patterns-list {
+      margin-top: 0.5rem;
+      border: 1px solid;
+    }
+
     .patterns h3 {
-        font-size: 1.125rem;
-        border-top: 4px solid;
-        border-bottom: 4px solid;
-        padding: 0.75rem 0;
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem 0.75rem;
     }
     .patterns li:not(.pattern) {
         margin-top: 0;
@@ -873,10 +900,11 @@ h1 svg {
         font-size: 1rem;
     }
     .pattern a {
-        padding: 0.75rem 0;
+        padding: 1rem;
     }
     .pattern [aria-current] {
-        background-image: none;
+        clip-path: none;
+        padding: 1rem;
     }
     .pattern + .pattern {
         border-top: 1px solid;
