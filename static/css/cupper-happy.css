@@ -135,10 +135,15 @@ fieldset > input {
     padding-right: 0.5em;
     background-color: #202020;
     font-weight: normal;
+    clip-path: none;
 }
 
 .pattern span {
     margin-left: 0;
+}
+
+.pattern a {
+    padding: 0;
 }
 
 .intro-and-nav {
