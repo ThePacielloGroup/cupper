@@ -4,12 +4,15 @@ These are the source files for the [FilePond documentation](https://pqina.nl/fil
 
 The documentation is based on [Cupper](https://github.com/ThePacielloGroup/cupper)
 
-Install node modules
+The markdown files can be found in the `content/` directory.
+
+Install node modules:
+
 ```bash
 npm install
 ```
 
-Start development server
+Start development server:
 
 ```bash
 npm run serve
