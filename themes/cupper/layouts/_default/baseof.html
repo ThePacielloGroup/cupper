@@ -23,6 +23,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
     <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
+    {{ range .Site.Params.stylesheets -}}
+        <link rel="stylesheet" type="text/css" href="{{ . | absURL }}">
+    {{- end }}
     <style id="inverter" media="none">
       html { filter: invert(100%) }
       * { background-color: inherit }
@@ -81,7 +84,7 @@
                   <ul id="patterns-list">
                     {{ range .Pages.ByWeight }}
                       <li class="pattern">
-                        <a href="{{ .RelPermalink }}" {{ if eq $current.Permalink .Permalink  }}aria-current="page"{{ end }}>
+                        <a href="{{ .RelPermalink }}" {{ if eq $current.File .File  }}aria-current="page"{{ end }}>
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
                           </svg>
@@ -95,7 +98,7 @@
                         <ul>
                           {{ range .Pages.ByWeight }}
                             <li class="pattern">
-                              <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
+                              <a href="{{ .RelPermalink }}" {{ if eq $current.File .File  }}aria-current="page"{{ end }}>
                                 <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                                   <use xlink:href="#bookmark"></use>
                                 </svg>
