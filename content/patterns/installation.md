@@ -3,52 +3,51 @@ title = "Installation"
 weight = 1
 +++
 
-**Cupper** is built using the static site engine, [Hugo](https://gohugo.io/), and NPM. The codebase is available to download on Github. Let's get everything installed step-by-step.
+FilePond is exposed as a module wrapped in a UMD. It can be added to a project using Node Package Manager, from a CDN or by adding the files manually.
 
-## Install Hugo
+## Using npm
 
-First you need to install Hugo globally.
+If you're familiar with Node you can run the following command in your terminal to install FilePond.
 
-### OSX users
+{{<cmd>}}npm i filepond --save{{</cmd>}}
 
-If you are a Mac user and have [Homebrew](https://brew.sh/) on your system, installing Hugo is simple:
+We can then use it in our project using imports.
 
-{{<cmd>}}brew install hugo{{</cmd>}}
+```js
+import * as FilePond from 'filepond';
+```
 
-Alternatively, you can manually [install Hugo from a package](https://github.com/gohugoio/hugo/releases). You can verify the installation was successful by typing:
+FilePond also requires some styles. When using a module bundler like Webpack we can add those styles like this.
 
-{{<cmd>}}hugo version{{</cmd>}}
+```js
+import 'filepond/dist/filepond.min.css';
+```
 
-### Windows users
+If we're not using a module bundler, we can simply add the stylesheet to the `<head>` of the document.
 
-Installing on Windows is a little more involved than on OSX. The authors of Hugo provide [a guide](https://gohugo.io/tutorials/installing-on-windows/) with instructions for technical and less technical users.
 
-It's also best you install a Windows Subsystem for running Linux, and therefore [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (**Cupper** incorporates some bash commands in its scripts). [Microsoft offer a complete guide](https://msdn.microsoft.com/en-gb/commandline/wsl/install_guide).
+## From a CDN
 
-## Install Node & NPM
+We can link to the files on a CDN.
 
-It is likely you already have Node and NPM installed on your system. If so, you can skip this step. Otherwise, [refer to NPM's own guide](https://docs.npmjs.com/getting-started/installing-node), which includes a video tutorial.
+```html
+<!-- add to document <head> -->
+<link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
 
-## Get the files
+<!-- add before </body> -->
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+```
 
-**Cupper** is hosted on Github. To start using it, you'll need to get the files from there. If you are comfortable with the command line, just fork the [github.com/ThePacielloGroup/cupper](https://github.com/ThePacielloGroup/cupper) repository, then do a `git clone` to your local system. Replace `[your username]` in the following:
+## Manual embedding the files
 
-{{<cmd>}}git clone https://github.com/[your username]/cupper.git{{</cmd>}}
+We can also [download FilePond](https://github.com/pqina/filepond/archive/master.zip) and embed the files manually.
 
-If the command line is not your thing, use Github's web interface to fork  [github.com/ThePacielloGroup/cupper](https://github.com/ThePacielloGroup/cupper) and choose **Open in Desktop** from **Clone or download** (see figure 1, below).
+```html
+<!-- add to document <head> -->
+<link href="filepond.css" rel="stylesheet">
 
-{{% figure caption="The Github web interface" %}}
-![The open in desktop option, revealed when clicking clone or download](/images/open_in_desktop.png)
-{{% /figure %}}
+<!-- add before </body> -->
+<script src="filepond.js"></script>
+```
 
-{{% note %}}
-If you do not have a version of the Github desktop client installed, follow the prompts after clicking **Open in Desktop**.
-{{% /note %}}
-
-While you're in the Github interface, you might as well set up the publishing source for the live site. Choose the Master branch/docs option under **Settings → Github Pages → Source**. See {{% pattern "Serving" %}} for more details.
-
-Once you have your local copy of the files, move to the root of that folder and in your terminal run an npm installation:
-
-{{<cmd>}}npm install{{</cmd>}}
-
-Now it's time to consult the {{% pattern "Setup" %}} pattern.
+With the FilePond files in place we can now [get started setting up a FilePond instance](../getting-started).

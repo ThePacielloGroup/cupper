@@ -1,10 +1,11 @@
 languageCode = "en-us"
-title = "Cupper"
-baseURL = "https://thepaciellogroup.github.io/cupper/"
+title = "FilePond Documentation"
+baseURL = "https://pqina.nl/filepond/docs/"
 canonifyURLs = true
 theme = "cupper"
-publishDir = "docs"
+publishDir = "filepond/docs"
 
 [params]
-  description = "Documentation for the **Cupper** documentation builder, built with **Cupper** itself."
-  codePenUser = "Heydon"
+  description = "**FilePond** Documentation"
+  codePenUser = "rikschennink"
+  stylesheets = ["css/cupper-happy.css"]
