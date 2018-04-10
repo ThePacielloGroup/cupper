@@ -28,7 +28,7 @@ Plugins can be registered with FilePond using the `registerPlugin` method. Read 
 
 ## Installing plugins
 
-In the example below we'll use the image preview plugin. The installation procedure is the same for all plugins, simply replace `filepond-plugin-image-preview` with another plugins name.
+In the examples below we'll install the [Image Preview](../image-preview) plugin. The installation procedure is the same for all plugins, replace `filepond-plugin-image-preview` with the name of the plugin you want to install.
 
 ### Using npm
 
@@ -37,7 +37,11 @@ In the example below we'll use the image preview plugin. The installation proced
 Now we can add the plugin to our project like this.
 
 ```js
+// Import the plugin code
 import FilepondPluginImagePreview from 'filepond-plugin-image-preview';
+
+// Import the plugin styles (if needed)
+import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
 ```
 
 {{% note %}}

@@ -5,6 +5,12 @@ html {
         'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
+a {
+    text-decoration: underline;
+    border-bottom: none;
+    text-decoration-color: #a5b1b5;
+}
+
 h1,
 h2,
 h3,
@@ -144,6 +150,7 @@ fieldset > input {
 
 .pattern a {
     padding: 0;
+    text-decoration: none;
 }
 
 .intro-and-nav {
