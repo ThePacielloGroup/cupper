@@ -42,6 +42,46 @@ The resulting object will look something like this.
 Submitting forms with very large Base64 encoded strings can result in browsers running out of memory (especially on mobile devices). Server side security software might also tag a big form post as insecure and prevent the submit from succeeding. To remedy this we can use the [Image transform](../image-transform) plugin to limit the file size before encoding.
 {{% /warning %}}
 
+
+## Installation
+
+### Using npm
+
+{{<cmd>}}npm i filepond-plugin-file-encode --save{{</cmd>}}
+
+Now we can add the File Encode plugin to our project like this.
+
+```js
+// Import the plugin code
+import FilepondPluginFileEncode from 'filepond-plugin-file-encode';
+```
+
+
+### Using a CDN
+
+```html
+<!-- add before </body> -->
+<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+<script>
+// ... FilePond initialisation code here
+</script>
+```
+
+### Manual installation
+
+```html
+<!-- add before </body> -->
+<script src="filepond-plugin-file-encode.js"></script>
+<script src="filepond.js"></script>
+
+<script>
+// ... FilePond initialisation code here
+</script>
+```
+
+
 ## Properties
 
 | Property        | Default | Description                     |

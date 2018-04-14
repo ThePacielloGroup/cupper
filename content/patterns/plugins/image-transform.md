@@ -4,6 +4,45 @@ title = "Image transform"
 
 The Image transform plugin applies the image modifications supplied by the [Image crop](../image-crop) and [Image resize](../image-resize) plugins before the image is uploaded. It can also change the file format to either JPEG or PNG.
 
+
+## Installation
+
+### Using npm
+
+{{<cmd>}}npm i filepond-plugin-image-transform --save{{</cmd>}}
+
+Now we can add the Image Transform plugin to our project like this.
+
+```js
+// Import the plugin code
+import FilepondPluginImageTransform from 'filepond-plugin-image-transform';
+```
+
+
+### Using a CDN
+
+```html
+<!-- add before </body> -->
+<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+<script>
+// ... FilePond initialisation code here
+</script>
+```
+
+### Manual installation
+
+```html
+<!-- add before </body> -->
+<script src="filepond-plugin-image-transform.js"></script>
+<script src="filepond.js"></script>
+
+<script>
+// ... FilePond initialisation code here
+</script>
+```
+
 ## Properties
 
 | Property                     | Default | Description                                                                                                                                                                                                                                                                                                         |

@@ -6,6 +6,46 @@ The Image resize plugin automatically calculates and adds resize information.
 
 The [Image preview](../image-preview) plugin uses this information to show the correct preview. The [Image transform](../image-transform) plugin uses this information to transform the image before uploading it to the server.
 
+
+## Installation
+
+### Using npm
+
+{{<cmd>}}npm i filepond-plugin-image-resize --save{{</cmd>}}
+
+Now we can add the Image Resize plugin to our project like this.
+
+```js
+// Import the plugin code
+import FilepondPluginImageResize from 'filepond-plugin-image-resize';
+```
+
+
+### Using a CDN
+
+```html
+<!-- add before </body> -->
+<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+<script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+
+<script>
+// ... FilePond initialisation code here
+</script>
+```
+
+### Manual installation
+
+```html
+<!-- add before </body> -->
+<script src="filepond-plugin-image-resize.js"></script>
+<script src="filepond.js"></script>
+
+<script>
+// ... FilePond initialisation code here
+</script>
+```
+
+
 ## Properties
 
 | Property                | Default   | Description                                                                                                                                                                                                                                                                                                                                                                                                           |

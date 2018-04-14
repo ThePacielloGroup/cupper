@@ -278,8 +278,29 @@ FilePond.setOptions({
 
 ## Registering Plugins
 
-After installing a plugin we need to register it with FilePond. We can do this with the `registerPlugin` method.
+With the plugins available on the page we can now register them with `FilePond` using the `registerPlugin` method.
 
 ```js
-FilePond.registerPlugin(plugin);
+FilePond.registerPlugin(FilePondPluginImagePreview);
 ```
+
+We can pass multiple plugin references to the `registerPlugin` method.
+
+```js
+FilePond.registerPlugin(
+    FilePondPluginImagePreview,
+    FilePondPluginFileValidateSize
+);
+```
+
+A plugin will fire a `FilePond:pluginloaded` event on the document when it's ready for use. The event `detail` property will contain the plugin.
+
+```js
+document.addEventListener('FilePond:pluginloaded', e => {
+    console.log('FilePond plugin is ready for use', e.detail);
+});
+```
+
+{{% note %}}
+Plugins need to be registered before we create our first FilePond instance.
+{{% /note %}}
