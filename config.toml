@@ -1,10 +1,9 @@
 languageCode = "en-us"
-title = "Cupper"
-baseURL = "https://thepaciellogroup.github.io/cupper/"
+title = "Mimir"
+baseURL = "https://mazzucchelli.github.io/mimir/"
 canonifyURLs = true
 theme = "cupper"
 publishDir = "docs"
 
 [params]
-  description = "Documentation for the **Cupper** documentation builder, built with **Cupper** itself."
-  codePenUser = "Heydon"
+  description = "Just a place where I store notes!"
