@@ -15,7 +15,7 @@ Now you can import the `<FilePond>` Component in your Vue project. The adapter a
 We can configure our pond by using the [FilePond instance properties](../../api/filepond-instance/#properties) as attributes on the `<FilePond>` Component. Note that the callback methods are not available and have been mapped to Vue events, see the example below.
 
 ```html
-<FilePond allowMultiple="true" maxFiles="3" server="/api"/>
+<FilePond allow-multiple="true" max-files="3" server="/api"/>
 ```
 
 You can see that instead of using the `multiple` attribute we use the property name `allowMultiple` and instead of `data-max-files` we use `maxFiles`.
@@ -26,7 +26,7 @@ Use bindings if values need to be updated in the future.
 <!-- normal -->
 <FilePond v-bind:files="myFiles"/>
 
-<!-- shortcut -->
+<!-- shorthand -->
 <FilePond :files="myFiles"/>
 ```
 
@@ -36,7 +36,7 @@ We can use the `v-on` to listen for events on the pond.
 <!-- normal -->
 <FilePond v-on:init="handleFilePondInit"/>
 
-<!-- shortcut -->
+<!-- shorthand -->
 <FilePond @init="handleFilePondInit"/>
 ```
 
@@ -49,10 +49,10 @@ A more elaborate example showing the use of `data` to populate the `files` attri
     <FilePond
         name="test"
         ref="pond"
-        className="my-pond"
-        labelIdle="Drop files here..."
-        allowMultiple="true"
-        acceptedFileTypes="image/jpeg, image/png"
+        class-name="my-pond"
+        label-idle="Drop files here..."
+        allow-multiple="true"
+        accepted-file-types="image/jpeg, image/png"
         v-bind:files="myFiles"
         v-on:init="handleFilePondInit"/>
     
