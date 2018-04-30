@@ -21,15 +21,17 @@ The FilePond core module exposes the following properties.
 | allowPaste    | `true`       | Enable or disable pasting of files. Pasting files is not supported on all browesrs.      |
 | allowMultiple | `false`      | Enable or disable adding multiple files                                                  |
 | allowReplace  | `true`       | Allow drop to replace a file, only works when `allowMultiple` is `false`                 |
+| allowRevert   | `true`       | Allows the user to undo file upload
 | maxFiles      | `null`       | The maximum number of files that the pond can handle                                     |
 
 ### Drag n' Drop related
 
-| Property      | Default                                     | Description                                                                                                  |
-| ------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| dropOnPage    | `false`                                     | FilePond will catch all files dropped on the webpage                                                         |
-| dropOnElement | `true`                                      | Require drop on the FilePond element itself to catch the file.                                               |
-| ignoredFiles  | `['.ds_store', 'thumbs.db', 'desktop.ini']` | Ignored file names when handling dropped directories. Dropping directories is not supported on all browsers. |
+| Property       | Default                                     | Description                                                                                                  |
+| -------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| dropOnPage     | `false`                                     | FilePond will catch all files dropped on the webpage                                                         |
+| dropOnElement  | `true`                                      | Require drop on the FilePond element itself to catch the file.                                               |
+| dropValidation | `false`                                     | When enabled, files are validated before they are dropped. A file is not added when it's invalid.
+| ignoredFiles   | `['.ds_store', 'thumbs.db', 'desktop.ini']` | Ignored file names when handling dropped directories. Dropping directories is not supported on all browsers. |
 
 ### Server configuration
 

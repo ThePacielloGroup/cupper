@@ -10,43 +10,43 @@ Installation instructions for npm.
 npm install vue-filepond --save
 ```
 
-Now you can import the `<FilePond>` Component in your Vue project. The adapter automatically references FilePond methods to the Component instance so you can use the Component just like you would use FilePond itself.
+Now you can import the `<file-pond>` Component in your Vue project. The adapter automatically references FilePond methods to the Component instance so you can use the Component just like you would use FilePond itself.
 
-We can configure our pond by using the [FilePond instance properties](../../api/filepond-instance/#properties) as attributes on the `<FilePond>` Component. Note that the callback methods are not available and have been mapped to Vue events, see the example below.
+We can configure our pond by using the [FilePond instance properties](../../api/filepond-instance/#properties) as attributes on the `<file-pond>` Component. Note that the callback methods are not available and have been mapped to Vue events, see the example below.
 
 ```html
-<FilePond allow-multiple="true" max-files="3" server="/api"/>
+<file-pond allow-multiple="true" max-files="3" server="/api"/>
 ```
 
-You can see that instead of using the `multiple` attribute we use the property name `allowMultiple` and instead of `data-max-files` we use `maxFiles`.
+You can see that instead of using the `multiple` attribute we use the property name `allow-multiple` and instead of `data-max-files` we use `max-files`.
 
 Use bindings if values need to be updated in the future.
 
 ```html
 <!-- normal -->
-<FilePond v-bind:files="myFiles"/>
+<file-pond v-bind:files="myFiles"/>
 
 <!-- shorthand -->
-<FilePond :files="myFiles"/>
+<file-pond :files="myFiles"/>
 ```
 
 We can use the `v-on` to listen for events on the pond.
 
 ```html
 <!-- normal -->
-<FilePond v-on:init="handleFilePondInit"/>
+<file-pond v-on:init="handleFilePondInit"/>
 
 <!-- shorthand -->
-<FilePond @init="handleFilePondInit"/>
+<file-pond @init="handleFilePondInit"/>
 ```
 
-A more elaborate example showing the use of `data` to populate the `files` attribute and `registerPlugin` to register a plugin.
+A more elaborate example showing the use of `data` to populate the `files` attribute.
 
 ```html
 <template>
   <div id="app">
     
-    <FilePond
+    <file-pond
         name="test"
         ref="pond"
         class-name="my-pond"
@@ -61,11 +61,18 @@ A more elaborate example showing the use of `data` to populate the `files` attri
 
 <script>
 // Import FilePond
-import FilePond, { registerPlugin } from 'vue-filepond';
+import vueFilePond from 'vue-filepond';
 
-// Register a plugin
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
-registerPlugin(FilePondPluginFileValidateType);
+// Import plugins
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm.js';
+import FilePondPluginImagePreview from 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.esm.js';
+
+// Import styles
+import 'filepond/dist/filepond.min.css';
+import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
+
+// Create FilePond component
+const FilePond = vueFilePond( FilePondPluginFileValidateType, FilePondPluginImagePreview );
 
 export default {
     name: 'app',

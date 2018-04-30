@@ -215,7 +215,7 @@ const handler = (fieldName, file, metadata, load, error, progress, abort) => {
     error('oh my goodness');
 
     // Should call the progress method to update the progress to 100% before calling load
-    // (endlessMode, processedSize, totalSize)
+    // (computable, processedSize, totalSize)
     progress(true, 0, 1024);
 
     // Should call the load method when done and pass the returned server file id
@@ -256,15 +256,33 @@ const handler = (uniqueFileId, load, error) => {
 Custom load methods receive the unique server file id and a load and error callback.
 
 ```js
-const handler = (uniqueFileId, load, error) => {
+const handler = (uniqueFileId, load, error, progress, abort, headers) => {
     // Should get a file object here
     // ...
 
     // Can call the error method if something is wrong, should exit after
     error('oh my goodness');
 
-    // Should call the load method when done, no parameters required
-    load();
+    // Can call the header method to supply FilePond with early response header string
+    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
+    headers(headersString);
+
+    // Should call the progress method to update the progress to 100% before calling load
+    // (endlessMode, loadedSize, totalSize)
+    progress(true, 0, 1024);
+
+    // Should call the load method with a file object or blob when done
+    load(file);
+
+    // Should expose an abort method so the request can be cancelled
+    return {
+        abort: () => {
+            // User tapped abort, cancel our ongoing actions here
+
+            // Let FilePond know the request has been cancelled
+            abort();
+        }
+    };
 };
 ```
 
@@ -285,7 +303,7 @@ const handler = (url, load, error, progress, abort, headers) => {
     headers(headersString);
 
     // Should call the progress method to update the progress to 100% before calling load
-    // (endlessMode, loadedSize, totalSize)
+    // (computable, loadedSize, totalSize)
     progress(true, 0, 1024);
 
     // Should call the load method with a file object when done
@@ -320,7 +338,7 @@ const handler = (uniqueFileId, load, error, progress, abort, headers) => {
     headers(headersString);
 
     // Should call the progress method to update the progress to 100% before calling load
-    // (endlessMode, loadedSize, totalSize)
+    // (computable, loadedSize, totalSize)
     progress(true, 0, 1024);
 
     // Should call the load method with a file object when done
