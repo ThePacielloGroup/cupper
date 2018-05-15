@@ -39,7 +39,7 @@ This is another reason why FilePond uses unique ids. If we're going to give the 
 
 ### Restore
 
-FilePond uses the `restore` end point to restore temporary server files. This might be useful in a situation where the user closes the browser window but has not finished completing the form. Temporary files can be set with the `files` property.
+FilePond uses the `restore` end point to restore temporary server files. This might be useful in a situation where the user closes the browser window but hadn't finished completing the form. Temporary files can be set with the `files` property.
 
 Step one and two now look like this.
 
@@ -48,7 +48,7 @@ Step one and two now look like this.
 
 ### Load
 
-The `restore` end point is used to restore a temporary file, the `load` end point is used to restore already uploaded server files. These files might be located in a database or somewhere on the server file system. Either way they might not be accessible by URL.
+The `restore` end point is used to restore a temporary file, the `load` end point is used to restore already uploaded server files. These files might be located in a database or somewhere on the server file system. Either way they might not be directly accessible from the web.
 
 For situations where a user might want to edit an existing file selection we can use the `load` end point to restore those files.
 
@@ -57,7 +57,7 @@ For situations where a user might want to edit an existing file selection we can
 
 ### Fetch
 
-On to the `fetch` end point. When a user drops a remote link, FilePond asks the server to download it (CORS might otherwise block it).
+The `fetch` end point is used to load files located on remote servers. When a user drops a remote link, FilePond asks the server to download it (CORS might otherwise block it).
 
 1. **client** requests fetch of file `http://somewhere/their-file.jpg` using a `GET` request
 2. **server** returns a file object as if the file is located on the server
@@ -86,7 +86,7 @@ This tells FilePond the api is located at the same location as the current page.
 | restore | GET    | ?restore=<id> |
 | fetch   | GET    | ?fetch=<url>  |
 
-We can of course supply a path or URL to another location, FilePond will simply append the above default paths to the supplied value. If we want more fine grained control we can use an object to configure the server location.
+We can of course supply a path or URL to another location, FilePond will simply append the above default paths to the supplied value. If we want more fine grained control we can use an object to configure the server end points.
 
 ### Object Configuration
 
@@ -95,12 +95,14 @@ To setup asynchronous uploading only, we pass the location of the process end po
 ```js
 FilePond.setOptions({
     server: {
-        process: './process'
+        process: './process',
+        fetch: null,
+        revert: null
     }
 });
 ```
 
-This configuration assumes that the `process` end point is located on the same server. All additional options have been omitted. Reverting a file upload, fetching a remote file, restoring or loading an earlier uploaded file with this configuration is therefor not possible.
+This configuration assumes that the `process` end point is located on the same server. Reverting a file upload and fetching a remote file have been disabled. Restoring or loading an earlier uploaded file with this configuration is also not possible.
 
 To unlock these features we have to supply FilePond with some more end points using the `revert`, `fetch`, `load` and `restore` properties.
 
@@ -145,7 +147,8 @@ FilePond.setOptions({
             method: 'POST',
             withCredentials: false,
             headers: {},
-            timeout: 7000
+            timeout: 7000,
+            onload: null
         }
     }
 });
@@ -158,6 +161,7 @@ FilePond.setOptions({
 | withCredentials | Toggles the XMLHttpRequest withCredentials on or off | no       |
 | headers         | An object containing additional headers to send      | no       |
 | timeout         | Timeout for this action                              | no       |
+| onload          | Called when server response is received, useful for getting the unique file id from the server response | no |
 
 A more elaborate server configuration is shown below. This configuration reveals the `timeout` property as assigned to the server object. This sets it for all end points, it can also be configured per end point.
 
@@ -172,7 +176,10 @@ FilePond.setOptions({
             headers: {
                 'x-customheader': 'Hello World'
             },
-            withCredentials: false
+            withCredentials: false,
+            onload: function(response) => {
+                return response.key;
+            }
         },
         revert: './revert',
         restore: './restore/',
@@ -198,7 +205,7 @@ FilePond.setOptions({
 
 ## Advanced
 
-If we require more control we can configure each end point as a function instead of an object. FilePond will then run our function and supply callback methods to control the FilePond interface.
+If we require even more control we can configure each end point as a function instead of an object. FilePond will then run our function and supply callback methods to control the FilePond interface.
 
 Note that in the examples below we make use of [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), these can of course also be written as a classic function.
 
