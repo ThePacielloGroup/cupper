@@ -50,5 +50,7 @@ import FilepondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 Property | Default | Description
 ---------|---------|---------
 allowFileTypeValidation | `true` | Enable or disable file type validation
-acceptedFileTypes | `[]` | Array of accepted file types. Can be mime types, wild cards or extensions. For instance `['image/*']` will accept all images. `['image/png', 'image/jpeg']` will only accepts `PNGs` and `JPEGs`. 
+acceptedFileTypes | `[]` | Array of accepted file types. Can be mime types or wild cards. For instance `['image/*']` will accept all images. `['image/png', 'image/jpeg']` will only accepts `PNGs` and `JPEGs`. 
 labelFileTypeNotAllowed | `'File of invalid type'` | Message shown when an invalid file is added
+fileValidateTypeLabelExpectedTypes | `'Expects {allButLastType} or {lastType}'` | Message shown to indicate the allowed file types. Available placeholders are `{allTypes}`, `{allButLastType}`, `{lastType}`.
+fileValidateTypeLabelExpectedTypesMap | `{}` | Allows mapping the file type to a more visually appealing label, `{ 'image/jpeg': '.jpg' }` will show `.jpg` in the expected types label. Set to `null` to hide a type from the label.

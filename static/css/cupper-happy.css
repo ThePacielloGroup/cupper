@@ -65,6 +65,10 @@ td {
     border: 1px solid #e6e9e6;
 }
 
+td:first-child {
+    word-break: break-all;
+}
+
 fieldset {
     padding: 1em;
 }
