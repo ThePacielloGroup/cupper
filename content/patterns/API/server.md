@@ -148,7 +148,8 @@ FilePond.setOptions({
             withCredentials: false,
             headers: {},
             timeout: 7000,
-            onload: null
+            onload: null,
+            onerror: null
         }
     }
 });
@@ -162,6 +163,7 @@ FilePond.setOptions({
 | headers         | An object containing additional headers to send      | no       |
 | timeout         | Timeout for this action                              | no       |
 | onload          | Called when server response is received, useful for getting the unique file id from the server response | no |
+| onerror         | Called when server error is received, receis the response body, useful to select the relevant error data | no |
 
 A more elaborate server configuration is shown below. This configuration reveals the `timeout` property as assigned to the server object. This sets it for all end points, it can also be configured per end point.
 
@@ -179,6 +181,9 @@ FilePond.setOptions({
             withCredentials: false,
             onload: function(response) => {
                 return response.key;
+            },
+            onload: function(response) => {
+                return response.data;
             }
         },
         revert: './revert',
@@ -247,7 +252,7 @@ Custom revert methods receive the unique server file id and a load and error cal
 
 ```js
 const handler = (uniqueFileId, load, error) => {
-    // Should get a file object here
+    // Should remove the earlier created temp file here
     // ...
 
     // Can call the error method if something is wrong, should exit after
@@ -264,7 +269,7 @@ Custom load methods receive the unique server file id and a load and error callb
 
 ```js
 const handler = (uniqueFileId, load, error, progress, abort, headers) => {
-    // Should get a file object here
+    // Should request a file object here
     // ...
 
     // Can call the error method if something is wrong, should exit after

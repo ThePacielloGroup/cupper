@@ -11,6 +11,7 @@ The `addFile`, `getFile` and `processFile` methods will return `File` objects. W
 | ------------------------ | --------------------------------------------------------------------------------------------------- |
 | id                       | Returns the id of the file                                                                          |
 | serverId                 | Returns the server id of the file                                                                   |
+| origin                   | Returns the origin of the file, either `input` ( added by user ), `limbo` ( temporary server file ) or `local` ( existing server file ) |
 | status                   | Returns the current status of the file, use the `FilePond.FileStatus` enum to determine the status. |
 | file                     | Returns the `File` object                                                                           |
 | fileExtension            | Returns the file extension                                                                          |

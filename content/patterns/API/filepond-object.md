@@ -22,8 +22,9 @@ The FilePond object is the object available after importing FilePond in your pro
 
 | Property   | Description                                                                                               |
 | ---------- | --------------------------------------------------------------------------------------------------------- |
-| FileStatus | A file status enum to use together with the `File.getStatus` method to determine the current file status. |
-| OptionTypes | Returns the type of the available options |
+| FileOrigin | An enum to use together with the File `origin` property to determine the file origin. |
+| FileStatus | An enum to use together with the File `status` method to determine the current file status. |
+| OptionTypes | Returns an object describing all the available options and their types, useful for writing FilePond adapters |
 
 ## Events
 
