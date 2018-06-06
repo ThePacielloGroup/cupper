@@ -17,6 +17,7 @@ Plugins can be registered with FilePond using the `registerPlugin` method. Read 
 
 | Plugin                                              | Name                                   | Description                                                                                    |
 | --------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [File Rename](../file-rename)                       | filepond-plugin-file-rename | Rename files on the client
 | [File Encode](../file-encode)                       | filepond-plugin-file-encode            | Encodes files as base64 data for submitting along a classic form post.                         |
 | [File Size Validation](../file-validate-size)       | filepond-plugin-file-validate-size     | Limit the size of files being added                                                            |
 | [File Type Validation](../file-validate-type)       | filepond-plugin-file-validate-type     | Limit the types of files being added                                                           |
