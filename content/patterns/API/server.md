@@ -15,10 +15,10 @@ Asynchronously uploading files with FilePond is called processing. In short, Fil
 
 The upload process described over time:
 
-1. **client** uploads file `my-file.jpg` as `multipart/form-data` using a `POST` request
+1. **FilePond** uploads file `my-file.jpg` as `multipart/form-data` using a `POST` request
 2. **server** saves file to unique location `tmp/12345/my-file.jpg`
 3. **server** returns unique location id `12345` in `text/plain` response
-4. **client** stores unique id `12345` in a hidden input field
+4. **FilePond** stores unique id `12345` in a hidden input field
 5. **client** submits the FilePond parent form containing the hidden input field with the unique id
 6. **server** uses the unique id to move `tmp/12345/my-file.jpg` to its final location and remove the `tmp/12345` folder
 
@@ -31,7 +31,7 @@ FilePond uses unique file ids to prevent showing information about the server fi
 There's one way the **client** can deviate from the previous path and that is by reverting the upload. Let's go back to step five and switch to this alternate reality.
 
 <ol start="5">
-<li><strong>client</strong> sends <code>DELETE</code> request with <code>12345</code> as body by tapping the undo button
+<li><strong>FilePond</strong> sends <code>DELETE</code> request with <code>12345</code> as body by tapping the undo button
 <li><strong>server</strong> removes temporary folder matching the supplied id <code>tmp/12345</code> and returns an empty response
 </ol>
 
@@ -43,7 +43,7 @@ FilePond uses the `restore` end point to restore temporary server files. This mi
 
 Step one and two now look like this.
 
-1. **client** requests restore of file with id `12345` using a `GET` request
+1. **FilePond** requests restore of file with id `12345` using a `GET` request
 2. **server** returns a file object with header `Content-Disposition: inline; filename=my-file.jpg`
 
 ### Load
@@ -52,14 +52,14 @@ The `restore` end point is used to restore a temporary file, the `load` end poin
 
 For situations where a user might want to edit an existing file selection we can use the `load` end point to restore those files.
 
-1. **client** requests restore of file with id `12345` or a file name using a `GET` request
+1. **FilePond** requests restore of file with id `12345` or a file name using a `GET` request
 2. **server** returns a file object with header `Content-Disposition: inline; filename=my-file.jpg`
 
 ### Fetch
 
 The `fetch` end point is used to load files located on remote servers. When a user drops a remote link, FilePond asks the server to download it (CORS might otherwise block it).
 
-1. **client** requests fetch of file `http://somewhere/their-file.jpg` using a `GET` request
+1. **FilePond** requests fetch of file `http://somewhere/their-file.jpg` using a `GET` request
 2. **server** returns a file object as if the file is located on the server
 
 ## Configuration
@@ -216,7 +216,7 @@ Note that in the examples below we make use of [arrow functions](https://develop
 
 ### Process
 
-Custom `process` functions receive a `file` object plus a set of FilePond callback methods to return control to FilePond.
+Custom `process` function receives a `file` object plus a set of FilePond callback methods to return control to FilePond. The `file` parameter contains the native file object and access to it is restricted in the `process` function to prevent setting properties or running functions that would would contradict or interfere with the current processing of the file.
 
 ```js
 const handler = (fieldName, file, metadata, load, error, progress, abort) => {
@@ -229,8 +229,11 @@ const handler = (fieldName, file, metadata, load, error, progress, abort) => {
     // Should call the progress method to update the progress to 100% before calling load
     // (computable, processedSize, totalSize)
     progress(true, 0, 1024);
+    // progress(false) switches the loading indicator to infinite mode
+
 
     // Should call the load method when done and pass the returned server file id
+    // the load method accepts either a string (id) or an object
     // the unique server file id is used by revert and restore functions
     load('unique-file-id');
 

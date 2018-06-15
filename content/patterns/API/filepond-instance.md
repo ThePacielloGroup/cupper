@@ -223,7 +223,7 @@ pond.addFiles('./my-file.jpg', './my-documents.zip', { index: 0 });
 pond.addFiles(['./my-file.jpg', './my-documents.zip'], { index: 0 });
 ```
 
-As state earlier the `addFile` method also accepts Blobs, File objects and DataURLs.
+As stated earlier the `addFile` method also accepts Blobs, File objects and DataURLs.
 
 ```js
 // Adding a basic DataURL
@@ -258,7 +258,7 @@ pond
 
 We can trigger manual processing of files using the `processFile` method.
 
-Files can be removed by `id`, `index` or `file`. A parameter is not required.
+Files can be processed by `id`, `index` or `file`. A parameter is not required.
 
 ```js
 // processes the first file

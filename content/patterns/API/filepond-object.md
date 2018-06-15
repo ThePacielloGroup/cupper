@@ -292,6 +292,7 @@ FilePond.registerPlugin(
     FilePondPluginImagePreview,
     FilePondPluginFileValidateSize
 );
+// create a FilePond instance here
 ```
 
 A plugin will fire a `FilePond:pluginloaded` event on the document when it's ready for use. The event `detail` property will contain the plugin.
