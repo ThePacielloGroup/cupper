@@ -216,7 +216,7 @@ Note that in the examples below we make use of [arrow functions](https://develop
 
 ### Process
 
-Custom `process` function receives a `file` object plus a set of FilePond callback methods to return control to FilePond. The `file` parameter contains the native file object and access to it is restricted in the `process` function to prevent setting properties or running functions that would would contradict or interfere with the current processing of the file.
+The custom `process` function receives a `file` object plus a set of FilePond callback methods to return control to FilePond. The `file` parameter contains the native file object (instead of a FilePond file item) access the file item is restricted in the `process` function to prevent setting properties or running functions that would would contradict or interfere with the current processing of the file.
 
 ```js
 const handler = (fieldName, file, metadata, load, error, progress, abort) => {
@@ -227,9 +227,9 @@ const handler = (fieldName, file, metadata, load, error, progress, abort) => {
     error('oh my goodness');
 
     // Should call the progress method to update the progress to 100% before calling load
+    // Setting computable to false switches the loading indicator to infinite mode
     // (computable, processedSize, totalSize)
     progress(true, 0, 1024);
-    // progress(false) switches the loading indicator to infinite mode
 
 
     // Should call the load method when done and pass the returned server file id
