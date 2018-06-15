@@ -294,6 +294,10 @@ FilePond.registerPlugin(
 );
 ```
 
+{{% note %}}
+Plugins need to be registered before we create our first FilePond instance.
+{{% /note %}}
+
 A plugin will fire a `FilePond:pluginloaded` event on the document when it's ready for use. The event `detail` property will contain the plugin.
 
 ```js
@@ -301,7 +305,3 @@ document.addEventListener('FilePond:pluginloaded', e => {
     console.log('FilePond plugin is ready for use', e.detail);
 });
 ```
-
-{{% note %}}
-Plugins need to be registered before we create our first FilePond instance.
-{{% /note %}}
