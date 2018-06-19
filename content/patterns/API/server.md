@@ -44,7 +44,7 @@ FilePond uses the `restore` end point to restore temporary server files. This mi
 Step one and two now look like this.
 
 1. **FilePond** requests restore of file with id `12345` using a `GET` request
-2. **server** returns a file object with header `Content-Disposition: inline; filename=my-file.jpg`
+2. **server** returns a file object with header `Content-Disposition: inline; filename="my-file.jpg"`
 
 ### Load
 
@@ -53,7 +53,7 @@ The `restore` end point is used to restore a temporary file, the `load` end poin
 For situations where a user might want to edit an existing file selection we can use the `load` end point to restore those files.
 
 1. **FilePond** requests restore of file with id `12345` or a file name using a `GET` request
-2. **server** returns a file object with header `Content-Disposition: inline; filename=my-file.jpg`
+2. **server** returns a file object with header `Content-Disposition: inline; filename="my-file.jpg"`
 
 ### Fetch
 

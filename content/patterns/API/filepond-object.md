@@ -121,7 +121,7 @@ The files property takes an array of file references, it accepts the same format
 
 It extends this selection with the option to add server files.
 
-Adding a temporary server file. The `limbo` type will direct the load request to the `restore` end point.
+Adding a temporary server file. The `limbo` type will direct the load request to the [server API restore end point](../server/#restore).
 
 ```js
 const pond = FilePond.create({
@@ -139,7 +139,7 @@ const pond = FilePond.create({
 });
 ```
 
-Adding an already uploaded server file. The `local` type will direct the load request to the `load` end point.
+Adding an already uploaded server file. The `local` type will direct the load request to the [server API load end point](../server/#load).
 
 ```js
 const pond = FilePond.create({
@@ -156,6 +156,60 @@ const pond = FilePond.create({
     ]
 });
 ```
+
+You can also mock the file by supplying file information in the `options` object. FilePond will now create a mock item, and won't load the file data.
+
+```js
+const pond = FilePond.create({
+    files: [
+        {
+            // the server file reference
+            source: '12345',
+
+            // set type to local to indicate an already uploaded file
+            options: {
+                type: 'local',
+
+                // mock file information
+                file: {
+                    name: 'my-file.png',
+                    size: 3001025,
+                    type: 'image/png'
+                }
+            }
+        }
+    ]
+});
+```
+
+{{% note %}}
+Note that this will impact the way plugins render or process the file as no actual file data is available.
+{{% /note %}}
+
+If you want to supply initial metadata to a loaded (or mocked) server file you can do so with the `metadata` property. The following example will create a `date` entry in the FilePond file item metadata object.
+
+```js
+const pond = FilePond.create({
+    files: [
+        {
+            // the server file reference
+            source: '12345',
+
+            // set type to local to indicate an already uploaded file
+            options: {
+                type: 'local',
+
+                // file initial metadata
+                metadata: {
+                    date: '2018-10-5T12:00'
+                }
+            }
+        }
+    ]
+});
+```
+
+
 
 Fitting with the progressive enhancement strategy FilePond adheres to, it's also possible to feed FilePond an initial file using HTML.
 
