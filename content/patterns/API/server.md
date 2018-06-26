@@ -163,7 +163,7 @@ FilePond.setOptions({
 | headers         | An object containing additional headers to send      | no       |
 | timeout         | Timeout for this action                              | no       |
 | onload          | Called when server response is received, useful for getting the unique file id from the server response | no |
-| onerror         | Called when server error is received, receis the response body, useful to select the relevant error data | no |
+| onerror         | Called when server error is received, receives the response body, useful to select the relevant error data | no |
 
 A more elaborate server configuration is shown below. This configuration reveals the `timeout` property as assigned to the server object. This sets it for all end points, it can also be configured per end point.
 
@@ -182,7 +182,7 @@ FilePond.setOptions({
             onload: function(response) => {
                 return response.key;
             },
-            onload: function(response) => {
+            onerror: function(response) => {
                 return response.data;
             }
         },

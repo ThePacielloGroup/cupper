@@ -2,7 +2,7 @@
 title = "File rename"
 +++
 
-The File Rename plugin handles allows us to rename files before they are added to FilePond.
+The File Rename plugin allows us to rename files before they are added to FilePond.
 
 
 ## Installation
