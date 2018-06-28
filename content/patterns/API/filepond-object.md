@@ -157,7 +157,7 @@ const pond = FilePond.create({
 });
 ```
 
-You can also mock the file by supplying file information in the `options` object. FilePond will now create a mock item, and won't load the file data.
+You can also mock the file by supplying file information in the `options` object, this will be the same information FilePond otherwise fetches from the server. FilePond will now create a mock file item, and won't load the file data.
 
 ```js
 const pond = FilePond.create({
@@ -186,7 +186,7 @@ const pond = FilePond.create({
 Note that this will impact the way plugins render or process the file as no actual file data is available.
 {{% /note %}}
 
-If you want to supply initial metadata to a loaded (or mocked) server file you can do so with the `metadata` property. The following example will create a `date` entry in the FilePond file item metadata object.
+If you want to supply initial metadata to a loaded file (accessible using `setMetadata` and `getMetadata` on the file item) you can do so with the `metadata` property. The following example will create a `date` entry in the FilePond file item metadata object.
 
 ```js
 const pond = FilePond.create({
@@ -207,9 +207,10 @@ const pond = FilePond.create({
         }
     ]
 });
+
+// get the data of the first file
+const date = pond.getFile().getMetadata('date');
 ```
-
-
 
 Fitting with the progressive enhancement strategy FilePond adheres to, it's also possible to feed FilePond an initial file using HTML.
 
