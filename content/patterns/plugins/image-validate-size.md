@@ -54,4 +54,4 @@ imageValidateSizeMaxHeight | `65535` | The maximum image height.
 imageValidateSizeLabelImageSizeTooSmall | `'Image is too small'` | The message shown when the image is too small.
 imageValidateSizeLabelImageSizeTooBig | `'Image is too big'` | The message shown when the image is too big.
 imageValidateSizeLabelExpectedMinSize | `'Minimum size is {minWidth} × {minHeight}'` | Message shown to indicate the minimum image size.
-imageValidateSizeLabelExpectedMaxSize | `'Minimum size is {maxWidth} × {maxHeight}'` | Message shown to indicate the maximum image size.
+imageValidateSizeLabelExpectedMaxSize | `'Maximum size is {maxWidth} × {maxHeight}'` | Message shown to indicate the maximum image size.
