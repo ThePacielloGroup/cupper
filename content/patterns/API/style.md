@@ -5,7 +5,7 @@ weight = 1
 
 ## Fonts and colors
 
-FilePond is quite oppinionated about its layout but fonts, colors, border-radius and paddings can be finetuned without problem.
+FilePond is quite opinionated about its layout but fonts, colors, border-radius and paddings can be finetuned without problem.
 
 FilePond's default font stack is set to the system font stack. This makes it as light weight as possible and familiar to the user.
 
