@@ -39,7 +39,7 @@ The FilePond core module exposes the following properties.
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | server        | `null`  | [Server API configuration](../server)                                                                                           |
 | instantUpload | `true`  | Immidiately upload new files to the server                                                                                      |
-| files         | `[]`    | A list of file locations that should be loaded immidiately, read more about [setting the initial files](#setting-initial-files) |
+| files         | `[]`    | A list of file locations that should be loaded immidiately, read more about [setting the initial files](../filepond-object/#setting-initial-files) |
 
 ### Labels
 
