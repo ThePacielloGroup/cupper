@@ -226,8 +226,8 @@ pond.addFiles(['./my-file.jpg', './my-documents.zip'], { index: 0 });
 As stated earlier the `addFile` method also accepts Blobs, File objects and DataURLs.
 
 ```js
-// Adding a basic DataURL
-pond.addFile('data:,Hello%2C%20World!');
+// Adding a basic base64 encoded DataURL
+pond.addFile('data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==');
 
 // Adding a Blob or File
 const data = { hello: 'world' };
