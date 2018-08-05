@@ -48,13 +48,19 @@ Using the `<File>` Component we can programmatically update the current files li
 ```js
 <FilePond>
     {/* a random file to load immidiately */}
-    <File source="kitten.jpeg"/>
+    <File src="kitten.jpeg"/>
 
     {/* a temporary file already available on the server */}
-    <File source="12345" type="limbo"/>
+    <File src="12345" origin="limbo"/>
 
     {/* a file already uploaded to the server */}
-    <File source="12345" type="local"/>
+    <File src="12345" origin="local"/>
+
+    {/* mock file data so the file is not downloaded from the server */}
+    <File src="12345" origin="local" name="cat.jpeg" size={700100} type="image/jpeg"/>
+
+    {/* add metadata */}
+    <File src="12345" origin="local" metadata={{date:'2019-01-01T12:00'}}/>
 </FilePond>
 ```
 
@@ -99,7 +105,7 @@ class App extends Component {
                     
                     {/* // Set current files using the <File/> component */}
                     {this.state.files.map(file => (
-                        <File key={file} source={file} />
+                        <File key={file} src={file} />
                     ))}
                     
                 </FilePond>
