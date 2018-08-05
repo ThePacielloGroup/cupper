@@ -179,10 +179,10 @@ FilePond.setOptions({
                 'x-customheader': 'Hello World'
             },
             withCredentials: false,
-            onload: function(response) => {
+            onload: function(response) {
                 return response.key;
             },
-            onerror: function(response) => {
+            onerror: function(response) {
                 return response.data;
             }
         },
