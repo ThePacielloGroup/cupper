@@ -28,7 +28,7 @@ The FilePond object is the object available after importing FilePond in your pro
 
 ## Events
 
-The Filepond object fires a `FilePond:loaded` event when it's ready. This is useful when we're directly embedding filepond on a page using a `defer` or `async` attribute on the `<script>` tag. In those situations the script will be loaded asynchronous so it might not be available on document ready.
+The FilePond object fires a `FilePond:loaded` event when it's ready. This is useful when we're directly embedding filepond on a page using a `defer` or `async` attribute on the `<script>` tag. In those situations the script will be loaded asynchronous so it might not be available on document ready.
 
 The event `detail` property will contain the FilePond API.
 

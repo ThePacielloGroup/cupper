@@ -17,7 +17,7 @@ Now we can add the Image Resize plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginImageResize from 'filepond-plugin-image-resize';
+import FilePondPluginImageResize from 'filepond-plugin-image-resize';
 ```
 
 

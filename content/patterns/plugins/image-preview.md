@@ -20,7 +20,7 @@ Now we can add the Image Preview plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginImagePreview from 'filepond-plugin-image-preview';
+import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 
 // Import the plugin styles
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';

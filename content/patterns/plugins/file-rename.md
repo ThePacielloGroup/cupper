@@ -15,7 +15,7 @@ Now we can add the File Rename plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginFileRename from 'filepond-plugin-file-rename';
+import FilePondPluginFileRename from 'filepond-plugin-file-rename';
 ```
 
 

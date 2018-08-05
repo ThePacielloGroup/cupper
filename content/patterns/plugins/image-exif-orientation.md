@@ -16,7 +16,7 @@ Now we can add the Image EXIF Orientation plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
+import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
 ```
 
 

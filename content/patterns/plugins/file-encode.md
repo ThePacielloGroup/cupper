@@ -53,7 +53,7 @@ Now we can add the File Encode plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginFileEncode from 'filepond-plugin-file-encode';
+import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
 ```
 
 

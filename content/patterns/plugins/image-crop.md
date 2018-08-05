@@ -16,7 +16,7 @@ Now we can add the Image Crop plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginImageCrop from 'filepond-plugin-image-crop';
+import FilePondPluginImageCrop from 'filepond-plugin-image-crop';
 ```
 
 

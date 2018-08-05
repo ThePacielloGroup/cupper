@@ -17,7 +17,7 @@ Now we can add the File Poster plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginFilePoster from 'filepond-plugin-file-poster';
+import FilePondPluginFilePoster from 'filepond-plugin-file-poster';
 
 // Import the plugin styles
 import 'filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css';

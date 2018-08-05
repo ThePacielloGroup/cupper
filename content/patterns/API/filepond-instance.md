@@ -95,7 +95,7 @@ The FilePond core module exposes the following properties.
 
 ## Events
 
-Filepond exposes the following events, they're the same as the callback methods. The event `detail` property will contain the relevant event information. We can subscribe to them by listing on the root node.
+FilePond exposes the following events, they're the same as the callback methods. The event `detail` property will contain the relevant event information. We can subscribe to them by listing on the root node.
 
 ```js
 const pond = document.querySelector('.filepond--root');
@@ -148,7 +148,7 @@ DOM manipulation
 
 Event Methods
 
-Filepond provides the `on`, `onOnce` and `off` methods as an alternative way to listen for events. We can listen for the same events but can do so without adding the `'FilePond:'` prefix. Parameters received by the hanlder functions are the same as defined on the [callback methods](#callbacks).
+FilePond provides the `on`, `onOnce` and `off` methods as an alternative way to listen for events. We can listen for the same events but can do so without adding the `'FilePond:'` prefix. Parameters received by the hanlder functions are the same as defined on the [callback methods](#callbacks).
 
 ```js
 // 'addfile' instead of 'FilePond:addfile'

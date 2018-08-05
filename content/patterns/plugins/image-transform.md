@@ -15,7 +15,7 @@ Now we can add the Image Transform plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginImageTransform from 'filepond-plugin-image-transform';
+import FilePondPluginImageTransform from 'filepond-plugin-image-transform';
 ```
 
 

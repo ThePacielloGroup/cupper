@@ -17,7 +17,7 @@ Now we can add the File Metadata plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginFileMetadata from 'filepond-plugin-file-metadata';
+import FilePondPluginFileMetadata from 'filepond-plugin-file-metadata';
 ```
 
 

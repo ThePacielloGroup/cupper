@@ -15,7 +15,7 @@ Now we can add the File Validate Size plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
+import FilePondPluginFileValidateSize from 'filepond-plugin-file-validate-size';
 ```
 
 

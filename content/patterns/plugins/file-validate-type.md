@@ -17,7 +17,7 @@ Now we can add the File Validate Type plugin to our project like this.
 
 ```js
 // Import the plugin code
-import FilepondPluginFileValidateType from 'filepond-plugin-file-validate-type';
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 ```
 
 
