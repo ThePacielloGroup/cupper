@@ -6,6 +6,10 @@ Retrieves the EXIF orientation data from JPEG images. This helps in correctly or
 
 The [Image preview](../image-preview) plugin uses this information to show the correct preview. The [Image transform](../image-transform) plugin uses this information to transform the image before uploading it to the server.
 
+{{% warning %}}
+As other plugins use the information read by the EXIF orientation plugin please register this plugin first.
+{{% /warning %}}
+
 ## Installation
 
 ### Using npm
