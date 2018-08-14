@@ -55,9 +55,19 @@ FilePond.setOptions({
 })
 ```
 
+You can also return a `Promise` and do asynchronous file renaming.
+
+```js
+FilePond.setOptions({
+    fileRenameFunction: file => new Promise(resolve => {
+        resolve(window.prompt('Enter new filename', file.name))
+    })
+})
+```
+
 ## Properties
 
 Property | Default | Description
 ---------|---------|---------
 allowFileRename | `true` | Enable or disable file renaming
-fileRenameFunction | `null` | A function that receives an objecting containing file information like `basename`, `extension` and `name`, return value should be the output filename.
+fileRenameFunction | `null` | A function that receives an objecting containing file information like `basename`, `extension` and `name`. It should return either a string value or a Promise that resolves with a string value.
