@@ -2,7 +2,7 @@
 title = "Angular"
 +++
 
-The FilePond Angular Component functions as a tiny adapter for the FilePond object so it's easier to use with Angular.
+The FilePond Angular Component functions has a tiny adapter for the FilePond object so it's easier to use with Angular.
 
 Installation instructions for npm.
 
