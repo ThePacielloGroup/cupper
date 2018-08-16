@@ -28,7 +28,7 @@ The FilePond object is the object available after importing FilePond in your pro
 
 ## Events
 
-The FilePond object fires a `FilePond:loaded` event when it's ready. This is useful when we're directly embedding filepond on a page using a `defer` or `async` attribute on the `<script>` tag. In those situations the script will be loaded asynchronous so it might not be available on document ready.
+The FilePond object fires a `FilePond:loaded` event when it's ready. This is useful when we're directly embedding filepond on a page using a `defer` or `async` attribute on the `<script>` tag. In those situations the script will be loaded asynchronously so it might not be available on document ready.
 
 The event `detail` property will contain the FilePond API.
 
@@ -42,7 +42,7 @@ document.addEventListener('FilePond:loaded', e => {
 
 ### Enhancing an HTML element
 
-The `create` method can be used to turn an element into a FilePond element. Pass an element reference as the first argument and presto!.
+The `create` method can be used to turn an element into a FilePond element. Pass an element reference as the first argument and presto!
 
 We can still pass options to our instance by using data attributes.
 
@@ -111,7 +111,7 @@ pond.appendTo(document.body);
 
 ### Setting initial files
 
-You can populate FilePond with a set of initial files using the `files` property. This property is suitable for restoring earlier temporary uploads or already upload files. While the `files` property can also be populates with new files, it is adviced to add new files using the `addFile` and `addFiles` methods.
+You can populate FilePond with a set of initial files using the `files` property. This property is suitable for restoring earlier temporary uploads or already uploaded files. While the `files` property can also be populated with new files, it is advised to add new files using only the `addFile` and `addFiles` methods.
 
 The files property takes an array of file references, it accepts the same formats as the `addFile` method.
 
@@ -157,7 +157,7 @@ const pond = FilePond.create({
 });
 ```
 
-You can also mock the file by supplying file information in the `options` object, this will be the same information FilePond otherwise fetches from the server. FilePond will now create a mock file item, and won't load the file data.
+You can also mock the file by supplying file information in the `options` object, this will be the same information that FilePond otherwise fetches from the server. FilePond will now create a mock file item, and won't load the file data.
 
 ```js
 const pond = FilePond.create({

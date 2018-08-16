@@ -2,7 +2,7 @@
 title = "jQuery"
 +++
 
-The FilePond jQuery adapter transforms the standard FilePond API into a jQuery plguin API.
+The FilePond jQuery adapter transforms the standard FilePond API into a jQuery plugin API.
 
 Installation instructions for npm.
 
@@ -59,7 +59,7 @@ $(function(){
   });
 ```
 
-Using the static FilePond api we can register plugins and change default settings.
+Using the static FilePond API we can register plugins and change default settings.
 
 ```js
 $(function(){
