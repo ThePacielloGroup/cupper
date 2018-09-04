@@ -9,7 +9,7 @@ Ensure you've installed FilePond by following the [installation instructions](..
 
 We'll assume the `FilePond` object is available and loaded before these snippets are executed.
 
-Use the `create` method to [progressively enhance](../browser-support//#progressive-enhancement) a basic file input in to a FilePond element. The target (in this case the file input element) will automatically be replaced by a FilePond element.
+Use the `create` method to [progressively enhance](../browser-support//#progressive-enhancement) a basic file input into a FilePond element. The target (in this case the file input element) will automatically be replaced by a FilePond element.
 
 ```html
 <input type="file">

@@ -3,7 +3,7 @@ title = "Introduction"
 weight = 1
 +++
 
-FilePonds functionality can be extended with plugins.
+FilePond's functionality can be extended with plugins.
 
 Each plugin is located in its own GitHub repository and follows a specific naming convention.
 
