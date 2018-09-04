@@ -51,6 +51,7 @@ imageValidateSizeMinWidth | `1` | The minimum image width.
 imageValidateSizeMaxWidth | `65535` | The maximum image width.
 imageValidateSizeMinHeight | `1` | The minimum image height.
 imageValidateSizeMaxHeight | `65535` | The maximum image height.
+imageValidateSizeLabelFormatError | `'Image type not supported'` | The message shown when the image is not supported by the browser.
 imageValidateSizeLabelImageSizeTooSmall | `'Image is too small'` | The message shown when the image is too small.
 imageValidateSizeLabelImageSizeTooBig | `'Image is too big'` | The message shown when the image is too big.
 imageValidateSizeLabelExpectedMinSize | `'Minimum size is {minWidth} × {minHeight}'` | Message shown to indicate the minimum image size.
