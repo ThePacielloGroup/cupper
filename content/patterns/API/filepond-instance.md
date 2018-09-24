@@ -67,6 +67,7 @@ The FilePond core module exposes the following properties.
 | labelButtonRetryItemProcessing | `'Retry'`                                                                          | Label used for retry upload button                                                                                                                               |
 | labelButtonProcessItem         | `'Upload'`                                                                         | Label used for upload button                                                                                                                                     |
 
+
 ### SVG Icons
 
 | Property    | Default         | Description                       |
@@ -75,6 +76,7 @@ The FilePond core module exposes the following properties.
 | iconProcess | `'<svg></svg>'` | The icon used for process actions |
 | iconRetry   | `'<svg></svg>'` | The icon used for retry actions   |
 | iconUndo    | `'<svg></svg>'` | The icon used for undo actions    |
+
 
 ### Callbacks
 
@@ -91,7 +93,16 @@ The FilePond core module exposes the following properties.
 | onprocessfileabort    | `(file)`                  | Aborted processing of a file                                                                                                                                       |
 | onprocessfileundo     | `(file)`                  | Processing of a file has been undone                                                                                                                               |
 | onprocessfile         | `(error, file)`           | If no error, Processing of a file has been completed                                                                                                               |
-| onremovefile          | `(file)`                  | File has been removed                                                                                                                                              |
+| onremovefile          | `(file)`                  | File has been removed.                                                                                                                                              |
+
+
+### Hooks
+
+| Property              | Function                  | Description                                                                                                                                                        |
+| --------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| beforeRemoveFile      | `(item)`                  | FilePond is about to remove this file, return `false` to prevent removal, or return a `Promise` and resolve with `true` or `false`.                                |
+
+
 
 ## Events
 
