@@ -93,7 +93,9 @@ The FilePond core module exposes the following properties.
 | onprocessfileabort    | `(file)`                  | Aborted processing of a file                                                                                                                                       |
 | onprocessfileundo     | `(file)`                  | Processing of a file has been undone                                                                                                                               |
 | onprocessfile         | `(error, file)`           | If no error, Processing of a file has been completed                                                                                                               |
-| onremovefile          | `(file)`                  | File has been removed.                                                                                                                                              |
+| onremovefile          | `(file)`                  | File has been removed.                                                                                                                                             |
+| onpreparefile         | `(file, output)`          | File has been transformed by the transform plugin or another plugin subscribing to the prepare_output filter. It receives the file item and the output data.       |                                                                                                                                        |
+| onupdatefiles         | `(items)`                 | A file has been added or removed, receives a list of file items |
 
 
 ### Hooks
@@ -129,6 +131,7 @@ pond.addEventListener('FilePond:addfile', e => {
 | FilePond:processfileundo     | Processing of a file has been undone                                                                                                                               |
 | FilePond:processfile         | Finished processing a file, if the detail object contains an error property, something went wrong                                                                  |
 | FilePond:removefile          | File has been removed                                                                                                                                              |
+| FilePond:updatefiles         | A file has been added or removed
 
 ## Methods
 
@@ -141,8 +144,8 @@ pond.addEventListener('FilePond:addfile', e => {
 | [removeFiles](#removing-files)    |                      | Removes all files                                     |
 | [processFile](#processing-files)  | `query`              | Starts processing the file matching the given `query` |
 | [processFiles](#processing-files) |                      | Starts processing all files                           |
-| getFile                           | `query`              | Returns the file matching the supplied `query`        |
-| getFiles                          |                      | Returns all files                                     |
+| [getFile](#getting-files)         | `query`              | Returns the file matching the supplied `query`        |
+| [getFiles](#getting-files)        |                      | Returns all files                                     |
 | browse                            |                      | Opens the browse file dialog                          |
 | destroy                           |                      | Destroys this FilePond instance                       |
 
@@ -199,6 +202,7 @@ const pond = FilePond.create();
 pond.maxFiles = 10;
 pond.required = true;
 ```
+
 
 ### Adding files
 
@@ -304,6 +308,31 @@ pond.processFiles().then(files => {
 });
 ```
 
+
+### Getting files
+
+We can get access to a file by `id` or `index`. A parameter is not required.
+
+```js
+// returns the first file item
+pond.getFile();
+
+// returns the file item at index 1
+pond.getFile(1);
+
+// returns the file item with the given id
+pond.getFile('imzsdvxar');
+```
+
+Get all files with the `getFiles` method.
+
+```js
+// returns all files currently in the list
+pond.getFiles();
+```
+
+
+
 ### Removing files
 
 Files can be removed by `id`, `index` or `file`. A parameter is not required.
@@ -311,13 +340,13 @@ Files can be removed by `id`, `index` or `file`. A parameter is not required.
 If we don't supply a parameter to the `removeFile` method FilePond removes the first file in the file list.
 
 ```js
-// removes the first file
+// removes the first file item
 pond.removeFile();
 
-// removes the file at index 1
+// removes the file item at index 1
 pond.removeFile(1);
 
-// removes the file with the given id
+// removes the file item with the given id
 pond.removeFile('imzsdvxar');
 ```
 

@@ -7,7 +7,7 @@ The FilePond React Component functions as a tiny adapter for the FilePond object
 Installation instructions for npm.
 
 ```bash
-npm install react-filepond --save
+npm install react-filepond filepond --save
 ```
 
 Now you can import the `<FilePond>` Component and add it to your `.jsx` files.
@@ -26,7 +26,7 @@ We can configure our pond by using the [FilePond instance properties](../../api/
 <FilePond allowMultiple={true} maxFiles={3} server='/api'/>
 ```
 
-We can use the callback properties to listen for events on the pond.
+We can use the [callback properties](../../api/filepond-instance/#callbacks) to listen for events on the pond.
 
 ```js
 <FilePond oninit={() => this.handleInit() }/>
@@ -64,6 +64,17 @@ Using the `<File>` Component we can programmatically update the current files li
 </FilePond>
 ```
 
+We can use the `onupdatefiles` callback to sync the FilePond files with our own state.
+
+```js
+<FilePond onupdatefiles={(fileItems) => {
+    setState({
+        files: fileItems.map(fileItem => fileItem.file)
+    })
+}}>
+```
+
+
 A more elaborate example using state to update the files list and add a plugin.
 
 ```js
@@ -73,10 +84,14 @@ import { FilePond, File, registerPlugin } from 'react-filepond';
 // Import FilePond styles
 import 'filepond/dist/filepond.min.css';
 
-// Register the image preview plugin
-import FilePondImagePreview from 'filepond-plugin-image-preview';
+// Import the Image EXIF Orientation and Image Preview plugins
+// Note: These need to be installed separately
+import FilePondPluginImageExifOrientation from 'filepond-plugin-image-exif-orientation';
+import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css';
-registerPlugin(FilePondImagePreview);
+
+// Register the plugins
+registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
 
 // Our app
 class App extends Component {
@@ -84,6 +99,7 @@ class App extends Component {
         super(props);
 
         this.state = {
+            // Set initial files
             files: ['index.html']
         };
     }
@@ -101,11 +117,17 @@ class App extends Component {
                           allowMultiple={true}
                           maxFiles={3}
                           server="/api"
-                          oninit={() => this.handleInit()}>
+                          oninit={() => this.handleInit() }
+                          onupdatefiles={(fileItems) => {
+                              // Set current file objects to this.state
+                              this.setState({
+                                  files: fileItems.map(fileItem => fileItem.file)
+                              });
+                          }}>
                     
-                    {/* // Set current files using the <File/> component */}
+                    {/* Update current files  */}
                     {this.state.files.map(file => (
-                        <File key={file} src={file} />
+                        <File key={file} src={file} origin="local" />
                     ))}
                     
                 </FilePond>

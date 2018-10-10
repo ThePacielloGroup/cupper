@@ -219,34 +219,53 @@ Note that in the examples below we make use of [arrow functions](https://develop
 The custom `process` function receives a `file` object plus a set of FilePond callback methods to return control to FilePond. The `file` parameter contains the native file object (instead of a FilePond file item) access the file item is restricted in the `process` function to prevent setting properties or running functions that would would contradict or interfere with the current processing of the file.
 
 ```js
-const handler = (fieldName, file, metadata, load, error, progress, abort) => {
-    // Should do custom file upload or local storing here
-    // ...
+FilePond.setOptions({
+    server: {
+        process:(fieldName, file, metadata, load, error, progress, abort) => {
 
-    // Can call the error method if something is wrong, should exit after
-    error('oh my goodness');
+            // fieldName is the name of the input field
+            // file is the actual file object to send
+            const formData = new FormData();
+            formData.append(fieldName, file, file.name);
 
-    // Should call the progress method to update the progress to 100% before calling load
-    // Setting computable to false switches the loading indicator to infinite mode
-    // (computable, processedSize, totalSize)
-    progress(true, 0, 1024);
+            const request = new XMLHttpRequest();
+            request.open('POST', 'url-to-api');
 
+            // Should call the progress method to update the progress to 100% before calling load
+            // Setting computable to false switches the loading indicator to infinite mode
+            request.upload.onprogress = (e) => {
+                progress(e.lengthComputable, e.loaded, e.total);
+            };
 
-    // Should call the load method when done and pass the returned server file id
-    // the load method accepts either a string (id) or an object
-    // the unique server file id is used by revert and restore functions
-    load('unique-file-id');
+            // Should call the load method when done and pass the returned server file id
+            // this server file id is then used later on when reverting or restoring a file
+            // so your server knows which file to return without exposing that info to the client
+            request.onload = function() {
+                if (request.status >= 200 && request.status < 300) {
+                    // the load method accepts either a string (id) or an object
+                    load(request.responseText);
+                }
+                else {
+                    // Can call the error method if something is wrong, should exit after
+                    error('oh no');
+                }
+            };
 
-    // Should expose an abort method so the request can be cancelled
-    return {
-        abort: () => {
-            // User tapped abort, cancel our ongoing actions here
+            request.send(formData);
+            
+            // Should expose an abort method so the request can be cancelled
+            return {
+                abort: () => {
+                    // This function is entered if the user has tapped the cancel button
+                    request.abort();
 
-            // Let FilePond know the request has been cancelled
-            abort();
+                    // Let FilePond know the request has been cancelled
+                    abort();
+                }
+            };
         }
-    };
-};
+    }
+});
 ```
 
 ### Revert
@@ -254,16 +273,21 @@ const handler = (fieldName, file, metadata, load, error, progress, abort) => {
 Custom revert methods receive the unique server file id and a load and error callback.
 
 ```js
-const handler = (uniqueFileId, load, error) => {
-    // Should remove the earlier created temp file here
-    // ...
+FilePond.setOptions({
+    server: {
+        revert: (uniqueFileId, load, error) => {
+            
+            // Should remove the earlier created temp file here
+            // ...
 
-    // Can call the error method if something is wrong, should exit after
-    error('oh my goodness');
+            // Can call the error method if something is wrong, should exit after
+            error('oh my goodness');
 
-    // Should call the load method when done, no parameters required
-    load();
-};
+            // Should call the load method when done, no parameters required
+            load();
+        }
+    }
+});
 ```
 
 ### Load
@@ -271,34 +295,38 @@ const handler = (uniqueFileId, load, error) => {
 Custom load methods receive the unique server file id and a load and error callback.
 
 ```js
-const handler = (uniqueFileId, load, error, progress, abort, headers) => {
-    // Should request a file object here
-    // ...
+FilePond.setOptions({
+    server: {
+        load: (uniqueFileId, load, error, progress, abort, headers) => {
+            // Should request a file object from the server here
+            // ...
 
-    // Can call the error method if something is wrong, should exit after
-    error('oh my goodness');
+            // Can call the error method if something is wrong, should exit after
+            error('oh my goodness');
 
-    // Can call the header method to supply FilePond with early response header string
-    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
-    headers(headersString);
+            // Can call the header method to supply FilePond with early response header string
+            // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
+            headers(headersString);
 
-    // Should call the progress method to update the progress to 100% before calling load
-    // (endlessMode, loadedSize, totalSize)
-    progress(true, 0, 1024);
+            // Should call the progress method to update the progress to 100% before calling load
+            // (endlessMode, loadedSize, totalSize)
+            progress(true, 0, 1024);
 
-    // Should call the load method with a file object or blob when done
-    load(file);
+            // Should call the load method with a file object or blob when done
+            load(file);
 
-    // Should expose an abort method so the request can be cancelled
-    return {
-        abort: () => {
-            // User tapped abort, cancel our ongoing actions here
+            // Should expose an abort method so the request can be cancelled
+            return {
+                abort: () => {
+                    // User tapped cancel, abort our ongoing actions here
 
-            // Let FilePond know the request has been cancelled
-            abort();
+                    // Let FilePond know the request has been cancelled
+                    abort();
+                }
+            };
         }
-    };
-};
+    }
+});
 ```
 
 ### Fetch
@@ -306,34 +334,38 @@ const handler = (uniqueFileId, load, error, progress, abort, headers) => {
 Custom fetch methods receive the url to fetch and a set of FilePond callback methods to return control to FilePond.
 
 ```js
-const handler = (url, load, error, progress, abort, headers) => {
-    // Should get a file object from the URL here
-    // ...
+FilePond.setOptions({
+    server: {
+        fetch: (url, load, error, progress, abort, headers) => {
+            // Should get a file object from the URL here
+            // ...
 
-    // Can call the error method if something is wrong, should exit after
-    error('oh my goodness');
+            // Can call the error method if something is wrong, should exit after
+            error('oh my goodness');
 
-    // Can call the header method to supply FilePond with early response header string
-    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
-    headers(headersString);
+            // Can call the header method to supply FilePond with early response header string
+            // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
+            headers(headersString);
 
-    // Should call the progress method to update the progress to 100% before calling load
-    // (computable, loadedSize, totalSize)
-    progress(true, 0, 1024);
+            // Should call the progress method to update the progress to 100% before calling load
+            // (computable, loadedSize, totalSize)
+            progress(true, 0, 1024);
 
-    // Should call the load method with a file object when done
-    load(file);
+            // Should call the load method with a file object when done
+            load(file);
 
-    // Should expose an abort method so the request can be cancelled
-    return {
-        abort: () => {
-            // User tapped abort, cancel our ongoing actions here
+            // Should expose an abort method so the request can be cancelled
+            return {
+                abort: () => {
+                    // User tapped abort, cancel our ongoing actions here
 
-            // Let FilePond know the request has been cancelled
-            abort();
+                    // Let FilePond know the request has been cancelled
+                    abort();
+                }
+            };
         }
-    };
-};
+    }
+});
 ```
 
 ### Restore
@@ -341,34 +373,38 @@ const handler = (url, load, error, progress, abort, headers) => {
 Custom restore methods receive the server file id of the file to restore and a set of FilePond callback methods to return control to FilePond.
 
 ```js
-const handler = (uniqueFileId, load, error, progress, abort, headers) => {
-    // Should get the temporary file object from the server
-    // ...
+FilePond.setOptions({
+    server: {
+        restore: (uniqueFileId, load, error, progress, abort, headers) => {
+            // Should get the temporary file object from the server
+            // ...
 
-    // Can call the error method if something is wrong, should exit after
-    error('oh my goodness');
+            // Can call the error method if something is wrong, should exit after
+            error('oh my goodness');
 
-    // Can call the header method to supply FilePond with early response header string
-    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
-    headers(headersString);
+            // Can call the header method to supply FilePond with early response header string
+            // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
+            headers(headersString);
 
-    // Should call the progress method to update the progress to 100% before calling load
-    // (computable, loadedSize, totalSize)
-    progress(true, 0, 1024);
+            // Should call the progress method to update the progress to 100% before calling load
+            // (computable, loadedSize, totalSize)
+            progress(true, 0, 1024);
 
-    // Should call the load method with a file object when done
-    load(serverFileObject);
+            // Should call the load method with a file object when done
+            load(serverFileObject);
 
-    // Should expose an abort method so the request can be cancelled
-    return {
-        abort: () => {
-            // User tapped abort, cancel our ongoing actions here
+            // Should expose an abort method so the request can be cancelled
+            return {
+                abort: () => {
+                    // User tapped abort, cancel our ongoing actions here
 
-            // Let FilePond know the request has been cancelled
-            abort();
-        }
-    };
-};
+                    // Let FilePond know the request has been cancelled
+                    abort();
+                }
+            };
+        };
+    }
+});
 ```
 
 ## Conclusion

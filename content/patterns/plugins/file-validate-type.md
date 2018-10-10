@@ -54,3 +54,4 @@ acceptedFileTypes | `[]` | Array of accepted file types. Can be mime types or wi
 labelFileTypeNotAllowed | `'File of invalid type'` | Message shown when an invalid file is added
 fileValidateTypeLabelExpectedTypes | `'Expects {allButLastType} or {lastType}'` | Message shown to indicate the allowed file types. Available placeholders are `{allTypes}`, `{allButLastType}`, `{lastType}`.
 fileValidateTypeLabelExpectedTypesMap | `{}` | Allows mapping the file type to a more visually appealing label, `{ 'image/jpeg': '.jpg' }` will show `.jpg` in the expected types label. Set to `null` to hide a type from the label.
+fileValidateTypeDetectType | `null` | A function that receives a `file` and the `type` detected by FilePond, should return a Promise, `resolve` with detected file type, `reject` if can't detect.
