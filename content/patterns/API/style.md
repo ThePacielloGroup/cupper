@@ -77,8 +77,9 @@ A collection of some common style overrides have been summarized below:
 }
 
 /* the color of the focus ring */
-.filepond--file-action-button:after {
-    border-color: #fff;
+.filepond--file-action-button:hover,
+.filepond--file-action-button:focus {
+    box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.9);
 }
 
 /* the text color of the file status and info labels */

@@ -7,7 +7,7 @@ The FilePond Angular Component functions as a tiny adapter for the FilePond obje
 Installation instructions for npm.
 
 ```bash
-npm install angular-filepond --save
+npm install filepond angular-filepond --save
 ```
 
 Add the stylesheet to your `angular-cli.json` configuration.
