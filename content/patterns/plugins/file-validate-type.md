@@ -45,6 +45,24 @@ import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 </script>
 ```
 
+## Custom type detection
+
+Sometimes a browser doesn't succeed in detecting the correct mime type for a file. In that situation the file `type` property is empty and FilePond can't determine the correct type either (it relies on the browser engine).
+
+To work around this situation the `fileValidateTypeDetectType` property allows you to set a custom file type detector method. This method will be called with the file and the browser detected type, we can then override this type by returning our custom detected type.
+
+```js
+FilePond.create(document.querySelector('input'), {
+    acceptedFileTypes: ['image/png'],
+    fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+        
+        // Do custom type detection here and return with promise
+
+        resolve(type);
+    })
+});
+```
+
 ## Properties
 
 Property | Default | Description
