@@ -1,3 +1,4 @@
+
 /* Default fonts*/
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -9,6 +10,10 @@ a {
     text-decoration: underline;
     border-bottom: none;
     text-decoration-color: #a5b1b5;
+}
+/* Hide deprecated */
+.patterns a[href*='deprecated'] {
+    display:none;
 }
 
 h1,

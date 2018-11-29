@@ -7,7 +7,7 @@ The FilePond Vue Component functions as a tiny adapter for the FilePond object s
 Installation instructions for npm.
 
 ```bash
-npm install vue-filepond --save
+npm install vue-filepond filepond --save
 ```
 
 Now you can import the `<file-pond>` Component in your Vue project. The adapter automatically references FilePond methods to the Component instance so you can use the Component just like you would use FilePond itself.
