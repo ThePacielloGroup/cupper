@@ -17,7 +17,7 @@
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/writing/project-structure/</guid>
       <description>Before you can set about making documentation, you need to know where everything goes. The simplest folder structure looks like this:
- content  _index.md print-version.md patterns  name-of-my-pattern.md name-of-my-other-pattern.md      /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content file for your home page. print-version.md — This is a placeholder for the single-page / print-friendly version of you library.</description>
+ content  _index.md print-version.md patterns  name-of-my-pattern.md name-of-my-other-pattern.md     /content - This is where all of your content lives. You won&amp;rsquo;t need to visit any other folders very frequently. _index.md — This is the content file for your home page. print-version.md — This is a placeholder for the single-page / print-friendly version of you library.</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@ Notes You may wish to pick out some content in your pattern&amp;rsquo;s document
       
       <guid>https://thepaciellogroup.github.io/cupper/patterns/writing/references/</guid>
       <description>Cross-references Cupper identifies the main content files in your documentation as patterns, and they&amp;rsquo;re kept in the content/ patterns folder. It&amp;rsquo;s easy to cross-reference patterns using the pattern shortcode. For example, I can reference the  Notes &amp;amp; warnings pattern. Here&amp;rsquo;s what the markdown looks like, including the shortcode:
-I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.  This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
+I can reference the &amp;#x7b;{% pattern &#34;Notes &amp; warnings&#34; %}} pattern here.This saves you having to worry about pathing and decorates the generated link with a bookmark icon, identifying the link as a pattern reference visually.</description>
     </item>
     
     <item>

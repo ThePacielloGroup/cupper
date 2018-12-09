@@ -466,12 +466,12 @@ toggle.addEventListener('click', (e) => {
 <div class="demo-container">
   
       <div class="demo-inner" >
-        <div class="demo" id="js-demo-285170a1c0812ad34ac4b853a052c8bd"></div>
-        <button data-launch="js-demo-285170a1c0812ad34ac4b853a052c8bd">Launch <span aria-hidden="true">↗</span></button>
+        <div class="demo" id="js-demo-bf66ab53b99b482cbae2c82b60774195"></div>
+        <button data-launch="js-demo-bf66ab53b99b482cbae2c82b60774195">Launch <span aria-hidden="true">↗</span></button>
       </div>
       
   
-  <template id="template-285170a1c0812ad34ac4b853a052c8bd">
+  <template id="template-bf66ab53b99b482cbae2c82b60774195">
       
 <button aria-pressed="false">Toggle Me</button>
 <style>
@@ -504,8 +504,8 @@ toggle.addEventListener('click', function () {
   </template>
   <script>
     (function() {
-      var root = document.getElementById('js-demo-285170a1c0812ad34ac4b853a052c8bd');
-      var template = document.getElementById('template-285170a1c0812ad34ac4b853a052c8bd');
+      var root = document.getElementById('js-demo-bf66ab53b99b482cbae2c82b60774195');
+      var template = document.getElementById('template-bf66ab53b99b482cbae2c82b60774195');
 
       
       var demoDiv = document.createElement('div');
@@ -518,7 +518,7 @@ toggle.addEventListener('click', function () {
       if (document.head.attachShadow) {
         var templateScript = template.content.querySelector('script');
         if (templateScript) {
-          var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-285170a1c0812ad34ac4b853a052c8bd\').shadowRoot;' + templateScript.textContent + '})();';
+          var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-bf66ab53b99b482cbae2c82b60774195\').shadowRoot;' + templateScript.textContent + '})();';
           templateScript.textContent = wrappedScript;
         }
         root.attachShadow({mode: 'open'});
@@ -527,7 +527,7 @@ toggle.addEventListener('click', function () {
         root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> A browser supporting Shadow DOM is needed to run encapsulated demos. You can launch the demo in a separate window ↓</p>';
       }
 
-      var launchButton = document.querySelector('[data-launch="js-demo-285170a1c0812ad34ac4b853a052c8bd"]');
+      var launchButton = document.querySelector('[data-launch="js-demo-bf66ab53b99b482cbae2c82b60774195"]');
       launchButton.addEventListener('click', function () {
         var standalone = window.open();
         standalone.document.body.innerHTML = demoDiv.innerHTML;
@@ -542,7 +542,7 @@ toggle.addEventListener('click', function () {
         }
         
 
-        standalone.document.title = 'demo ' + "285170a1c0812ad34ac4b853a052c8bd";
+        standalone.document.title = 'demo ' + "bf66ab53b99b482cbae2c82b60774195";
       });
     })();
   </script>
@@ -553,12 +553,12 @@ toggle.addEventListener('click', function () {
 
 <p>Sometimes your component will be expected to appear in a context where the parent element has a background color and possibly other styles. You can add style to your demo block&rsquo;s container element using the <code>style</code> attribute. It works just like standard inline styling.</p>
 
-<p><pre class="language-html"><code class="language-html" data-codeblock-shortcode>
+<pre class="language-html"><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo style="background-color: pink; padding: 1rem;">}}
 &lt;!-- demo code here -->
 &#x7b;{&lt;/demo>}}
 </code></pre>
-</p>
+
 
 <h2 id="launch">&ldquo;Launch&rdquo;</h2>
 
