@@ -27,5 +27,8 @@
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "sw-precache": "^5.2.0"
+  },
+  "dependencies": {
+    "hugo-cli": "^0.9.0"
   }
 }
