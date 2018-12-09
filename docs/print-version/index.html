@@ -221,7 +221,7 @@
                   </li>
                 
                   <li class="pattern">
-                    <a href="#markdown-metadata" >
+                    <a href="#markdown--metadata" >
                       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                         <use xlink:href="#bookmark"></use>
                       </svg>
@@ -239,7 +239,7 @@
                   </li>
                 
                   <li class="pattern">
-                    <a href="#notes-warnings" >
+                    <a href="#notes--warnings" >
                       <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                         <use xlink:href="#bookmark"></use>
                       </svg>
@@ -482,8 +482,7 @@
 </aside>
 
 
-<pre class="cmd"><code>
-  npm run clean</code></pre>
+<pre class="cmd"><code>  npm run clean</code></pre>
 
 
 <p>This will leave your <code>content</code> folder with just an <code>_index.md</code> file and a <code>patterns</code> folder containing a single demonstration pattern file. Individual content pages in <strong>Cupper</strong> are referred to as &ldquo;patterns&rdquo; — think pattern libraries). Find out more about these in <a class="pattern-link" href="https://thepaciellogroup.github.io/cupper/patterns/writing/project-structure/"><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"> <use xlink:href="#bookmark"></use> </svg>Project structure</a>.</p>
@@ -609,7 +608,7 @@ theme = "cupper"
 <pre><code>https://yourName.github.io/your-library/print-version
 </code></pre>
 
-<aside aria-label="note" class="note">
+<p><aside aria-label="note" class="note">
   <div>
     <svg class="sign" aria-hidden="true" viewBox="0 0 41.667306 41.66729" focusable="false">
       <use xlink:href="#info"></use>
@@ -618,7 +617,7 @@ theme = "cupper"
 
   </div>
 </aside>
-
+</p>
 
         </div>
       
@@ -652,8 +651,7 @@ theme = "cupper"
 
 <p>Cupper is undergoing constant development, so keep an eye out for new releases. To update to a new version of <strong>Cupper</strong>, simply run the <code>update</code> command from inside your local project folder.</p>
 
-<pre class="cmd"><code>
-npm run update</code></pre>
+<pre class="cmd"><code>npm run update</code></pre>
 
 
 <p>This will save a timestamped backup of the current version, and download the latest version. Your theme folder will now look something like the following.</p>
@@ -779,7 +777,7 @@ title = &quot;Popup windows&quot;
           </div>
         
           <div class="pattern-section">
-            <h1 id="markdown-metadata" tabindex="-1">
+            <h1 id="markdown--metadata" tabindex="-1">
               <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                 <use xlink:href="#bookmark"></use>
               </svg>
@@ -969,7 +967,7 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
           </div>
         
           <div class="pattern-section">
-            <h1 id="notes-warnings" tabindex="-1">
+            <h1 id="notes--warnings" tabindex="-1">
               <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                 <use xlink:href="#bookmark"></use>
               </svg>
@@ -1967,12 +1965,12 @@ toggle.addEventListener('click', (e) => {
 <div class="demo-container">
   
       <div class="demo-inner" >
-        <div class="demo" id="js-demo-bf66ab53b99b482cbae2c82b60774195"></div>
-        <button data-launch="js-demo-bf66ab53b99b482cbae2c82b60774195">Launch <span aria-hidden="true">↗</span></button>
+        <div class="demo" id="js-demo-285170a1c0812ad34ac4b853a052c8bd"></div>
+        <button data-launch="js-demo-285170a1c0812ad34ac4b853a052c8bd">Launch <span aria-hidden="true">↗</span></button>
       </div>
       
   
-  <template id="template-bf66ab53b99b482cbae2c82b60774195">
+  <template id="template-285170a1c0812ad34ac4b853a052c8bd">
       
 <button aria-pressed="false">Toggle Me</button>
 <style>
@@ -2005,8 +2003,8 @@ toggle.addEventListener('click', function () {
   </template>
   <script>
     (function() {
-      var root = document.getElementById('js-demo-bf66ab53b99b482cbae2c82b60774195');
-      var template = document.getElementById('template-bf66ab53b99b482cbae2c82b60774195');
+      var root = document.getElementById('js-demo-285170a1c0812ad34ac4b853a052c8bd');
+      var template = document.getElementById('template-285170a1c0812ad34ac4b853a052c8bd');
 
       
       var demoDiv = document.createElement('div');
@@ -2019,7 +2017,7 @@ toggle.addEventListener('click', function () {
       if (document.head.attachShadow) {
         var templateScript = template.content.querySelector('script');
         if (templateScript) {
-          var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-bf66ab53b99b482cbae2c82b60774195\').shadowRoot;' + templateScript.textContent + '})();';
+          var wrappedScript = '(function() { var demo = document.getElementById(\'js-demo-285170a1c0812ad34ac4b853a052c8bd\').shadowRoot;' + templateScript.textContent + '})();';
           templateScript.textContent = wrappedScript;
         }
         root.attachShadow({mode: 'open'});
@@ -2028,7 +2026,7 @@ toggle.addEventListener('click', function () {
         root.innerHTML = '<p class="site-error"><strong style="font-weight:bold">Site error:</strong> A browser supporting Shadow DOM is needed to run encapsulated demos. You can launch the demo in a separate window ↓</p>';
       }
 
-      var launchButton = document.querySelector('[data-launch="js-demo-bf66ab53b99b482cbae2c82b60774195"]');
+      var launchButton = document.querySelector('[data-launch="js-demo-285170a1c0812ad34ac4b853a052c8bd"]');
       launchButton.addEventListener('click', function () {
         var standalone = window.open();
         standalone.document.body.innerHTML = demoDiv.innerHTML;
@@ -2043,7 +2041,7 @@ toggle.addEventListener('click', function () {
         }
         
 
-        standalone.document.title = 'demo ' + "bf66ab53b99b482cbae2c82b60774195";
+        standalone.document.title = 'demo ' + "285170a1c0812ad34ac4b853a052c8bd";
       });
     })();
   </script>
@@ -2054,12 +2052,12 @@ toggle.addEventListener('click', function () {
 
 <p>Sometimes your component will be expected to appear in a context where the parent element has a background color and possibly other styles. You can add style to your demo block&rsquo;s container element using the <code>style</code> attribute. It works just like standard inline styling.</p>
 
-<pre class="language-html"><code class="language-html" data-codeblock-shortcode>
+<p><pre class="language-html"><code class="language-html" data-codeblock-shortcode>
 &#x7b;{&lt;demo style="background-color: pink; padding: 1rem;">}}
 &lt;!-- demo code here -->
 &#x7b;{&lt;/demo>}}
 </code></pre>
-
+</p>
 
 <h2 id="launch">&ldquo;Launch&rdquo;</h2>
 
@@ -2166,8 +2164,7 @@ npm run start
 
 <p>And here&rsquo;s how it looks:</p>
 
-<pre class="cmd"><code>
-npm run start</code></pre>
+<pre class="cmd"><code>npm run start</code></pre>
 
 
 <aside aria-label="warning" class="note warning">
@@ -2218,7 +2215,7 @@ npm run start</code></pre>
 
 <p>This is drawn in the following fashion, but preserves the underlying nested list structure for assistive technologies such as screen readers:</p>
 
-<div class="file-tree">
+<p><div class="file-tree">
   <ul>
 <li>Level 1 folder
 
@@ -2254,7 +2251,7 @@ npm run start</code></pre>
 </ul>
 
 </div>
-
+</p>
 
 <aside aria-label="warning" class="note warning">
   <div>
