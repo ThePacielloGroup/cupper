@@ -102,8 +102,20 @@ The FilePond core module exposes the following properties.
 
 | Property              | Function                  | Description                                                                                                                                                        |
 | --------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| beforeAddFile         | `(item)`                  | FilePond is about to add this file, return `false` to prevent adding it, or return a `Promise` and resolve with `true` or `false`.                                |
 | beforeRemoveFile      | `(item)`                  | FilePond is about to remove this file, return `false` to prevent removal, or return a `Promise` and resolve with `true` or `false`.                                |
 
+
+### Styles
+
+| Property              | Default                   | Description                                                                                                                                                        |
+| --------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| stylePanelLayout      | `null`                    | Set a different layout render mode. Can be either `'integrated'`, `'compact'`, and/or `'circle'`. Compact mode will remove padding, integrated mode is used to render FilePond as part of a bigger element. Circle mode adjusts the item position offsets so buttons and progress indicators don't fall outside of the circular shape. |
+| stylePanelAspectRatio | `null`                    | Set a forced aspect ratio for the FilePond drop area. Useful to make the drop area take up a fixed amount of space. For example when cropping a single square image. Accepts human readable aspect ratios like `'1:1'` or numeric aspect ratios like `0.75`. |
+| styleButtonRemoveItemPosition | `'left'`          | The position of the remove item button, `'left'`, `'center'`, `'right'`, and/or `'bottom'`. |
+| styleButtonProcessItemPosition | `'right`         | The position of the process item button, `'left'`, `'center'`, `'right'`, and/or `'bottom'`. |
+| styleLoadIndicatorPosition | `'right`             | The position of the load indicator, `'left'`, `'center'`, `'right'`, and/or `'bottom'`. |
+| styleProgressIndicatorPosition | `'right`         | The position of the progress indicator, `'left'`, `'center'`, `'right'`, and/or `'bottom'`. |
 
 
 ## Events

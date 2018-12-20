@@ -62,6 +62,11 @@ The `fetch` end point is used to load files located on remote servers. When a us
 1. **FilePond** requests fetch of file `http://somewhere/their-file.jpg` using a `GET` request
 2. **server** returns a file object as if the file is located on the server
 
+### Remove
+
+The `remove` end point is used to remove `local` files located on the server. This end point is not enabled by default and can only be set to a custom function.
+
+
 ## Configuration
 
 The `server` configuration property expects an object or a URL. If it's not defined, FilePond will not be able to upload file to the server or use fetch functionality.
@@ -82,7 +87,7 @@ This tells FilePond the api is located at the same location as the current page.
 | ------- | ------ | ------------- |
 | process | POST   |               |
 | revert  | DELETE |               |
-| load    | GET    | ?load=<id>    |
+| load    | GET    | ?load=<source>|
 | restore | GET    | ?restore=<id> |
 | fetch   | GET    | ?fetch=<url>  |
 
@@ -149,7 +154,8 @@ FilePond.setOptions({
             headers: {},
             timeout: 7000,
             onload: null,
-            onerror: null
+            onerror: null,
+            ondata: null
         }
     }
 });
@@ -164,6 +170,7 @@ FilePond.setOptions({
 | timeout         | Timeout for this action                              | no       |
 | onload          | Called when server response is received, useful for getting the unique file id from the server response | no |
 | onerror         | Called when server error is received, receives the response body, useful to select the relevant error data | no |
+| ondata          | Called with the formdata object right before it is sent, return extended formdata object to make changes | no |
 
 A more elaborate server configuration is shown below. This configuration reveals the `timeout` property as assigned to the server object. This sets it for all end points, it can also be configured per end point.
 
@@ -179,11 +186,11 @@ FilePond.setOptions({
                 'x-customheader': 'Hello World'
             },
             withCredentials: false,
-            onload: function(response) {
-                return response.key;
-            },
-            onerror: function(response) {
-                return response.data;
+            onload: (response) => response.key,
+            onerror: (response) => response.data,
+            ondata: (formData) => {
+                formData.append('Hello', 'World');
+                return formData;
             }
         },
         revert: './revert',
@@ -292,12 +299,12 @@ FilePond.setOptions({
 
 ### Load
 
-Custom load methods receive the unique server file id and a load and error callback.
+Custom load methods receive the local file `source`, and the callback methods: `load`, `error`, `abort`, and `headers`.
 
 ```js
 FilePond.setOptions({
     server: {
-        load: (uniqueFileId, load, error, progress, abort, headers) => {
+        load: (source, load, error, progress, abort, headers) => {
             // Should request a file object from the server here
             // ...
 
@@ -331,7 +338,7 @@ FilePond.setOptions({
 
 ### Fetch
 
-Custom fetch methods receive the url to fetch and a set of FilePond callback methods to return control to FilePond.
+The custom fetch method receives the `url` to fetch and a set of FilePond callback methods to return control to FilePond.
 
 ```js
 FilePond.setOptions({
@@ -403,6 +410,31 @@ FilePond.setOptions({
                 }
             };
         };
+    }
+});
+```
+
+### Remove
+
+The custom remove method receives the local file `source` and a `load` and `error` callback.
+
+{{% warning %}}
+This method is `null` by default as giving clients the power to remove files from the server in this way might not be very secure. But, because of popular demand the method has been added.
+{{% /warning %}}
+
+```js
+FilePond.setOptions({
+    server: {
+        remove: (source, load, error) => {
+            
+            // Should somehow send `source` to server so server can remove the file with this source
+
+            // Can call the error method if something is wrong, should exit after
+            error('oh my goodness');
+
+            // Should call the load method when done, no parameters required
+            load();
+        }
     }
 });
 ```

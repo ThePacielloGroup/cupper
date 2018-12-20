@@ -7,10 +7,10 @@ The FilePond Angular Component functions as a tiny adapter for the FilePond obje
 Installation instructions for npm.
 
 ```bash
-npm install filepond angular-filepond --save
+npm install filepond ngx-filepond --save
 ```
 
-Add the stylesheet to your `angular-cli.json` configuration.
+We add the stylesheet(s) to our `angular.json` configuration.
 
 ```json
 "styles": [
@@ -19,87 +19,87 @@ Add the stylesheet to your `angular-cli.json` configuration.
 ]
 ```
 
-After importing the component in an NgModule you can use the `<FilePond>` Component in your Angular project. Note that the plugin requires a `.esm` extension.
+After importing the component in an NgModule we can use the `<FilePond>` Component in our Angular project.
 
+{{% note %}}
+FilePond plugins are not automatically installed, we need to install these manually.
+{{% /note %}}
 ```js
-import { FilePond, registerPlugin } from 'angular-filepond';
+// app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 
-// Registering plugins
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm';
+// import filepond module
+import { FilePondModule, registerPlugin } from 'ngx-filepond';
+
+// import and register filepond file type validation plugin
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 registerPlugin(FilePondPluginFileValidateType);
 
-// Adding FilePond to imports
 @NgModule({
+  declarations: [
+    AppComponent
+  ],
   imports: [
-    FilePond
-  ]
+    BrowserModule,
+    FilePondModule // add filepond module here
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-
 export class AppModule { }
 ```
 
-The adapter automatically references FilePond methods to the Component instance so you can use the Component just like you would use FilePond itself.
+The adapter automatically references FilePond methods to the Component instance.
 
-We can configure our pond by using the [FilePond instance properties](../../api/filepond-instance/#properties) as attributes on the `<FilePond>` Component. Note that the callback methods are not available and have been mapped to events, see the example below.
+We can configure our pond by using the [FilePond instance properties](../../api/filepond-instance/#properties) as properties on the `[options]` attribute.
 
-```html
-<FilePond allowMultiple="true" maxFiles="3" server="/api"></FilePond>
-```
-
-You can see that instead of using the `multiple` attribute we use the property name `allowMultiple` and instead of `data-max-files` we use `maxFiles`.
-
-Use bindings if values need to be updated in the future.
+{{% note %}}
+The callback methods like `oninit` and `onaddfile` are not available as properties and have been mapped to events.
+{{% /note %}}
 
 ```html
-<FilePond [files]="myFiles"></FilePond>
+<!-- app.component.html -->
+<file-pond #myPond 
+    [options]="pondOptions" 
+    [files]="pondFiles"
+    (oninit)="pondHandleInit()"
+    (onaddfile)="pondHandleAddFile($event)">
+</file-pond>
 ```
-
-We can listen for events using parenthesis.
-
-```html
-<FilePond (oninit)="handleFilePondInit()"></FilePond>
-```
-
-A more elaborate example showing passing files using a `myFiles` property and `registerPlugin` to register a plugin.
 
 ```js
+// app.component.ts
 import { Component, ViewChild } from '@angular/core';
-
-// Register file type validation plugin
-import { registerPlugin } from './filepond/filepond';
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.esm.js';
-registerPlugin(FilePondPluginFileValidateType);
 
 @Component({
   selector: 'app-root',
-  template:  `
-    <div class="root">
-        <FilePond #myPond 
-            name="my-name" 
-            className="my-class" 
-            labelIdle="Drop files here..."
-            allowMultiple="true"
-            acceptedFileTypes="image/jpeg, image/png"
-            [files]="myFiles" 
-            (oninit)="handleFilePondInit()">
-        </FilePond>
-    </div>
-  `
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
 
-  myFiles = ['index.html'];
-
-  // Allows us to get a reference to the FilePond instance
   @ViewChild('myPond') myPond: any;
 
-  handleFilePondInit = () => {
+  pondOptions = {
+    class: 'my-filepond',
+    multiple: true,
+    labelIdle: 'Drop files here',
+    acceptedFileTypes: 'image/jpeg, image/png'
+  }
 
-    console.log('FilePond has initialised');
+  pondFiles = [
+    'index.html'
+  ]
 
-    // FilePond instance methods are available on `this.myPond`
+  pondHandleInit() {
+    console.log('FilePond has initialised', this.myPond);
+  }
 
+  pondHandleAddFile(event: any) {
+    console.log('A file was added', event);
   }
 }
 ```
