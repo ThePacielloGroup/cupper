@@ -57,10 +57,21 @@ For situations where a user might want to edit an existing file selection we can
 
 ### Fetch
 
-The `fetch` end point is used to load files located on remote servers. When a user drops a remote link, FilePond asks the server to download it (CORS might otherwise block it).
+The `fetch` end point is used to load files located on remote servers. When a user drops a remote link, FilePond asks the server to download it (CORS might otherwise block it). In this situation the server serves as a proxy.
 
 1. **FilePond** requests fetch of file `http://somewhere/their-file.jpg` using a `GET` request
 2. **server** returns a file object as if the file is located on the server
+
+An alternative is to configure **FilePond** to only do a `HEAD` request. The server should then save the file to `tmp/12345/my-file.jpg` and return response headers with the required file information.
+
+```
+header('Access-Control-Expose-Headers: Content-Disposition, Content-Length, X-Content-Transfer-Id');
+header('Content-Type: image/jpeg');
+header('Content-Length: 3965123');
+header('Content-Disposition: inline; filename="my-file.jpg"');    
+header('X-Content-Transfer-Id: 12345');
+```
+
 
 ### Remove
 
@@ -89,7 +100,7 @@ This tells FilePond the api is located at the same location as the current page.
 | revert  | DELETE |               |
 | load    | GET    | ?load=<source>|
 | restore | GET    | ?restore=<id> |
-| fetch   | GET    | ?fetch=<url>  |
+| fetch   | GET|HEAD    | ?fetch=<url>  |
 
 We can of course supply a path or URL to another location, FilePond will simply append the above default paths to the supplied value. If we want more fine grained control we can use an object to configure the server end points.
 

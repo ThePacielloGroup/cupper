@@ -69,6 +69,10 @@ If a module bundler ( like Webpack ) is not available, the plugin CSS file will 
 ## Integrating Doka.js using the Image Edit plugin
 
 ```js
+
+// Please note that for the image edit plugin to function
+// we also need to register the image preview plugin.
+
 FilePond.create(document.querySelector('input'), {
 
     // default crop aspect ratio
@@ -119,3 +123,89 @@ FilePond.create(document.querySelector('input'), {
 | imageEditAllowEdit | `true` | Disables the manual edit button. |
 | imageEditIconEdit | `'<svg></svg>'` | The SVG icon used in the image edit button |
 | imageEditEditor | `null` | The Image Editor to link to FilePond |
+
+
+
+## Integrating other editors
+
+It's possible to integrate with other editors as long as they supply the following API end points.
+
+The object assigned to the `imageEditEditor` property should have these properties.
+
+```js
+const editor = {
+
+    // Called by FilePond to edit the image
+    // - should open your image editor
+    // - receives file object and image edit instructions
+    open: (file, instructions) => {
+        // open editor here
+    },
+
+    // Callback set by FilePond
+    // - should be called by the editor when user confirms editing
+    // - should receive output object, resulting edit information
+    onconfirm: (output) => {},
+    
+    // Callback set by FilePond
+    // - should be called by the editor when user cancels editing
+    oncancel: () => {},
+
+    // Callback set by FilePond
+    // - should be called by the editor when user closes the editor
+    onclose: () => {}
+}
+```
+
+Data `instructions` object passed to `load` by FilePond.
+
+```js
+{
+    crop: {
+
+        // Center point of crop
+        center: {
+            x: .5,
+            y: .5
+        },
+
+        // Has the image been flipped
+        flip: {
+            horizontal: false,
+            vertical: false
+        },
+
+        // How far to zoom the image
+        zoom: 1,
+
+        // Rotation of image
+        rotation: 0,
+
+        // Aspect ratio of crop, `null` === free
+        aspectRatio: null
+    }
+}
+```
+
+Data `output` object returned to FilePond from the editor in `onconfirm`.
+
+```js
+{
+    data: {
+        // This is the same as the instructions object
+        crop: {
+            center: {
+                x: .5,
+                y: .5
+            },
+            flip: {
+                horizontal: false,
+                vertical: false
+            },
+            zoom: 1,
+            rotation: 0,
+            aspectRatio: null
+        }
+    }
+}
+```

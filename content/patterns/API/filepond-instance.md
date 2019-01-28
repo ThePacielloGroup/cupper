@@ -23,6 +23,7 @@ The FilePond core module exposes the following properties.
 | allowReplace  | `true`       | Allow drop to replace a file, only works when `allowMultiple` is `false`                 |
 | allowRevert   | `true`       | Allows the user to undo file upload
 | maxFiles      | `null`       | The maximum number of files that the pond can handle                                     |
+| maxParallelUploads | `null` | The maxmimum number of files that can be uploaded in parallel
 
 ### Drag n' Drop related
 

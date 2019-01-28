@@ -56,4 +56,10 @@ imageValidateSizeLabelImageSizeTooSmall | `'Image is too small'` | The message s
 imageValidateSizeLabelImageSizeTooBig | `'Image is too big'` | The message shown when the image is too big.
 imageValidateSizeLabelExpectedMinSize | `'Minimum size is {minWidth} × {minHeight}'` | Message shown to indicate the minimum image size.
 imageValidateSizeLabelExpectedMaxSize | `'Maximum size is {maxWidth} × {maxHeight}'` | Message shown to indicate the maximum image size.
+imageValidateSizeMinResolution | `null` | The minimum image resolution.
+imageValidateSizeMaxResolution | `null` | The maximum image resolution.
+imageValidateSizeLabelImageResolutionTooLow | `'Resolution is too low'` | The message shown when the image resolution is too low.
+imageValidateSizeLabelImageResolutionTooHigh | `'Resolution is too high'` | The message shown when the image resolution is too high.
+imageValidateSizeLabelExpectedMinResolution | `'Minimum resolution is {minResolution}'` | Message shown to indicate the minimum image resolution.
+imageValidateSizeLabelExpectedMaxResolution | `'Maximum resolution is {maxResolution}'` | Message shown to indicate the maximum image resolution.
 imageValidateSizeMeasure | `null` | A custom function to measure the image file, for when you want to measure image formats not supported by browsers. Receives the image file, should return a Promise. Resolve should pass a size object containing both a `width` and `height` parameter. Reject should be called if the image format is not supported / can't be measured.

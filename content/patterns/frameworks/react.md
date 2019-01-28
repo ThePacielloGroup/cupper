@@ -14,7 +14,7 @@ Now you can import the `<FilePond>` Component and add it to your `.jsx` files.
 
 ```js
 // Import React FilePond
-import { FilePond, File, registerPlugin } from 'react-filepond';
+import { FilePond, registerPlugin } from 'react-filepond';
 
 // Import FilePond styles
 import 'filepond/dist/filepond.min.css';
@@ -43,31 +43,12 @@ this.pond.getFiles();
 ```
 
 
-Using the `<File>` Component we can programmatically update the current files list. For more information see [Setting initial files](../../api/filepond-object/#setting-initial-files).
-
-```js
-<FilePond>
-    {/* a random file to load immidiately */}
-    <File src="kitten.jpeg"/>
-
-    {/* a temporary file already available on the server */}
-    <File src="12345" origin="limbo"/>
-
-    {/* a file already uploaded to the server */}
-    <File src="12345" origin="local"/>
-
-    {/* mock file data so the file is not downloaded from the server */}
-    <File src="12345" origin="local" name="cat.jpeg" size={700100} type="image/jpeg"/>
-
-    {/* add metadata */}
-    <File src="12345" origin="local" metadata={{date:'2019-01-01T12:00'}}/>
-</FilePond>
-```
+By setting the `files` prop we can programmatically update the current files list. For more information see [Setting initial files](../../api/filepond-object/#setting-initial-files).
 
 We can use the `onupdatefiles` callback to sync the FilePond files with our own state.
 
 ```js
-<FilePond onupdatefiles={(fileItems) => {
+<FilePond onupdatefiles={fileItems => {
     setState({
         files: fileItems.map(fileItem => fileItem.file)
     })
@@ -79,7 +60,7 @@ A more elaborate example using state to update the files list and add a plugin.
 
 ```js
 // Import React FilePond
-import { FilePond, File, registerPlugin } from 'react-filepond';
+import { FilePond, registerPlugin } from 'react-filepond';
 
 // Import FilePond styles
 import 'filepond/dist/filepond.min.css';
@@ -99,8 +80,14 @@ class App extends Component {
         super(props);
 
         this.state = {
-            // Set initial files
-            files: ['index.html']
+            // Set initial files, type 'local' means this is a file
+            // that has already been uploaded to the server (see docs)
+            files: [{
+                source: 'index.html',
+                options: {
+                    type: 'local'
+                }
+            }]
         };
     }
     
@@ -112,8 +99,9 @@ class App extends Component {
         return (
             <div className="App">
             
-                {/* // Pass FilePond properties as attributes */}
+                {/* Pass FilePond properties as attributes */}
                 <FilePond ref={ref => this.pond = ref}
+                          files={this.state.files}
                           allowMultiple={true}
                           maxFiles={3}
                           server="/api"
@@ -124,13 +112,8 @@ class App extends Component {
                                   files: fileItems.map(fileItem => fileItem.file)
                               });
                           }}>
-                    
-                    {/* Update current files  */}
-                    {this.state.files.map(file => (
-                        <File key={file} src={file} origin="local" />
-                    ))}
-                    
                 </FilePond>
+
             </div>
         );
     }
