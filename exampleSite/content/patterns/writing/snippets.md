@@ -16,4 +16,4 @@ To make your snippets truly reusable, try to write them in such a way that they 
 
 ## Visually hidden snippet
 
-{{% snippet file="visually-hidden.md" %}}
+{{/% snippet file="visually-hidden.md" %/}}

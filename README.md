@@ -17,7 +17,7 @@ Hugo Themes demo, weekly-ish updates: TODO
 From the root of your site:
 
 ```
-git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper
+git submodule add https://github.com/zwbetz-gh/cupper-hugo-theme.git themes/cupper-hugo-theme
 ```
 
 ## Updating
@@ -30,7 +30,7 @@ git submodule update --remote --merge
 
 ## Run example site
 
-From the root of `themes/cupper/exampleSite`:
+From the root of `themes/cupper-hugo-theme/exampleSite`:
 
 ```
 hugo server --themesDir ../..
@@ -38,11 +38,15 @@ hugo server --themesDir ../..
 
 ## Configuration
 
-Copy the `config.toml` or `config.yaml` from the `exampleSite` TODO, then edit as desired. 
+Copy the `config.toml` or `config.yaml` TODO from the `exampleSite` TODO, then edit as desired. 
 
 ## Typography
 
 TODO 
+
+## Features supported from the original Cupper
+
+TODO list em 
 
 ## Favicons
 
