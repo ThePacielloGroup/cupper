@@ -1,0 +1,48 @@
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Cupper"
+theme = "cupper"
+googleAnalytics = "UA-123456789-1"
+
+# Uncomment below to enable syntax highlighting
+# pygmentsCodefences = true
+# pygmentsCodefencesGuessSyntax = true
+# For more styles see https://xyproto.github.io/splash/docs/all.html 
+# pygmentsStyle = "pygments"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url = "/post/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+  [[menu.main]]
+    name = "RSS"
+    url = "/index.xml"
+    weight = 5
+
+[params]
+  description = "Documentation for the **Cupper** documentation builder, built with **Cupper** itself."
+  footerText = "Made with [Hugo](https://gohugo.io/) & TODO"
+  hideFooter = false
+  # Keep?
+  codePenUser = "Heydon"
+  # TODO link to date format docs page 
+  dateFormat = "Jan 2, 2006"
