@@ -1,4 +1,4 @@
-# Cupper Hugo Theme
+# Cupper
 
 An accessibility-friendly Hugo theme, ported from the original [Cupper](https://github.com/ThePacielloGroup/cupper) project.
 
@@ -42,7 +42,7 @@ Copy the `config.toml` or `config.yaml` TODO from the `exampleSite` TODO, then e
 
 ## Typography
 
-TODO 
+TODO link post
 
 ## Features supported from the original Cupper
 
