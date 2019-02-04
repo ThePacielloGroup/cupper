@@ -22,8 +22,11 @@ The FilePond core module exposes the following properties.
 | allowMultiple | `false`      | Enable or disable adding multiple files                                                  |
 | allowReplace  | `true`       | Allow drop to replace a file, only works when `allowMultiple` is `false`                 |
 | allowRevert   | `true`       | Allows the user to undo file upload
+| forceRevert   | `false`      | Set to `true` to require the file to be successfully reverted before continuing
 | maxFiles      | `null`       | The maximum number of files that the pond can handle                                     |
-| maxParallelUploads | `null` | The maxmimum number of files that can be uploaded in parallel
+| maxParallelUploads | `null`  | The maxmimum number of files that can be uploaded in parallel
+| checkValidity | `false`      | Set to `true` to enable custom validity messages. FilePond will throw an error when a parent form is submitted and it contains invalid files. |
+
 
 ### Drag n' Drop related
 
@@ -34,6 +37,7 @@ The FilePond core module exposes the following properties.
 | dropValidation | `false`                                     | When enabled, files are validated before they are dropped. A file is not added when it's invalid.
 | ignoredFiles   | `['.ds_store', 'thumbs.db', 'desktop.ini']` | Ignored file names when handling dropped directories. Dropping directories is not supported on all browsers. |
 
+
 ### Server configuration
 
 | Property      | Default | Description                                                                                                                     |
@@ -42,6 +46,7 @@ The FilePond core module exposes the following properties.
 | instantUpload | `true`  | Immediately upload new files to the server                                                                                      |
 | files         | `[]`    | A list of file locations that should be loaded Immediately, read more about [setting the initial files](../filepond-object/#setting-initial-files) |
 
+
 ### Labels
 
 | Property                       | Default                                                                            | Description                                                                                                                                                      |
@@ -49,6 +54,7 @@ The FilePond core module exposes the following properties.
 | labelDecimalSeparator          | `auto`                                                                             | The decimal separator used to render numbers. By default this is determined automatically.                                                                       |
 | labelThousandsSeparator        | `auto`                                                                             | The thousdands separator used to render numbers. By default this is determined automatically.                                                                    |
 | labelIdle                      | `'Drag & Drop your files or <span class="filepond--label-action"> Browse </span>'` | Default label shown to indicate this is a drop area. FilePond will automatically bind browse file events to the element with CSS class `.filepond--label-action` |
+| labelInvalidField              | `'Field contains invalid files'`                                                   | Label shown when the field contains invalid files and is validated by the parent form. |
 | labelFileWaitingForSize        | `'Waiting for size'`                                                               | Label used while waiting for file size information                                                                                                               |
 | labelFileSizeNotAvailable      | `'Size not available'`                                                             | Label used when no file size information was received                                                                                                            |
 | labelFileLoading               | `'Loading'`                                                                        | Label used while loading a file                                                                                                                                  |
@@ -57,6 +63,8 @@ The FilePond core module exposes the following properties.
 | labelFileProcessingComplete    | `'Upload complete'`                                                                | Label used when file upload has completed                                                                                                                        |
 | labelFileProcessingAborted     | `'Upload cancelled'`                                                               | Label used when upload was cancelled                                                                                                                             |
 | labelFileProcessingError       | `'Error during upload'`                                                            | Label used when something went wrong during file upload                                                                                                          |
+| labelFileProcessingRevertError | `'Error during revert'`                                                            | Label used when something went wrong during reverting the file upload                                                                                            |
+| labelFileRemoveError           | `'Error during remove'`
 | labelTapToCancel               | `'tap to cancel'`                                                                  | Label used to indicate to the user that an action can be cancelled.                                                                                              |
 | labelTapToRetry                | `'tap to retry'`                                                                   | Label used to indicate to the user that an action can be retried.                                                                                                |
 | labelTapToUndo                 | `'tap to undo'`                                                                    | Label used to indicate to the user that an action can be undone.                                                                                                 |
@@ -159,10 +167,10 @@ pond.addEventListener('FilePond:addfile', e => {
 | [processFiles](#processing-files) |                      | Starts processing all files                           |
 | [getFile](#getting-files)         | `query`              | Returns the file matching the supplied `query`        |
 | [getFiles](#getting-files)        |                      | Returns all files                                     |
-| browse                            |                      | Opens the browse file dialog                          |
+| [browse](#opening-the-file-browser)                            |                      | Opens the browse file dialog, please note that this only works if the user initiaded the callstack that ends up calling the `browse` method. |
 | destroy                           |                      | Destroys this FilePond instance                       |
 
-DOM manipulation
+#### DOM manipulation
 
 | Method         | Params    | Description                                                                                          |
 | -------------- | --------- | ---------------------------------------------------------------------------------------------------- |
@@ -173,7 +181,8 @@ DOM manipulation
 | replaceElement | `element` | Replaces the supplied element with FilePond                                                          |
 | restoreElement | `element` | If FilePond replaced the original element, this restores the original element to its original glory. |
 
-Event Methods
+
+#### Event Methods
 
 FilePond provides the `on`, `onOnce` and `off` methods as an alternative way to listen for events. We can listen for the same events but can do so without adding the `'FilePond:'` prefix. Parameters received by the hanlder functions are the same as defined on the [callback methods](#callbacks).
 
@@ -374,3 +383,38 @@ pond.addFile('./my-file.jpg').then(file => {
 {{% note %}}
 A [FilePond File](../file) is not the same a JavaScript [File](https://developer.mozilla.org/docs/Web/API/File) or [Blob](https://developer.mozilla.org/docs/Web/API/Blob). The FilePond File is a wrapper around a JavaScript file object. Passing a JavaScript File or Blob to the removeFile method won't work.
 {{% /note %}}
+
+
+## Opening The File Browser
+
+The `browse` method can be used to manually trigger the browse files panel.
+
+This only works if the call originates from the user.
+
+This works, as the call originates from the browser clicking the button.
+
+```js
+document.querySelector('button').addEventListener('click', () => {
+    pond.browse();
+})
+```
+
+This **doesn't work**, the call to `browse` originates from the browser itself.
+
+```js
+setTimeout(() => {
+    pond.browse();
+}, 5000);
+```
+
+This also **doesn't work**, the timeout "breaks" the callstack and the browser won't know the call originated from the button.
+
+```js
+document.querySelector('button').addEventListener('click', () => {
+    setTimeout(() => {
+        pond.browse();
+    }, 5000);
+})
+```
+
+

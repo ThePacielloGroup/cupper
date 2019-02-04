@@ -11,7 +11,8 @@ Each plugin is located in its own GitHub repository and follows a specific namin
 filepond-plugin-<name-of-plugin>
 ```
 
-Plugins can be registered with FilePond using the `registerPlugin` method. Read more about [registering plugins here](#registering-plugins).
+Plugins can be registered with FilePond using the `registerPlugin` method. Read more about [registering plugins here](../../api/filepond-object/#registering-plugins).
+
 
 ## Available plugins
 

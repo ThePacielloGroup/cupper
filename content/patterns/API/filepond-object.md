@@ -22,8 +22,8 @@ The FilePond object is the object available after importing FilePond in your pro
 
 | Property   | Description                                                                                               |
 | ---------- | --------------------------------------------------------------------------------------------------------- |
-| FileOrigin | An enum to use together with the File `origin` property to determine the file origin. |
-| FileStatus | An enum to use together with the File `status` method to determine the current file status. |
+| [FileOrigin](#fileorigin-enum) | An enum to use together with the File `origin` property to determine the file origin. |
+| [FileStatus](#filestatus-enum) | An enum to use together with the File `status` method to determine the current file status. |
 | OptionTypes | Returns an object describing all the available options and their types, useful for writing FilePond adapters |
 
 ## Events
@@ -359,4 +359,35 @@ A plugin will fire a `FilePond:pluginloaded` event on the document when it's rea
 document.addEventListener('FilePond:pluginloaded', e => {
     console.log('FilePond plugin is ready for use', e.detail);
 });
+```
+
+
+## FileStatus Enum
+
+These are the properties available on the `FileStatus` enum. We can use it to get the actual status from the file item status property.
+
+```js
+{
+    INIT: 1,
+    IDLE: 2,
+    PROCESSING_QUEUED: 9,
+    PROCESSING: 3,
+    PROCESSING_COMPLETE: 5,
+    PROCESSING_ERROR: 6,
+    PROCESSING_REVERT_ERROR: 10,
+    LOADING: 7,
+    LOAD_ERROR: 8
+}
+```
+
+## FileOrigin Enum
+
+This enum contains the names for the different file origins. A file item is either `INPUT` by the user, restored from the server a temporary file `LIMBO`, or is a `LOCAL` server file (a file already uploaded and confirmed that is not in the server temporary uploads folder).
+
+```js
+{
+    INPUT: 1,
+    LIMBO: 2,
+    LOCAL: 3
+};
 ```
