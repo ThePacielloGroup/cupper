@@ -38,11 +38,9 @@
     {{ end }}
   </head>
   <body>
-    {{ if ne .Type "print-version" }}
-      <a href="#main">skip to content</a>
-    {{ end }}
+    <a href="#main">skip to content</a>
     {{ partial "svg.html" . }}
-    <div class="wrapper {{ if eq .Type "print-version" }}print-version{{ end }}">
+    <div class="wrapper">
         <header class="intro-and-nav" role="banner">
           <div>
             <div class="intro">
@@ -51,21 +49,8 @@
               </a>
               <p class="library-desc">
                 {{ .Site.Params.Description | markdownify }}
-                {{ if ne .Type "print-version" }}
-                  <a class="print" href="{{ "print-version" | absURL }}">
-                    <svg viewBox="0 0 35 45" aria-hidden="true" focusable="false">
-                      <use xlink:href="#doc"></use>
-                    </svg>Print version
-                 {{ end }}
                </a>
               </p>
-              {{ if eq .Type "print-version" }}
-                <p class="toc-link">
-                  <span aria-hidden="true">&#x2193;</span>
-                  <a href="#toc">Table of contents</a>
-                  <span aria-hidden="true">&#x2193;</span>
-                </p>
-              {{ end }}
             </div>
             {{ block "nav" . }}
               <nav id="patterns-nav" class="patterns" role="navigation">
@@ -77,37 +62,20 @@
                   Menu
                 </button>
                 {{ $current := . }}
-                {{ range $.Site.Home.Sections }}
-                  <ul id="patterns-list">
-                    {{ range .Pages.ByWeight }}
-                      <li class="pattern">
-                        <a href="{{ .RelPermalink }}" {{ if eq $current.Permalink .Permalink  }}aria-current="page"{{ end }}>
-                          <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-                            <use xlink:href="#bookmark"></use>
-                          </svg>
-                          <span class="text">{{ .Title }}</span>
-                        </a>
-                      </li>
-                    {{ end }}
-                    {{ range .Sections.ByWeight }}
-                      <li>
-                        <h3>{{ .Title }}</h3>
-                        <ul>
-                          {{ range .Pages.ByWeight }}
-                            <li class="pattern">
-                              <a href="{{ .RelPermalink }}" {{ if eq $current.Title .Title  }}aria-current="page"{{ end }}>
-                                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-                                  <use xlink:href="#bookmark"></use>
-                                </svg>
-                                <span class="text">{{ .Title }}</span>
-                              </a>
-                            </li>
-                          {{ end }}
-                        </ul>
-                      </li>
-                    {{ end }}
-                  </ul>
+                <ul id="patterns-list">
+                {{ range .Site.Menus.nav }}
+                  <li class="pattern">
+                    {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+                    {{/*  TODO highlight Blog nav item when on post pages  */}}
+                    <a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>
+                      <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
+                        <use xlink:href="#bookmark"></use>
+                      </svg>
+                      <span class="text">{{ .Name }}</span>
+                    </a>
+                  </li>
                 {{ end }}
+                </ul>
               </nav>
             {{ end }}
           </div>
@@ -123,8 +91,7 @@
                 <span aria-hidden="true"></span>
               </label>
             </div>
-            Powered by <strong>Cupper</strong>, a <strong>The Paciello Group</strong> project.<br>
-            For general enquiries, contact us on info@paciellogroup.com.
+            {{ .Site.Params.footer | markdownify }}
           </footer>
         </div>
       </div>
