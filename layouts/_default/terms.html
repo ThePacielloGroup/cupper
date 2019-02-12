@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <main id="main">
+    <h1>
+      {{ .Title }}
+    </h1>
+    <ul class="patterns-list">
+      {{ $type := .Type }}
+      {{ range $key, $value := .Data.Terms.ByCount }}
+        {{ $name := .Name }}
+        {{ $count := .Count }}
+        {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+        <li>
+          <h2>
+            <a href="{{ .Permalink }}">
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              {{ printf "(%d) %s" $count $name }}
+            </a>
+          </h2>
+        </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </main>
+{{ end }}

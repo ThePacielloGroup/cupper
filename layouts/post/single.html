@@ -6,6 +6,9 @@
       </svg>
       {{ .Title }}
     </h1>
+    <div class="date">
+      <strong aria-hidden="true">Publish date: </strong>{{ .PublishDate.Format $.Site.Params.dateFormat }}
+    </div>
     {{ if isset .Params "tags" }}
       <div class="tags">
         <strong aria-hidden="true">Tags: </strong>
@@ -15,12 +18,13 @@
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+              <a href="{{ "/tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a>
             </li>
           {{ end }}
         </ul>
       </div>
     {{ end }}
+    
     {{ if ne .Params.TOC false }}
       {{ partial "toc" . }}
     {{ end }}

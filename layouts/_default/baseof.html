@@ -29,9 +29,7 @@
       img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
     </style>
     <title>
-      {{ block "title" . }}
-        {{ .Title }} | {{ .Site.Title }}
-      {{ end }}
+      {{ .Title }} | {{ .Site.Title }}
     </title>
     {{ if .IsHome }}
       <link rel="manifest" href="manifest.json">
@@ -66,7 +64,9 @@
                 {{ range .Site.Menus.nav }}
                   <li class="pattern">
                     {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
-                    {{/*  TODO highlight Blog nav item when on post pages  */}}
+                    {{ $active = or $active (eq .Name $current.Title) }}
+                    {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
+                    {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
                     <a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>
                       <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                         <use xlink:href="#bookmark"></use>

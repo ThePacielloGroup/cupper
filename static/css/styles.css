@@ -59,6 +59,9 @@ img {
     max-width: 100%;
     max-height: 50vh;
 }
+.img-link {
+    border-bottom: none;
+}
 p img {
     margin: 0.75rem 0;
 }
@@ -460,6 +463,13 @@ caption {
 .tags li {
     white-space: nowrap;
     margin: 0 0.25rem 0 0;
+}
+
+/* Date */
+
+.date {
+    margin-top: 0;
+    font-size: 0.85rem;
 }
 /* Notes and warnings */
 

@@ -1,0 +1,10 @@
+{{ $quote := .Inner }}
+{{ $quote = replace $quote "<p>" "" }}
+{{ $quote = replace $quote "</p>" "" }}
+{{ $quote = safeHTML $quote }}
+<blockquote class="blockquote">
+  <p>{{ $quote }}</p>
+  {{ with (.Get "author") }}
+  <footer>{{ . }}</footer>
+  {{ end }}
+</blockquote>

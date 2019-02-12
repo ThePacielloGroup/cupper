@@ -6,14 +6,24 @@ googleAnalytics = "UA-123456789-1"
 
 # Uncomment below to enable syntax highlighting
 # For more styles see https://xyproto.github.io/splash/docs/all.html 
-# pygmentsCodefences = true
-# pygmentsStyle = "algol"
+pygmentsCodefences = true
+pygmentsStyle = "algol"
 
 [taxonomies]
   tag = "tags"
 
 [permalinks]
   post = "/:filename/"
+
+[imaging]
+  quality = 99
+
+[params]
+  # description = "An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project."
+  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "Jan 2, 2006"
+  codePenUser = "TODO"
 
 [menu]
   [[menu.nav]]
@@ -36,10 +46,3 @@ googleAnalytics = "UA-123456789-1"
     name = "RSS"
     url = "/index.xml"
     weight = 5
-
-[params]
-  # description = "An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project."
-  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
-  # For more date formats see https://gohugo.io/functions/format/
-  dateFormat = "Jan 2, 2006"
-  codePenUser = "TODO"
