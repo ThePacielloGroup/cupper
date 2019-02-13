@@ -54,11 +54,7 @@ TODO link RealFaviconGenerator and give steps
 
 ## Credits
 
-TODO
+Thank you to:
 
-- Cupper and Heydon Pickering http://www.heydonworks.com
+- [Heydon Pickering](http://www.heydonworks.com) for creating the original Cupper project
 - [Netlify](https://www.netlify.com/) for deploys
-- [Visual Studio Code](https://code.visualstudio.com/) for text editing
-- [Fedora](https://getfedora.org/), [Xfce](https://www.xfce.org/), and [VirtualBox](https://www.virtualbox.org/) for development environment
-- [gh-md-toc](https://github.com/ekalinin/github-markdown-toc) for table of contents generation
-- [befunky](https://www.befunky.com/) for screenshot editing

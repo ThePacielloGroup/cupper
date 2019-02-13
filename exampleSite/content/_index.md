@@ -8,7 +8,7 @@ Welcome to **Cupper**: An accessibility-friendly Hugo theme, ported from the [or
 {{% ticks %}}
 * Screen reader and keyboard accessible
 * Responsive
-* Shortcodes for figures, notes, and warnings, just to name a few
+* Shortcodes for figures, notes, warnings, file trees, and expandable sections -- just to name a few
 * Toggleable dark theme
-* Toggleable table of contents
+* Toggleable table of contents per blog post
 {{% /ticks %}}
