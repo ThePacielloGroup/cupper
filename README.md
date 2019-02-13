@@ -46,7 +46,7 @@ TODO link RealFaviconGenerator and give steps
 
 ## Shortcodes
 
-TODO list em 
+TODO link to demo post
 
 ## Credits
 
