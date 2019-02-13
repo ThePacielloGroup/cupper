@@ -195,8 +195,11 @@ dd li + li {
 
 /* Blockquotes */
 blockquote {
+  border-left: 0.5rem solid;
+  padding-left: 0.75rem;
+}
+blockquote .author {
   font-size: 0.85rem;
-  font-style: italic;
 }
 
 /* Buttons */
