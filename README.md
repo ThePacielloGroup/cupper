@@ -40,13 +40,13 @@ hugo server --themesDir ../..
 
 Copy the `config.toml` from the [`exampleSite`](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite), then edit as desired. 
 
-## Favicons
-
-TODO link RealFaviconGenerator and give steps
-
 ## Shortcodes
 
-TODO link to demo post
+See the [full list of supported shortcodes](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/).
+
+## Favicons
+
+Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files to `static/images`. 
 
 ## Credits
 
