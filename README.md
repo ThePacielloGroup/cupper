@@ -11,6 +11,7 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Updating](#updating)
 - [Run example site](#run-example-site)
 - [Configuration](#configuration)
+- [Disable toc for a blog post](#disable-toc-for-a-blog-post)
 - [Shortcodes](#shortcodes)
 - [Favicons](#favicons)
 - [Credits](#credits)
@@ -48,6 +49,17 @@ hugo server --themesDir ../..
 Copy the `config.toml` from the [`exampleSite`](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite), then edit as desired. 
 
 Replace `static/images/logo.svg` with your logo. Keep the filename as `logo.svg`. 
+
+## Disable toc for a blog post
+
+Blog posts that have two or more subheadings (`<h2>`s) automatically get a table of contents. To disable this set `toc` to `false`. For example:
+
+```
+---
+title: "My page with a few headings"
+toc: false
+---
+```
 
 ## Shortcodes
 
