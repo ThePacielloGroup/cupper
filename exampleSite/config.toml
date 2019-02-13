@@ -5,10 +5,6 @@ title = "Cupper"
 theme = "cupper-hugo-theme"
 googleAnalytics = "UA-123456789-1"
 
-# For more styles see https://xyproto.github.io/splash/docs/all.html 
-pygmentsCodefences = true
-pygmentsStyle = "algol"
-
 [taxonomies]
   tag = "tags"
 

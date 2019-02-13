@@ -12,6 +12,7 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Run example site](#run-example-site)
 - [Configuration](#configuration)
 - [Disable toc for a blog post](#disable-toc-for-a-blog-post)
+- [Syntax highlighting](#syntax-highlighting)
 - [Shortcodes](#shortcodes)
 - [Favicons](#favicons)
 - [Credits](#credits)
@@ -60,6 +61,10 @@ title: "My page with a few headings"
 toc: false
 ---
 ```
+
+## Syntax highlighting
+
+Syntax highlighting is provided by [Prism](https://prismjs.com/). See the [full list of supported languages](https://prismjs.com/#languages-list).
 
 ## Shortcodes
 

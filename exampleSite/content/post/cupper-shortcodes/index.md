@@ -62,6 +62,32 @@ hugo server --gc
 3. The close button uses `aria-label` to provide the text label "close", overriding the text content
 4. The heading is used as the dialog's label. The `aria-labelledby` attribute points to its `id`
 
+---
+
+To get syntax highlighting, use regular markdown code fences:
+
+````
+```html
+<div role="dialog" aria-labelledby="dialog-heading">
+  <button aria-label="close">x</button>
+  <h2 id="dialog-heading">Confirmation</h2>
+  <p>Press Okay to confirm or Cancel</p>
+  <button>Okay</button>
+  <button>Cancel</button>
+</div>
+```
+````
+
+```html
+<div role="dialog" aria-labelledby="dialog-heading">
+  <button aria-label="close">x</button>
+  <h2 id="dialog-heading">Confirmation</h2>
+  <p>Press Okay to confirm or Cancel</p>
+  <button>Okay</button>
+  <button>Cancel</button>
+</div>
+```
+
 ## codePen
 
 ```
