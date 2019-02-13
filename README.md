@@ -52,5 +52,6 @@ TODO link to demo post
 
 Thank you to:
 
-- [Heydon Pickering](http://www.heydonworks.com) for creating the original Cupper project
+- [Heydon Pickering](http://www.heydonworks.com) and [The Paciello Group
+](https://www.paciellogroup.com/) for creating the original Cupper project
 - [Netlify](https://www.netlify.com/) for deploys
