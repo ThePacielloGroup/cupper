@@ -162,6 +162,8 @@ This is a note! It's something the reader may like to know about but is suppleme
 
 ## principles
 
+See the [full principles list](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/data/principles.json).
+
 ```
 {{%/* principles include="Add value, Be consistent" descriptions="true" */%}}
 ```
@@ -205,6 +207,8 @@ This is a warning! It's about something the reader should be careful to do or to
 {{% /warning %}}
 
 ## wcag
+
+See the [full wcag list](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/data/wcag.json). 
 
 ```
 {{%/* wcag include="1.2.1, 1.3.1, 4.1.2" */%}}
