@@ -64,7 +64,7 @@ toc: false
 
 ## Syntax highlighting
 
-Syntax highlighting is provided by [Prism](https://prismjs.com/). See the [full list of supported languages](https://prismjs.com/#languages-list). See [this](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/#code) for an example usage. 
+Syntax highlighting is provided by [Prism](https://prismjs.com/). See the [full list of supported languages](https://prismjs.com/#languages-list).
 
 ## Shortcodes
 
