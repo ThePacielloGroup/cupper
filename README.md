@@ -6,7 +6,14 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 
 ## Table of contents
 
-TODO generate
+- [Demo](#demo)
+- [Installation](#installation)
+- [Updating](#updating)
+- [Run example site](#run-example-site)
+- [Configuration](#configuration)
+- [Shortcodes](#shortcodes)
+- [Favicons](#favicons)
+- [Credits](#credits)
 
 ## Demo
 
