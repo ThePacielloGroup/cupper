@@ -1,105 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ "images/apple-touch-icon-57x57.png" | absURL }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ "images/apple-touch-icon-60x60.png" | absURL }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ "images/apple-touch-icon-72x72.png" | absURL }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ "images/apple-touch-icon-76x76.png" | absURL }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ "images/apple-touch-icon-114x114.png" | absURL }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ "images/apple-touch-icon-120x120.png" | absURL }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ "images/apple-touch-icon-144x144.png" | absURL }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ "images/apple-touch-icon-152x152.png" | absURL }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon-180x180.png" | absURL }}">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ "images/android-icon-192x192.png" | absURL }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | absURL }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ "images/favicon-96x96.png" | absURL }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon-16x16.png" | absURL }}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ "images/ms-icon-144x144.png" | absURL }}">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
-    <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
-    <style id="inverter" media="none">
-      html { filter: invert(100%) }
-      * { background-color: inherit }
-      img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
-    </style>
-    <title>
-      {{ .Title }} | {{ .Site.Title }}
-    </title>
-    {{ if .IsHome }}
-      <link rel="manifest" href="manifest.json">
-    {{ end }}
-  </head>
+<html lang="{{ .Site.Language.Lang }}">
+  {{ partial "head.html" . }}
   <body>
     <a href="#main">skip to content</a>
     {{ partial "svg.html" . }}
     <div class="wrapper">
-        <header class="intro-and-nav" role="banner">
-          <div>
-            <div class="intro">
-              <a class="logo" href="/" aria-label="{{ .Site.Title }} home page">
-                <img src="{{ "images/logo.svg" | absURL }}" alt="">
-              </a>
-              <p class="library-desc">
-                {{ .Site.Params.Description | markdownify }}
-               </a>
-              </p>
-            </div>
-            {{ block "nav" . }}
-              <nav id="patterns-nav" class="patterns" role="navigation">
-                <h2 class="vh">Main navigation</h2>
-                <button id="menu-button" aria-expanded="false">
-                  <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
-                    <use xlink:href="#menu"></use>
-                  </svg>
-                  Menu
-                </button>
-                {{ $current := . }}
-                <ul id="patterns-list">
-                {{ range .Site.Menus.nav }}
-                  <li class="pattern">
-                    {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
-                    {{ $active = or $active (eq .Name $current.Title) }}
-                    {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
-                    {{ $active = or $active (and (eq .Name "Tags") (eq $current.Section "tags")) }}
-                    <a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>
-                      <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-                        <use xlink:href="#bookmark"></use>
-                      </svg>
-                      <span class="text">{{ .Name }}</span>
-                    </a>
-                  </li>
-                {{ end }}
-                </ul>
-              </nav>
-            {{ end }}
-          </div>
-        </header>
+      {{ partial "header.html" . }}
       <div class="main-and-footer">
         <div>
-          {{ block "main" . }}
-          {{ end }}
-          <footer role="contentinfo">
-            <div>
-              <label for="themer">
-                dark theme: <input type="checkbox" id="themer" class="vh">
-                <span aria-hidden="true"></span>
-              </label>
-            </div>
-            {{ .Site.Params.footer | markdownify }}
-          </footer>
+          {{ block "main" . }}{{ end }}
+          {{ partial "footer.html" . }}
         </div>
       </div>
     </div>
-    <script src="{{ "js/prism.js" | absURL }}"></script>
-    <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
-    {{ if .Page.IsHome }}
-      <script src="{{ "js/service-worker-registration.js" | absURL }}"></script>
-    {{ end }}
+    {{ partial "script.html" . }}
   </body>
 </html>

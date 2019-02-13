@@ -1,0 +1,14 @@
+<header class="intro-and-nav" role="banner">
+  <div>
+    <div class="intro">
+      <a class="logo" href="/" aria-label="{{ .Site.Title }} home page">
+        <img src="{{ "images/logo.svg" | absURL }}" alt="">
+      </a>
+      <p class="library-desc">
+        {{ .Site.Params.description | markdownify }}
+        </a>
+      </p>
+    </div>
+    {{ partial "nav.html" . }}
+  </div>
+</header>

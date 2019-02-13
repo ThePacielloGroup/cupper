@@ -1,0 +1,9 @@
+<footer role="contentinfo">
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+  </div>
+  {{ .Site.Params.footer | markdownify }}
+</footer>
