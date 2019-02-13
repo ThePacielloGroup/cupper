@@ -72,7 +72,7 @@ See the [full list of supported shortcodes](https://cupper-hugo-theme.netlify.co
 
 ## Favicons
 
-Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files to `static/images`. 
+Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files under `static`. 
 
 ## Credits
 
