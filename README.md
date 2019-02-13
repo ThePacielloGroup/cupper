@@ -47,6 +47,8 @@ hugo server --themesDir ../..
 
 Copy the `config.toml` from the [`exampleSite`](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite), then edit as desired. 
 
+Replace `static/images/logo.svg` with your logo. Keep the filename as `logo.svg`. 
+
 ## Shortcodes
 
 See the [full list of supported shortcodes](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/).
