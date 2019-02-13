@@ -2,15 +2,15 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bc8c4e51-37ee-419d-ad4f-b378010ee546/deploy-status)](https://app.netlify.com/sites/cupper-hugo-theme/deploys)
 
-An accessibility-friendly Hugo theme, ported from the original [Cupper](https://github.com/ThePacielloGroup/cupper) project.
+An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project.
 
 ## Table of contents
 
-TODO
+TODO generate
 
 ## Demo
 
-Dev demo: https://cupper-hugo-theme.netlify.com/
+https://cupper-hugo-theme.netlify.com/
 
 ## Installation
 
@@ -40,17 +40,13 @@ hugo server --themesDir ../..
 
 Copy the `config.toml` or `config.yaml` TODO from the `exampleSite` TODO, then edit as desired. 
 
-## Typography
-
-TODO link post
-
-## Features supported from the original Cupper
-
-TODO list em 
-
 ## Favicons
 
 TODO link RealFaviconGenerator and give steps
+
+## Shortcodes
+
+TODO list em 
 
 ## Credits
 

@@ -1,5 +1,6 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "Cupper"
 theme = "cupper-hugo-theme"
 googleAnalytics = "UA-123456789-1"
