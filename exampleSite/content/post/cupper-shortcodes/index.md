@@ -16,6 +16,30 @@ Even a happy life cannot be without a measure of darkness, and the word happy wo
 Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
 {{% /blockquote %}}
 
+## note
+
+```
+{{%/* note */%}}
+This is a note! It's something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.
+{{%/* /note */%}}
+```
+
+{{% note %}}
+This is a note! It's something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.
+{{% /note %}}
+
+## warning note
+
+```
+{{%/* warning */%}}
+This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
+{{%/* /warning */%}}
+```
+
+{{% warning %}}
+This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
+{{% /warning %}}
+
 ## cmd
 
 ```
@@ -116,22 +140,6 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
 Here is some markdown including [a link](https://twitter.com/heydonworks). Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.
 {{% /expandable %}}
 
-## figure
-
-```
-{{</* figure
-img="sun.jpg" 
-caption="The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. [Credits](https://images.nasa.gov/details-GSFC_20171208_Archive_e000393.html)." 
-command="Resize" 
-options="700x" */>}}
-```
-
-{{< figure
-img="sun.jpg" 
-caption="The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. [Credits](https://images.nasa.gov/details-GSFC_20171208_Archive_e000393.html)." 
-command="Resize" 
-options="700x" >}}
-
 ## fileTree
 
 ```
@@ -174,36 +182,6 @@ options="700x" >}}
 * Level 1 file
 {{% /fileTree %}}
 
-## note
-
-```
-{{%/* note */%}}
-This is a note! It's something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.
-{{%/* /note */%}}
-```
-
-{{% note %}}
-This is a note! It's something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.
-{{% /note %}}
-
-## principles
-
-See the [full principles list](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/data/principles.json).
-
-```
-{{%/* principles include="Add value, Be consistent" descriptions="true" */%}}
-```
-
-{{% principles include="Add value, Be consistent" descriptions="true" %}}
-
-## tested
-
-```
-{{%/* tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" */%}}
-```
-
-{{% tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" %}}
-
 ## ticks
 
 ```
@@ -220,17 +198,31 @@ See the [full principles list](https://github.com/zwbetz-gh/cupper-hugo-theme/bl
 * Selling point three
 {{% /ticks %}}
 
-## warning
+## figure
 
 ```
-{{%/* warning */%}}
-This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
-{{%/* /warning */%}}
+{{</* figure
+img="sun.jpg" 
+caption="The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. [Credits](https://images.nasa.gov/details-GSFC_20171208_Archive_e000393.html)." 
+command="Resize" 
+options="700x" */>}}
 ```
 
-{{% warning %}}
-This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
-{{% /warning %}}
+{{< figure
+img="sun.jpg" 
+caption="The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. [Credits](https://images.nasa.gov/details-GSFC_20171208_Archive_e000393.html)." 
+command="Resize" 
+options="700x" >}}
+
+## principles
+
+See the [full principles list](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/data/principles.json).
+
+```
+{{%/* principles include="Add value, Be consistent" descriptions="true" */%}}
+```
+
+{{% principles include="Add value, Be consistent" descriptions="true" %}}
 
 ## wcag
 
@@ -241,3 +233,11 @@ See the [full wcag list](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/mas
 ```
 
 {{% wcag include="1.2.1, 1.3.1, 4.1.2" %}}
+
+## tested
+
+```
+{{%/* tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" */%}}
+```
+
+{{% tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" %}}
