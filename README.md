@@ -11,10 +11,11 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Updating](#updating)
 - [Run example site](#run-example-site)
 - [Configuration](#configuration)
-- [Disable toc for a blog post](#disable-toc-for-a-blog-post)
+- [Logo](#logo)
+- [Favicons](#favicons)
 - [Syntax highlighting](#syntax-highlighting)
 - [Shortcodes](#shortcodes)
-- [Favicons](#favicons)
+- [Disable toc for a blog post](#disable-toc-for-a-blog-post)
 - [Credits](#credits)
 
 ## Demo
@@ -49,7 +50,21 @@ hugo server --themesDir ../..
 
 Copy the `config.toml` from the [`exampleSite`](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite), then edit as desired. 
 
+## Logo
+
 Replace `static/images/logo.svg` with your logo. Keep the filename as `logo.svg`. 
+
+## Favicons
+
+Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files under `static`. 
+
+## Syntax highlighting
+
+Syntax highlighting is provided by [Prism](https://prismjs.com/). See the [full list of supported languages](https://prismjs.com/#languages-list).
+
+## Shortcodes
+
+See the [full list of supported shortcodes](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/).
 
 ## Disable toc for a blog post
 
@@ -61,18 +76,6 @@ title: "My page with a few headings"
 toc: false
 ---
 ```
-
-## Syntax highlighting
-
-Syntax highlighting is provided by [Prism](https://prismjs.com/). See the [full list of supported languages](https://prismjs.com/#languages-list).
-
-## Shortcodes
-
-See the [full list of supported shortcodes](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/).
-
-## Favicons
-
-Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files under `static`. 
 
 ## Credits
 
