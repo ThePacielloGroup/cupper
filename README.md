@@ -60,7 +60,7 @@ Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) t
 
 ## Syntax highlighting
 
-Syntax highlighting is provided by [Prism](https://prismjs.com/). See the [full list of supported languages](https://prismjs.com/#languages-list).
+Syntax highlighting is provided by [Prism](https://prismjs.com/). See this [markdown code fences example](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/#syntax-highlighting).
 
 ## Shortcodes
 

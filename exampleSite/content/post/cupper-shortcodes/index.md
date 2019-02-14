@@ -86,9 +86,9 @@ hugo server --gc
 3. The close button uses `aria-label` to provide the text label "close", overriding the text content
 4. The heading is used as the dialog's label. The `aria-labelledby` attribute points to its `id`
 
----
+## syntax highlighting
 
-To get syntax highlighting, use regular markdown code fences:
+To get syntax highlighting for your code, use regular markdown code fences:
 
 ````
 ```html
