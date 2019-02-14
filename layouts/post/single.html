@@ -10,16 +10,16 @@
       {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
       <strong aria-hidden="true">Publish date: </strong>{{ .PublishDate.Format $dateFormat }}
     </div>
-    {{ if isset .Params "tags" }}
+    {{ with .Params.tags }}
       <div class="tags">
         <strong aria-hidden="true">Tags: </strong>
         <ul aria-label="tags">
-          {{ range .Params.tags }}
+          {{ range . }}
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              <a href="{{ "/tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a>
+              <a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a>
             </li>
           {{ end }}
         </ul>
