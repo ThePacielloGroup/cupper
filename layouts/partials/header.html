@@ -5,7 +5,9 @@
         <img src="{{ "images/logo.svg" | absURL }}" alt="">
       </a>
       <p class="library-desc">
-        {{ .Site.Params.description | markdownify }}
+        {{ with .Site.Params.description }}
+          {{ . | markdownify }}
+        {{ end }}
         </a>
       </p>
     </div>

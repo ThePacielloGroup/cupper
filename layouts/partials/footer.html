@@ -5,5 +5,7 @@
       <span aria-hidden="true"></span>
     </label>
   </div>
-  {{ .Site.Params.footer | markdownify }}
+  {{ with .Site.Params.footer }}
+    {{ . | markdownify }}
+  {{ end }}
 </footer>
