@@ -76,8 +76,4 @@ Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) t
 
 ## Credits
 
-Thank you to:
-
-- [Heydon Pickering](http://www.heydonworks.com) and [The Paciello Group
-](https://www.paciellogroup.com/) for creating the original Cupper project
-- [Netlify](https://www.netlify.com/) for deploys
+Thank you to [Heydon Pickering](http://www.heydonworks.com) and [The Paciello Group](https://www.paciellogroup.com/) for creating the original Cupper project. 
