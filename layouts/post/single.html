@@ -7,7 +7,8 @@
       {{ .Title }}
     </h1>
     <div class="date">
-      <strong aria-hidden="true">Publish date: </strong>{{ .PublishDate.Format $.Site.Params.dateFormat }}
+      {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
+      <strong aria-hidden="true">Publish date: </strong>{{ .PublishDate.Format $dateFormat }}
     </div>
     {{ if isset .Params "tags" }}
       <div class="tags">
