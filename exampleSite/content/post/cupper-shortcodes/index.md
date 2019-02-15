@@ -88,7 +88,7 @@ hugo server --gc
 
 ## syntax highlighting
 
-To get syntax highlighting for your code, use regular markdown code fences:
+To get syntax highlighting for your code, use markdown code fences, then specify the language:
 
 ````
 ```html
