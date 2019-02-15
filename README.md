@@ -7,6 +7,7 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 ## Table of contents
 
 - [Demo](#demo)
+- [Minimum Hugo version](#minimum-hugo-version)
 - [Installation](#installation)
 - [Updating](#updating)
 - [Run example site](#run-example-site)
@@ -21,6 +22,10 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 ## Demo
 
 https://cupper-hugo-theme.netlify.com/
+
+## Minimum Hugo version
+
+This theme **requires** Hugo version `0.48` or higher. Take a look at the [Hugo releases](https://github.com/gohugoio/hugo/releases) and download the binary for your OS.
 
 ## Installation
 
