@@ -14,8 +14,8 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Configuration](#configuration)
 - [Logo](#logo)
 - [Favicons](#favicons)
-- [Syntax highlighting](#syntax-highlighting)
 - [Shortcodes](#shortcodes)
+- [Syntax highlighting](#syntax-highlighting)
 - [Disable toc for a blog post](#disable-toc-for-a-blog-post)
 - [Credits](#credits)
 
@@ -63,13 +63,14 @@ Replace `static/images/logo.svg` with your logo. Keep the filename as `logo.svg`
 
 Upload your image to [RealFaviconGenerator](https://realfavicongenerator.net/) then copy-paste the generated favicon files under `static`. 
 
+## Shortcodes
+
+See the [full list of supported shortcodes](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/).
+
 ## Syntax highlighting
 
 Syntax highlighting is provided by [Prism](https://prismjs.com/). See this [markdown code fences example](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/#syntax-highlighting).
 
-## Shortcodes
-
-See the [full list of supported shortcodes](https://cupper-hugo-theme.netlify.com/cupper-shortcodes/).
 
 ## Disable toc for a blog post
 
