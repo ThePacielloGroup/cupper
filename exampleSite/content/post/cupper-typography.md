@@ -120,9 +120,23 @@ As Kanye West said:
 
 ## Inline code
 
+```
+This `<html>` tag is inline code.
+```
+
 This `<html>` tag is inline code.
 
 ## Block code
+
+````
+This
+
+```
+<html>
+```
+
+tag is block code. 
+````
 
 This
 
