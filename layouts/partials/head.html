@@ -15,7 +15,10 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
-  <link rel="stylesheet" type="text/css" href="{{ "css/styles.css" | absURL }}">
+
+  {{ $templateStyles := resources.Get "css/template-styles.css" }}
+  {{ $styles := $templateStyles | resources.ExecuteAsTemplate "css/styles.css" . }}
+  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
 
   <style id="inverter" media="none">
     html { filter: invert(100%) }

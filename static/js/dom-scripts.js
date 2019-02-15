@@ -1,4 +1,4 @@
-/* expandable sections */
+/* Expandable sections */
 (function () {
   function toggle (button, target) {
     var expanded = button.getAttribute('aria-expanded') === 'true';
@@ -17,7 +17,7 @@
   })
 }());
 
-/* menu button */
+/* Menu button */
 (function () {
   var button = document.getElementById('menu-button');
   if (button) {
@@ -29,7 +29,7 @@
   }
 }());
 
-/* persist navigation scroll point */
+/* Persist navigation scroll point */
 (function () {
   window.onbeforeunload = function () {
     var patternsNav = document.getElementById('patterns-nav');
