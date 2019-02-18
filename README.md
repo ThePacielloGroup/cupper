@@ -53,7 +53,7 @@ hugo server --themesDir ../..
 
 ## Configuration
 
-Copy the `config.toml` from the [`exampleSite`](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite), then edit as desired. 
+Copy the `config.toml` or `config.yaml` from the [`exampleSite`](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/exampleSite), then edit as desired. 
 
 ## Logo
 
