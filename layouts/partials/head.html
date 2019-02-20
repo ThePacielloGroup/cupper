@@ -7,7 +7,7 @@
   <link rel="canonical" href="{{ .Permalink }}">
 
   {{ if .IsHome }}
-    {{ with .Site.Params.description }}
+    {{ with .Site.Params.homeMetaContent }}
       <meta name="description" content="{{ . | plainify }}">
     {{ end }}
   {{ end }}
