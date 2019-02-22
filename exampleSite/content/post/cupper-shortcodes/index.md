@@ -236,6 +236,8 @@ See the [full wcag list](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/mas
 
 ## tested
 
+See the [full browser list](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/static/images).
+
 ```
 {{%/* tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" */%}}
 ```
