@@ -5,7 +5,11 @@
     <ol>
       {{ range $headings }}
         <li>
-          <a href="#{{ . | htmlUnescape | plainify | urlize }}">
+          {{ $id := findRE "id=\".*\"" . }}
+          {{ $id = index $id 0 }}
+          {{ $id = strings.TrimPrefix "id=\"" $id }}
+          {{ $id = strings.TrimSuffix "\"" $id }}
+          <a href="#{{ $id }}">
             {{ . | htmlUnescape | plainify }}
           </a>
         </li>
