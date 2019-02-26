@@ -58,7 +58,7 @@ Copy the `config.toml` or `config.yaml` from the [`exampleSite`](https://github.
 
 ## Logo
 
-Replace `static/images/logo.svg` with your logo. Keep the filename as `logo.svg`. 
+Place your SVG logo at `static/images/logo.svg`. If you don't provide a logo, then the default theme logo will be used. 
 
 ## Favicons
 
