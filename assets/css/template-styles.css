@@ -430,6 +430,23 @@ caption {
     margin-top: 0.5rem;
 }
 
+/* Disqus Comments */
+#disqus-container {
+  font-size: 0.85rem;
+  border: 1px solid;
+  padding: 1.5rem;
+}
+#disqus-button {
+  width: 100%;
+}
+#disqus-comments {
+  display: none; 
+}
+#disqus-comments,
+#disqus-comments iframe {
+  max-height: 75vh !important;
+}
+
 /* Pattern lists */
 .patterns-list {
     list-style: none;

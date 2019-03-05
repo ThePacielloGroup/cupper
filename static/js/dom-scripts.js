@@ -131,3 +131,12 @@
     }
   });
 }());
+
+/* Disqus comments */
+function showComments() {
+  var disqusButton = document.getElementById('disqus-button');
+  disqusButton.remove(); 
+
+  var disqusComments = document.getElementById('disqus-comments');
+  disqusComments.style.display = 'block'; 
+}

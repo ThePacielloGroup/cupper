@@ -1,0 +1,13 @@
+<div id="disqus-container">
+  {{ $ctx := . }}
+  {{ with .Site.DisqusShortname }}
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      {{ if eq . "yourdiscussshortname" }}
+        <p>Disqus comments are disabled.</p>
+      {{ else }}
+        {{ template "_internal/disqus.html" $ctx }}
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
