@@ -445,6 +445,7 @@ caption {
 #disqus-comments,
 #disqus-comments iframe {
   max-height: 65vh !important;
+  overflow-y: auto; 
 }
 
 /* Pattern lists */
