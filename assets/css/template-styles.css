@@ -444,7 +444,7 @@ caption {
 }
 #disqus-comments,
 #disqus-comments iframe {
-  max-height: 75vh !important;
+  max-height: 65vh !important;
 }
 
 /* Pattern lists */
