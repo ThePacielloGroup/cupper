@@ -1,13 +1,27 @@
 <div id="disqus-container">
-  {{ $ctx := . }}
   {{ with .Site.DisqusShortname }}
     <button id="disqus-button" onclick="showComments()">Show comments</button>
     <div id="disqus-comments">
-      {{ if eq . "yourdiscussshortname" }}
+      {{ $isDummyName := eq . "yourdiscussshortname" }}
+      {{ $isServer := $.Site.IsServer }}
+      {{ if or $isDummyName $isServer }}
         <p>Disqus comments are disabled.</p>
+        <script type="application/javascript">
+          function showComments() {
+            {{ partial "disqus-js-common.js" . | safeJS }}
+          }
+        </script>
       {{ else }}
-        {{ template "_internal/disqus.html" $ctx }}
+        <div id="disqus_thread">
+        </div>
+        <script type="application/javascript">
+          function showComments() {
+            {{ partial "disqus-js-main.js" . | safeJS }}
+            {{ partial "disqus-js-common.js" . | safeJS }}
+          }
+        </script>
       {{ end }}
+      <noscript>Enable JavaScript to view Disqus comments.</noscript>
     </div>
   {{ end }}
 </div>
