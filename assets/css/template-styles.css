@@ -442,11 +442,6 @@ caption {
 #disqus-comments {
   display: none; 
 }
-#disqus-comments,
-#disqus-comments iframe {
-  max-height: 65vh !important;
-  overflow-y: auto; 
-}
 
 /* Pattern lists */
 .patterns-list {
