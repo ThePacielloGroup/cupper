@@ -32,7 +32,7 @@ import 'filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css';
 <link href="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css" rel="stylesheet">
 
 <!-- add before </body> -->
-<script src="https://unpkg.com/filepond-plugin-file-metadata/dist/filepond-plugin-file-poster.js"></script>
+<script src="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.js"></script>
 <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
 
 <script>
