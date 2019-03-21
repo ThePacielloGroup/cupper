@@ -432,12 +432,11 @@ caption {
 
 /* Disqus Comments */
 #disqus-container {
-  font-size: 0.85rem;
-  border: 1px solid;
-  padding: 1.5rem;
+  text-align: center;
 }
 #disqus-button {
   width: 100%;
+  padding: 0.25em 0.75em;
 }
 #disqus-comments {
   display: none; 

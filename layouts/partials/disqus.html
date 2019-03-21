@@ -5,7 +5,7 @@
       {{ $isDummyName := eq . "yourdiscussshortname" }}
       {{ $isServer := $.Site.IsServer }}
       {{ if or $isDummyName $isServer }}
-        <p>Disqus comments are disabled.</p>
+        <p><em>Disqus comments are disabled.</em></p>
         <script type="application/javascript">
           function showComments() {
             {{ partial "disqus-js-common.js" . | safeJS }}
