@@ -11,22 +11,25 @@ The FilePond core module exposes the following properties.
 
 | Property      | Default      | Description                                                                              |
 | ------------- | ------------ | ---------------------------------------------------------------------------------------- |
-| element       | `null`       | The root element of the FilePond instance. This is the only property that has no setter. |
+| element       | `null`       | The root element of the FilePond instance. This property has no setter  |
+| status        | `0`           | Returns the current status of the FilePond instance, use the `FilePond.Status` enum to determine the status. Has no setter. |
 | name          | `'filepond'` | The input field name to use                                                              |
-| className     | `null`       | Additional CSS class to add to the root element.                                         |
+| className     | `null`       | Additional CSS class to add to the root element                                          |
 | required      | `false`      | Sets the required attribute to the output field                                          |
+| disabled      | `false`      | Sets the disabled attribute to the output field                                          |
 | captureMethod | `null`       | Sets the given value to the `capture` attribute                                          |
 | allowDrop     | `true`       | Enable or disable drag n' drop                                                           |
 | allowBrowse   | `true`       | Enable or disable file browser                                                           |
 | allowPaste    | `true`       | Enable or disable pasting of files. Pasting files is not supported on all browesrs.      |
 | allowMultiple | `false`      | Enable or disable adding multiple files                                                  |
 | allowReplace  | `true`       | Allow drop to replace a file, only works when `allowMultiple` is `false`                 |
-| allowRevert   | `true`       | Allows the user to undo file upload
-| forceRevert   | `false`      | Set to `true` to require the file to be successfully reverted before continuing
+| allowRevert   | `true`       | Allows the user to undo file upload |
+| forceRevert   | `false`      | Set to `true` to require the file to be successfully reverted before continuing |
 | maxFiles      | `null`       | The maximum number of files that the pond can handle                                     |
-| maxParallelUploads | `null`  | The maxmimum number of files that can be uploaded in parallel
+| maxParallelUploads | `null`  | The maxmimum number of files that can be uploaded in parallel |
 | checkValidity | `false`      | Set to `true` to enable custom validity messages. FilePond will throw an error when a parent form is submitted and it contains invalid files. |
-
+| itemInsertLocation | `'before'` | Set to `'after'` to add files to end of list (when dropped at the top of the list or added using browse or paste), set to `'before'` to add files at start of list. Set to a compare function to automatically [sort items](#sorting-files) when added |
+| itemInsertInterval | `75` | The interval to use before showing each item being added to the list |
 
 ### Drag n' Drop related
 
@@ -102,9 +105,11 @@ The FilePond core module exposes the following properties.
 | onprocessfileabort    | `(file)`                  | Aborted processing of a file                                                                                                                                       |
 | onprocessfileundo     | `(file)`                  | Processing of a file has been undone                                                                                                                               |
 | onprocessfile         | `(error, file)`           | If no error, Processing of a file has been completed                                                                                                               |
+| onprocessfiles        | `()`                      | Called when all files in the list have been processed |
 | onremovefile          | `(file)`                  | File has been removed.                                                                                                                                             |
 | onpreparefile         | `(file, output)`          | File has been transformed by the transform plugin or another plugin subscribing to the prepare_output filter. It receives the file item and the output data.       |                                                                                                                                        |
-| onupdatefiles         | `(items)`                 | A file has been added or removed, receives a list of file items |
+| onupdatefiles         | `(files)`                 | A file has been added or removed, receives a list of file items |
+| onactivatefile        | `(file)`                  | Called when a file is clicked or tapped |
 
 
 ### Hooks
@@ -125,7 +130,7 @@ The FilePond core module exposes the following properties.
 | styleButtonProcessItemPosition | `'right`         | The position of the process item button, `'left'`, `'center'`, `'right'`, and/or `'bottom'`. |
 | styleLoadIndicatorPosition | `'right`             | The position of the load indicator, `'left'`, `'center'`, `'right'`, and/or `'bottom'`. |
 | styleProgressIndicatorPosition | `'right`         | The position of the progress indicator, `'left'`, `'center'`, `'right'`, and/or `'bottom'`. |
-
+| styleItemPanelAspectRatio | `null` | Set a forced aspect ratio for the file items. Useful when rendering cropped or fixed aspect ratio images in grid view, this will improve performance as FilePond will know beforehand the size of the item to render. |
 
 ## Events
 
@@ -168,6 +173,7 @@ pond.addEventListener('FilePond:addfile', e => {
 | [getFile](#getting-files)         | `query`              | Returns the file matching the supplied `query`        |
 | [getFiles](#getting-files)        |                      | Returns all files                                     |
 | [browse](#opening-the-file-browser)                            |                      | Opens the browse file dialog, please note that this only works if the user initiaded the callstack that ends up calling the `browse` method. |
+| [sort]($sorting-files) | `compare` | Sorts files in the list using the supplied compare function |
 | destroy                           |                      | Destroys this FilePond instance                       |
 
 #### DOM manipulation
@@ -417,4 +423,54 @@ document.querySelector('button').addEventListener('click', () => {
 })
 ```
 
+## Sorting Files
 
+Using the `sort()` method or the `itemInsertLocation` property we can sort the items in the files list.
+
+This sort method behaves exactly the same as the [default JavaScript sort compare function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+
+
+{{% note %}}
+When loading URLs the file items passed to the sort function don't have file data yet, in that situation we need to check if the files have already been loaded, and if not, we can treat the files as equals. FilePond will call the compare function again after a file has fully loaded.
+{{% /note %}}
+
+```js
+// Sort the current files from small to big
+pond.sort((a, b) => {
+
+    // If no file data yet, treat as equal
+    if (!(a.file && b.file)) return 0;
+    
+    // Move to right location in list
+    if (a.fileSize < b.fileSize) {
+        return -1;
+    }
+    else if (b.fileSize > a.fileSize) {
+        return 1;
+    }
+
+    return 0;
+});
+```
+
+To automatically sort files when they're added to the list we can set the above sort method to the `itemInsertLocation` property.
+
+```js
+const pond = FilePond.create({
+    itemInsertLocation: (a, b) => {
+
+        // If no file data yet, treat as equal
+        if (!(a.file && b.file)) return 0;
+        
+        // Move to right location in list
+        if (a.fileSize < b.fileSize) {
+            return -1;
+        }
+        else if (b.fileSize > a.fileSize) {
+            return 1;
+        }
+
+        return 0;
+    }
+});
+```

@@ -22,8 +22,9 @@ The FilePond object is the object available after importing FilePond in your pro
 
 | Property   | Description                                                                                               |
 | ---------- | --------------------------------------------------------------------------------------------------------- |
+| [Status](#filepond-status) | An enum to use together with the FilePond `status` property to determine the current filepond instance status. |
 | [FileOrigin](#fileorigin-enum) | An enum to use together with the File `origin` property to determine the file origin. |
-| [FileStatus](#filestatus-enum) | An enum to use together with the File `status` method to determine the current file status. |
+| [FileStatus](#filestatus-enum) | An enum to use together with the File `status` property to determine the current file status. |
 | OptionTypes | Returns an object describing all the available options and their types, useful for writing FilePond adapters |
 
 ## Events
@@ -361,6 +362,20 @@ document.addEventListener('FilePond:pluginloaded', e => {
 });
 ```
 
+
+## FilePond Status
+
+These are the properties available on the `Status` enum.
+
+```js
+{
+    EMPTY: 0,
+    IDLE: 1,
+    ERROR: 2,
+    BUSY: 3,
+    READY: 4
+}
+```
 
 ## FileStatus Enum
 

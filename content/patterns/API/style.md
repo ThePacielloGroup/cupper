@@ -3,6 +3,38 @@ title = "Style"
 weight = 1
 +++
 
+## Grid Layout
+
+FilePond can render items in a grid, to do this we must limit the width of each file item.
+
+Using the CSS below we scale the item to `50%` the width of the list, minus `0.5em`. The `0.5em` is equal to the combined left and right margin of the item (which is `0.25em`).
+
+```css
+.filepond--item {
+    width: calc(50% - .5em);
+}
+```
+
+Media queries also work.
+
+```css
+@media (min-width: 30em) {
+    .filepond--item {
+        width: calc(50% - .5em);
+    }
+}
+
+@media (min-width: 50em) {
+    .filepond--item {
+        width: calc(33.33% - .5em);
+    }
+}
+```
+
+{{% note %}}
+Make sure that each item is the same height. FilePond currently calculates the height of the first item in the list and then uses that as the base height for each item. You can set the item height using `styleItemPanelAspectRatio`, `imageCropAspectRatio`, or by setting a fixed `imagePreviewHeight`.
+{{% /note %}}
+
 ## Fonts and colors
 
 FilePond is quite opinionated about its layout but fonts, colors, border-radius and paddings can be finetuned without problem.
