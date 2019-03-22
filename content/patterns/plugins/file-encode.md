@@ -87,3 +87,13 @@ import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
 | Property        | Default | Description                     |
 | --------------- | ------- | ------------------------------- |
 | allowFileEncode | `true`  | Enable or disable file encoding |
+
+
+## Methods
+
+These methods are automatically added to the file item
+
+| Method          | Description                                       |
+| --------------- | --------------------------------------------------- |
+| getFileEncodeBase64String | Returns the base64 encoded file string |
+| getFileEncodeDataURL | Returns the base64 encoded file string in DataURL format |
