@@ -148,11 +148,6 @@ pre,
 code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 0.85em;
-    font-weight: bold;
-}
-pre code,
-.code-annotated code {
-    font-weight: normal;
 }
 .cmd {
     padding: 0.75rem;
