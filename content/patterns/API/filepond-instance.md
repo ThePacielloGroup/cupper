@@ -106,7 +106,7 @@ The FilePond core module exposes the following properties.
 | onprocessfilerevert   | `(file)`                  | Processing of a file has been reverted                                                                                                                               |
 | onprocessfile         | `(error, file)`           | If no error, Processing of a file has been completed                                                                                                               |
 | onprocessfiles        | `()`                      | Called when all files in the list have been processed |
-| onremovefile          | `(file)`                  | File has been removed.                                                                                                                                             |
+| onremovefile          | `(error, file)`           | File has been removed.                                                                                                                                             |
 | onpreparefile         | `(file, output)`          | File has been transformed by the transform plugin or another plugin subscribing to the prepare_output filter. It receives the file item and the output data.       |                                                                                                                                        |
 | onupdatefiles         | `(files)`                 | A file has been added or removed, receives a list of file items |
 | onactivatefile        | `(file)`                  | Called when a file is clicked or tapped |
@@ -440,7 +440,7 @@ pond.sort((a, b) => {
 
     // If no file data yet, treat as equal
     if (!(a.file && b.file)) return 0;
-    
+
     // Move to right location in list
     if (a.fileSize < b.fileSize) {
         return -1;
@@ -461,7 +461,7 @@ const pond = FilePond.create({
 
         // If no file data yet, treat as equal
         if (!(a.file && b.file)) return 0;
-        
+
         // Move to right location in list
         if (a.fileSize < b.fileSize) {
             return -1;
