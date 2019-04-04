@@ -23,7 +23,7 @@ The FilePond core module exposes the following properties.
 | allowPaste    | `true`       | Enable or disable pasting of files. Pasting files is not supported on all browesrs.      |
 | allowMultiple | `false`      | Enable or disable adding multiple files                                                  |
 | allowReplace  | `true`       | Allow drop to replace a file, only works when `allowMultiple` is `false`                 |
-| allowRevert   | `true`       | Allows the user to undo file upload |
+| allowRevert   | `true`       | Allows the user to revert file upload |
 | forceRevert   | `false`      | Set to `true` to require the file to be successfully reverted before continuing |
 | maxFiles      | `null`       | The maximum number of files that the pond can handle                                     |
 | maxParallelUploads | `null`  | The maxmimum number of files that can be uploaded in parallel |
@@ -103,7 +103,7 @@ The FilePond core module exposes the following properties.
 | onprocessfilestart    | `(file)`                  | Started processing a file                                                                                                                                          |
 | onprocessfileprogress | `(file, progress)`        | Made progress processing a file                                                                                                                                    |
 | onprocessfileabort    | `(file)`                  | Aborted processing of a file                                                                                                                                       |
-| onprocessfileundo     | `(file)`                  | Processing of a file has been undone                                                                                                                               |
+| onprocessfilerevert   | `(file)`                  | Processing of a file has been reverted                                                                                                                               |
 | onprocessfile         | `(error, file)`           | If no error, Processing of a file has been completed                                                                                                               |
 | onprocessfiles        | `()`                      | Called when all files in the list have been processed |
 | onremovefile          | `(file)`                  | File has been removed.                                                                                                                                             |
@@ -154,7 +154,7 @@ pond.addEventListener('FilePond:addfile', e => {
 | FilePond:processfilestart    | Started processing a file                                                                                                                                          |
 | FilePond:processfileprogress | Made progress processing a file                                                                                                                                    |
 | FilePond:processfileabort    | Aborted processing of a file                                                                                                                                       |
-| FilePond:processfileundo     | Processing of a file has been undone                                                                                                                               |
+| FilePond:processfilerevert   | Processing of a file has been reverted                                                                                                                               |
 | FilePond:processfile         | Finished processing a file, if the detail object contains an error property, something went wrong                                                                  |
 | FilePond:removefile          | File has been removed                                                                                                                                              |
 | FilePond:updatefiles         | A file has been added or removed
