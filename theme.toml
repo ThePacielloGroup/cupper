@@ -5,7 +5,7 @@ description = "An accessibility-friendly Hugo theme, ported from the original Cu
 homepage = "https://github.com/zwbetz-gh/cupper-hugo-theme"
 tags = ["accessible", "blog", "documentation", "dark"]
 features = ["accessible", "blog", "documentation", "dark"]
-min_version = "0.48"
+min_version = "0.54.0"
 
 [author]
   name = "Zachary Betz"
