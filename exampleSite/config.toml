@@ -22,7 +22,6 @@ disqusShortname = "yourdiscussshortname"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "Jan 2, 2006"
   codePenUser = "someUser"
-  katex = true
 
 [menu]
   [[menu.nav]]
