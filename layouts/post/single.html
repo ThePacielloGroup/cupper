@@ -14,7 +14,7 @@
       {{ with .Lastmod }}
         {{ if gt . $publishDate }}
           <br>
-          <strong aria-hidden="true">Last mod date: </strong>{{ .Format $dateFormat }}
+          <strong aria-hidden="true">Last updated: </strong>{{ .Format $dateFormat }}
         {{ end }}
       {{ end }}
     </div>
