@@ -6,10 +6,19 @@
       </svg>
       {{ .Title }}
     </h1>
+
     <div class="date">
       {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
-      <strong aria-hidden="true">Publish date: </strong>{{ .PublishDate.Format $dateFormat }}
+      {{ $publishDate := .PublishDate }}
+      <strong aria-hidden="true">Publish date: </strong>{{ $publishDate.Format $dateFormat }}
+      {{ with .Lastmod }}
+        {{ if gt . $publishDate }}
+          <br>
+          <strong aria-hidden="true">Last mod date: </strong>{{ .Format $dateFormat }}
+        {{ end }}
+      {{ end }}
     </div>
+
     {{ with .Params.tags }}
       <div class="tags">
         <strong aria-hidden="true">Tags: </strong>
@@ -26,9 +35,11 @@
         </ul>
       </div>
     {{ end }}
+    
     {{ if ne .Params.toc false }}
       {{ partial "toc" . }}
     {{ end }}
+
     {{ .Content }}
   </main>
   {{ partial "disqus.html" . }}
