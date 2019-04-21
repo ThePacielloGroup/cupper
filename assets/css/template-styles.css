@@ -78,6 +78,12 @@ a {
   outline-offset: 2px;
 }
 
+/* Katex math typesetting */
+.katex * {
+    margin-top: 0;
+    background-color: transparent;
+}
+
 /* Fix for IE :( */
 [tabindex="-1"]:focus,
 div:not([tabindex]):focus {
