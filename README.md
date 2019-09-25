@@ -26,7 +26,7 @@ https://cupper-hugo-theme.netlify.com/
 
 ## Minimum Hugo version
 
-Hugo version `0.54.0` or higher is required. View the [Hugo releases](https://github.com/gohugoio/hugo/releases) and download the binary for your OS.
+Hugo version `0.58.3` or higher is required. View the [Hugo releases](https://github.com/gohugoio/hugo/releases) and download the binary for your OS.
 
 ## Installation
 
