@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Cupper</title>
@@ -11,20 +11,20 @@
     
     
     <item>
-      <title>Markdown</title>
-      <link>https://thepaciellogroup.github.io/cupper/tags/markdown/</link>
+      <title>another tag</title>
+      <link>https://thepaciellogroup.github.io/cupper/tags/another-tag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thepaciellogroup.github.io/cupper/tags/markdown/</guid>
+      <guid>https://thepaciellogroup.github.io/cupper/tags/another-tag/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Metadata</title>
-      <link>https://thepaciellogroup.github.io/cupper/tags/metadata/</link>
+      <title>example tag</title>
+      <link>https://thepaciellogroup.github.io/cupper/tags/example-tag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thepaciellogroup.github.io/cupper/tags/metadata/</guid>
+      <guid>https://thepaciellogroup.github.io/cupper/tags/example-tag/</guid>
       <description></description>
     </item>
     
