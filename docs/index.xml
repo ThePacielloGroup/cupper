@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Name Of This Project/Site on Cupper</title>
-    <link>https://thepaciellogroup.github.io/cupper/</link>
-    <description>Recent content in The Name Of This Project/Site on Cupper</description>
+    <title>The Name Of This Project/Site on Blueprint</title>
+    <link>https://alliberry.github.io/cupper-test/</link>
+    <description>Recent content in The Name Of This Project/Site on Blueprint</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://thepaciellogroup.github.io/cupper/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alliberry.github.io/cupper-test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cupper</title>
-      <link>https://thepaciellogroup.github.io/cupper/print-version/</link>
+      <link>https://alliberry.github.io/cupper-test/print-version/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thepaciellogroup.github.io/cupper/print-version/</guid>
+      <guid>https://alliberry.github.io/cupper-test/print-version/</guid>
       <description>You don&amp;rsquo;t want to edit this file :-)</description>
     </item>
     
     <item>
       <title>My First Pattern File</title>
-      <link>https://thepaciellogroup.github.io/cupper/patterns/pattern/</link>
+      <link>https://alliberry.github.io/cupper-test/patterns/pattern/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://thepaciellogroup.github.io/cupper/patterns/pattern/</guid>
+      <guid>https://alliberry.github.io/cupper-test/patterns/pattern/</guid>
       <description>You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Cupper for full details.
    Here&#39;s an example of a note shortcode for adding little &#34;oh and also&#34; notes to your patterns&#39; documentation.   </description>
     </item>
