@@ -11,22 +11,25 @@
     
     
     <item>
+      <title>Colors</title>
+      <link>https://alliberry.github.io/cupper-test/patterns/color/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alliberry.github.io/cupper-test/patterns/color/</guid>
+      <description>Midnight
+#1C2345    Neutral
+#8894A8    #384056  #657287  #8894A8  #CCD3DE  #E6E9ED  #F7F8FA    Cerulean
+#009FDB    #0078CC  #0092D5  #009FDB  #33BAE6  #7FD4EF  #D9F2FB  #EBF9FD    Magenta
+#DB0A5B    #C2022C  #CE0643  #DB0A5B  #E23B7C  #ED84AD  #F4B5CD  #FDECF2    </description>
+    </item>
+    
+    <item>
       <title>Cupper</title>
       <link>https://alliberry.github.io/cupper-test/print-version/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://alliberry.github.io/cupper-test/print-version/</guid>
       <description>You don&amp;rsquo;t want to edit this file :-)</description>
-    </item>
-    
-    <item>
-      <title>My First Pattern File</title>
-      <link>https://alliberry.github.io/cupper-test/patterns/pattern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://alliberry.github.io/cupper-test/patterns/pattern/</guid>
-      <description>You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Cupper for full details.
-   Here&#39;s an example of a note shortcode for adding little &#34;oh and also&#34; notes to your patterns&#39; documentation.   </description>
     </item>
     
   </channel>
