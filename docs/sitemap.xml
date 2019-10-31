@@ -3,11 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://alliberry.github.io/cupper-test/</loc>
+  </url>
+  
+  <url>
     <loc>https://alliberry.github.io/cupper-test/categories/</loc>
   </url>
   
   <url>
-    <loc>https://alliberry.github.io/cupper-test/patterns/color/</loc>
+    <loc>https://alliberry.github.io/cupper-test/patterns/design/color/</loc>
+  </url>
+  
+  <url>
+    <loc>https://alliberry.github.io/cupper-test/patterns/components/</loc>
   </url>
   
   <url>
@@ -15,15 +23,19 @@
   </url>
   
   <url>
+    <loc>https://alliberry.github.io/cupper-test/patterns/design/</loc>
+  </url>
+  
+  <url>
     <loc>https://alliberry.github.io/cupper-test/patterns/</loc>
   </url>
   
   <url>
-    <loc>https://alliberry.github.io/cupper-test/tags/</loc>
+    <loc>https://alliberry.github.io/cupper-test/patterns/components/storybook/</loc>
   </url>
   
   <url>
-    <loc>https://alliberry.github.io/cupper-test/</loc>
+    <loc>https://alliberry.github.io/cupper-test/tags/</loc>
   </url>
   
 </urlset>

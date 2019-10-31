@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Name Of This Project/Site on Blueprint</title>
+    <title>Blueprint</title>
     <link>https://alliberry.github.io/cupper-test/</link>
-    <description>Recent content in The Name Of This Project/Site on Blueprint</description>
+    <description>Recent content on Blueprint</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -11,11 +11,11 @@
     
     
     <item>
-      <title>Colors</title>
-      <link>https://alliberry.github.io/cupper-test/patterns/color/</link>
+      <title>Color</title>
+      <link>https://alliberry.github.io/cupper-test/patterns/design/color/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://alliberry.github.io/cupper-test/patterns/color/</guid>
+      <guid>https://alliberry.github.io/cupper-test/patterns/design/color/</guid>
       <description>Midnight
 #1C2345    Neutral
 #8894A8    #384056  #657287  #8894A8  #CCD3DE  #E6E9ED  #F7F8FA    Cerulean
@@ -30,6 +30,15 @@
       
       <guid>https://alliberry.github.io/cupper-test/print-version/</guid>
       <description>You don&amp;rsquo;t want to edit this file :-)</description>
+    </item>
+    
+    <item>
+      <title>Storybook</title>
+      <link>https://alliberry.github.io/cupper-test/patterns/components/storybook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alliberry.github.io/cupper-test/patterns/components/storybook/</guid>
+      <description></description>
     </item>
     
   </channel>

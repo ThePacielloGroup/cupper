@@ -1,5 +1,5 @@
 +++
-title = "Colors"
+title = "Color"
 +++
 
 Midnight

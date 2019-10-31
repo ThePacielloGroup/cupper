@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Blueprint</title>
+    <link>https://alliberry.github.io/cupper-test/patterns/design/</link>
+    <description>Recent content in Design on Blueprint</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://alliberry.github.io/cupper-test/patterns/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Color</title>
+      <link>https://alliberry.github.io/cupper-test/patterns/design/color/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alliberry.github.io/cupper-test/patterns/design/color/</guid>
+      <description>Midnight
+#1C2345    Neutral
+#8894A8    #384056  #657287  #8894A8  #CCD3DE  #E6E9ED  #F7F8FA    Cerulean
+#009FDB    #0078CC  #0092D5  #009FDB  #33BAE6  #7FD4EF  #D9F2FB  #EBF9FD    Magenta
+#DB0A5B    #C2022C  #CE0643  #DB0A5B  #E23B7C  #ED84AD  #F4B5CD  #FDECF2    </description>
+    </item>
+    
+  </channel>
+</rss>
