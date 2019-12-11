@@ -7,38 +7,38 @@ tags: [hugo, shortcodes]
 ## blockquote
 
 ```
-{{%/* blockquote author="Carl Jung" */%}}
+{{</* blockquote author="Carl Jung" */>}}
 Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
-{{%/* /blockquote */%}}
+{{</* /blockquote */>}}
 ```
 
-{{% blockquote author="Carl Jung" %}}
+{{< blockquote author="Carl Jung" >}}
 Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
-{{% /blockquote %}}
+{{< /blockquote >}}
 
 ## note
 
 ```
-{{%/* note */%}}
+{{</* note */>}}
 This is a note! It's something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.
-{{%/* /note */%}}
+{{</* /note */>}}
 ```
 
-{{% note %}}
+{{< note >}}
 This is a note! It's something the reader may like to know about but is supplementary to the main content. Use notes when something may be interesting but not critical.
-{{% /note %}}
+{{< /note >}}
 
 ## warning note
 
 ```
-{{%/* warning */%}}
+{{</* warning */>}}
 This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
-{{%/* /warning */%}}
+{{</* /warning */>}}
 ```
 
-{{% warning %}}
+{{< warning >}}
 This is a warning! It's about something the reader should be careful to do or to avoid doing. Use warnings when something could go wrong.
-{{% /warning %}}
+{{< /warning >}}
 
 ## cmd
 
@@ -115,35 +115,35 @@ To get syntax highlighting for your code, use markdown code fences, then specify
 ## codePen
 
 ```
-{{%/* codePen VpVNKW */%}}
+{{</* codePen VpVNKW */>}}
 ```
 
-{{% codePen VpVNKW %}}
+{{< codePen VpVNKW >}}
 
 ## colors
 
 ```
-{{%/* colors "#111111, #cccccc, #ffffff" */%}}
+{{</* colors "#111111, #cccccc, #ffffff" */>}}
 ```
 
-{{% colors "#111111, #cccccc, #ffffff" %}}
+{{< colors "#111111, #cccccc, #ffffff" >}}
 
 ## expandable
 
 ```
-{{%/* expandable label="A section of dummy text" level="2" */%}}
+{{</* expandable label="A section of dummy text" level="2" */>}}
 Here is some markdown including [a link](https://twitter.com/heydonworks). Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.
-{{%/* /expandable */%}}
+{{</* /expandable */>}}
 ```
 
-{{% expandable label="A section of dummy text" level="2" %}}
+{{< expandable label="A section of dummy text" level="2" >}}
 Here is some markdown including [a link](https://twitter.com/heydonworks). Donec erat est, feugiat a est sed, aliquet pharetra ipsum. Vivamus in arcu leo. Praesent feugiat, purus a molestie ultrices, libero massa iaculis ante, sit amet accumsan leo eros vel ligula.
-{{% /expandable %}}
+{{< /expandable >}}
 
 ## fileTree
 
 ```
-{{%/* fileTree */%}}
+{{</* fileTree */>}}
 * Level 1 folder
     * Level 2 file
     * Level 2 folder
@@ -160,10 +160,10 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
         * Level 3 file
     * Level 2 file
 * Level 1 file
-{{%/* /fileTree */%}}
+{{</* /fileTree */>}}
 ```
 
-{{% fileTree %}}
+{{< fileTree >}}
 * Level 1 folder
     * Level 2 file
     * Level 2 folder
@@ -180,23 +180,23 @@ Here is some markdown including [a link](https://twitter.com/heydonworks). Donec
         * Level 3 file
     * Level 2 file
 * Level 1 file
-{{% /fileTree %}}
+{{< /fileTree >}}
 
 ## ticks
 
 ```
-{{%/* ticks */%}}
+{{</* ticks */>}}
 * Selling point one
 * Selling point two
 * Selling point three
-{{%/* /ticks */%}}
+{{</* /ticks */>}}
 ```
 
-{{% ticks %}}
+{{< ticks >}}
 * Selling point one
 * Selling point two
 * Selling point three
-{{% /ticks %}}
+{{< /ticks >}}
 
 ## figureCupper
 
@@ -219,27 +219,27 @@ options="700x" >}}
 See the [full principles list](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/data/principles.json).
 
 ```
-{{%/* principles include="Add value, Be consistent" descriptions="true" */%}}
+{{</* principles include="Add value, Be consistent" descriptions="true" */>}}
 ```
 
-{{% principles include="Add value, Be consistent" descriptions="true" %}}
+{{< principles include="Add value, Be consistent" descriptions="true" >}}
 
 ## wcag
 
 See the [full wcag list](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/data/wcag.json). 
 
 ```
-{{%/* wcag include="1.2.1, 1.3.1, 4.1.2" */%}}
+{{</* wcag include="1.2.1, 1.3.1, 4.1.2" */>}}
 ```
 
-{{% wcag include="1.2.1, 1.3.1, 4.1.2" %}}
+{{< wcag include="1.2.1, 1.3.1, 4.1.2" >}}
 
 ## tested
 
 See the [full browser list](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/master/static/images).
 
 ```
-{{%/* tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" */%}}
+{{</* tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" */>}}
 ```
 
-{{% tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" %}}
+{{< tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" >}}
