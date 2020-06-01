@@ -94,7 +94,7 @@ The strings in the templates of this theme can be localized. Make a copy of <THE
 
 ## Custom css
 
-Instead of coppying the theme's css file to your own installation and modifiying this large file, you can provide a list of css files that will be loaded after the theme's one. This ennables you to override individual style while getting theme updates when they come.
+Instead of copying the theme's css file to your own installation and modifying this large file, you can provide a list of css files that will be loaded after the theme's one. This enables you to override individual style while getting theme updates when they come.
 
 Please see the params section of the example site config.yaml for more details.
 
