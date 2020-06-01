@@ -10,19 +10,19 @@
     <div class="date">
       {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
       {{ $publishDate := .PublishDate }}
-      <strong aria-hidden="true">Publish date: </strong>{{ $publishDate.Format $dateFormat }}
+      <strong aria-hidden="true">{{ T "publish_date" }} </strong>{{ $publishDate.Format $dateFormat }}
       {{ with .Lastmod }}
         {{ if gt . $publishDate }}
           <br>
-          <strong aria-hidden="true">Last updated: </strong>{{ .Format $dateFormat }}
+          <strong aria-hidden="true">{{ T "last_updated" }} </strong>{{ .Format $dateFormat }}
         {{ end }}
       {{ end }}
     </div>
 
     {{ with .Params.tags }}
       <div class="tags">
-        <strong aria-hidden="true">Tags: </strong>
-        <ul aria-label="tags">
+        <strong aria-hidden="true">{{ T "tags" }} </strong>
+        <ul aria-label="{{ T "aria_label_tags" }}">
           {{ range . }}
             <li>
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">

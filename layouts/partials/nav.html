@@ -1,10 +1,10 @@
 <nav id="patterns-nav" class="patterns" role="navigation">
-  <h2 class="vh">Main navigation</h2>
+  <h2 class="vh">{{ T "nav_main_navigation" }}</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
       <use xlink:href="#menu"></use>
     </svg>
-    Menu
+    {{ T "nav_button_menu" }}
   </button>
   {{ $current := . }}
   <ul id="patterns-list">

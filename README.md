@@ -17,6 +17,8 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Shortcodes](#shortcodes)
 - [Syntax highlighting](#syntax-highlighting)
 - [Disable toc for a blog post](#disable-toc-for-a-blog-post)
+- [Localization](#localization)
+- [Custom css](#custom-css)
 - [Getting help](#getting-help)
 - [Credits](#credits)
 
@@ -83,6 +85,18 @@ title: "My page with a few headings"
 toc: false
 ---
 ```
+
+## Localization
+
+The strings in the templates of this theme can be localized. Make a copy of <THEME_BASE_FOLDER>/i18n/en.yaml to <YOUR_SITE_FOLDER>/i18n/<YOUR_SITE_LANGUAGE>.yaml, and translate one by one, changing the 'translation' field.
+
+[Here is a tutorial that goes more in depth about this.](https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-2-i18n-string-localization/)
+
+## Custom css
+
+Instead of coppying the theme's css file to your own installation and modifiying this large file, you can provide a list of css files that will be loaded after the theme's one. This ennables you to override individual style while getting theme updates when they come.
+
+Please see the params section of the example site config.yaml for more details.
 
 ## Getting help
 

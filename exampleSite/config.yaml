@@ -24,6 +24,14 @@ params:
   dateFormat: Jan 2, 2006
   codePenUser: someUser
   katex: true
+  # A list of custom css files can be provided, which must be placed inside
+  # 'static/'.
+  # This is useful to override just specific css classes, instead of copying
+  # the entire theme's css file to your own site.
+  # Usage:
+  # customCss:
+  #   - css/foo.css # relative path starting from static/
+  #- css/bar.css
 
 menu:
   nav:
