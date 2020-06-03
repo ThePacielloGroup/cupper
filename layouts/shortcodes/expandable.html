@@ -15,6 +15,6 @@
     </h{{ .Get "level"}}>
   {{ end }}
   <div id="js-expandable-{{ .Inner | md5 }}" {{ with .Get "open" | not }}hidden{{ end }}>
-    {{ .Inner }}
+    {{ .Inner | markdownify }}
   </div>
 </div>
