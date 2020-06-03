@@ -1,2 +1,5 @@
 <script src="{{ "js/prism.js" | absURL }}"></script>
-<script src="{{ "js/dom-scripts.js" | absURL }}"></script>
+
+{{ $templateDomScripts := resources.Get "js/template-dom-scripts.js" }}
+{{ $domScripts := $templateDomScripts | resources.ExecuteAsTemplate "js/dom-scripts.js" . }}
+<script src="{{ $domScripts.Permalink }}"></script>

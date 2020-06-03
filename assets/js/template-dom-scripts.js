@@ -130,4 +130,8 @@
       }
     }
   });
+
+  {{ if .Site.Params.darkThemeAsDefault }}
+  darkTheme('screen');
+  {{ end }}
 }());
