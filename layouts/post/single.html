@@ -10,18 +10,18 @@
     <div class="date">
       {{ $dateFormat := $.Site.Params.dateFormat | default "Jan 2, 2006" }}
       {{ $publishDate := .PublishDate }}
-      <strong aria-hidden="true">{{ T "publish_date" }} </strong>{{ $publishDate.Format $dateFormat }}
+      <strong>{{ T "publish_date" }} </strong>{{ $publishDate.Format $dateFormat }}
       {{ with .Lastmod }}
         {{ if gt . $publishDate }}
           <br>
-          <strong aria-hidden="true">{{ T "last_updated" }} </strong>{{ .Format $dateFormat }}
+          <strong>{{ T "last_updated" }} </strong>{{ .Format $dateFormat }}
         {{ end }}
       {{ end }}
     </div>
 
     {{ with .Params.tags }}
       <div class="tags">
-        <strong aria-hidden="true">{{ T "tags" }} </strong>
+        <strong>{{ T "tags" }} </strong>
         <ul aria-label="{{ T "aria_label_tags" }}">
           {{ range . }}
             <li>
