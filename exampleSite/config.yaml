@@ -25,6 +25,7 @@ params:
   codePenUser: someUser
   katex: true
   darkThemeAsDefault: false
+  hideHeaderLinks: false
   # A list of custom css files can be provided, which must be placed inside
   # 'static/'.
   # This is useful to override just specific css classes, instead of copying
