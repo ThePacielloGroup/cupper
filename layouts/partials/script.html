@@ -3,3 +3,10 @@
 {{ $templateDomScripts := resources.Get "js/template-dom-scripts.js" }}
 {{ $domScripts := $templateDomScripts | resources.ExecuteAsTemplate "js/dom-scripts.js" . }}
 <script src="{{ $domScripts.Permalink }}"></script>
+
+{{ if site.Params.search }}
+{{ $searchJs := resources.Get "js/search.js" | fingerprint }}
+<script src="{{ $searchJs.RelPermalink }}"></script>
+{{ $searchCss := resources.Get "css/search.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $searchCss.RelPermalink }}"></link>
+{{ end }}
