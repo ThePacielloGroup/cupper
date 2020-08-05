@@ -161,7 +161,7 @@ code {
 }
 .cmd code {
     color: #fefefe;
-    white-space: nowrap;
+    white-space: pre-wrap;
 }
 .cmd code::before {
     content: '$';
