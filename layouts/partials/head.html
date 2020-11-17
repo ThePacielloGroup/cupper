@@ -26,9 +26,9 @@
   {{ $styles := $templateStyles | resources.ExecuteAsTemplate "css/styles.css" . }}
   <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
 
-  {{ range .Site.Params.customCss -}}
+  {{ range .Site.Params.customCss }}
     <link rel="stylesheet" href="{{ . | absURL }}">
-  {{- end }}
+  {{ end }}
 
   <style id="inverter" media="none">
     .intro-and-nav, .main-and-footer { filter: invert(100%) }

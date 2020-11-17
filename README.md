@@ -18,7 +18,7 @@ An accessibility-friendly Hugo theme, ported from the [original Cupper](https://
 - [Syntax highlighting](#syntax-highlighting)
 - [Disable toc for a blog post](#disable-toc-for-a-blog-post)
 - [Localization](#localization)
-- [Custom css](#custom-css)
+- [Custom CSS and JS](#custom-css-and-js)
 - [Getting help](#getting-help)
 - [Credits](#credits)
 
@@ -92,11 +92,13 @@ The strings in the templates of this theme can be localized. Make a copy of `<TH
 
 [Here is a tutorial that goes more in depth about this.](https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-2-i18n-string-localization/)
 
-## Custom css
+## Custom CSS and JS
 
-Instead of copying the theme's css file to your own installation and modifying this large file, you can provide a list of css files that will be loaded after the theme's one. This enables you to override individual style while getting theme updates when they come.
+You can provide an optional list of custom CSS files, which must be placed inside the `static` dir. These will load after the theme CSS loads. So, `static/css/custom_01.css` translates to `css/custom_01.css`.
 
-Please see the params section of the example site `config.yaml` for more details.
+You can provide an optional list of custom JS files, which must be placed inside the `static` dir. These will load after the theme JS loads. So, `static/js/custom_01.js` translates to `js/custom_01.js`.
+
+See the [example site config file](https://github.com/zwbetz-gh/cupper-hugo-theme/blob/master/exampleSite/config.yaml) for sample usage.
 
 ## Getting help
 

@@ -27,14 +27,12 @@ params:
   darkThemeAsDefault: false
   hideHeaderLinks: false
   search: true
-  # A list of custom css files can be provided, which must be placed inside
-  # 'static/'.
-  # This is useful to override just specific css classes, instead of copying
-  # the entire theme's css file to your own site.
-  # Usage:
-  # customCss:
-  #   - css/foo.css # relative path starting from static/
-  #- css/bar.css
+  customCss:
+    - css/custom_01.css
+    - css/custom_02.css
+  customJs:
+    - js/custom_01.js
+    - js/custom_02.js
 
 menu:
   nav:
