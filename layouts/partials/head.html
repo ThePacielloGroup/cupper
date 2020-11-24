@@ -20,6 +20,13 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
   <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
 
   {{ $templateStyles := resources.Get "css/template-styles.css" }}
@@ -29,12 +36,6 @@
   {{ range .Site.Params.customCss }}
     <link rel="stylesheet" href="{{ . | absURL }}">
   {{ end }}
-
-  <style id="inverter" media="none">
-    .intro-and-nav, .main-and-footer { filter: invert(100%) }
-    * { background-color: inherit }
-    img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
-  </style>
 
   {{ $title := print .Title " | " .Site.Title }}
   {{ if .IsHome }}

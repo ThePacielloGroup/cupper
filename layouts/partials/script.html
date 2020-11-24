@@ -1,8 +1,8 @@
-<script src="{{ "js/prism.js" | absURL }}"></script>
-
 {{ $templateDomScripts := resources.Get "js/template-dom-scripts.js" }}
 {{ $domScripts := $templateDomScripts | resources.ExecuteAsTemplate "js/dom-scripts.js" . }}
-<script src="{{ $domScripts.Permalink }}"></script>
+<script src="{{ $domScripts.Permalink }}"></script>  
+
+<script src="{{ "js/prism.js" | absURL }}"></script>
 
 {{ if site.Params.search }}
 {{ $searchJs := resources.Get "js/search.js" | fingerprint }}

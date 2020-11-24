@@ -97,41 +97,64 @@
 
 /* Switch and persist theme */
 (function () {
-  function CSSSupported (property, value) {
-    var prop = property + ':',
-        el = document.createElement('test'),
-        mStyle = el.style;
-    el.style.cssText = prop + value;
-    return mStyle[property];
-  }
-
   var checkbox = document.getElementById('themer');
-  var inverter = document.getElementById('inverter');
 
-  if (!CSSSupported('filter', 'invert(100%)')) {
-    checkbox.parentNode.hidden = true;
-    return;
+  function persistTheme(val) {
+    localStorage.setItem('darkTheme', val);
   }
 
-  function darkTheme(media) {
-    inverter.setAttribute('media', media);
-    inverter.textContent = inverter.textContent.trim();
-    localStorage.setItem('darkTheme', media);
+  function applyDarkTheme() {
+    var rules = [
+      '.intro-and-nav, .main-and-footer { filter: invert(100%); }',
+      '* { background-color: inherit; }',
+      'img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%); }'
+    ];
+    rules.forEach(function(rule) {
+      document.styleSheets[0].insertRule(rule);
+    })
+  }
+
+  function clearDarkTheme() {
+    for (let i = 0; i < document.styleSheets[0].cssRules.length; i++) {
+      document.styleSheets[0].deleteRule(i);
+    }
   }
 
   checkbox.addEventListener('change', function () {
-    darkTheme(this.checked ? 'screen' : 'none');
-  });
-
-  window.addEventListener('DOMContentLoaded', function () {
-    if ('filter' in document.body.style) {
-      if (localStorage.getItem('darkTheme') === 'screen') {
-        checkbox.click();
-      }
+    if (this.checked) {
+      applyDarkTheme();
+      persistTheme('true');
+    } else {
+      clearDarkTheme();
+      persistTheme('false');
     }
   });
 
-  {{ if .Site.Params.darkThemeAsDefault }}
-  darkTheme('screen');
-  {{ end }}
+  function handleDarkThemeAsDefault() {
+    {{ if .Site.Params.darkThemeAsDefault }}
+      persistTheme('true');
+      handleDarkThemeAsDefault = function() {};
+    {{ end }}
+  }
+
+  function showTheme() {
+    if (localStorage.getItem('darkTheme') === 'true') {
+      applyDarkTheme();
+      checkbox.checked = true;
+    }
+  }
+
+  function showContent() {
+    document.body.style.visibility = 'visible';
+    document.body.style.opacity = 1;
+  }
+
+  window.addEventListener('DOMContentLoaded', function () {
+    handleDarkThemeAsDefault();
+
+    showTheme();
+
+    showContent();
+  });
+
 }());
