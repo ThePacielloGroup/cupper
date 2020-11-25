@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   {{ hugo.Generator }}
-  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .RelPermalink }}">
 
   {{ if .IsHome }}
     {{ with .Site.Params.homeMetaContent }}
@@ -27,14 +27,14 @@
     }
   </style>
 
-  <link rel="stylesheet" href="{{ "css/prism.css" | absURL }}" media="none" onload="this.media='all';">
+  <link rel="stylesheet" href="{{ "css/prism.css" | relURL }}" media="none" onload="this.media='all';">
 
   {{ $templateStyles := resources.Get "css/template-styles.css" }}
   {{ $styles := $templateStyles | resources.ExecuteAsTemplate "css/styles.css" . }}
-  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
+  <link rel="stylesheet" type="text/css" href="{{ $styles.RelPermalink }}">
 
   {{ range .Site.Params.customCss }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+    <link rel="stylesheet" href="{{ . | relURL }}">
   {{ end }}
 
   {{ $title := print .Title " | " .Site.Title }}

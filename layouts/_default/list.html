@@ -13,7 +13,7 @@
     {{ range .Pages.ByPublishDate.Reverse }}
     <li>
       <h2>
-        <a href="{{ .Permalink }}">
+        <a href="{{ .RelPermalink }}">
           <svg
             class="bookmark"
             aria-hidden="true"

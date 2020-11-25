@@ -28,7 +28,7 @@
               <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
                 <use xlink:href="#tag"></use>
               </svg>
-              {{ $href := print ("tags/" | absLangURL) (. | urlize) "/" }}
+              {{ $href := print ("tags/" | relLangURL) (. | urlize) "/" }}
               <a href="{{ $href }}">{{ . }}</a>
             </li>
           {{ end }}

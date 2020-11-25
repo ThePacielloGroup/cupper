@@ -6,7 +6,7 @@
         href="{{ .Site.BaseURL }}"
         aria-label="{{ .Site.Title }} home page"
       >
-        <img src="{{ "images/logo.svg" | absURL }}" alt="">
+        <img src="{{ "images/logo.svg" | relURL }}" alt="">
       </a>
       <p class="library-desc">
         {{ with .Site.Params.description }} {{ . | markdownify }} {{ end }}

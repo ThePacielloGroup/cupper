@@ -15,7 +15,7 @@
         {{ $browser := index $browser 0 }}
         {{ $version := findRE "[0-9]+$" . }}
         {{ $slug := replace $browser " " "-" | lower }}
-        <img src="{{ (printf "images/browser-%s" $slug) | absURL }}.svg" alt="">
+        <img src="{{ (printf "images/browser-%s" $slug) | relURL }}.svg" alt="">
         <span><strong>{{ $browser }} {{ index $version 0 }}</strong></span>
         {{ if in . "+" }}
           {{ $parts := split . "+" }}
