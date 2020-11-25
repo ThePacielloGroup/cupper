@@ -130,13 +130,6 @@
     }
   });
 
-  function handleDarkThemeAsDefault() {
-    {{ if .Site.Params.darkThemeAsDefault }}
-      persistTheme('true');
-      handleDarkThemeAsDefault = function() {};
-    {{ end }}
-  }
-
   function showTheme() {
     if (localStorage.getItem('darkTheme') === 'true') {
       applyDarkTheme();
@@ -150,10 +143,7 @@
   }
 
   window.addEventListener('DOMContentLoaded', function () {
-    handleDarkThemeAsDefault();
-
     showTheme();
-
     showContent();
   });
 

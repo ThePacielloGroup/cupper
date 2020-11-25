@@ -24,7 +24,6 @@ params:
   dateFormat: Jan 2, 2006
   codePenUser: someUser
   katex: true
-  darkThemeAsDefault: false
   hideHeaderLinks: false
   search: true
   customCss:
