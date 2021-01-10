@@ -1,5 +1,7 @@
 <footer role="contentinfo">
-  <div>
+  <div
+  {{ if eq .Site.Params.showThemeSwitcher false }}style="display: none;"{{ end }}
+  >
     <label for="themer">
       {{ T "dark_theme" }} <input type="checkbox" id="themer" class="vh">
       <!-- Shows "on" or "off" -->

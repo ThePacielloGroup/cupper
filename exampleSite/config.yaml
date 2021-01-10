@@ -26,6 +26,7 @@ params:
   katex: true
   hideHeaderLinks: false
   search: true
+  showThemeSwitcher: true
   customCss:
     - css/custom_01.css
     - css/custom_02.css
