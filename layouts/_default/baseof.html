@@ -10,7 +10,9 @@
       <div class="main-and-footer">
         <div>
           {{ block "main" . }}{{ end }}
-          {{ partial "footer.html" . }}
+          {{ if ne .Site.Params.moveFooterToHeader true }}
+            {{ partial "footer.html" . }}
+          {{ end }}
         </div>
       </div>
     </div>
