@@ -243,3 +243,10 @@ See the [full browser list](https://github.com/zwbetz-gh/cupper-hugo-theme/tree/
 ```
 
 {{< tested using="Firefox + JAWS, Chrome, Safari iOS + Voiceover, Edge" >}}
+
+## line
+```
+{{</* line */>}}
+```
+
+{{< line >}}
