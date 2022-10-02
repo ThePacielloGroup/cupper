@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# hugo lock
+.hugo_build.lock

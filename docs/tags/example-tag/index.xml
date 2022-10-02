@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Name Of This Project/Site on Riposte Collective</title>
-    <link>https://riposte-collective.org/</link>
-    <description>Recent content in The Name Of This Project/Site on Riposte Collective</description>
+    <title>example tag on Riposte Collective</title>
+    <link>https://riposte-collective.org/tags/example-tag/</link>
+    <description>Recent content in example tag on Riposte Collective</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr</language><atom:link href="https://riposte-collective.org/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cupper</title>
-      <link>https://riposte-collective.org/print-version/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://riposte-collective.org/print-version/</guid>
-      <description>You don&amp;rsquo;t want to edit this file :-)</description>
-    </item>
-    
+    <language>fr</language><atom:link href="https://riposte-collective.org/tags/example-tag/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Pattern File</title>
       <link>https://riposte-collective.org/patterns/pattern/</link>
