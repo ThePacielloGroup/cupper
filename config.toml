@@ -1,10 +1,9 @@
-languageCode = "en-us"
-title = "Cupper"
-baseURL = "https://thepaciellogroup.github.io/cupper/"
+title = "Lana.Coffee"
+baseURL = "https://lana.coffee"
 canonifyURLs = true
 theme = "cupper"
-publishDir = "docs"
+publishDir = ""
 
 [params]
-  description = "Documentation for the **Cupper** documentation builder, built with **Cupper** itself."
-  codePenUser = "Heydon"
+  description = "**lana.coffee**"
+  codePenUser = "Lana"

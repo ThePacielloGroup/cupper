@@ -7,7 +7,7 @@ min_version = 0.1
 SectionPagesMenu = "main"
 
 [author]
-  name = "Heydon Pickering"
+  name = ""
   homepage = "https://inclusive-components.design"
 
 [taxonomies]

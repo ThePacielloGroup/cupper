@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>art on Lana.Coffee</title>
+    <link>https://lana.coffee/tags/art/</link>
+    <description>Recent content in art on Lana.Coffee</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://lana.coffee/tags/art/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sticker designs</title>
+      <link>https://lana.coffee/patterns/art/sticker-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/art/sticker-design/</guid>
+      <description>You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Cupper for full details.
+Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh and also&amp;rdquo; notes to your patterns&amp;rsquo; documentation.</description>
+    </item>
+    
+    <item>
+      <title>Embroidery Designs</title>
+      <link>https://lana.coffee/patterns/art/embroidery-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/art/embroidery-design/</guid>
+      <description>All Designs and are public and can be found on github.</description>
+    </item>
+    
+    <item>
+      <title>Perpendikulum</title>
+      <link>https://lana.coffee/patterns/art/perpendiculum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/art/perpendiculum/</guid>
+      <description>You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Cupper for full details.
+Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh and also&amp;rdquo; notes to your patterns&amp;rsquo; documentation.</description>
+    </item>
+    
+    <item>
+      <title>Junk Mail Cards</title>
+      <link>https://lana.coffee/patterns/projects/junkmailcards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/projects/junkmailcards/</guid>
+      <description>Mein erstes &amp;ldquo;DickPic&amp;rdquo; bekam ich mit 16 gesendet und wie bei den meisten Menschen die solche Bilder von Fremden erhalten: ungewollt. Als Frau im Internet die sich in männlich geprägten technischen Internetblasen bewegt, aber auch gerne ihre Party- und Alltagsoutfits im Internet teilt nam das Problem irgendwann überhand.
+Auch wenn ich alle mir gesendeten Bilder meldete und die Personen blockierte sah ich keine Besserung. Also fing ich von 2016 bis 2018 an die mir gesendeten Bilder zu sammeln.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Lana.Coffee</title>
+    <link>https://lana.coffee/tags/</link>
+    <description>Recent content in Tags on Lana.Coffee</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://lana.coffee/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2016</title>
+      <link>https://lana.coffee/tags/2016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2018</title>
+      <link>https://lana.coffee/tags/2018/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2020</title>
+      <link>https://lana.coffee/tags/2020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2022</title>
+      <link>https://lana.coffee/tags/2022/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>another tag</title>
+      <link>https://lana.coffee/tags/another-tag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/another-tag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>art</title>
+      <link>https://lana.coffee/tags/art/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/art/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://lana.coffee/tags/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fotographie</title>
+      <link>https://lana.coffee/tags/fotographie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/fotographie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social</title>
+      <link>https://lana.coffee/tags/social/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/social/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://lana.coffee/tags/software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/tags/software/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>another tag on Lana.Coffee</title>
+    <link>https://lana.coffee/tags/another-tag/</link>
+    <description>Recent content in another tag on Lana.Coffee</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://lana.coffee/tags/another-tag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sticker designs</title>
+      <link>https://lana.coffee/patterns/art/sticker-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/art/sticker-design/</guid>
+      <description>You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Cupper for full details.
+Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh and also&amp;rdquo; notes to your patterns&amp;rsquo; documentation.</description>
+    </item>
+    
+  </channel>
+</rss>

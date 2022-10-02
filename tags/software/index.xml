@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Lana.Coffee</title>
+    <link>https://lana.coffee/tags/software/</link>
+    <description>Recent content in software on Lana.Coffee</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://lana.coffee/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bundeswerbung</title>
+      <link>https://lana.coffee/patterns/projects/bundeswehrbung/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/projects/bundeswehrbung/</guid>
+      <description>Mit der Abschaffung des Wehrdienstes griff die deutsche Bundeswehr 2016 zu neuen Maßnahmen. Die Webserie &amp;ldquo;Die Rekruten&amp;rdquo; soll auf YouTube nach neuen und vor allem jungen Wehrdienst-Interessierten werben. Für diesen Zweck setzt man auf Jumpcuts, kecke Sprüche und Jugendsprache. Die Serie selbst wurde als Erfolg gefeier und hat mittlerweile viele Spin-Offs nach sich gezogen.
+Doch die als Abenteuer dargestellte Grundausbildung ist auch durch ihre Sprachauswahl spannend. Als ich die Serie das erste Mal sah war ich doch verwundert, denn Themen wie Krieg oder Tod wurde deutlich anders dargestellt als ich es mir vorgestellt hatte.</description>
+    </item>
+    
+    <item>
+      <title>Kladderadatsch</title>
+      <link>https://lana.coffee/patterns/projects/kladderadatsch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/projects/kladderadatsch/</guid>
+      <description>Kladderadatsch - Mok din shiet!
+Ist ein Projekt, welches im Rahmen eines Healthcare-Hakathons entstanden ist.
+Die Idee ist simpel:
+ToDo Apps werden für Menschen gebaut, welche ihre Aufgaben erinnern, sortieren, oder im Blick behalten wollen. Herkömmliche ToDo Apps gehen dabei jedoch davon aus, dass Menschen auch die Energie für die notwendigen Aufgaben haben. Leidet man an Energielosigkeit und Erschöpfung, so wirken jedoch lange Listen und stetige Erinnerungen eher zu Überforderung und Resignation.</description>
+    </item>
+    
+  </channel>
+</rss>
