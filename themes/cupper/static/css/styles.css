@@ -716,6 +716,7 @@ h1 svg {
   width: 1.25em;
 }
 .bookmark-icon {
+  display: none !important;
   vertical-align: middle;
 }
 .link-icon {
