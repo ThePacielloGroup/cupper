@@ -800,6 +800,17 @@ h1 svg {
     align-items: center;
     justify-content: center;
 }
+
+.socials {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+.social {
+    margin-top: 0px;
+    border-bottom: 0px;
+    font-size: 2rem;
+}
 .wrapper.print-version main {
     min-height: 0;
 }

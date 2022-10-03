@@ -6,5 +6,8 @@ theme = "cupper"
 publishDir = "docs"
 
 [params]
-  description = "Riposte Collective"
-  codePenUser = "Heydon"
+#  description = "![images/logo.svg](images/logo.svg)"
+  Twitter = "https://twitter.com/riposte_col"
+  Tiktok = "https://www.tiktok.com/@ripostecollective"
+  Instagram = "https://www.instagram.com/ripostecollective/"
+  Mail = "mailto:***REMOVED***"

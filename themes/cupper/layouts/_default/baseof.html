@@ -48,16 +48,39 @@
             <div class="intro">
               <a class="logo" href="/" aria-label="{{ .Site.Title }} home page">
                 <img src="{{ "images/logo.svg" | absURL }}" alt="">
-              </a>
+	      </a>
+	      <div class="socials">
+		      {{if ne .Site.Params.Twitter ""}}
+		      <a class="social" href="{{.Site.Params.Twitter}}"><svg viewBox="0 0 35 43">
+				      <use xlink:href="#twitter"></use>
+			      </svg>
+		      </a>
+		      {{end}}
+		      {{if ne .Site.Params.Tiktok ""}}
+		      <a class="social" href="{{.Site.Params.Tiktok}}"><svg viewBox="0 0 35 45">
+				      <use xlink:href="#tiktok"></use>
+			      </svg>
+		      </a>
+		      {{end}}
+		      {{if ne .Site.Params.Instagram ""}}
+		      <a class="social" href="{{.Site.Params.Instagram}}"><svg viewBox="0 0 35 45">
+				      <use xlink:href="#instagram"></use>
+			      </svg>
+		      </a>
+		      {{end}}
+		      {{if ne .Site.Params.Mail ""}}
+		      <a class="social" href="{{.Site.Params.Mail}}"><svg viewBox="0 0 35 45">
+				      <use xlink:href="#mail"></use>
+			      </svg>
+		      </a>
+		      {{end}}
+		      <a class="social" href="{{ "print-version" | absURL }}"><svg viewBox="0 0 35 45">
+				      <use xlink:href="#doc"></use>
+			      </svg>
+		      </a>
+	      </div>
               <p class="library-desc">
-                {{ .Site.Params.Description | markdownify }}
-                {{ if ne .Type "print-version" }}
-                  <a class="print" href="{{ "print-version" | absURL }}">
-                    <svg viewBox="0 0 35 45" aria-hidden="true" focusable="false">
-                      <use xlink:href="#doc"></use>
-                    </svg>Print version
-                 {{ end }}
-               </a>
+	        {{ .Site.Params.Description | markdownify}}
               </p>
               {{ if eq .Type "print-version" }}
                 <p class="toc-link">
