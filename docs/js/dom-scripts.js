@@ -120,7 +120,7 @@
   }
 
   checkbox.addEventListener('change', function () {
-    darkTheme(this.checked ? 'screen' : 'none');
+    darkTheme(this.checked ? 'none' : 'screen');
   });
 
   window.addEventListener('DOMContentLoaded', function () {

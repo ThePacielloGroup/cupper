@@ -716,6 +716,7 @@ h1 svg {
   width: 1.25em;
 }
 .bookmark-icon {
+  display: none !important;
   vertical-align: middle;
 }
 .link-icon {
@@ -798,6 +799,17 @@ h1 svg {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.socials {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+.social {
+    margin-top: 0px;
+    border-bottom: 0px;
+    font-size: 2rem;
 }
 .wrapper.print-version main {
     min-height: 0;
