@@ -1,4 +1,4 @@
 +++ 
-title = "Art" 
+title = "Kunst" 
 weight = 5
 +++

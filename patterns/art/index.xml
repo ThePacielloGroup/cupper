@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Art on Lana.Coffee</title>
+    <title>Kunst on Lana.Coffee</title>
     <link>https://lana.coffee/patterns/art/</link>
-    <description>Recent content in Art on Lana.Coffee</description>
+    <description>Recent content in Kunst on Lana.Coffee</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://lana.coffee/patterns/art/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Sticker designs</title>
+      <title>Sticker Designs</title>
       <link>https://lana.coffee/patterns/art/sticker-design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lana.coffee/patterns/art/sticker-design/</guid>
-      <description>You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Cupper for full details.
-Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh and also&amp;rdquo; notes to your patterns&amp;rsquo; documentation.</description>
+      <description>Manchmal doodle ich kleine Designs. Wenn daraus ein Sticker wird findet man diesen auf github und kann ihn für nicht kommerzielle Zwecke nutzen.</description>
     </item>
     
     <item>
-      <title>Embroidery Designs</title>
+      <title>Stickdateien</title>
       <link>https://lana.coffee/patterns/art/embroidery-design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lana.coffee/patterns/art/embroidery-design/</guid>
-      <description>All Designs and are public and can be found on github.</description>
+      <description>Mit der Anschaffung einer programmierbaren Stickmaschine in meinem Lieblings-Hackspace begann meine Liebe fürs Sticken. All meine Stickdateien sind auf github verfügbar.</description>
     </item>
     
     <item>
@@ -30,8 +29,7 @@ Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lana.coffee/patterns/art/perpendiculum/</guid>
-      <description>You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Cupper for full details.
-Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh and also&amp;rdquo; notes to your patterns&amp;rsquo; documentation.</description>
+      <description>&amp;hellip; coming one day.</description>
     </item>
     
   </channel>

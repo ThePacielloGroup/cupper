@@ -9,13 +9,12 @@ weight = 2
 * [2022](http://localhost:1313/tags/2022/)
 * [2020](http://localhost:1313/tags/2020/)
 * [2018](http://localhost:1313/tags/2018/)
+* [2016](http://localhost:1313/tags/2016/)
 
 
 # By Topic
 
 * [art](http://localhost:1313/tags/art/)
+* [blog](http://localhost:1313/tags/blog/)
 * [social](http://localhost:1313/tags/social/)
 * [software](http://localhost:1313/tags/software/)
-* [hardware](http://localhost:1313/tags/hardware/)
-* [web app](http://localhost:1313/tags/webapp/)
-* [website](http://localhost:1313/tags/website/)

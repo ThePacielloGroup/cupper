@@ -1,4 +1,4 @@
 +++ 
-title = "Projects" 
+title = "Projekte" 
 weight = 4
 +++

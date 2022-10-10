@@ -1,11 +1,7 @@
 +++
-title = "Sticker designs"
-tags = ["art", "another tag"]
+title = "Sticker Designs"
+tags = ["art"]
 weight = 1
 +++
 
-You can just write **markdown** here. But don't forget there are lots of shortcodes to help you with writing and showing off code too. See [the documentation for **Cupper**](https://thepaciellogroup.github.io/cupper/) for full details.
-
-{{% note %}}
-Here's an example of a note shortcode for adding little "oh and also" notes to your patterns' documentation.
-{{% /note %}}
+Manchmal doodle ich kleine Designs. Wenn daraus ein Sticker wird findet man diesen auf [github](https://github.com/DasUnicorn/stickIt) und kann ihn für nicht kommerzielle Zwecke nutzen.
