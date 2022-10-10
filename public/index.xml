@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.coffee on Lana.Coffee</title>
+    <link>https://lana.coffee/</link>
+    <description>Recent content in .coffee on Lana.Coffee</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://lana.coffee/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dasUnicorn</title>
+      <link>https://lana.coffee/patterns/projects/dasunicorn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/projects/dasunicorn/</guid>
+      <description>Mein Leben im Internet begann 2015 mit meinem Blogprojekt &amp;ldquo;dasUnicorn&amp;rdquo;, welches meine Reisen und Meinungen aus der Sicht meiner Plüscheinhorn-Begleitung beschreibt. Auch wenn ich mich nach und nach immer weiter von meiner Einhorn-Internet-Persona entfernt habe, bleibt der Blog ein Medium für längere Gedanken und Updates und der Name ein Synonym unter welchem mich die meisten Menschen kennen.
+dasUnicorn.de</description>
+    </item>
+    
+    <item>
+      <title>Sticker Designs</title>
+      <link>https://lana.coffee/patterns/art/sticker-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/art/sticker-design/</guid>
+      <description>Manchmal doodle ich kleine Designs. Wenn daraus ein Sticker wird findet man diesen auf github und kann ihn für nicht kommerzielle Zwecke nutzen.</description>
+    </item>
+    
+    <item>
+      <title>Stickdateien</title>
+      <link>https://lana.coffee/patterns/art/embroidery-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/art/embroidery-design/</guid>
+      <description>Mit der Anschaffung einer programmierbaren Stickmaschine in meinem Lieblings-Hackspace begann meine Liebe fürs Sticken. All meine Stickdateien sind auf github verfügbar.</description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>https://lana.coffee/patterns/tags/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/tags/</guid>
+      <description>By year  2022 2020 2018 2016  By Topic  art blog social software  </description>
+    </item>
+    
+    <item>
+      <title>Perpendikulum</title>
+      <link>https://lana.coffee/patterns/art/perpendiculum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/art/perpendiculum/</guid>
+      <description>&amp;hellip; coming one day.</description>
+    </item>
+    
+    <item>
+      <title>Bundeswerbung</title>
+      <link>https://lana.coffee/patterns/projects/bundeswehrbung/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/projects/bundeswehrbung/</guid>
+      <description>Mit der Abschaffung des Wehrdienstes griff die deutsche Bundeswehr 2016 zu neuen Maßnahmen. Die Webserie &amp;ldquo;Die Rekruten&amp;rdquo; soll auf YouTube nach neuen und vor allem jungen Wehrdienst-Interessierten werben. Für diesen Zweck setzt man auf Jumpcuts, kecke Sprüche und Jugendsprache. Die Serie selbst wurde als Erfolg gefeier und hat mittlerweile viele Spin-Offs nach sich gezogen.
+Doch die als Abenteuer dargestellte Grundausbildung ist auch durch ihre Sprachauswahl spannend. Als ich die Serie das erste Mal sah war ich doch verwundert, denn Themen wie Krieg oder Tod wurde deutlich anders dargestellt als ich es mir vorgestellt hatte.</description>
+    </item>
+    
+    <item>
+      <title>Cupper</title>
+      <link>https://lana.coffee/print-version/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/print-version/</guid>
+      <description>You don&amp;rsquo;t want to edit this file :-)</description>
+    </item>
+    
+    <item>
+      <title>Junk Mail Cards</title>
+      <link>https://lana.coffee/patterns/projects/junkmailcards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/projects/junkmailcards/</guid>
+      <description>Mein erstes &amp;ldquo;DickPic&amp;rdquo; bekam ich mit 16 gesendet und wie bei den meisten Menschen die solche Bilder von Fremden erhalten: ungewollt. Als Frau im Internet die sich in männlich geprägten technischen Internetblasen bewegt, aber auch gerne ihre Party- und Alltagsoutfits im Internet teilt nam das Problem irgendwann überhand.
+Auch wenn ich alle mir gesendeten Bilder meldete und die Personen blockierte sah ich keine Besserung. Also fing ich von 2016 bis 2018 an die mir gesendeten Bilder zu sammeln.</description>
+    </item>
+    
+    <item>
+      <title>Kladderadatsch</title>
+      <link>https://lana.coffee/patterns/projects/kladderadatsch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/projects/kladderadatsch/</guid>
+      <description>Kladderadatsch - Mok din shiet!
+Ist ein Projekt, welches im Rahmen eines Healthcare-Hakathons entstanden ist.
+Die Idee ist simpel:
+ToDo Apps werden für Menschen gebaut, welche ihre Aufgaben erinnern, sortieren, oder im Blick behalten wollen. Herkömmliche ToDo Apps gehen dabei jedoch davon aus, dass Menschen auch die Energie für die notwendigen Aufgaben haben. Leidet man an Energielosigkeit und Erschöpfung, so wirken jedoch lange Listen und stetige Erinnerungen eher zu Überforderung und Resignation.</description>
+    </item>
+    
+  </channel>
+</rss>

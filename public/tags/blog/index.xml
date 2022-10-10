@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on Lana.Coffee</title>
+    <link>https://lana.coffee/tags/blog/</link>
+    <description>Recent content in blog on Lana.Coffee</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://lana.coffee/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dasUnicorn</title>
+      <link>https://lana.coffee/patterns/projects/dasunicorn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/projects/dasunicorn/</guid>
+      <description>Mein Leben im Internet begann 2015 mit meinem Blogprojekt &amp;ldquo;dasUnicorn&amp;rdquo;, welches meine Reisen und Meinungen aus der Sicht meiner Plüscheinhorn-Begleitung beschreibt. Auch wenn ich mich nach und nach immer weiter von meiner Einhorn-Internet-Persona entfernt habe, bleibt der Blog ein Medium für längere Gedanken und Updates und der Name ein Synonym unter welchem mich die meisten Menschen kennen.
+dasUnicorn.de</description>
+    </item>
+    
+    <item>
+      <title>Perpendikulum</title>
+      <link>https://lana.coffee/patterns/art/perpendiculum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/art/perpendiculum/</guid>
+      <description>&amp;hellip; coming one day.</description>
+    </item>
+    
+  </channel>
+</rss>

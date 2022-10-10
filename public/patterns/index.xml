@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patterns on Lana.Coffee</title>
+    <link>https://lana.coffee/patterns/</link>
+    <description>Recent content in Patterns on Lana.Coffee</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://lana.coffee/patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tags</title>
+      <link>https://lana.coffee/patterns/tags/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lana.coffee/patterns/tags/</guid>
+      <description>By year  2022 2020 2018 2016  By Topic  art blog social software  </description>
+    </item>
+    
+  </channel>
+</rss>

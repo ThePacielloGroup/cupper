@@ -2,7 +2,7 @@ title = "Lana.Coffee"
 baseURL = "https://lana.coffee"
 canonifyURLs = true
 theme = "cupper"
-publishDir = ""
+publishDir = "public"
 
 [params]
   description = "**lana.coffee**"
