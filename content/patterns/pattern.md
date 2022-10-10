@@ -8,6 +8,3 @@ You can just write **markdown** here. But don't forget there are lots of shortco
 {{% note %}}
 Here's an example of a note shortcode for adding little "oh and also" notes to your patterns' documentation.
 {{% /note %}}
-
-
-Test
