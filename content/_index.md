@@ -18,4 +18,3 @@ Face à un corps armé qui ne cesse de nous isoler et nous diviser, nous pensons
 - Instagram : [@ripostecollective](https://www.instagram.com/ripostecollective/)
 - Tiktok: [@ripostecollective](https://www.tiktok.com/@ripostecollective)
 - Facebook : [Riposte Collective](https://www.facebook.com/Riposte-Collective-106256235296255/)
-- Par mail : ***REMOVED***
