@@ -1,6 +1,7 @@
 +++
-title = "My First Pattern File"
-tags = ["example tag", "another tag"]
+title = "Affiches"
+tags = ["communication", "images"]
 +++
 
-j'aime la bière
+![Reunion](img/reunion.png)
+![Autodéfense Numérique](img/autodef.png)
