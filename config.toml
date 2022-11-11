@@ -1,6 +1,6 @@
 languageCode = "fr"
 title = "Riposte Collective"
-baseURL = "https://riposte-collective.org/"
+baseURL = ""
 canonifyURLs = true
 theme = "cupper"
 publishDir = "docs"
