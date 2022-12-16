@@ -13,4 +13,4 @@ tags = ["communication", "images"]
 ![Projection Répression](/img/afficherepressionfinal_large.png)
 ![Regarde](/img/regarde.png)
 ![TROU](/img/TROU.png)
-![Autodéfense Numérique](/img/autodef-num.png)
+![Autodéfense Numérique](/img/autodef.png)

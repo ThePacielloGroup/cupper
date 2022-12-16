@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1229px"
+   height="99px"
+   viewBox="0 0 1229 99"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="mail.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview27461"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.74742565"
+     inkscape:cx="396.69498"
+     inkscape:cy="432.81897"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs27456">
+    <rect
+       x="-0.71020142"
+       y="1.0222058"
+       width="1230.4286"
+       height="98.830464"
+       id="rect30417" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       id="text30415"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Charles Wright';-inkscape-font-specification:'Charles Wright';white-space:pre;shape-inside:url(#rect30417);fill:#000000;fill-opacity:1;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:99px;line-height:1.25;font-family:'Charles Wright';-inkscape-font-specification:'Charles Wright';fill:#000000;fill-opacity:1;stroke:none"
+       x="2.8889844"
+       y="79.566795"
+       id="text46611"><tspan
+         sodipodi:role="line"
+         id="tspan46609"
+         x="2.8889844"
+         y="79.566795">ripostecollective@riseup.net</tspan></text>
+  </g>
+</svg>
