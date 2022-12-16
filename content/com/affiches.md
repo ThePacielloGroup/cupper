@@ -1,6 +1,6 @@
 +++
-title = Affiches
-tags = [communication, images]
+title = "Affiches"
+tags = ["communication", "images"]
 +++
 
 # Réunion hebdomadaire
