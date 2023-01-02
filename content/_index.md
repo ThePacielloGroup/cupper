@@ -12,7 +12,7 @@ Nous diffusons des savoirs collectifs, élaborés à partir de nos expériences.
 
 Face à un corps armé qui ne cesse de nous isoler et nous diviser, nous pensons que c'est ensemble que nous pourrons construire une riposte collective.
 
-**Vous pouvez nous retrouver tous les MARDIS à 18h à Saint-Denis Université, dans le hall du bâtiment B2 de l'Université Paris 8.** Également dans les différentes formations/évènements que nous organisons. Nous publions nos évènements sur [Paris Luttes Info](https://paris-luttes.info/), l'[AMI](https://www.agendamilitant.org/) et sur nos réseaux :
+**Vous pouvez nous retrouver tous les LUNDIS à 18h à Saint-Denis Université, dans le hall du bâtiment B2 de l'Université Paris 8.** Également dans les différentes formations/évènements que nous organisons. Nous publions nos évènements sur [Paris Luttes Info](https://paris-luttes.info/), l'[AMI](https://www.agendamilitant.org/) et sur nos réseaux :
     
 - Twitter : [@riposte_col](https://twitter.com/riposte_col)
 - Instagram : [@ripostecollective](https://www.instagram.com/ripostecollective/)

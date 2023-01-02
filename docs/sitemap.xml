@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://riposte-collective.org/tags/another-tag/</loc>
+    <loc>/com/affiches/</loc>
   </url><url>
-    <loc>https://riposte-collective.org/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://riposte-collective.org/print-version/</loc>
+    <loc>/tags/communication/</loc>
   </url><url>
-    <loc>https://riposte-collective.org/tags/example-tag/</loc>
+    <loc>/com/</loc>
   </url><url>
-    <loc>https://riposte-collective.org/patterns/pattern/</loc>
+    <loc>/print-version/</loc>
   </url><url>
-    <loc>https://riposte-collective.org/patterns/</loc>
+    <loc>/tags/images/</loc>
   </url><url>
-    <loc>https://riposte-collective.org/</loc>
+    <loc>/</loc>
   </url><url>
-    <loc>https://riposte-collective.org/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

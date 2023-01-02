@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Riposte Collective</title>
-    <link>https://riposte-collective.org/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Riposte Collective</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr</language><atom:link href="https://riposte-collective.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>another tag</title>
-      <link>https://riposte-collective.org/tags/another-tag/</link>
+      <title>communication</title>
+      <link>/tags/communication/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://riposte-collective.org/tags/another-tag/</guid>
+      <guid>/tags/communication/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>example tag</title>
-      <link>https://riposte-collective.org/tags/example-tag/</link>
+      <title>images</title>
+      <link>/tags/images/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://riposte-collective.org/tags/example-tag/</guid>
+      <guid>/tags/images/</guid>
       <description></description>
     </item>
     

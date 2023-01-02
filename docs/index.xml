@@ -2,27 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Riposte Collective : présentation du collectif on Riposte Collective</title>
-    <link>https://riposte-collective.org/</link>
+    <link>/</link>
     <description>Recent content in Riposte Collective : présentation du collectif on Riposte Collective</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr</language><atom:link href="https://riposte-collective.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cupper</title>
-      <link>https://riposte-collective.org/print-version/</link>
+      <title>Affiches</title>
+      <link>/com/affiches/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://riposte-collective.org/print-version/</guid>
-      <description>You don&amp;rsquo;t want to edit this file :-)</description>
+      <guid>/com/affiches/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>My First Pattern File</title>
-      <link>https://riposte-collective.org/patterns/pattern/</link>
+      <title>Cupper</title>
+      <link>/print-version/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://riposte-collective.org/patterns/pattern/</guid>
-      <description>You can just write markdown here. But don&amp;rsquo;t forget there are lots of shortcodes to help you with writing and showing off code too. See the documentation for Cupper for full details.
-Here&amp;rsquo;s an example of a note shortcode for adding little &amp;ldquo;oh and also&amp;rdquo; notes to your patterns&#39; documentation.</description>
+      <guid>/print-version/</guid>
+      <description>You don&amp;rsquo;t want to edit this file :-)</description>
     </item>
     
   </channel>

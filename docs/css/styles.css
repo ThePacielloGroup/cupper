@@ -1,9 +1,26 @@
 /* fonts */
 @font-face {
     font-family: 'Miriam Libre';
-    src: url('fonts/miriamlibre-bold.woff2') format('woff2'), url('fonts/miriamlibre-bold.woff') format('woff');
+    src: url('fonts/miriamlibre-bold.woff2') format('woff2'),
+    	 url('fonts/miriamlibre-bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+}
+@font-face {
+    font-family: 'race_sportregular';
+    src: url('fonts/rs-webfont.woff2') format('woff2'),
+         url('fonts/rs-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'charles_wrightbold';
+    src: url('fonts/charleswright-bold-webfont.woff2') format('woff2'),
+         url('fonts/charleswright-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 *,
 *::before,
@@ -17,7 +34,7 @@
 }
 html {
     font-size: calc(1em + 0.33vw);
-    font-family: Arial, Helvetica Neue, sans-serif;
+    font-family: charles_wrightbold, Arial, Helvetica Neue, sans-serif;
     line-height: 1.5;
     color: #111;
     background-color: #fefefe;
@@ -103,23 +120,25 @@ div:not([tabindex]):focus {
 }
 /* text styles */
 
-h1,
 h2,
 h3,
 h4 {
-    font-family: Miriam Libre, serif;
+    font-family: charles_wrightbold, Miriam Libre, serif;
     line-height: 1.125;
 }
 h1 {
+    font-family: race_sportregular, Miriam Libre, serif;
     font-size: 2rem;
 }
 h2 {
-    font-size: 1.66rem;
+    font-size: 2rem;
 }
 h3 {
+    font-size: 1.66rem;
+}
+h4 {
     font-size: 1.25rem;
 }
-h4,
 h5 {
     font-size: 1rem;
     font-family: PT Sans, sans-serif;
