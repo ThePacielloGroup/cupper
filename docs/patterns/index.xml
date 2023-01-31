@@ -20,6 +20,27 @@ Improvement A possible alternate implementation would be.
     </item>
     
     <item>
+      <title>Custom components</title>
+      <link>https://erikkroes.github.io/unicef/patterns/custom-components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/custom-components/</guid>
+      <description>Finding There are several components on this page that are custom made. This covers complex components like the &amp;ldquo;explore unicef&amp;rdquo;-dropdown, search filters (&amp;ldquo;Contract type&amp;rdquo;, &amp;ldquo;Locations&amp;rdquo;, &amp;ldquo;Functional Area&amp;rdquo; and &amp;ldquo;Position level&amp;rdquo;) and the search input/mechanism.
+They are not accessible by keyboard and fail WCAG Criteria like 4.1.2 for not adding appropriate name, role and/or value.
+They are considered out of scope for this audit as they need further in-depth review to discover all issues in all possible states and applications, and might require a thorough rewrite.</description>
+    </item>
+    
+    <item>
+      <title>Headings</title>
+      <link>https://erikkroes.github.io/unicef/patterns/headings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/headings/</guid>
+      <description>Finding The heading structure of a page should create a hierarchy. It starts with one unique &amp;lt;h1&amp;gt; that mirrors the page title. Every other heading should be &amp;ldquo;below&amp;rdquo; the &amp;lt;h1&amp;gt;, and no levels should be skipped. Ignoring the rogue role=&amp;quot;heading&amp;quot; that is (I assume) implemented by Drupal, the current structure is the following:
+h2: Vacancies h1: Current vacancies h3: Explore our current job opportunities h3: Contract type h3: Locations h3: Functional Area h4: Re-advertisement Risk and Compliance Officer, NOB, Bridgetown, Barbados, Post #122476 (Open to Nationals of Barbados) h4.</description>
+    </item>
+    
+    <item>
       <title>High contrast mode</title>
       <link>https://erikkroes.github.io/unicef/patterns/high-contrast/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -30,6 +51,29 @@ Improvement A possible alternate implementation would be.
     </item>
     
     <item>
+      <title>More jobs</title>
+      <link>https://erikkroes.github.io/unicef/patterns/more-jobs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/more-jobs/</guid>
+      <description>Finding The &amp;ldquo;More jobs&amp;rdquo;-button looks like a button and functions like a button but is an &amp;lt;a&amp;gt; in the code.
+&amp;lt;a href=&amp;#34;/en-us/listing/?page=2&amp;amp;amp;page-items=20&amp;#34; class=&amp;#34;more-link button&amp;#34; style=&amp;#34;display:block&amp;#34; title=&amp;#34;More Jobs&amp;#34; data-page=&amp;#34;2&amp;#34; data-page-items=&amp;#34;20&amp;#34;&amp;gt; More Jobs &amp;lt;span class=&amp;#34;count&amp;#34;&amp;gt;239&amp;lt;/span&amp;gt; &amp;lt;/a&amp;gt; By turning this into a &amp;lt;button&amp;gt;, the appearance and behavior will align with the expectations of users.
+The label-text can also be clarified more, but this seems to be a general usability-issue and not accessibility-specific.
+Location Xpath: /html/body/div[1]/div[2]/div/section/div[2]/article/div/div[2]/div/div/div/div/div[2]/div/div/div[5]/p/a</description>
+    </item>
+    
+    <item>
+      <title>Navigation</title>
+      <link>https://erikkroes.github.io/unicef/patterns/navigation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/navigation/</guid>
+      <description>Finding The items &amp;ldquo;EXPLORE UNICEF&amp;rdquo;, &amp;ldquo;SEARCH JOBS&amp;rdquo; and &amp;ldquo;CANDIDATE LOGIN&amp;rdquo; are navigation but not in a &amp;lt;nav&amp;gt;.
+Location Xpath: /html/body/div[1]/header/div/div[1]/div[5]/div[1]/div/section/div/ul
+Improvement Place the &amp;lt;ul&amp;gt; inside a &amp;lt;nav&amp;gt;.</description>
+    </item>
+    
+    <item>
       <title>Unicef logo</title>
       <link>https://erikkroes.github.io/unicef/patterns/logo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -37,6 +81,18 @@ Improvement A possible alternate implementation would be.
       <guid>https://erikkroes.github.io/unicef/patterns/logo/</guid>
       <description>Finding The logo is currently implemented as following:
 &amp;lt;a href=&amp;#34;https://www.unicef.org/careers/&amp;#34; title=&amp;#34;UNICEF&amp;#34; rel=&amp;#34;home&amp;#34; class=&amp;#34;site-branding__logo&amp;#34;&amp;gt; &amp;lt;span class=&amp;#34;icon-logo-unicef en&amp;#34;&amp;gt; ::before &amp;lt;em class=&amp;#34;visibility-hidden&amp;#34;&amp;gt;Unicef default logo&amp;lt;/em&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/a&amp;gt; The image includes the &amp;ldquo;for every child&amp;rdquo;-text and is implemented as an icon font. Icon fonts can present all kinds of issues, for example when people locally change their font. It also results in an image that contains no text alternative. That alternative is specifically needed because the &amp;ldquo;for every child&amp;rdquo;-text is part of the image.</description>
+    </item>
+    
+    <item>
+      <title>Vacancy definitions</title>
+      <link>https://erikkroes.github.io/unicef/patterns/vacancy-definitions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/vacancy-definitions/</guid>
+      <description>Finding The &amp;ldquo;Location&amp;rdquo; and &amp;ldquo;Deadline&amp;rdquo; in vacancies look like (prime candidates for) definition lists, but they&amp;rsquo;re not. Visually there&amp;rsquo;s a clear relation but it&amp;rsquo;s not communicated in code.
+Location Xpath: /html/body/div[1]/div[2]/div/section/div[2]/article/div/div[2]/div/div/div/div/div[2]/div/div/div[5]/div/div/div[1]/div/div/div/div/div[2]/p[3]
+Improvement A possible alternate implementation would be.
+&amp;lt;dl&amp;gt; &amp;lt;dt&amp;gt;Location&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;Barbados&amp;lt;/dd&amp;gt; &amp;lt;dt&amp;gt;Deadline&amp;lt;/dt&amp;gt; &amp;lt;dd&amp;gt;&amp;lt;time datetime=&amp;#34;...&amp;#34;&amp;gt;5 Feb 2023 11:55 PM&amp;lt;/time&amp;gt;&amp;lt;/dd&amp;gt; &amp;lt;/dl&amp;gt; This makes sure that a visual relationship is also presented in code.</description>
     </item>
     
   </channel>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://erikkroes.github.io/unicef/tags/wcag1.4.11/">
+    <link rel="canonical" href="https://erikkroes.github.io/unicef/patterns/vacancy-definitions/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://erikkroes.github.io/unicef/images/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://erikkroes.github.io/unicef/images/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://erikkroes.github.io/unicef/images/apple-touch-icon-72x72.png">
@@ -30,8 +30,8 @@
     </style>
     <title>
       
-  Patterns tagged wcag1.4.11 | Unicef hiring
-
+        Vacancy definitions | Unicef hiring
+      
     </title>
     
   </head>
@@ -224,7 +224,7 @@
                       </li>
                     
                       <li class="pattern">
-                        <a href="https://erikkroes.github.io/unicef/patterns/vacancy-definitions/" >
+                        <a href="https://erikkroes.github.io/unicef/patterns/vacancy-definitions/" aria-current="page">
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
                           </svg>
@@ -244,26 +244,64 @@
           
   <main id="main">
     <h1>
-      <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-        <use xlink:href="#tag"></use>
-      </svg>
-      Tagged &#x201c;wcag1.4.11&#x201d;
-    </h1>
-    <ul class="patterns-list">
-      
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/patterns/high-contrast/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
         <use xlink:href="#bookmark"></use>
       </svg>
-      High contrast mode
-    </a>
-  </h2>
-</li>
-
+      Vacancy definitions
+    </h1>
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://erikkroes.github.io/unicef/tags/wcag1.3.1">wcag1.3.1</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
       
-    </ul>
+
+  <nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
+      
+        <li>
+          <a href="#finding">
+            Finding
+          </a>
+        </li>
+      
+        <li>
+          <a href="#improvement">
+            Improvement
+          </a>
+        </li>
+      
+    </ol>
+  </nav>
+
+
+    
+    <h2 id="finding">Finding</h2>
+<p>The &ldquo;Location&rdquo; and &ldquo;Deadline&rdquo; in vacancies look like (prime candidates for) definition lists, but they&rsquo;re not. Visually there&rsquo;s a clear relation but it&rsquo;s not communicated in code.</p>
+<h3 id="location">Location</h3>
+<p>Xpath: <code>/html/body/div[1]/div[2]/div/section/div[2]/article/div/div[2]/div/div/div/div/div[2]/div/div/div[5]/div/div/div[1]/div/div/div/div/div[2]/p[3]</code></p>
+<h2 id="improvement">Improvement</h2>
+<p>A possible alternate implementation would be.</p>
+<pre tabindex="0"><code>  &lt;dl&gt;
+    &lt;dt&gt;Location&lt;/dt&gt;
+    &lt;dd&gt;Barbados&lt;/dd&gt;
+    &lt;dt&gt;Deadline&lt;/dt&gt;
+    &lt;dd&gt;&lt;time datetime=&#34;...&#34;&gt;5 Feb 2023 11:55 PM&lt;/time&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+</code></pre><p>This makes sure that a visual relationship is also presented in code.</p>
+
   </main>
 
           <footer role="contentinfo">

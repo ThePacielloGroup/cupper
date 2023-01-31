@@ -31,3 +31,4 @@ A possible alternate implementation would be.
     <span>for every child</span>
   </a>
 ````
+This way the text is also implemented as a separate text, preventing a WCAG 1.4.5 failure

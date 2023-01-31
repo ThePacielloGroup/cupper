@@ -171,6 +171,24 @@
             </li>
           
             <li class="pattern">
+              <a href="#custom-components" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Custom components</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#headings" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Headings</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
               <a href="#high-contrast-mode" >
                 <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                   <use xlink:href="#bookmark"></use>
@@ -180,11 +198,38 @@
             </li>
           
             <li class="pattern">
+              <a href="#more-jobs" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">More jobs</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#navigation" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Navigation</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
               <a href="#unicef-logo" >
                 <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
                   <use xlink:href="#bookmark"></use>
                 </svg>
                 <span class="text">Unicef logo</span>
+              </a>
+            </li>
+          
+            <li class="pattern">
+              <a href="#vacancy-definitions" >
+                <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+                  <use xlink:href="#bookmark"></use>
+                </svg>
+                <span class="text">Vacancy definitions</span>
               </a>
             </li>
           
@@ -218,6 +263,70 @@
         </div>
       
         <div class="pattern-section">
+          <h1 id="custom-components" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Custom components
+          </h1>
+          <h2 id="finding">Finding</h2>
+<p>There are several components on this page that are custom made. This covers complex components like the &ldquo;explore unicef&rdquo;-dropdown, search filters (&ldquo;Contract type&rdquo;, &ldquo;Locations&rdquo;, &ldquo;Functional Area&rdquo; and &ldquo;Position level&rdquo;) and the search input/mechanism.</p>
+<p>They are not accessible by keyboard and fail WCAG Criteria like 4.1.2 for not adding appropriate name, role and/or value.</p>
+<p>They are considered out of scope for this audit as they need further in-depth review to discover all issues in all possible states and applications, and might require a thorough rewrite.</p>
+
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="headings" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Headings
+          </h1>
+          <h2 id="finding">Finding</h2>
+<p>The heading structure of a page should create a hierarchy. It starts with one unique <code>&lt;h1&gt;</code> that mirrors the page title. Every other heading should be &ldquo;below&rdquo; the <code>&lt;h1&gt;</code>, and no levels should be skipped.
+Ignoring the rogue <code>role=&quot;heading&quot;</code> that is (I assume) implemented by Drupal, the current structure is the following:</p>
+<ul>
+<li>h2: Vacancies
+<ul>
+<li>h1: Current vacancies
+<ul>
+<li>h3: Explore our current job opportunities</li>
+<li>h3: Contract type</li>
+<li>h3: Locations</li>
+<li>h3: Functional Area
+<ul>
+<li>h4: <strong>Re-advertisement</strong> Risk and Compliance Officer, NOB, Bridgetown, Barbados, Post #122476 (Open to Nationals of Barbados)</li>
+<li>h4.. etc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="improvement">Improvement</h2>
+<p>A more structured set of headings would be along the lines of:</p>
+<ul>
+<li>h1: Vacancies</li>
+<li>h2: Current vacancies</li>
+<li>h3: <strong>Re-advertisement</strong> Risk and Compliance Officer, NOB, Bridgetown, Barbados, Post #122476 (Open to Nationals of Barbados)</li>
+<li>h3: etc</li>
+<li>h2: Footer
+<ul>
+<li>h3: UNICEF Careers home</li>
+<li>h3: Work with UNICEF</li>
+<li>h3: Our talent programmes</li>
+<li>h3: Social media</li>
+</ul>
+</li>
+</ul>
+<p>This makes sure no levels are skipped, the <code>h1</code> aligns with the page-title and any texts that shouldn&rsquo;t be heading will no longer be headings.
+It also adds headings to the footer, where there are now elements implemented as links that should be headings.</p>
+
+        </div>
+      
+        <div class="pattern-section">
           <h1 id="high-contrast-mode" tabindex="-1">
             <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
               <use xlink:href="#bookmark"></use>
@@ -238,6 +347,46 @@ Another issue with the button is that it does not communicate its state. It&rsqu
     Toggle high contrast
   &lt;/button&gt;
 </code></pre><p>This also removes the superfluous <code>tabindex</code> and should be accompanied by a visual change to indicate the state of the button.</p>
+
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="more-jobs" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            More jobs
+          </h1>
+          <h2 id="finding">Finding</h2>
+<p>The &ldquo;More jobs&rdquo;-button looks like a button and functions like a button but is an <code>&lt;a&gt;</code> in the code.</p>
+<pre tabindex="0"><code>&lt;a href=&#34;/en-us/listing/?page=2&amp;amp;page-items=20&#34; class=&#34;more-link button&#34; style=&#34;display:block&#34; title=&#34;More Jobs&#34; data-page=&#34;2&#34; data-page-items=&#34;20&#34;&gt;
+  More Jobs &lt;span class=&#34;count&#34;&gt;239&lt;/span&gt;
+&lt;/a&gt;
+</code></pre><p>By turning this into a <code>&lt;button&gt;</code>, the appearance and behavior will align with the expectations of users.</p>
+<p>The label-text can also be clarified more, but this seems to be a general usability-issue and not accessibility-specific.</p>
+<h3 id="location">Location</h3>
+<p>Xpath: <code>/html/body/div[1]/div[2]/div/section/div[2]/article/div/div[2]/div/div/div/div/div[2]/div/div/div[5]/p/a</code></p>
+<h2 id="improvement">Improvement</h2>
+<p>A possible alternate implementation would be.</p>
+<pre tabindex="0"><code>  &lt;button type=&#34;button&#34;&gt;
+    More Jobs &lt;span class=&#34;count&#34;&gt;239&lt;/span&gt;
+  &lt;/button&gt;
+</code></pre>
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="navigation" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Navigation
+          </h1>
+          <h2 id="finding">Finding</h2>
+<p>The items &ldquo;EXPLORE UNICEF&rdquo;, &ldquo;SEARCH JOBS&rdquo; and &ldquo;CANDIDATE LOGIN&rdquo; are navigation but not in a <code>&lt;nav&gt;</code>.</p>
+<h3 id="location">Location</h3>
+<p>Xpath: <code>/html/body/div[1]/header/div/div[1]/div[5]/div[1]/div/section/div/ul</code></p>
+<h2 id="improvement">Improvement</h2>
+<p>Place the <code>&lt;ul&gt;</code> inside a <code>&lt;nav&gt;</code>.</p>
 
         </div>
       
@@ -266,7 +415,31 @@ The link also includes a title-attribute that&rsquo;s superfluous and might conf
   	&lt;img src=&#34;unicef-logo.svg&#34; alt=&#34;Unicef logo&#34;&gt;
     &lt;span&gt;for every child&lt;/span&gt;
   &lt;/a&gt;
-</code></pre>
+</code></pre><p>This way the text is also implemented as a separate text, preventing a WCAG 1.4.5 failure</p>
+
+        </div>
+      
+        <div class="pattern-section">
+          <h1 id="vacancy-definitions" tabindex="-1">
+            <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Vacancy definitions
+          </h1>
+          <h2 id="finding">Finding</h2>
+<p>The &ldquo;Location&rdquo; and &ldquo;Deadline&rdquo; in vacancies look like (prime candidates for) definition lists, but they&rsquo;re not. Visually there&rsquo;s a clear relation but it&rsquo;s not communicated in code.</p>
+<h3 id="location">Location</h3>
+<p>Xpath: <code>/html/body/div[1]/div[2]/div/section/div[2]/article/div/div[2]/div/div/div/div/div[2]/div/div/div[5]/div/div/div[1]/div/div/div/div/div[2]/p[3]</code></p>
+<h2 id="improvement">Improvement</h2>
+<p>A possible alternate implementation would be.</p>
+<pre tabindex="0"><code>  &lt;dl&gt;
+    &lt;dt&gt;Location&lt;/dt&gt;
+    &lt;dd&gt;Barbados&lt;/dd&gt;
+    &lt;dt&gt;Deadline&lt;/dt&gt;
+    &lt;dd&gt;&lt;time datetime=&#34;...&#34;&gt;5 Feb 2023 11:55 PM&lt;/time&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+</code></pre><p>This makes sure that a visual relationship is also presented in code.</p>
+
         </div>
       
       

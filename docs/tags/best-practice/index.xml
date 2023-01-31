@@ -7,6 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://erikkroes.github.io/unicef/tags/best-practice/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Custom components</title>
+      <link>https://erikkroes.github.io/unicef/patterns/custom-components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/custom-components/</guid>
+      <description>Finding There are several components on this page that are custom made. This covers complex components like the &amp;ldquo;explore unicef&amp;rdquo;-dropdown, search filters (&amp;ldquo;Contract type&amp;rdquo;, &amp;ldquo;Locations&amp;rdquo;, &amp;ldquo;Functional Area&amp;rdquo; and &amp;ldquo;Position level&amp;rdquo;) and the search input/mechanism.
+They are not accessible by keyboard and fail WCAG Criteria like 4.1.2 for not adding appropriate name, role and/or value.
+They are considered out of scope for this audit as they need further in-depth review to discover all issues in all possible states and applications, and might require a thorough rewrite.</description>
+    </item>
+    
+    <item>
+      <title>Headings</title>
+      <link>https://erikkroes.github.io/unicef/patterns/headings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/headings/</guid>
+      <description>Finding The heading structure of a page should create a hierarchy. It starts with one unique &amp;lt;h1&amp;gt; that mirrors the page title. Every other heading should be &amp;ldquo;below&amp;rdquo; the &amp;lt;h1&amp;gt;, and no levels should be skipped. Ignoring the rogue role=&amp;quot;heading&amp;quot; that is (I assume) implemented by Drupal, the current structure is the following:
+h2: Vacancies h1: Current vacancies h3: Explore our current job opportunities h3: Contract type h3: Locations h3: Functional Area h4: Re-advertisement Risk and Compliance Officer, NOB, Bridgetown, Barbados, Post #122476 (Open to Nationals of Barbados) h4.</description>
+    </item>
+    
+    <item>
       <title>Unicef logo</title>
       <link>https://erikkroes.github.io/unicef/patterns/logo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
