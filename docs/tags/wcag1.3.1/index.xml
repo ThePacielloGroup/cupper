@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Unicef Vacancies on Unicef hiring</title>
-    <link>https://erikkroes.github.io/unicef/</link>
-    <description>Recent content in Unicef Vacancies on Unicef hiring</description>
+    <title>wcag1.3.1 on Unicef hiring</title>
+    <link>https://erikkroes.github.io/unicef/tags/wcag1.3.1/</link>
+    <description>Recent content in wcag1.3.1 on Unicef hiring</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://erikkroes.github.io/unicef/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://erikkroes.github.io/unicef/tags/wcag1.3.1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cookie notice close-button</title>
       <link>https://erikkroes.github.io/unicef/patterns/cookie-close/</link>
@@ -20,15 +20,6 @@ Improvement A possible alternate implementation would be.
     </item>
     
     <item>
-      <title>Cupper</title>
-      <link>https://erikkroes.github.io/unicef/print-version/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://erikkroes.github.io/unicef/print-version/</guid>
-      <description>You don&amp;rsquo;t want to edit this file :-)</description>
-    </item>
-    
-    <item>
       <title>High contrast mode</title>
       <link>https://erikkroes.github.io/unicef/patterns/high-contrast/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -36,16 +27,6 @@ Improvement A possible alternate implementation would be.
       <guid>https://erikkroes.github.io/unicef/patterns/high-contrast/</guid>
       <description>Finding The &amp;ldquo;High contrast&amp;rdquo;-button is currently implemented as following:
 &amp;lt;a class=&amp;#34;high-contrast__lnk&amp;#34; data-action=&amp;#34;https://www.unicef.org/careers/vacancies/template&amp;#34; tabindex=&amp;#34;0&amp;#34; data-tracked-component=&amp;#34;high-contrast&amp;#34; data-bound=&amp;#34;click&amp;#34; data-label=&amp;#34;High contrast&amp;#34;&amp;gt;High contrast&amp;lt;/a&amp;gt; It looks like, and is implemented as, a link but functions mostly like a button. This results in the behavior of the component not aligning with its presentation. This can confuse and mislead the user. The button triggers something within the page and should therefore be implemented as a button, unlike a link that should refer to another page.</description>
-    </item>
-    
-    <item>
-      <title>Unicef logo</title>
-      <link>https://erikkroes.github.io/unicef/patterns/logo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://erikkroes.github.io/unicef/patterns/logo/</guid>
-      <description>Finding The logo is currently implemented as following:
-&amp;lt;a href=&amp;#34;https://www.unicef.org/careers/&amp;#34; title=&amp;#34;UNICEF&amp;#34; rel=&amp;#34;home&amp;#34; class=&amp;#34;site-branding__logo&amp;#34;&amp;gt; &amp;lt;span class=&amp;#34;icon-logo-unicef en&amp;#34;&amp;gt; ::before &amp;lt;em class=&amp;#34;visibility-hidden&amp;#34;&amp;gt;Unicef default logo&amp;lt;/em&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/a&amp;gt; The image includes the &amp;ldquo;for every child&amp;rdquo;-text and is implemented as an icon font. Icon fonts can present all kinds of issues, for example when people locally change their font. It also results in an image that contains no text alternative. That alternative is specifically needed because the &amp;ldquo;for every child&amp;rdquo;-text is part of the image.</description>
     </item>
     
   </channel>

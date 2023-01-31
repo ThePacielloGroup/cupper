@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://erikkroes.github.io/unicef/tags/">
+    <link rel="canonical" href="https://erikkroes.github.io/unicef/patterns/high-contrast/">
     <link rel="apple-touch-icon" sizes="57x57" href="https://erikkroes.github.io/unicef/images/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://erikkroes.github.io/unicef/images/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://erikkroes.github.io/unicef/images/apple-touch-icon-72x72.png">
@@ -30,7 +30,7 @@
     </style>
     <title>
       
-        Tags | Unicef hiring
+        High contrast mode | Unicef hiring
       
     </title>
     
@@ -170,7 +170,7 @@
                       </li>
                     
                       <li class="pattern">
-                        <a href="https://erikkroes.github.io/unicef/patterns/high-contrast/" >
+                        <a href="https://erikkroes.github.io/unicef/patterns/high-contrast/" aria-current="page">
                           <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
                             <use xlink:href="#bookmark"></use>
                           </svg>
@@ -199,107 +199,86 @@
           
   <main id="main">
     <h1>
-      Tags
+      <svg class="bookmark-icon" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+        <use xlink:href="#bookmark"></use>
+      </svg>
+      High contrast mode
     </h1>
-    <ul class="patterns-list">
+    
+      <div class="tags">
+        <strong aria-hidden="true">Tags: </strong>
+        <ul aria-label="tags">
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://erikkroes.github.io/unicef/tags/wcag1.3.1">wcag1.3.1</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://erikkroes.github.io/unicef/tags/wcag1.4.1">wcag1.4.1</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://erikkroes.github.io/unicef/tags/wcag1.4.11">wcag1.4.11</a>
+            </li>
+          
+            <li>
+              <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                <use xlink:href="#tag"></use>
+              </svg>
+              <a href="https://erikkroes.github.io/unicef/tags/wcag4.1.2">wcag4.1.2</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+    
       
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/tags/best-practice/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      Best practice
-    </a>
-  </h2>
-</li>
 
+  <nav class="toc" aria-labelledby="toc-heading">
+    <h2 id="toc-heading">Table of contents</h2>
+    <ol>
       
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/tags/wcag1.1.1/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      wcag1.1.1
-    </a>
-  </h2>
-</li>
+        <li>
+          <a href="#finding">
+            Finding
+          </a>
+        </li>
+      
+        <li>
+          <a href="#improvement">
+            Improvement
+          </a>
+        </li>
+      
+    </ol>
+  </nav>
 
-      
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/tags/wcag1.3.1/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      wcag1.3.1
-    </a>
-  </h2>
-</li>
 
-      
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/tags/wcag1.4.1/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      wcag1.4.1
-    </a>
-  </h2>
-</li>
+    
+    <h2 id="finding">Finding</h2>
+<p>The &ldquo;High contrast&rdquo;-button is currently implemented as following:</p>
+<pre tabindex="0"><code>	&lt;a class=&#34;high-contrast__lnk&#34; data-action=&#34;https://www.unicef.org/careers/vacancies/template&#34; tabindex=&#34;0&#34; data-tracked-component=&#34;high-contrast&#34; data-bound=&#34;click&#34; data-label=&#34;High contrast&#34;&gt;High contrast&lt;/a&gt;
+</code></pre><p>It looks like, and is implemented as, a link but functions mostly like a button. This results in the behavior of the component not aligning with its presentation. This can confuse and mislead the user. The button triggers something within the page and should therefore be implemented as a button, unlike a link that should refer to another page.
+As the implementation of the high contrast-mode is inaccessible, the page has no &ldquo;conforming alternate version&rdquo; and all contrast-related issues on the page should be treated as issues. If the implementation were accessible, these issues would be irrelevant.
+Another issue with the button is that it does not communicate its state. It&rsquo;s not clear when (and if) the high contrast-mode is activated.</p>
+<h3 id="location">Location</h3>
+<p>Xpath: <code>/html/body/div[1]/header/div/div[1]/div[1]/div/div/div/a</code></p>
+<h2 id="improvement">Improvement</h2>
+<p>A possible alternate implementation would be.</p>
+<pre tabindex="0"><code>  &lt;button type=&#34;button&#34; aria-pressed=&#34;false&#34;&gt;
+    Toggle high contrast
+  &lt;/button&gt;
+</code></pre><p>This also removes the superfluous <code>tabindex</code> and should be accompanied by a visual change to indicate the state of the button.</p>
 
-      
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/tags/wcag1.4.11/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      wcag1.4.11
-    </a>
-  </h2>
-</li>
-
-      
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/tags/wcag1.4.5/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      wcag1.4.5
-    </a>
-  </h2>
-</li>
-
-      
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/tags/wcag2.1.1/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      wcag2.1.1
-    </a>
-  </h2>
-</li>
-
-      
-          <li>
-  <h2>
-    <a href="https://erikkroes.github.io/unicef/tags/wcag4.1.2/">
-      <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-        <use xlink:href="#bookmark"></use>
-      </svg>
-      wcag4.1.2
-    </a>
-  </h2>
-</li>
-
-      
-    </ul>
   </main>
 
           <footer role="contentinfo">

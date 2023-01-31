@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wcag2.1.1 on Unicef hiring</title>
+    <link>https://erikkroes.github.io/unicef/tags/wcag2.1.1/</link>
+    <description>Recent content in wcag2.1.1 on Unicef hiring</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://erikkroes.github.io/unicef/tags/wcag2.1.1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cookie notice close-button</title>
+      <link>https://erikkroes.github.io/unicef/patterns/cookie-close/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/cookie-close/</guid>
+      <description>Finding The close-button for the cookie notice is currently implemented as following:
+&amp;lt;img class=&amp;#34;agree-button&amp;#34; src=&amp;#34;https://sites.unicef.org/vacanciestemplate/icon_wclose.png&amp;#34; alt=&amp;#34;pop up close&amp;#34;&amp;gt; It looks like and functions mostly like a button but is implemented as an image. This results in the component being unreachable and inoperable for people using a keyboard.
+Location Xpath: /html/body/div[1]/div/div/div[2]/img
+Improvement A possible alternate implementation would be.
+&amp;lt;button type=&amp;#34;button&amp;#34;&amp;gt; &amp;lt;img class=&amp;#34;agree-button&amp;#34; src=&amp;#34;close-icon.svg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt; Close notice &amp;lt;/button&amp;gt; </description>
+    </item>
+    
+  </channel>
+</rss>

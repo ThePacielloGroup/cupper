@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wcag1.1.1 on Unicef hiring</title>
+    <link>https://erikkroes.github.io/unicef/tags/wcag1.1.1/</link>
+    <description>Recent content in wcag1.1.1 on Unicef hiring</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://erikkroes.github.io/unicef/tags/wcag1.1.1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unicef logo</title>
+      <link>https://erikkroes.github.io/unicef/patterns/logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://erikkroes.github.io/unicef/patterns/logo/</guid>
+      <description>Finding The logo is currently implemented as following:
+&amp;lt;a href=&amp;#34;https://www.unicef.org/careers/&amp;#34; title=&amp;#34;UNICEF&amp;#34; rel=&amp;#34;home&amp;#34; class=&amp;#34;site-branding__logo&amp;#34;&amp;gt; &amp;lt;span class=&amp;#34;icon-logo-unicef en&amp;#34;&amp;gt; ::before &amp;lt;em class=&amp;#34;visibility-hidden&amp;#34;&amp;gt;Unicef default logo&amp;lt;/em&amp;gt; &amp;lt;/span&amp;gt; &amp;lt;/a&amp;gt; The image includes the &amp;ldquo;for every child&amp;rdquo;-text and is implemented as an icon font. Icon fonts can present all kinds of issues, for example when people locally change their font. It also results in an image that contains no text alternative. That alternative is specifically needed because the &amp;ldquo;for every child&amp;rdquo;-text is part of the image.</description>
+    </item>
+    
+  </channel>
+</rss>

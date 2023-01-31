@@ -1,18 +1,14 @@
 +++
-date = "2017-06-26T18:27:58+01:00"
-title = "The Cupper Documentation Builder"
+title = "Unicef Vacancies"
 +++
 
-Welcome to **Cupper**: a documentation builder for inclusive designers and those trying to be inclusive designers. These are **Cupper's** docs, but they are also an example of a site built with **Cupper**. Here are some of its features:
+## Contents
+An audit of the [vacancies](https://jobs.unicef.org/en-us/listing/)-page based on WCAG 2.1 AA.
 
-{{% ticks %}}
-* Built with [Hugo](https://gohugo.io/), so easy to structure content and fast to compile it
-* Available to read offline, as a [Progressive Web App](https://developers.google.com/web/progressive-web-apps/)
-* Include encapsulated live demos, inline with your markdown, [using Shadow DOM](https://www.smashingmagazine.com/2017/07/pattern-libraries-in-markdown/)
-* Quickly include WCAG and [Inclusive Design Principles](http://inclusivedesignprinciples.org/) references
-* A responsive, screen reader and keyboard accessible static site as output
-* Automated Github Pages deployment
-* Includes a single-page printable version suitable for PDF conversion
-{{% /ticks %}}
 
-To get started, take a look at {{% pattern "Installation" %}}.
+## Out of scope
+Several parts were found to be out of scope:
+- **"explore unicef"-dropdown**: A custom component that doesn't follow general conventions and has multiple issues including keyboard accessibility.
+- **Search filter** ("Contract type", "Locations", "Functional Area" and "Position level"): A custom components that doesn't follow general conventions and has multiple issues including keyboard accessibility.
+- **Search mechanism**: Found inaccessible (change on input)
+- **Sensory characteristics**: Content has not been checked for sensory characteristics due to language issues
