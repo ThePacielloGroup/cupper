@@ -1,9 +1,9 @@
 +++
-title = "Installation"
+title = "Quick Start"
 weight = 1
 +++
 
-**Cupper** is built using the static site engine, [Hugo](https://gohugo.io/), and NPM. The codebase is available to download on Github. Let's get everything installed step-by-step.
+**This** is the quick start page
 
 ## Install Hugo
 

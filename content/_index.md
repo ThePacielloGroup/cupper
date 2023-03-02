@@ -1,18 +1,14 @@
 +++
-date = "2017-06-26T18:27:58+01:00"
-title = "The Cupper Documentation Builder"
+date = "2023-03-02T11:27:58+01:00"
+title = "script_sweep Application Program Interface (API) Endpoint Documentation"
 +++
-
-Welcome to **Cupper**: a documentation builder for inclusive designers and those trying to be inclusive designers. These are **Cupper's** docs, but they are also an example of a site built with **Cupper**. Here are some of its features:
+Welcome to **script_sweep** an API Endpoint that can help you classify, organize, and learn about more about the world's scripting languages.
 
 {{% ticks %}}
-* Built with [Hugo](https://gohugo.io/), so easy to structure content and fast to compile it
-* Available to read offline, as a [Progressive Web App](https://developers.google.com/web/progressive-web-apps/)
-* Include encapsulated live demos, inline with your markdown, [using Shadow DOM](https://www.smashingmagazine.com/2017/07/pattern-libraries-in-markdown/)
-* Quickly include WCAG and [Inclusive Design Principles](http://inclusivedesignprinciples.org/) references
-* A responsive, screen reader and keyboard accessible static site as output
-* Automated Github Pages deployment
-* Includes a single-page printable version suitable for PDF conversion
+* Access to information about various language writing systems and scripts supported by the [Unicode](https://unicode.org/standard/supported.html) system 
+* The ability to filter results based on selected qualifiers
+* Up to *100* free API requests daily
+* Text classification and organization 
 {{% /ticks %}}
 
-To get started, take a look at {{% pattern "Installation" %}}.
+To get started, take a look at {{% pattern "Quick Start" %}}.
